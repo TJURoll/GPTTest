@@ -1,0 +1,1311 @@
+{
+  "complete_dataset": false,
+  "scope": "11 source archives; decompressed format preview",
+  "counting_method": {
+    "jsonl": "Exact physical lines (newlines plus a nonempty unterminated final line); not uniqueness or full JSON validity",
+    "parquet": "Footer num_rows checked against row-group sum; data pages not decoded",
+    "exported_jsonl": "Nonempty complete JSON records parsed from retained files"
+  },
+  "main_splits_original_physical_lines": {
+    "bench": 9424,
+    "gnome": 177922,
+    "test": 3300,
+    "train": 4230906,
+    "unsplit": 101991,
+    "val": 334367
+  },
+  "totals": {
+    "all_jsonl_physical_lines": 7511643,
+    "all_exported_jsonl_records": 18528,
+    "main_jsonl_physical_lines": 4857910,
+    "main_exported_jsonl_records": 11500,
+    "original_regular_files": 763065,
+    "uncompressed_file_bytes": 51440916251,
+    "original_cif_files": 528947,
+    "original_xyz_files": 233948,
+    "original_structure_files": 762895,
+    "exported_structure_files": 291,
+    "auxiliary_jsonl_physical_lines": 2653733,
+    "original_parquet_rows": 1910952
+  },
+  "datasets": [
+    {
+      "name": "alm_csp_atomtxt",
+      "description": "化学式、晶系和空间群约束下的晶体结构生成",
+      "complete_dataset": false,
+      "original_regular_file_count": 112497,
+      "original_uncompressed_file_bytes": 480253291,
+      "original_structure_file_count": 112485,
+      "original_cif_file_count": 112485,
+      "exported_structure_file_count": 30,
+      "main_jsonl_files": [
+        {
+          "dataset": "alm_csp_atomtxt",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 196361020,
+          "original_physical_line_count": 105698,
+          "exported_path": "datasets/alm_csp_atomtxt/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "alm_csp_atomtxt",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 21701814,
+          "original_physical_line_count": 11705,
+          "exported_path": "datasets/alm_csp_atomtxt/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 332429,
+      "preview_manifest": "datasets/alm_csp_atomtxt/preview-manifest.json"
+    },
+    {
+      "name": "alm_doping",
+      "description": "按掺杂约束编辑晶体结构，含输入和输出 CIF",
+      "complete_dataset": false,
+      "original_regular_file_count": 9113,
+      "original_uncompressed_file_bytes": 50541570,
+      "original_structure_file_count": 9098,
+      "original_cif_file_count": 9098,
+      "exported_structure_file_count": 40,
+      "main_jsonl_files": [
+        {
+          "dataset": "alm_doping",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 19268866,
+          "original_physical_line_count": 6403,
+          "exported_path": "datasets/alm_doping/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "alm_doping",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 1581485,
+          "original_physical_line_count": 525,
+          "exported_path": "datasets/alm_doping/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 21303,
+      "preview_manifest": "datasets/alm_doping/preview-manifest.json"
+    },
+    {
+      "name": "alm_polymorph",
+      "description": "相同组分的多晶型结构转换，含结构对和能量信息",
+      "complete_dataset": false,
+      "original_regular_file_count": 10943,
+      "original_uncompressed_file_bytes": 289670238,
+      "original_structure_file_count": 10922,
+      "original_cif_file_count": 10922,
+      "exported_structure_file_count": 40,
+      "main_jsonl_files": [
+        {
+          "dataset": "alm_polymorph",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 50229634,
+          "original_physical_line_count": 13677,
+          "exported_path": "datasets/alm_polymorph/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "alm_polymorph",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 2447750,
+          "original_physical_line_count": 669,
+          "exported_path": "datasets/alm_polymorph/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 679702,
+      "preview_manifest": "datasets/alm_polymorph/preview-manifest.json"
+    },
+    {
+      "name": "atomworldbench",
+      "description": "晶体原子编辑任务，另含 bench 评测划分",
+      "complete_dataset": false,
+      "original_regular_file_count": 133765,
+      "original_uncompressed_file_bytes": 587221006,
+      "original_structure_file_count": 133752,
+      "original_cif_file_count": 133752,
+      "exported_structure_file_count": 40,
+      "main_jsonl_files": [
+        {
+          "dataset": "atomworldbench",
+          "path": "messages/bench.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 15252381,
+          "original_physical_line_count": 9424,
+          "exported_path": "datasets/atomworldbench/messages/bench.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "bench"
+        },
+        {
+          "dataset": "atomworldbench",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 100346434,
+          "original_physical_line_count": 57452,
+          "exported_path": "datasets/atomworldbench/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 133857,
+      "preview_manifest": "datasets/atomworldbench/preview-manifest.json"
+    },
+    {
+      "name": "chebi20",
+      "description": "SMILES 到英文分子描述",
+      "complete_dataset": false,
+      "original_regular_file_count": 9,
+      "original_uncompressed_file_bytes": 22760097,
+      "original_structure_file_count": 0,
+      "original_cif_file_count": 0,
+      "exported_structure_file_count": 0,
+      "main_jsonl_files": [
+        {
+          "dataset": "chebi20",
+          "path": "messages/test.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 2262322,
+          "original_physical_line_count": 3300,
+          "exported_path": "datasets/chebi20/messages/test.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "test"
+        },
+        {
+          "dataset": "chebi20",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 18169811,
+          "original_physical_line_count": 26407,
+          "exported_path": "datasets/chebi20/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "chebi20",
+          "path": "messages/validation.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 2317060,
+          "original_physical_line_count": 3301,
+          "exported_path": "datasets/chebi20/messages/validation.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 0,
+      "preview_manifest": "datasets/chebi20/preview-manifest.json"
+    },
+    {
+      "name": "hmof",
+      "description": "MOF 吸附、孔径、空隙率和表面积等性质问答",
+      "complete_dataset": false,
+      "original_regular_file_count": 70648,
+      "original_uncompressed_file_bytes": 1222898101,
+      "original_structure_file_count": 70634,
+      "original_cif_file_count": 70634,
+      "exported_structure_file_count": 30,
+      "main_jsonl_files": [
+        {
+          "dataset": "hmof",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 729252584,
+          "original_physical_line_count": 534879,
+          "exported_path": "datasets/hmof/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "hmof",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 38323925,
+          "original_physical_line_count": 28153,
+          "exported_path": "datasets/hmof/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 141292,
+      "preview_manifest": "datasets/hmof/preview-manifest.json"
+    },
+    {
+      "name": "llm_corpus",
+      "description": "FG26 光谱或三维分子结构到性质、SELFIES 和官能团等回答",
+      "complete_dataset": false,
+      "original_regular_file_count": 233984,
+      "original_uncompressed_file_bytes": 45361879076,
+      "original_structure_file_count": 233948,
+      "original_cif_file_count": 0,
+      "exported_structure_file_count": 25,
+      "main_jsonl_files": [
+        {
+          "dataset": "llm_corpus",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 2000638005,
+          "original_physical_line_count": 1355530,
+          "exported_path": "datasets/llm_corpus/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "llm_corpus",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 105466927,
+          "original_physical_line_count": 71552,
+          "exported_path": "datasets/llm_corpus/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 702000,
+      "preview_manifest": "datasets/llm_corpus/preview-manifest.json"
+    },
+    {
+      "name": "matterchat",
+      "description": "材料性质问答，另含 gnome 外部评测划分",
+      "complete_dataset": false,
+      "original_regular_file_count": 158398,
+      "original_uncompressed_file_bytes": 1959309825,
+      "original_structure_file_count": 158382,
+      "original_cif_file_count": 158382,
+      "exported_structure_file_count": 35,
+      "main_jsonl_files": [
+        {
+          "dataset": "matterchat",
+          "path": "messages/gnome.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 115379472,
+          "original_physical_line_count": 177922,
+          "exported_path": "datasets/matterchat/messages/gnome.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "gnome"
+        },
+        {
+          "dataset": "matterchat",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 924302771,
+          "original_physical_line_count": 1478871,
+          "exported_path": "datasets/matterchat/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "matterchat",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 101642812,
+          "original_physical_line_count": 164209,
+          "exported_path": "datasets/matterchat/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 554872,
+      "preview_manifest": "datasets/matterchat/preview-manifest.json"
+    },
+    {
+      "name": "mof_papers",
+      "description": "论文来源的 MOF 结构与性质问答，未预设 train/val",
+      "complete_dataset": false,
+      "original_regular_file_count": 13313,
+      "original_uncompressed_file_bytes": 204198130,
+      "original_structure_file_count": 13302,
+      "original_cif_file_count": 13302,
+      "exported_structure_file_count": 21,
+      "main_jsonl_files": [
+        {
+          "dataset": "mof_papers",
+          "path": "messages/data.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 66417423,
+          "original_physical_line_count": 101991,
+          "exported_path": "datasets/mof_papers/messages/data.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "unsplit"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 27103,
+      "preview_manifest": "datasets/mof_papers/preview-manifest.json"
+    },
+    {
+      "name": "molopt",
+      "description": "按 QED、HBD、HBA 等约束编辑 SMILES",
+      "complete_dataset": false,
+      "original_regular_file_count": 10,
+      "original_uncompressed_file_bytes": 625244947,
+      "original_structure_file_count": 0,
+      "original_cif_file_count": 0,
+      "exported_structure_file_count": 0,
+      "main_jsonl_files": [
+        {
+          "dataset": "molopt",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 591340385,
+          "original_physical_line_count": 340294,
+          "exported_path": "datasets/molopt/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "molopt",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 33856030,
+          "original_physical_line_count": 19624,
+          "exported_path": "datasets/molopt/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 12,
+      "preview_manifest": "datasets/molopt/preview-manifest.json"
+    },
+    {
+      "name": "qmof",
+      "description": "QMOF 材料性质问答",
+      "complete_dataset": false,
+      "original_regular_file_count": 20385,
+      "original_uncompressed_file_bytes": 636939970,
+      "original_structure_file_count": 20372,
+      "original_cif_file_count": 20372,
+      "exported_structure_file_count": 30,
+      "main_jsonl_files": [
+        {
+          "dataset": "qmof",
+          "path": "messages/train.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 404123221,
+          "original_physical_line_count": 311695,
+          "exported_path": "datasets/qmof/messages/train.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "train"
+        },
+        {
+          "dataset": "qmof",
+          "path": "messages/val.jsonl",
+          "is_main_messages": true,
+          "original_bytes": 43521451,
+          "original_physical_line_count": 34629,
+          "exported_path": "datasets/qmof/messages/val.jsonl",
+          "exported_record_count": 500,
+          "selection_method": "first500",
+          "complete_source_file": false,
+          "split": "val"
+        }
+      ],
+      "auxiliary_jsonl_physical_lines": 61163,
+      "preview_manifest": "datasets/qmof/preview-manifest.json"
+    }
+  ],
+  "jsonl_files": [
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 196361020,
+      "original_physical_line_count": 105698,
+      "exported_path": "datasets/alm_csp_atomtxt/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 21701814,
+      "original_physical_line_count": 11705,
+      "exported_path": "datasets/alm_csp_atomtxt/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 29628917,
+      "original_physical_line_count": 112485,
+      "exported_path": "datasets/alm_csp_atomtxt/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 23413,
+      "original_physical_line_count": 10,
+      "exported_path": "datasets/alm_csp_atomtxt/others/preview.jsonl",
+      "exported_record_count": 10,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "others/split_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 13563368,
+      "original_physical_line_count": 107449,
+      "exported_path": "datasets/alm_csp_atomtxt/others/split_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_csp_atomtxt",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 108196254,
+      "original_physical_line_count": 112485,
+      "exported_path": "datasets/alm_csp_atomtxt/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 19268866,
+      "original_physical_line_count": 6403,
+      "exported_path": "datasets/alm_doping/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 1581485,
+      "original_physical_line_count": 525,
+      "exported_path": "datasets/alm_doping/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 2399713,
+      "original_physical_line_count": 9098,
+      "exported_path": "datasets/alm_doping/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 15049,
+      "original_physical_line_count": 5,
+      "exported_path": "datasets/alm_doping/others/preview.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "others/split_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 466693,
+      "original_physical_line_count": 3102,
+      "exported_path": "datasets/alm_doping/others/split_manifest.jsonl",
+      "exported_record_count": 3102,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "alm_doping",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 5506537,
+      "original_physical_line_count": 9098,
+      "exported_path": "datasets/alm_doping/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 50229634,
+      "original_physical_line_count": 13677,
+      "exported_path": "datasets/alm_polymorph/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 2447750,
+      "original_physical_line_count": 669,
+      "exported_path": "datasets/alm_polymorph/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 2881371,
+      "original_physical_line_count": 10922,
+      "exported_path": "datasets/alm_polymorph/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/pair_selection.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 69525742,
+      "original_physical_line_count": 200899,
+      "exported_path": "datasets/alm_polymorph/others/pair_selection.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 21966,
+      "original_physical_line_count": 6,
+      "exported_path": "datasets/alm_polymorph/others/preview.jsonl",
+      "exported_record_count": 6,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/split_geometry_checks.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 23227118,
+      "original_physical_line_count": 112753,
+      "exported_path": "datasets/alm_polymorph/others/split_geometry_checks.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/split_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 491172,
+      "original_physical_line_count": 3298,
+      "exported_path": "datasets/alm_polymorph/others/split_manifest.jsonl",
+      "exported_record_count": 3298,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/split_nodes.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 40290440,
+      "original_physical_line_count": 143427,
+      "exported_path": "datasets/alm_polymorph/others/split_nodes.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 6598926,
+      "original_physical_line_count": 10922,
+      "exported_path": "datasets/alm_polymorph/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/structure_roundtrip_checks.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 1881472,
+      "original_physical_line_count": 10922,
+      "exported_path": "datasets/alm_polymorph/others/structure_roundtrip_checks.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "alm_polymorph",
+      "path": "others/excluded_from_corpus/split_holds.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 64571159,
+      "original_physical_line_count": 186553,
+      "exported_path": "datasets/alm_polymorph/others/excluded_from_corpus/split_holds.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "atomworldbench",
+      "path": "messages/bench.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 15252381,
+      "original_physical_line_count": 9424,
+      "exported_path": "datasets/atomworldbench/messages/bench.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "bench"
+    },
+    {
+      "dataset": "atomworldbench",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 100346434,
+      "original_physical_line_count": 57452,
+      "exported_path": "datasets/atomworldbench/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "atomworldbench",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 54642208,
+      "original_physical_line_count": 133752,
+      "exported_path": "datasets/atomworldbench/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "atomworldbench",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 181085,
+      "original_physical_line_count": 105,
+      "exported_path": "datasets/atomworldbench/others/preview.jsonl",
+      "exported_record_count": 105,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "chebi20",
+      "path": "messages/test.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 2262322,
+      "original_physical_line_count": 3300,
+      "exported_path": "datasets/chebi20/messages/test.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "test"
+    },
+    {
+      "dataset": "chebi20",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 18169811,
+      "original_physical_line_count": 26407,
+      "exported_path": "datasets/chebi20/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "chebi20",
+      "path": "messages/validation.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 2317060,
+      "original_physical_line_count": 3301,
+      "exported_path": "datasets/chebi20/messages/validation.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "chebi20",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 0,
+      "original_physical_line_count": 0,
+      "exported_path": "datasets/chebi20/others/asset_manifest.jsonl",
+      "exported_record_count": 0,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "hmof",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 729252584,
+      "original_physical_line_count": 534879,
+      "exported_path": "datasets/hmof/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "hmof",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 38323925,
+      "original_physical_line_count": 28153,
+      "exported_path": "datasets/hmof/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "hmof",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 14929771,
+      "original_physical_line_count": 70634,
+      "exported_path": "datasets/hmof/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "hmof",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 35001,
+      "original_physical_line_count": 24,
+      "exported_path": "datasets/hmof/others/preview.jsonl",
+      "exported_record_count": 24,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "hmof",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 97501321,
+      "original_physical_line_count": 70634,
+      "exported_path": "datasets/hmof/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 61625594,
+      "original_physical_line_count": 233964,
+      "exported_path": "datasets/llm_corpus/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "others/spectrum_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 681145083,
+      "original_physical_line_count": 233948,
+      "exported_path": "datasets/llm_corpus/others/spectrum_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 197138,
+      "original_physical_line_count": 140,
+      "exported_path": "datasets/llm_corpus/others/preview.jsonl",
+      "exported_record_count": 140,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 431163781,
+      "original_physical_line_count": 233948,
+      "exported_path": "datasets/llm_corpus/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 2000638005,
+      "original_physical_line_count": 1355530,
+      "exported_path": "datasets/llm_corpus/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 105466927,
+      "original_physical_line_count": 71552,
+      "exported_path": "datasets/llm_corpus/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "matterchat",
+      "path": "messages/gnome.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 115379472,
+      "original_physical_line_count": 177922,
+      "exported_path": "datasets/matterchat/messages/gnome.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "gnome"
+    },
+    {
+      "dataset": "matterchat",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 924302771,
+      "original_physical_line_count": 1478871,
+      "exported_path": "datasets/matterchat/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "matterchat",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 101642812,
+      "original_physical_line_count": 164209,
+      "exported_path": "datasets/matterchat/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "matterchat",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 33616625,
+      "original_physical_line_count": 158382,
+      "exported_path": "datasets/matterchat/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "matterchat",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 92040,
+      "original_physical_line_count": 144,
+      "exported_path": "datasets/matterchat/others/preview.jsonl",
+      "exported_record_count": 144,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "matterchat",
+      "path": "others/skipped_tasks.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 21659359,
+      "original_physical_line_count": 79582,
+      "exported_path": "datasets/matterchat/others/skipped_tasks.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "matterchat",
+      "path": "others/structures.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 232797851,
+      "original_physical_line_count": 158382,
+      "exported_path": "datasets/matterchat/others/structures.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "matterchat",
+      "path": "others/structure_file_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 64844686,
+      "original_physical_line_count": 158382,
+      "exported_path": "datasets/matterchat/others/structure_file_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "mof_papers",
+      "path": "messages/data.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 66417423,
+      "original_physical_line_count": 101991,
+      "exported_path": "datasets/mof_papers/messages/data.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "unsplit"
+    },
+    {
+      "dataset": "mof_papers",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 3378984,
+      "original_physical_line_count": 13302,
+      "exported_path": "datasets/mof_papers/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "mof_papers",
+      "path": "others/provenance.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 11237466,
+      "original_physical_line_count": 13801,
+      "exported_path": "datasets/mof_papers/others/provenance.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "molopt",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 591340385,
+      "original_physical_line_count": 340294,
+      "exported_path": "datasets/molopt/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "molopt",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 33856030,
+      "original_physical_line_count": 19624,
+      "exported_path": "datasets/molopt/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "molopt",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 0,
+      "original_physical_line_count": 0,
+      "exported_path": "datasets/molopt/others/asset_manifest.jsonl",
+      "exported_record_count": 0,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "molopt",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 21105,
+      "original_physical_line_count": 12,
+      "exported_path": "datasets/molopt/others/preview.jsonl",
+      "exported_record_count": 12,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "qmof",
+      "path": "messages/train.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 404123221,
+      "original_physical_line_count": 311695,
+      "exported_path": "datasets/qmof/messages/train.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "train"
+    },
+    {
+      "dataset": "qmof",
+      "path": "messages/val.jsonl",
+      "is_main_messages": true,
+      "original_bytes": 43521451,
+      "original_physical_line_count": 34629,
+      "exported_path": "datasets/qmof/messages/val.jsonl",
+      "exported_record_count": 500,
+      "selection_method": "first500",
+      "complete_source_file": false,
+      "split": "val"
+    },
+    {
+      "dataset": "qmof",
+      "path": "others/asset_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 4261927,
+      "original_physical_line_count": 20372,
+      "exported_path": "datasets/qmof/others/asset_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "qmof",
+      "path": "others/preview.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 78335,
+      "original_physical_line_count": 47,
+      "exported_path": "datasets/qmof/others/preview.jsonl",
+      "exported_record_count": 47,
+      "selection_method": "FULL",
+      "complete_source_file": true
+    },
+    {
+      "dataset": "qmof",
+      "path": "others/split_manifest.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 6654515,
+      "original_physical_line_count": 20372,
+      "exported_path": "datasets/qmof/others/split_manifest.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    },
+    {
+      "dataset": "qmof",
+      "path": "others/structure_index.jsonl",
+      "is_main_messages": false,
+      "original_bytes": 16187557,
+      "original_physical_line_count": 20372,
+      "exported_path": "datasets/qmof/others/structure_index.jsonl",
+      "exported_record_count": 5,
+      "selection_method": "first5",
+      "complete_source_file": false
+    }
+  ],
+  "parquet_files": [
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_broad-nmr-h_spectra.parquet",
+      "original_bytes": 1659858360,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_broad-nmr-h_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_broad-nmr-h_spectra.parquet",
+      "original_bytes": 185547719,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_broad-nmr-h_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_ir_spectra.parquet",
+      "original_bytes": 6879303221,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_ir_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_xas-n_spectra.parquet",
+      "original_bytes": 509424864,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_xas-n_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_broad-nmr-c_spectra.parquet",
+      "original_bytes": 1719373441,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_broad-nmr-c_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_raman_spectra.parquet",
+      "original_bytes": 764806305,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_raman_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_xas-n_spectra.parquet",
+      "original_bytes": 4611805598,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_xas-n_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_xas-o_spectra.parquet",
+      "original_bytes": 523492644,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_xas-o_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_xas-c_spectra.parquet",
+      "original_bytes": 5885464045,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_xas-c_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_xas-c_spectra.parquet",
+      "original_bytes": 650767410,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_xas-c_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_ir_spectra.parquet",
+      "original_bytes": 764652653,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_ir_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_uv_spectra.parquet",
+      "original_bytes": 5336158267,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_uv_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_uv_spectra.parquet",
+      "original_bytes": 590858850,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_uv_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/test_fg26_broad-nmr-c_spectra.parquet",
+      "original_bytes": 191570577,
+      "original_row_count": 23887,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/test_fg26_broad-nmr-c_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_raman_spectra.parquet",
+      "original_bytes": 6880464841,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_raman_spectra.parquet.metadata.json"
+    },
+    {
+      "dataset": "llm_corpus",
+      "path": "spectra/train_fg26_xas-o_spectra.parquet",
+      "original_bytes": 4711369581,
+      "original_row_count": 214982,
+      "data_rows_exported": 0,
+      "metadata_path": "datasets/llm_corpus/spectra/train_fg26_xas-o_spectra.parquet.metadata.json"
+    }
+  ]
+}

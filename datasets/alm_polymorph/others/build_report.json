@@ -1,0 +1,244 @@
+{
+  "status": "complete",
+  "created_utc": "2026-09-12T17:23:55.193874+00:00",
+  "seed": 20260913,
+  "total_records": 14346,
+  "record_counts": {
+    "train": 13677,
+    "val": 669
+  },
+  "total_structure_files": 10922,
+  "source_accepted_pairs": 200899,
+  "excluded_from_corpus": 186553,
+  "subgroup_counts": {
+    "same_composition_distinct_polymorph": 7173,
+    "same_composition_distinct_polymorph_lower_hull_energy": 7173
+  },
+  "orientation_counts": {
+    "same_composition_distinct_polymorph|reverse": 3587,
+    "same_composition_distinct_polymorph|forward": 3586,
+    "same_composition_distinct_polymorph_lower_hull_energy|forward": 7173
+  },
+  "verification": {
+    "status": "passed",
+    "finished_utc": "2026-09-12T17:23:55.193874+00:00",
+    "regressions": {
+      "inherited_export_regressions": {
+        "export_positive_cases": 4,
+        "export_corruption_rejections": 4,
+        "balanced_sampling_sizes": 61,
+        "forbidden_text_rejections": 6,
+        "group_split_cases": 5,
+        "rendering_cases": 3
+      },
+      "orientation_sampling_sizes": 101,
+      "transitive_split_cases": 5,
+      "two_group_schedule_records": 100,
+      "forbidden_message_rejections": 4,
+      "template_groups": 2,
+      "rendering_and_reverse_cases": 16
+    },
+    "accepted_source_records_reread": 200899,
+    "corpus_records_verified": 14346,
+    "record_counts": {
+      "train": 13677,
+      "val": 669
+    },
+    "saved_structure_files_reread": 10922,
+    "maximum_site_error_A": 2.220446049250313e-16,
+    "maximum_cell_metric_error_A2": 2.2737367544323206e-13,
+    "parser_warnings": {},
+    "original_corpus_records_checked": 124331,
+    "graph": {
+      "nodes": 143427,
+      "components": 105540,
+      "comparison_coverage_checked": 112753,
+      "actual_eval_endpoints": 4000,
+      "accepted_components": 3298
+    },
+    "cross_split_geometry_identity_component_conflicts": 0,
+    "preview_records_exactly_matched": 6,
+    "template_usage": {
+      "train|tasks": {
+        "same_composition_distinct_polymorph": 6839,
+        "same_composition_distinct_polymorph_lower_hull_energy": 6838
+      },
+      "train|same_composition_distinct_polymorph|query": {
+        "query_04": 342,
+        "query_10": 342,
+        "query_01": 342,
+        "query_16": 342,
+        "query_15": 342,
+        "query_03": 342,
+        "query_18": 341,
+        "query_17": 342,
+        "query_20": 342,
+        "query_14": 342,
+        "query_07": 342,
+        "query_08": 342,
+        "query_12": 342,
+        "query_02": 342,
+        "query_09": 342,
+        "query_13": 342,
+        "query_05": 342,
+        "query_06": 342,
+        "query_11": 342,
+        "query_19": 342
+      },
+      "train|same_composition_distinct_polymorph|response": {
+        "response_04": 684,
+        "response_06": 684,
+        "response_07": 684,
+        "response_09": 684,
+        "response_03": 684,
+        "response_01": 683,
+        "response_10": 684,
+        "response_08": 684,
+        "response_05": 684,
+        "response_02": 684
+      },
+      "train|same_composition_distinct_polymorph_lower_hull_energy|query": {
+        "query_15": 342,
+        "query_05": 342,
+        "query_08": 342,
+        "query_03": 342,
+        "query_14": 342,
+        "query_07": 342,
+        "query_11": 342,
+        "query_02": 341,
+        "query_13": 342,
+        "query_18": 342,
+        "query_17": 342,
+        "query_10": 341,
+        "query_01": 342,
+        "query_19": 342,
+        "query_16": 342,
+        "query_06": 342,
+        "query_20": 342,
+        "query_04": 342,
+        "query_09": 342,
+        "query_12": 342
+      },
+      "train|same_composition_distinct_polymorph_lower_hull_energy|response": {
+        "response_10": 684,
+        "response_03": 684,
+        "response_02": 684,
+        "response_07": 683,
+        "response_08": 684,
+        "response_05": 684,
+        "response_01": 684,
+        "response_04": 684,
+        "response_09": 683,
+        "response_06": 684
+      },
+      "val|tasks": {
+        "same_composition_distinct_polymorph": 334,
+        "same_composition_distinct_polymorph_lower_hull_energy": 335
+      },
+      "val|same_composition_distinct_polymorph|query": {
+        "query_04": 17,
+        "query_15": 17,
+        "query_01": 16,
+        "query_11": 17,
+        "query_12": 16,
+        "query_10": 17,
+        "query_14": 17,
+        "query_20": 17,
+        "query_02": 16,
+        "query_09": 17,
+        "query_08": 17,
+        "query_13": 17,
+        "query_17": 16,
+        "query_06": 16,
+        "query_07": 16,
+        "query_03": 17,
+        "query_18": 17,
+        "query_05": 17,
+        "query_16": 17,
+        "query_19": 17
+      },
+      "val|same_composition_distinct_polymorph|response": {
+        "response_05": 34,
+        "response_06": 33,
+        "response_01": 33,
+        "response_04": 33,
+        "response_03": 34,
+        "response_02": 33,
+        "response_08": 34,
+        "response_09": 34,
+        "response_07": 33,
+        "response_10": 33
+      },
+      "val|same_composition_distinct_polymorph_lower_hull_energy|query": {
+        "query_08": 17,
+        "query_04": 17,
+        "query_02": 17,
+        "query_20": 16,
+        "query_10": 17,
+        "query_11": 17,
+        "query_16": 17,
+        "query_12": 16,
+        "query_19": 17,
+        "query_18": 17,
+        "query_17": 17,
+        "query_09": 17,
+        "query_03": 17,
+        "query_13": 17,
+        "query_15": 16,
+        "query_06": 17,
+        "query_07": 16,
+        "query_05": 17,
+        "query_14": 16,
+        "query_01": 17
+      },
+      "val|same_composition_distinct_polymorph_lower_hull_energy|response": {
+        "response_09": 34,
+        "response_05": 33,
+        "response_06": 33,
+        "response_10": 34,
+        "response_04": 34,
+        "response_02": 33,
+        "response_08": 34,
+        "response_01": 34,
+        "response_07": 33,
+        "response_03": 33
+      }
+    },
+    "orientation_counts": {
+      "train|same_composition_distinct_polymorph": {
+        "False": 3419,
+        "True": 3420
+      },
+      "train|same_composition_distinct_polymorph_lower_hull_energy": {
+        "False": 6838
+      },
+      "val|same_composition_distinct_polymorph": {
+        "False": 167,
+        "True": 167
+      },
+      "val|same_composition_distinct_polymorph_lower_hull_energy": {
+        "False": 335
+      }
+    },
+    "frozen_inputs_unchanged": 193,
+    "scope": "Every corpus record, saved structure and current-orientation energy association checked; independent connected-component reconstruction and complete split-comparison coverage; prior full source and polymorph matcher audit reused by immutable hashes, not rerun or replaced with a physical stability claim"
+  },
+  "output_sha256": {
+    "train.jsonl": "e9b1e9881ea6515c08464550800ec3ee9c4bbc11e05dc5cec783a656c797e522",
+    "val.jsonl": "7bc69f0f3632588940010a6ae33483884593aca865804eae6c5bfe6c2c667755",
+    "preview.jsonl": "43ff98f4d57d0e92a9232b5354237e55d3985b7bc827e2469fe643c0ab98e6a3",
+    "structure_index.jsonl": "c248378e6eea7039389b820fc33caa9449193e444e722c9d942e8d5a0914612d",
+    "split_manifest.jsonl": "e65699243a293a592d19a680e17d075206c07a4a22c9a3633cecea0271f00648",
+    "verification.json": "5be509712ee55f0b6a698b9ed6c69afede119c0b2b1ddb7d2db557b6ea544b32",
+    "README_zh.md": "873d066ae94ca3b569e3b1359043dadead33a4af0fb13b45f4cc5c29ec88d58e",
+    "inputs.json": "9c3bbf96b0bfb2344644d8c0011f61c601dc496ad1ff1cee619feaff253a2344",
+    "build_plan.json": "f0738f74753490240b8e85cef8381691760bc638b09103cfe457ec6394346f69",
+    "split_report.json": "8395ba3980536c7986bdca2662c59ee98a770f5152356839d256668ed0797928",
+    "split_nodes.jsonl": "2ddfa15adf76bc3776b1d378787ef0d88244e1940fa60b818430026a36747098",
+    "pair_selection.jsonl": "6685b99c3a25593aa851f6146854f32050dabd53fce5d63324318a57e161c9f9",
+    "split_geometry_checks.jsonl": "9530001b46110d5cdc8a1e8d745bf20ab871a74d4221d0a5e059a681ad42bbc2",
+    "structure_roundtrip_checks.jsonl": "32bb541103add44beca36598bbd48032206ce2b3b9c5d1f12cc0a250b2c0c318",
+    "excluded_from_corpus/split_holds.jsonl": "a4cc4eaefcf23fa9171225a76fc2e80ac5019c94e6928dd397038a5771ef11f3"
+  },
+  "original_data_and_existing_corpora_modified": false
+}

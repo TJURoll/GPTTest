@@ -1,0 +1,68 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "alm_polymorph",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 10922,
+      "original_sha256": "c248378e6eea7039389b820fc33caa9449193e444e722c9d942e8d5a0914612d",
+      "sha256": "3e50a200f01ec35710b84650af922a0017c3450c80c1469f29125d4c9797915b",
+      "messages_sha256": null,
+      "bytes": 6598926
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 13677,
+      "original_sha256": "e9b1e9881ea6515c08464550800ec3ee9c4bbc11e05dc5cec783a656c797e522",
+      "sha256": "c08a7cf664380569da3f37ec9789d9f958e0e70ca8d5a3d8db79ce6180e11f6d",
+      "messages_sha256": "42a39c8ccbfa0416d5bb6cb87a8d33ebd65d8e7517aba5d3c40aa3fd9f01d00a",
+      "bytes": 50229634
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 669,
+      "original_sha256": "7bc69f0f3632588940010a6ae33483884593aca865804eae6c5bfe6c2c667755",
+      "sha256": "fd996ef86fe35f2b9471d736b4a833bee9f8bb80e77e8f3f1699dd43c28d073f",
+      "messages_sha256": "656d2b5f385144341f6973fc305250b2d895845d7b8a09583159f1858e3fdd0c",
+      "bytes": 2447750
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 10922
+    },
+    "bytes": {
+      "structures": 27441199
+    },
+    "manifest_sha256": "68aee770529b131155d76feaa79c396c4332077fa67f4a0d7e37033e2ef6d389",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 10922,
+    "input_cif_path": 14346,
+    "output_cif_path": 14346
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 6,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/alm_polymorph/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

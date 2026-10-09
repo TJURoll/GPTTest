@@ -1,0 +1,1371 @@
+{
+  "dataset": "AtomWorldBench",
+  "schema_version": 2,
+  "format": "JSONL: id, messages (user instruction + standalone assistant response), provenance metadata; structures only linked through metadata",
+  "seed": 20260909,
+  "one_record_per_source_record": true,
+  "source_order_preserved": true,
+  "template_allocation": "Five equal integer quotas per original action/subgroup (difference at most one), then deterministic group-specific shuffle; SuperCell separator preserved",
+  "bench_prompt_policy": "No random paraphrasing; replace only the original cif file wording with structure, preserving operation and raw parameter strings",
+  "bench_response_policy": "Fixed first action-specific response for each action; excluded from training response quotas",
+  "messages_contain_structures_or_placeholders": false,
+  "message_format_names_forbidden": [
+    "CIF"
+  ],
+  "response_allocation": "Nearest integer global 25% GENERAL quota, apportioned across actions by largest remainder; uniform four-template quotas per response pool; separate deterministic streams for response kind, response template and user template",
+  "path_convention": "Resolve metadata paths as corpus_directory / metadata.path_base / metadata.input_cif (or output_cif, source_file, original_source_file). Indices are zero-based.",
+  "source_directory": "/mnt/e/Datasets/Inorganic_Materials/AtomWorldBench",
+  "source_sha256": {
+    "AtomWorldBench_output_response_templates.txt": "a8636433d46367ef7f4ac28771e61ce54ec5634141ef67c3e806d5118dda8ba5",
+    "action_prompt_templates_expand.txt": "9a98f5caa98f7a7f5554c4bbe082457a3f9514f9fa16b36d62f14b395486219d",
+    "audit_metadata_warnings.jsonl": "2dcbe11f6092c2480ba71a6d837b686bca47692a1cecbcb575e51f6328c8042a",
+    "bench/AddAtomAction.json": "e66fc79764a8fcb6d979e3a5ca48dde9efe48cb23f317463459ad4d3a4b218a2",
+    "bench/ChangeAtomAction.json": "6e5b3f8fbc2c99e9898acc69511de24f9999729735af129edab97e6585ad9739",
+    "bench/DeleteBelowAtomAction.json": "0b0a96ddaf52a939cb19a33d550d20ecd76998fc4a87422c9774cf0728036465",
+    "bench/InsertBetweenAtomsAction.json": "659e17a26f28edb000daaf7e3052e1725a3f6236152a646197623e0162017bc1",
+    "bench/MoveAtomAction.json": "0ff96dc0933e4931379f37740a6d918d573a3cea30d0e77882933dfc4733ecf4",
+    "bench/MoveTowardsAtomAction.json": "ec42121220b1894a729410a1d1d9f80dd20c2bc4cb54f04017404bb5c4f095d6",
+    "bench/RemoveAtomAction.json": "82fa785b7569ad758ad4479542d71bc4b257bc6169775b31e10471a0bd9faff8",
+    "bench/RotateAroundAtomAction.json": "57aa83ca3bff5238be5873a9b30714f28f01b6fdab1cef996c63573fbc9c8b42",
+    "bench/SuperCellAction.json": "2c212c89f49f26dbb6c7e1ff377b5b9fbc25c79fa1671067aacf61f4147f08b7",
+    "bench/SwapAtomsAction.json": "cee8aee79f21b91580ca843383850f6b9cca20c7de4e026d940af54fbc95a67e",
+    "cif_pairs/bench/pairs.jsonl": "48ce5e69afd74666a68172f492ed33d4f0152f7a4f24d92355df5f6776d0ddfd",
+    "cif_pairs/export_manifest.json": "7c6e1e252ebbbfadb699c81a690234d179f73c74f74d431eb3a1fa3b67030897",
+    "cif_pairs/train/pairs.jsonl": "e244906d4a79ad6015db7a14863822e6006b38043fea89fea96837033e74b9c4",
+    "discarded/quarantine_state.json": "0b390e549207e6900fca282719e793f64064ba6eeb6a515215dd3913537509bd",
+    "partition_verification.json": "f95da1e426722c5b89c518fc3a3ad8a539068f0c7c1ee2cfa1b030bf4538abff",
+    "train/AddAtomAction.json": "fc533686f1003366f8077d65680cbe18664636fb2efe5c6438a4a304c135d320",
+    "train/ChangeAtomAction.json": "e549b6a00b2551dc0792243793115188decfffbe9759dc98ecd45a48064fb6dd",
+    "train/DeleteAroundAtomAction.json": "b54974b7fd7d102875d1ce2d842fe65b2d07751a24d41162f75bec33f6cc3729",
+    "train/DeleteBelowAtomAction.json": "1e09a2aedebcc7345f9df2e0b042c3bb82f6391f3cb5811b6c68cd066de1ec50",
+    "train/InsertBetweenAtomsAction.json": "6c40ef6b67f0a4cec16471b055acc4c819538547076825c6e9e93f28bd9d87cb",
+    "train/MoveAroundAtomAction.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "train/MoveAtomAction.json": "8353d6f3917fff6c291739204036638abae2084bf491d8f7dc75617362146e67",
+    "train/MoveSelectedAtomsAction.json": "6f995f0788b95306063f02edbb237285bef78fbe079bc0e423f7e2c7ff4fda2b",
+    "train/MoveTowardsAtomAction.json": "5cfd40181510ba30ed4666c25c96bd068bf62d70a929ed394b2bf145027f428d",
+    "train/RemoveAtomAction.json": "def9b4e35bc598ee77b621932198cf3a3d2976853ab80be307b6bcf2c589bac8",
+    "train/RotateAroundAtomAction.json": "3faf7b173c0a9a1add1df3e75c18ecf044c76456dc4326210b86d3876abc4ec9",
+    "train/SuperCellAction.json": "f611b130ca8515842d2579bcf6600ad5bd0f973bc86c0983d2b2b3dfe158ec68",
+    "train/SwapAtomsAction.json": "0b71e172fed4278bb9f52b9bd8bcc0b6d0bd98c51141d2f4bb31aca79fb4ff58"
+  },
+  "builder_sha256": "1b75ca4ab4f8903c54fed6db2324e1db2f574920ccd92040464bf0f81438a81a",
+  "enabled_templates": [
+    {
+      "id": "01.1",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "text": "Add a {element} atom to the structure at the Cartesian coordinate {cartesian_coordinate}, with coordinates in angstrom."
+    },
+    {
+      "id": "01.2",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "text": "Place one {element} atom at the Cartesian coordinate {cartesian_coordinate} in the structure, with coordinates in angstrom."
+    },
+    {
+      "id": "01.3",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "text": "Insert a {element} atom at Cartesian coordinate {cartesian_coordinate} into the crystal structure, with coordinates in angstrom."
+    },
+    {
+      "id": "01.4",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "text": "Add one atom of {element} at the Cartesian position {cartesian_coordinate} in the atomic structure, with coordinates in angstrom."
+    },
+    {
+      "id": "01.5",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "text": "Introduce a {element} atom into the crystalline structure at the Cartesian coordinate {cartesian_coordinate}, with coordinates in angstrom."
+    },
+    {
+      "id": "02.1",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "text": "Change the element of the atom at index {atom_index} to {element} in the periodic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "02.2",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "text": "Replace the atom at index {atom_index} with {element} in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "02.3",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "text": "Set the atom at index {atom_index} to element {element} in the structural model. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "02.4",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "text": "Convert the atom at index {atom_index} into {element} in the crystal structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "02.5",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "text": "Substitute the atom at index {atom_index} with an atom of {element} in the structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "03.1",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "text": "Delete all atoms whose periodic minimum-image distance from the atom at index {center_index} is strictly less than {radius} angstrom in the crystal structure, including the center atom. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "03.2",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "text": "Remove every atom at a periodic minimum-image distance of less than {radius} angstrom from atom {center_index} in the atomic structure. Include the center atom in the deletion. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "03.3",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "text": "Delete every atom in the crystalline structure with a periodic minimum-image distance strictly below {radius} angstrom from the atom at index {center_index}, including that atom itself. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "03.4",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "text": "Remove all atoms whose periodic minimum-image distance from atom {center_index} is less than {radius} angstrom in the periodic structure. Delete the center atom as well. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "03.5",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "text": "Delete the atoms at periodic minimum-image distances strictly less than {radius} angstrom from the center atom at index {center_index} in the periodic atomic structure, including the center atom. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "04A.1",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "text": "Delete all atoms with a z coordinate below that of the atom at index {atom_index} in the structural model. Exclude the atom itself and all atoms having the same z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "04A.2",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "text": "Remove every atom whose z coordinate is lower than that of atom {atom_index} in the atomic structure, excluding the reference atom and atoms at the same z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "04A.3",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "text": "Delete atoms lying below the atom at index {atom_index} along the z coordinate in the structure. Do not delete the reference atom or atoms sharing its z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "04A.4",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "text": "Remove all atoms in the crystal structure whose z coordinate is less than that of the atom at index {atom_index}. Keep the atom itself and all atoms with an equal z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "04A.5",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "text": "Delete every atom with z lower than the z coordinate of atom {atom_index}. The reference atom and atoms with the same z coordinate must be excluded. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "05A.1",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "text": "Insert a {element} atom on the line segment between the atoms at indices {first_index} and {second_index}, at a distance of {distance} angstrom from atom {first_index} in the atomic structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "05A.2",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "text": "Place a {element} atom on the line segment between atoms {first_index} and {second_index}, {distance} angstrom from atom {first_index}, in the crystalline structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "05A.3",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "text": "Add a {element} atom on the line segment between atoms at indices {first_index} and {second_index}, with the new atom {distance} angstrom from atom {first_index}. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "05A.4",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "text": "Introduce a {element} atom on the line segment between atoms {first_index} and {second_index}, positioned {distance} angstrom from atom {first_index} in the periodic structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "05A.5",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "text": "Add a {element} atom between atoms at indices {first_index} and {second_index} so that it lies on their connecting line segment and is {distance} angstrom from atom {first_index}. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "07.1",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "text": "Move the atom at index {atom_index} by the Cartesian displacement {displacement} angstrom in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "07.2",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "text": "Translate atom {atom_index} by the Cartesian displacement {displacement} angstrom in the structural model. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "07.3",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "text": "Shift the atom at index {atom_index} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "07.4",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "text": "Apply a Cartesian displacement of {displacement} angstrom to the atom at index {atom_index} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "07.5",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "text": "Translate the position of atom {atom_index} by the Cartesian displacement {displacement} angstrom in the structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "08.1",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "text": "Move the atoms at indices {atom_indices} by the Cartesian displacement {displacement} angstrom in the crystal structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "08.2",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "text": "Translate all atoms listed in {atom_indices} by the Cartesian displacement {displacement} angstrom in the atomic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "08.3",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "text": "Shift the atoms with indices {atom_indices} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "08.4",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "text": "Apply a Cartesian displacement of {displacement} angstrom to the atoms at indices {atom_indices} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "08.5",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "text": "Translate the selected atoms at indices {atom_indices} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "09.1",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "text": "Move the atom at index {moving_index} by {distance} angstrom toward the atom at index {target_index} in the periodic structure. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "09.2",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "text": "Translate atom {moving_index} a distance of {distance} angstrom in the direction of atom {target_index}. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "09.3",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "text": "Shift the atom at index {moving_index} toward atom {target_index} by {distance} angstrom in the periodic atomic structure. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "09.4",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "text": "Move atom {moving_index} along the direction toward atom {target_index} by {distance} angstrom. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "09.5",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "text": "Displace the atom at index {moving_index} by {distance} angstrom toward the atom at index {target_index}. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "10.1",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "text": "Delete the atom at index {atom_index} from the structural model. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "10.2",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "text": "Remove atom {atom_index} from the periodic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "10.3",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "text": "Delete the atom whose index is {atom_index} from the structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "10.4",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "text": "Remove the atom with index {atom_index} from the crystal structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "10.5",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "text": "Delete atom {atom_index} from the atomic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "11.1",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "text": "Rotate all surrounding atoms within {radius} angstrom of the center atom at index {center_index} by {angle} degree about the axis {axis}, following the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "11.2",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "text": "Rotate the surrounding atoms located within {radius} angstrom of atom {center_index} through {angle} degree around the axis {axis} according to the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "11.3",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "text": "Apply a {angle} degree rotation about the axis {axis} to all surrounding atoms within {radius} angstrom of the center atom at index {center_index}, using the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "11.4",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "text": "Rotate every surrounding atom within a radius of {radius} angstrom from atom {center_index} by {angle} degree around {axis}. Use the right-hand rule for the rotation direction. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "11.5",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "text": "Perform a {angle} degree right-hand-rule rotation around the axis {axis} for all surrounding atoms within {radius} angstrom of the center atom at index {center_index}. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "12A.1",
+      "group": "12A",
+      "action_type": "SuperCellAction",
+      "text": "Generate a supercell of size {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12A.2",
+      "group": "12A",
+      "action_type": "SuperCellAction",
+      "text": "Build a {repeat_a}x{repeat_b}x{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12A.3",
+      "group": "12A",
+      "action_type": "SuperCellAction",
+      "text": "Construct a supercell with replication factors {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12A.4",
+      "group": "12A",
+      "action_type": "SuperCellAction",
+      "text": "Expand the structure into a {repeat_a}x{repeat_b}x{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12A.5",
+      "group": "12A",
+      "action_type": "SuperCellAction",
+      "text": "Make a supercell using replication factors {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12B.1",
+      "group": "12B",
+      "action_type": "SuperCellAction",
+      "text": "Generate a supercell of size {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12B.2",
+      "group": "12B",
+      "action_type": "SuperCellAction",
+      "text": "Build a {repeat_a}X{repeat_b}X{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12B.3",
+      "group": "12B",
+      "action_type": "SuperCellAction",
+      "text": "Construct a supercell with replication factors {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12B.4",
+      "group": "12B",
+      "action_type": "SuperCellAction",
+      "text": "Expand the structure into a {repeat_a}X{repeat_b}X{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12B.5",
+      "group": "12B",
+      "action_type": "SuperCellAction",
+      "text": "Make a supercell using replication factors {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12C.1",
+      "group": "12C",
+      "action_type": "SuperCellAction",
+      "text": "Generate a supercell of size {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12C.2",
+      "group": "12C",
+      "action_type": "SuperCellAction",
+      "text": "Build a {repeat_a}×{repeat_b}×{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12C.3",
+      "group": "12C",
+      "action_type": "SuperCellAction",
+      "text": "Construct a supercell with replication factors {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12C.4",
+      "group": "12C",
+      "action_type": "SuperCellAction",
+      "text": "Expand the structure into a {repeat_a}×{repeat_b}×{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12C.5",
+      "group": "12C",
+      "action_type": "SuperCellAction",
+      "text": "Make a supercell using replication factors {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12D.1",
+      "group": "12D",
+      "action_type": "SuperCellAction",
+      "text": "Generate a supercell of size {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12D.2",
+      "group": "12D",
+      "action_type": "SuperCellAction",
+      "text": "Build a {repeat_a}*{repeat_b}*{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12D.3",
+      "group": "12D",
+      "action_type": "SuperCellAction",
+      "text": "Construct a supercell with replication factors {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12D.4",
+      "group": "12D",
+      "action_type": "SuperCellAction",
+      "text": "Expand the structure into a {repeat_a}*{repeat_b}*{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12D.5",
+      "group": "12D",
+      "action_type": "SuperCellAction",
+      "text": "Make a supercell using replication factors {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12E.1",
+      "group": "12E",
+      "action_type": "SuperCellAction",
+      "text": "Generate a supercell of size {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12E.2",
+      "group": "12E",
+      "action_type": "SuperCellAction",
+      "text": "Build a {repeat_a} by {repeat_b} by {repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12E.3",
+      "group": "12E",
+      "action_type": "SuperCellAction",
+      "text": "Construct a supercell with replication factors {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12E.4",
+      "group": "12E",
+      "action_type": "SuperCellAction",
+      "text": "Expand the structure into a {repeat_a} by {repeat_b} by {repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12E.5",
+      "group": "12E",
+      "action_type": "SuperCellAction",
+      "text": "Make a supercell using replication factors {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "13.1",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "text": "Swap the spatial positions of the atoms at indices {first_index} and {second_index} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "13.2",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "text": "Exchange the positions of atoms {first_index} and {second_index} in the periodic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "13.3",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "text": "Switch the spatial coordinates of the atoms at indices {first_index} and {second_index}. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "13.4",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "text": "Exchange the spatial locations of atom {first_index} and atom {second_index} in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure."
+    },
+    {
+      "id": "13.5",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "text": "Swap the positions occupied by atoms at indices {first_index} and {second_index} in the structural model. Atom indices are zero-based and follow the atom order in the input structure."
+    }
+  ],
+  "response_templates": [
+    {
+      "id": "01.1",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "One {element} atom has been added at the Cartesian coordinates {cartesian_coordinate} angstrom."
+    },
+    {
+      "id": "01.2",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by adding one {element} atom at the Cartesian coordinates {cartesian_coordinate} angstrom."
+    },
+    {
+      "id": "01.3",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "A new {element} atom has been placed at the Cartesian position {cartesian_coordinate} angstrom."
+    },
+    {
+      "id": "01.4",
+      "group": "01",
+      "action_type": "AddAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested {element} atom has been inserted at the Cartesian coordinates {cartesian_coordinate} angstrom."
+    },
+    {
+      "id": "02.1",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The element of atom {atom_index} has been changed to {element}."
+    },
+    {
+      "id": "02.2",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {atom_index} has been assigned the element {element}."
+    },
+    {
+      "id": "02.3",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The element at atom index {atom_index} has been replaced with {element}."
+    },
+    {
+      "id": "02.4",
+      "group": "02",
+      "action_type": "ChangeAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by changing the element of atom {atom_index} to {element}."
+    },
+    {
+      "id": "03.1",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "All atoms whose periodic minimum-image distance from atom {center_index} is strictly less than {radius} angstrom have been removed, including the center atom."
+    },
+    {
+      "id": "03.2",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The center atom {center_index} and all atoms at periodic minimum-image distances of less than {radius} angstrom from it have been deleted."
+    },
+    {
+      "id": "03.3",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The atoms around atom {center_index} have been removed where their periodic minimum-image distance from it was strictly less than {radius} angstrom, with the center atom included."
+    },
+    {
+      "id": "03.4",
+      "group": "03",
+      "action_type": "DeleteAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by deleting the center atom {center_index} and every atom whose periodic minimum-image distance from it is strictly below {radius} angstrom."
+    },
+    {
+      "id": "04A.1",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atoms with Cartesian z coordinates strictly lower than that of atom {atom_index} have been removed, while the reference atom and atoms at the same z coordinate were retained."
+    },
+    {
+      "id": "04A.2",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "All atoms strictly below atom {atom_index} in Cartesian z have been deleted, excluding the reference atom and atoms sharing its z coordinate."
+    },
+    {
+      "id": "04A.3",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by removing atoms at strictly lower Cartesian z coordinates than atom {atom_index}, while retaining the reference atom and all atoms at its z level."
+    },
+    {
+      "id": "04A.4",
+      "group": "04A",
+      "action_type": "DeleteBelowAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atoms lying strictly below atom {atom_index} along Cartesian z have been removed, with the reference atom and equal-z atoms retained."
+    },
+    {
+      "id": "05A.1",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "One {element} atom has been inserted on the direct Cartesian line segment between atoms {first_index} and {second_index}, {distance} angstrom from atom {first_index}."
+    },
+    {
+      "id": "05A.2",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by placing one {element} atom on the direct Cartesian line segment between atoms {first_index} and {second_index}, at a distance of {distance} angstrom from atom {first_index}."
+    },
+    {
+      "id": "05A.3",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "A new {element} atom has been positioned on the direct Cartesian line segment from atom {first_index} to atom {second_index}, {distance} angstrom from atom {first_index}."
+    },
+    {
+      "id": "05A.4",
+      "group": "05A",
+      "action_type": "InsertBetweenAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested {element} atom has been added on the direct Cartesian line segment connecting atoms {first_index} and {second_index}, at the specified distance of {distance} angstrom from atom {first_index}."
+    },
+    {
+      "id": "07.1",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {atom_index} has been moved by the Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "07.2",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The Cartesian displacement {displacement} angstrom has been applied to atom {atom_index}."
+    },
+    {
+      "id": "07.3",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by translating atom {atom_index} by the Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "07.4",
+      "group": "07",
+      "action_type": "MoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {atom_index} has been shifted according to the requested Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "08.1",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atoms {atom_indices} have been moved by the Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "08.2",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The Cartesian displacement {displacement} angstrom has been applied to atoms {atom_indices}."
+    },
+    {
+      "id": "08.3",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The selected atoms {atom_indices} have each been translated by the Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "08.4",
+      "group": "08",
+      "action_type": "MoveSelectedAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by shifting each atom in {atom_indices} by the requested Cartesian displacement {displacement} angstrom."
+    },
+    {
+      "id": "09.1",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {moving_index} has been moved the full {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}."
+    },
+    {
+      "id": "09.2",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by displacing atom {moving_index} by the full {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}."
+    },
+    {
+      "id": "09.3",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {moving_index} has been translated by {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}, without clipping the displacement at the target."
+    },
+    {
+      "id": "09.4",
+      "group": "09",
+      "action_type": "MoveTowardsAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The full {distance}-angstrom displacement of atom {moving_index} along the initial direct Cartesian direction toward atom {target_index} has been applied."
+    },
+    {
+      "id": "10.1",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atom {atom_index} has been removed from the structure."
+    },
+    {
+      "id": "10.2",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by deleting atom {atom_index}."
+    },
+    {
+      "id": "10.3",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The atom at index {atom_index} has been deleted."
+    },
+    {
+      "id": "10.4",
+      "group": "10",
+      "action_type": "RemoveAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested removal of atom {atom_index} has been completed."
+    },
+    {
+      "id": "11.1",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The surrounding atoms with periodic minimum-image distances strictly less than {radius} angstrom from atom {center_index} have been rotated by {angle} degrees about the axis through the center atom with Cartesian direction {axis}, following the right-hand rule."
+    },
+    {
+      "id": "11.2",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "A {angle}-degree right-hand-rule rotation has been applied to the surrounding atoms at periodic minimum-image distances of less than {radius} angstrom from atom {center_index}, about the axis passing through the center atom in Cartesian direction {axis}."
+    },
+    {
+      "id": "11.3",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by rotating the surrounding atoms selected with a strictly less than {radius} angstrom periodic minimum-image cutoff around atom {center_index}, through {angle} degrees about the axis through the center atom with Cartesian direction {axis}, according to the right-hand rule."
+    },
+    {
+      "id": "11.4",
+      "group": "11",
+      "action_type": "RotateAroundAtomAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested {angle}-degree rotation about the axis through atom {center_index} in Cartesian direction {axis} has been applied to the surrounding atoms at periodic minimum-image distances strictly below {radius} angstrom from the center atom, following the right-hand rule."
+    },
+    {
+      "id": "12.1",
+      "group": "12",
+      "action_type": "SuperCellAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "A {repeat_a}×{repeat_b}×{repeat_c} supercell has been constructed using replication factors along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12.2",
+      "group": "12",
+      "action_type": "SuperCellAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "A supercell has been generated by using {repeat_a}, {repeat_b}, and {repeat_c} repeats of the input unit cell along the a, b, and c lattice vectors, respectively."
+    },
+    {
+      "id": "12.3",
+      "group": "12",
+      "action_type": "SuperCellAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The input unit cell has been repeated with replication factors {repeat_a}, {repeat_b}, and {repeat_c} along the a, b, and c lattice vectors, respectively, to form the supercell."
+    },
+    {
+      "id": "12.4",
+      "group": "12",
+      "action_type": "SuperCellAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested supercell with replication factors {repeat_a}×{repeat_b}×{repeat_c} along the a, b, and c lattice vectors, respectively, has been constructed."
+    },
+    {
+      "id": "13.1",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The spatial positions of atoms {first_index} and {second_index} have been swapped."
+    },
+    {
+      "id": "13.2",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "Atoms {first_index} and {second_index} have exchanged their spatial positions."
+    },
+    {
+      "id": "13.3",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The structure has been updated by swapping the positions of atoms {first_index} and {second_index}."
+    },
+    {
+      "id": "13.4",
+      "group": "13",
+      "action_type": "SwapAtomsAction",
+      "type": "ACTION-SPECIFIC",
+      "text": "The requested position exchange between atoms {first_index} and {second_index} has been applied."
+    },
+    {
+      "id": "GENERAL.1",
+      "group": "GENERAL",
+      "action_type": null,
+      "type": "GENERAL",
+      "text": "The requested structural modification has been applied."
+    },
+    {
+      "id": "GENERAL.2",
+      "group": "GENERAL",
+      "action_type": null,
+      "type": "GENERAL",
+      "text": "The structure has been updated according to the requested operation."
+    },
+    {
+      "id": "GENERAL.3",
+      "group": "GENERAL",
+      "action_type": null,
+      "type": "GENERAL",
+      "text": "The specified structural edit has been completed."
+    },
+    {
+      "id": "GENERAL.4",
+      "group": "GENERAL",
+      "action_type": null,
+      "type": "GENERAL",
+      "text": "The requested operation has been applied to the structure."
+    }
+  ],
+  "disabled_groups": [
+    "04B",
+    "05B",
+    "06"
+  ],
+  "train_template_quotas": {
+    "01": {
+      "01.1": 1000,
+      "01.2": 1000,
+      "01.3": 1000,
+      "01.4": 1000,
+      "01.5": 1000
+    },
+    "02": {
+      "02.1": 1000,
+      "02.2": 1000,
+      "02.3": 1000,
+      "02.4": 1000,
+      "02.5": 1000
+    },
+    "03": {
+      "03.1": 1000,
+      "03.2": 999,
+      "03.3": 999,
+      "03.4": 999,
+      "03.5": 999
+    },
+    "04A": {
+      "04A.1": 507,
+      "04A.2": 507,
+      "04A.3": 507,
+      "04A.4": 506,
+      "04A.5": 506
+    },
+    "05A": {
+      "05A.1": 997,
+      "05A.2": 997,
+      "05A.3": 997,
+      "05A.4": 996,
+      "05A.5": 996
+    },
+    "07": {
+      "07.1": 1000,
+      "07.2": 1000,
+      "07.3": 1000,
+      "07.4": 1000,
+      "07.5": 1000
+    },
+    "08": {
+      "08.1": 1000,
+      "08.2": 1000,
+      "08.3": 1000,
+      "08.4": 1000,
+      "08.5": 1000
+    },
+    "09": {
+      "09.1": 998,
+      "09.2": 997,
+      "09.3": 997,
+      "09.4": 997,
+      "09.5": 997
+    },
+    "10": {
+      "10.1": 1000,
+      "10.2": 1000,
+      "10.3": 1000,
+      "10.4": 1000,
+      "10.5": 1000
+    },
+    "11": {
+      "11.1": 993,
+      "11.2": 993,
+      "11.3": 993,
+      "11.4": 993,
+      "11.5": 992
+    },
+    "12A": {
+      "12A.1": 205,
+      "12A.2": 205,
+      "12A.3": 205,
+      "12A.4": 205,
+      "12A.5": 205
+    },
+    "12B": {
+      "12B.1": 194,
+      "12B.2": 194,
+      "12B.3": 194,
+      "12B.4": 193,
+      "12B.5": 193
+    },
+    "12C": {
+      "12C.1": 194,
+      "12C.2": 193,
+      "12C.3": 193,
+      "12C.4": 193,
+      "12C.5": 193
+    },
+    "12D": {
+      "12D.1": 209,
+      "12D.2": 208,
+      "12D.3": 208,
+      "12D.4": 208,
+      "12D.5": 208
+    },
+    "12E": {
+      "12E.1": 200,
+      "12E.2": 200,
+      "12E.3": 200,
+      "12E.4": 200,
+      "12E.5": 200
+    },
+    "13": {
+      "13.1": 998,
+      "13.2": 998,
+      "13.3": 998,
+      "13.4": 998,
+      "13.5": 998
+    }
+  },
+  "train_response_quotas": {
+    "target_general_fraction": "1/4",
+    "general_records": 14363,
+    "action_specific_records": 43089,
+    "by_action": {
+      "AddAtomAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "ChangeAtomAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "DeleteAroundAtomAction": {
+        "GENERAL": 1249,
+        "ACTION-SPECIFIC": 3747
+      },
+      "DeleteBelowAtomAction": {
+        "GENERAL": 633,
+        "ACTION-SPECIFIC": 1900
+      },
+      "InsertBetweenAtomsAction": {
+        "GENERAL": 1246,
+        "ACTION-SPECIFIC": 3737
+      },
+      "MoveAtomAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "MoveSelectedAtomsAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "MoveTowardsAtomAction": {
+        "GENERAL": 1247,
+        "ACTION-SPECIFIC": 3739
+      },
+      "RemoveAtomAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "RotateAroundAtomAction": {
+        "GENERAL": 1241,
+        "ACTION-SPECIFIC": 3723
+      },
+      "SuperCellAction": {
+        "GENERAL": 1250,
+        "ACTION-SPECIFIC": 3750
+      },
+      "SwapAtomsAction": {
+        "GENERAL": 1247,
+        "ACTION-SPECIFIC": 3743
+      }
+    },
+    "template_quotas_by_pool": {
+      "GENERAL": {
+        "GENERAL.1": 3591,
+        "GENERAL.2": 3591,
+        "GENERAL.3": 3591,
+        "GENERAL.4": 3590
+      },
+      "01": {
+        "01.1": 938,
+        "01.2": 938,
+        "01.3": 937,
+        "01.4": 937
+      },
+      "02": {
+        "02.1": 938,
+        "02.2": 938,
+        "02.3": 937,
+        "02.4": 937
+      },
+      "03": {
+        "03.1": 937,
+        "03.2": 937,
+        "03.3": 937,
+        "03.4": 936
+      },
+      "04A": {
+        "04A.1": 475,
+        "04A.2": 475,
+        "04A.3": 475,
+        "04A.4": 475
+      },
+      "05A": {
+        "05A.1": 935,
+        "05A.2": 934,
+        "05A.3": 934,
+        "05A.4": 934
+      },
+      "07": {
+        "07.1": 938,
+        "07.2": 938,
+        "07.3": 937,
+        "07.4": 937
+      },
+      "08": {
+        "08.1": 938,
+        "08.2": 938,
+        "08.3": 937,
+        "08.4": 937
+      },
+      "09": {
+        "09.1": 935,
+        "09.2": 935,
+        "09.3": 935,
+        "09.4": 934
+      },
+      "10": {
+        "10.1": 938,
+        "10.2": 938,
+        "10.3": 937,
+        "10.4": 937
+      },
+      "11": {
+        "11.1": 931,
+        "11.2": 931,
+        "11.3": 931,
+        "11.4": 930
+      },
+      "12": {
+        "12.1": 938,
+        "12.2": 938,
+        "12.3": 937,
+        "12.4": 937
+      },
+      "13": {
+        "13.1": 936,
+        "13.2": 936,
+        "13.3": 936,
+        "13.4": 935
+      }
+    }
+  },
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "records": 57452,
+      "action_counts": {
+        "AddAtomAction": 5000,
+        "ChangeAtomAction": 5000,
+        "DeleteAroundAtomAction": 4996,
+        "DeleteBelowAtomAction": 2533,
+        "InsertBetweenAtomsAction": 4983,
+        "MoveAtomAction": 5000,
+        "MoveSelectedAtomsAction": 5000,
+        "MoveTowardsAtomAction": 4986,
+        "RemoveAtomAction": 5000,
+        "RotateAroundAtomAction": 4964,
+        "SuperCellAction": 5000,
+        "SwapAtomsAction": 4990
+      },
+      "template_counts": {
+        "01.1": 1000,
+        "01.2": 1000,
+        "01.3": 1000,
+        "01.4": 1000,
+        "01.5": 1000,
+        "02.1": 1000,
+        "02.2": 1000,
+        "02.3": 1000,
+        "02.4": 1000,
+        "02.5": 1000,
+        "03.1": 1000,
+        "03.2": 999,
+        "03.3": 999,
+        "03.4": 999,
+        "03.5": 999,
+        "04A.1": 507,
+        "04A.2": 507,
+        "04A.3": 507,
+        "04A.4": 506,
+        "04A.5": 506,
+        "05A.1": 997,
+        "05A.2": 997,
+        "05A.3": 997,
+        "05A.4": 996,
+        "05A.5": 996,
+        "07.1": 1000,
+        "07.2": 1000,
+        "07.3": 1000,
+        "07.4": 1000,
+        "07.5": 1000,
+        "08.1": 1000,
+        "08.2": 1000,
+        "08.3": 1000,
+        "08.4": 1000,
+        "08.5": 1000,
+        "09.1": 998,
+        "09.2": 997,
+        "09.3": 997,
+        "09.4": 997,
+        "09.5": 997,
+        "10.1": 1000,
+        "10.2": 1000,
+        "10.3": 1000,
+        "10.4": 1000,
+        "10.5": 1000,
+        "11.1": 993,
+        "11.2": 993,
+        "11.3": 993,
+        "11.4": 993,
+        "11.5": 992,
+        "12A.1": 205,
+        "12A.2": 205,
+        "12A.3": 205,
+        "12A.4": 205,
+        "12A.5": 205,
+        "12B.1": 194,
+        "12B.2": 194,
+        "12B.3": 194,
+        "12B.4": 193,
+        "12B.5": 193,
+        "12C.1": 194,
+        "12C.2": 193,
+        "12C.3": 193,
+        "12C.4": 193,
+        "12C.5": 193,
+        "12D.1": 209,
+        "12D.2": 208,
+        "12D.3": 208,
+        "12D.4": 208,
+        "12D.5": 208,
+        "12E.1": 200,
+        "12E.2": 200,
+        "12E.3": 200,
+        "12E.4": 200,
+        "12E.5": 200,
+        "13.1": 998,
+        "13.2": 998,
+        "13.3": 998,
+        "13.4": 998,
+        "13.5": 998
+      },
+      "response_template_counts": {
+        "01.1": 938,
+        "01.2": 938,
+        "01.3": 937,
+        "01.4": 937,
+        "02.1": 938,
+        "02.2": 938,
+        "02.3": 937,
+        "02.4": 937,
+        "03.1": 937,
+        "03.2": 937,
+        "03.3": 937,
+        "03.4": 936,
+        "04A.1": 475,
+        "04A.2": 475,
+        "04A.3": 475,
+        "04A.4": 475,
+        "05A.1": 935,
+        "05A.2": 934,
+        "05A.3": 934,
+        "05A.4": 934,
+        "07.1": 938,
+        "07.2": 938,
+        "07.3": 937,
+        "07.4": 937,
+        "08.1": 938,
+        "08.2": 938,
+        "08.3": 937,
+        "08.4": 937,
+        "09.1": 935,
+        "09.2": 935,
+        "09.3": 935,
+        "09.4": 934,
+        "10.1": 938,
+        "10.2": 938,
+        "10.3": 937,
+        "10.4": 937,
+        "11.1": 931,
+        "11.2": 931,
+        "11.3": 931,
+        "11.4": 930,
+        "12.1": 938,
+        "12.2": 938,
+        "12.3": 937,
+        "12.4": 937,
+        "13.1": 936,
+        "13.2": 936,
+        "13.3": 936,
+        "13.4": 935,
+        "GENERAL.1": 3591,
+        "GENERAL.2": 3591,
+        "GENERAL.3": 3591,
+        "GENERAL.4": 3590
+      },
+      "response_type_counts": {
+        "ACTION-SPECIFIC": 43089,
+        "GENERAL": 14363
+      },
+      "sha256": "f3662651c5c80ca98e6c730f734ed0c6c278521d8d2e72b3c507bbdd736a2e57",
+      "all_records_roundtrip_verified": true,
+      "all_messages_format_neutral_and_parameters_filled": true
+    },
+    "bench": {
+      "file": "bench.jsonl",
+      "records": 9424,
+      "action_counts": {
+        "AddAtomAction": 1000,
+        "ChangeAtomAction": 1000,
+        "DeleteBelowAtomAction": 489,
+        "InsertBetweenAtomsAction": 993,
+        "MoveAtomAction": 1000,
+        "MoveTowardsAtomAction": 995,
+        "RemoveAtomAction": 1000,
+        "RotateAroundAtomAction": 949,
+        "SuperCellAction": 1000,
+        "SwapAtomsAction": 998
+      },
+      "template_counts": {
+        "original_format_neutralized": 9424
+      },
+      "response_template_counts": {
+        "01.1": 1000,
+        "02.1": 1000,
+        "04A.1": 489,
+        "05A.1": 993,
+        "07.1": 1000,
+        "09.1": 995,
+        "10.1": 1000,
+        "11.1": 949,
+        "12.1": 1000,
+        "13.1": 998
+      },
+      "response_type_counts": {
+        "ACTION-SPECIFIC": 9424
+      },
+      "sha256": "b68433058b17afc6b5291c33301a967681592167246cbc26486ddfabf64ec2b3",
+      "all_records_roundtrip_verified": true,
+      "all_messages_format_neutral_and_parameters_filled": true
+    }
+  },
+  "geometry_revalidated_in_this_conversion": false,
+  "additional_physical_or_element_filtering": false,
+  "geometry_audit_reference": "../CLEANING_STATUS_zh.md",
+  "all_cif_files_readback_sha256_verified": 133752,
+  "source_hashes_unchanged": true,
+  "retained_metadata_warning_records": 6015,
+  "preview": {
+    "file": "preview.jsonl",
+    "records": 105,
+    "user_templates_covered": 80,
+    "response_templates_covered": 52,
+    "sha256": "8e6d9f54841d9bdaf480bbcd7424f7551b2b400b5ec66a13a51e2facac6049a8",
+    "subset_of_train_not_extra_training_records": true
+  },
+  "split_overlap_report_sha256": "a31f4701f0b50c2f3c48280864fa23b80090aaad9a67ee9c3690da2efe853ffd",
+  "template_snapshot_sha256": "9a98f5caa98f7a7f5554c4bbe082457a3f9514f9fa16b36d62f14b395486219d",
+  "response_template_snapshot_sha256": "a8636433d46367ef7f4ac28771e61ce54ec5634141ef67c3e806d5118dda8ba5"
+}

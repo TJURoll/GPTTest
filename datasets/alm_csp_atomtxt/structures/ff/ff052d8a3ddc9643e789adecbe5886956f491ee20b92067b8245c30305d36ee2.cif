@@ -1,0 +1,20 @@
+data_structure
+_cell_length_a 3.3649694775759680
+_cell_length_b 3.3649694775759680
+_cell_length_c 8.2665133117288558
+_cell_angle_alpha 90.0000000000000000
+_cell_angle_beta 90.0000000000000000
+_cell_angle_gamma 90.0000000000000000
+loop_
+_space_group_symop_operation_xyz
+'x, y, z'
+loop_
+_atom_site_type_symbol
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Na Na1 0.0000000000000000 0.0000000000000000 0.6160971379997544 1
+Sn Sn2 0.0000000000000000 0.0000000000000000 0.0048158673529498 1
+Cl Cl3 0.0000000000000000 0.0000000000000000 0.3106918136791843 1

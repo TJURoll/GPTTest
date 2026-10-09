@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "source": "/mnt/e/Datasets/Matterchat/matterchat_dataset/llm_corpus/structures.jsonl",
+  "source_sha256": "e7ac62f680bf82f3ba21022d53cb69f9abd895964683c0b774c3a8d4fa3f4ee4",
+  "exporter_sha256": "55c102246e25a310ba42efaa9bf368b6a5c916e63af49ab8e0300fd8f7bf49e4",
+  "post_export_tool_update": {
+    "current_exporter_sha256": "45f424eee13aef4c929309ccdcb5067d41c54435fbd5ab35f589d2f0fa90f275",
+    "change": "After this completed export, the script's final directory checks were optimized and resumable finalization was added. CIF serialization and per-file round-trip validation code are unchanged; the original exporter hash above records the version used for this batch."
+  },
+  "versions": {
+    "pymatgen": "2026.3.23",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  },
+  "source_counts": {
+    "train": 128609,
+    "val": 14290,
+    "gnome": 15483
+  },
+  "expected_counts": {
+    "train": 128609,
+    "val": 14290,
+    "gnome": 15483
+  },
+  "exported_counts": {
+    "train": 128609,
+    "val": 14290,
+    "gnome": 15483
+  },
+  "total_cifs": 158382,
+  "failed_count": 0,
+  "limit_per_split": 0,
+  "cif_encoding": "P1 full-site listing; original cell, no refinement or symmetry reduction; not a claim that the maximal crystal space group is P1",
+  "significant_figures": 16,
+  "parser_frac_tolerance": 0,
+  "validation": "Read each saved file, parse with primitive=False, compare atom counts, species/occupancies, lattice metric, and one-to-one periodic positions",
+  "metric_rtol": 1e-10,
+  "metric_atol_angstrom_squared": 1e-09,
+  "position_atol_angstrom": 1e-08,
+  "max_periodic_position_error_angstrom": 2.327919007124386e-15,
+  "max_metric_error_angstrom_squared": 7.275957614183426e-12,
+  "warning_counts": {
+    "No Pauling electronegativity for He. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.": 8,
+    "No Pauling electronegativity for Ne. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.": 1,
+    "No Pauling electronegativity for Ar. Setting to NaN. This has no physical meaning, and is mainly done to avoid errors caused by the code expecting a float.": 2
+  },
+  "index_sha256": "29fa9360cfc18ad42a1c99b5749745dd6b84337cd296a19515856f67077e906b",
+  "elapsed_seconds": 248.92
+}

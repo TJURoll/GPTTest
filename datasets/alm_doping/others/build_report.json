@@ -1,0 +1,121 @@
+{
+  "status": "complete",
+  "created_utc": "2026-09-12T09:46:49.795271+00:00",
+  "seed": 20260912,
+  "total_records": 6928,
+  "record_counts": {
+    "train": 6403,
+    "val": 525
+  },
+  "total_structure_files": 9098,
+  "split_group_counts": {
+    "train": 2929,
+    "val": 173
+  },
+  "template_counts": {
+    "train.query": {
+      "query_03": 1281,
+      "query_02": 1281,
+      "query_05": 1280,
+      "query_04": 1280,
+      "query_01": 1281
+    },
+    "train.response": {
+      "response_05": 1280,
+      "response_03": 1281,
+      "response_04": 1280,
+      "response_02": 1281,
+      "response_01": 1281
+    },
+    "val.query": {
+      "query_01": 105,
+      "query_05": 105,
+      "query_04": 105,
+      "query_03": 105,
+      "query_02": 105
+    },
+    "val.response": {
+      "response_02": 105,
+      "response_03": 105,
+      "response_01": 105,
+      "response_04": 105,
+      "response_05": 105
+    }
+  },
+  "output_sha256": {
+    "train.jsonl": "e753121eb7d87f0d566426934a9b7cadf0014d58a55d1318929951a101e4b504",
+    "val.jsonl": "c0bdabe228a76dfe6cc28eb7c8cf1ff55c7031981bbb670ba30499092ed82c7e",
+    "preview.jsonl": "a51df8691cd0c579ff70565ee89a673b9fe880f6e3c7cd336e25c285d7ed2286",
+    "structure_index.jsonl": "1fc1bd0889f432e309de735d3608be8ffef57d384de25a2c3c3b9991d0ecafef",
+    "split_manifest.jsonl": "c308670056014dfac26fc6c9bb5a4f8f3dd7bd765c40607e775ff5f613545c2d",
+    "inputs.json": "e9539a27037e16c59662d4438173c7ebef1787e55e271f466a17f2a88ac1290f",
+    "build_plan.json": "07e5931bf4fc710be25d02e3ec17f0da913f61fec79bc7adb49fb623e1ebea04",
+    "verification.json": "54813500e04866f34a2f18b49019037468c2e3cf4d1e9bdfe30ca2df96e7c11c",
+    "README_zh.md": "7c690b8684564a583f4cb316aeb66f07ddf1d0a926d31ab11d0a643c41b6548f"
+  },
+  "verification": {
+    "status": "passed",
+    "verified_utc": "2026-09-12T09:46:49.780976+00:00",
+    "regressions": {
+      "export_positive_cases": 4,
+      "export_corruption_rejections": 4,
+      "balanced_sampling_sizes": 61,
+      "forbidden_text_rejections": 6,
+      "group_split_cases": 5,
+      "rendering_cases": 3
+    },
+    "records_verified": 6928,
+    "record_counts": {
+      "train": 6403,
+      "val": 525
+    },
+    "unique_structure_files_reread": 9098,
+    "exported_structure_pair_witnesses_independently_reconstructed": 6928,
+    "preview_records_exactly_matched": 5,
+    "cross_split_component_overlap": 0,
+    "cross_split_raw_geometry_overlap": 0,
+    "cross_split_native_identity_overlap": 0,
+    "old_corpus_raw_and_identity_links_rechecked": 4015,
+    "maximum_export_site_error_A": 3.1401849173675503e-16,
+    "maximum_export_cell_metric_error_A2": 2.2737367544323206e-13,
+    "parser_warning_counts": {},
+    "template_counts": {
+      "train.query": {
+        "query_03": 1281,
+        "query_02": 1281,
+        "query_05": 1280,
+        "query_04": 1280,
+        "query_01": 1281
+      },
+      "train.response": {
+        "response_05": 1280,
+        "response_03": 1281,
+        "response_04": 1280,
+        "response_02": 1281,
+        "response_01": 1281
+      },
+      "val.query": {
+        "query_01": 105,
+        "query_05": 105,
+        "query_04": 105,
+        "query_03": 105,
+        "query_02": 105
+      },
+      "val.response": {
+        "response_02": 105,
+        "response_03": 105,
+        "response_01": 105,
+        "response_04": 105,
+        "response_05": 105
+      }
+    },
+    "frozen_input_files_unchanged": 165,
+    "build_plan_sha256": "07e5931bf4fc710be25d02e3ec17f0da913f61fec79bc7adb49fb623e1ebea04",
+    "scope": "Every saved structure reread and each exported pair checked against its geometric witness; prior source and transitive split audit reused with unchanged hashes; no new physical or DFT claims"
+  },
+  "original_data_modified": false,
+  "existing_csp_atomtxt_corpus_modified": false,
+  "task": "bounded_all_site_substitution",
+  "template_policy": "One conversation per selected ordered pair; query and response independently balanced within each split and the single task subgroup",
+  "split_policy": "Preserve inherited train/val assignments; split only new complete components by seeded 90/10 group allocation; never split endpoints or change old corpus"
+}

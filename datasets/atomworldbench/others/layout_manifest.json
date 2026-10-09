@@ -1,0 +1,60 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "atomworldbench",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "bench.jsonl",
+      "relative_path": "messages/bench.jsonl",
+      "rows": 9424,
+      "original_sha256": "b68433058b17afc6b5291c33301a967681592167246cbc26486ddfabf64ec2b3",
+      "sha256": "c166996cedcae44cc10b75c1d1c70cbd6b3cf7860c76375afa7d0945606f8ba2",
+      "messages_sha256": "6c9d7b44f7bb980b5e94d616b60aab2a547e98e48bcdea5f80285ff5ed914a8d",
+      "bytes": 15252381
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 57452,
+      "original_sha256": "f3662651c5c80ca98e6c730f734ed0c6c278521d8d2e72b3c507bbdd736a2e57",
+      "sha256": "f3fc5c0d52edc9b1c394f455c5834349f852b7359baf0d6eaca0c7f241d4f5c7",
+      "messages_sha256": "4a1d01d456991bed882afcab20e47ce34d680254565449c964a7874e4d22cf2c",
+      "bytes": 100346434
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 133752
+    },
+    "bytes": {
+      "structures": 416639460
+    },
+    "manifest_sha256": "3ea7fd41fe64852d4518920ea43e980e895ec7067bed127e77bd67f2edb3f272",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "metadata.source_file": 66876,
+    "metadata.original_source_file": 66876,
+    "metadata.input_cif": 66876,
+    "metadata.output_cif": 66876
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 105,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/atomworldbench/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "bench.jsonl",
+    "train.jsonl"
+  ]
+}

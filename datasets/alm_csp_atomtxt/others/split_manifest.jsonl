@@ -1,0 +1,5 @@
+{"split":"train","split_group_id":"00001da420d8be8247da2099fa17ccd01ac4ee5b23d8f44ddc2658b33098da53","task_counts":{"csp":2}}
+{"split":"train","split_group_id":"0000777b089fd5fc622d2942063aea400831eb6b2346aeddd67abdf4a2c34197","task_counts":{"csp":1}}
+{"split":"train","split_group_id":"000082f55b482e85ce31049fb44a24f575b2ef573789d021754f3bba7b671e94","task_counts":{"csp":1}}
+{"split":"val","split_group_id":"00011d965d7388a3f9ba21a4c6e3cf985d2817d4c552333a27207ce0fd6b2b62","task_counts":{"csp":1}}
+{"split":"train","split_group_id":"000194eeeef491ca5411b5461c1e0031f2520aaf51ed9a6d812a7c9a1da65da1","task_counts":{"csp":1}}

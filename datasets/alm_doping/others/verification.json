@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "verified_utc": "2026-09-12T09:46:49.780976+00:00",
+  "regressions": {
+    "export_positive_cases": 4,
+    "export_corruption_rejections": 4,
+    "balanced_sampling_sizes": 61,
+    "forbidden_text_rejections": 6,
+    "group_split_cases": 5,
+    "rendering_cases": 3
+  },
+  "records_verified": 6928,
+  "record_counts": {
+    "train": 6403,
+    "val": 525
+  },
+  "unique_structure_files_reread": 9098,
+  "exported_structure_pair_witnesses_independently_reconstructed": 6928,
+  "preview_records_exactly_matched": 5,
+  "cross_split_component_overlap": 0,
+  "cross_split_raw_geometry_overlap": 0,
+  "cross_split_native_identity_overlap": 0,
+  "old_corpus_raw_and_identity_links_rechecked": 4015,
+  "maximum_export_site_error_A": 3.1401849173675503e-16,
+  "maximum_export_cell_metric_error_A2": 2.2737367544323206e-13,
+  "parser_warning_counts": {},
+  "template_counts": {
+    "train.query": {
+      "query_03": 1281,
+      "query_02": 1281,
+      "query_05": 1280,
+      "query_04": 1280,
+      "query_01": 1281
+    },
+    "train.response": {
+      "response_05": 1280,
+      "response_03": 1281,
+      "response_04": 1280,
+      "response_02": 1281,
+      "response_01": 1281
+    },
+    "val.query": {
+      "query_01": 105,
+      "query_05": 105,
+      "query_04": 105,
+      "query_03": 105,
+      "query_02": 105
+    },
+    "val.response": {
+      "response_02": 105,
+      "response_03": 105,
+      "response_01": 105,
+      "response_04": 105,
+      "response_05": 105
+    }
+  },
+  "frozen_input_files_unchanged": 165,
+  "build_plan_sha256": "07e5931bf4fc710be25d02e3ec17f0da913f61fec79bc7adb49fb623e1ebea04",
+  "scope": "Every saved structure reread and each exported pair checked against its geometric witness; prior source and transitive split audit reused with unchanged hashes; no new physical or DFT claims"
+}

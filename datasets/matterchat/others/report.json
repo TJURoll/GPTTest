@@ -1,0 +1,306 @@
+{
+  "status": "complete",
+  "seed": 20260910,
+  "parameters": {
+    "symprec_angstrom": 0.1,
+    "angle_tolerance_degrees": 5.0,
+    "seed": 20260910
+  },
+  "template_sha256": "62311932d3ef68c21ad5bc64a352466e76f3609cf6b4a08f8d261f5f2b1b0390",
+  "original_template_sha256": "92b54fa8d30708b666a12798cc81b5065cd3aeb0be03cbd6b715b039ed8b5d9e",
+  "builder_sha256": "a5b7891cb79f8f5deced87cab70eb8de97a23a8071b29d253144006f0bb6e16d",
+  "versions": {
+    "pymatgen": "2026.3.23",
+    "numpy": "2.4.4",
+    "spglib": "2.7.0",
+    "PyYAML": "6.0.3"
+  },
+  "splits": {
+    "train": {
+      "source_records": 128609,
+      "processed_records": 128609,
+      "source_sha256": "40fb244fa1dc4bf6b9d8a47bbcd62930e8f34469237636cbef9d7082cc6172d7",
+      "failed_check_counts": {
+        "bandgap_type_applicable": 62669,
+        "magnetic_labels_consistent": 860,
+        "metal_bandgap_consistent": 24
+      },
+      "task_counts": {
+        "reduced_formula": 128609,
+        "space_group": 128609,
+        "crystal_system": 128609,
+        "metallicity": 128585,
+        "bandgap_type": 65940,
+        "thermodynamic_stability": 128609,
+        "magnetic_status": 127749,
+        "magnetic_order": 127749,
+        "bandgap": 128585,
+        "formation_energy_per_atom": 128609,
+        "energy_above_hull_per_atom": 128609,
+        "basic_structure_description": 128609
+      },
+      "subgroup_counts": {
+        "reduced_formula/reduced_formula": 114319,
+        "reduced_formula/elements": 14290,
+        "space_group/symbol": 115748,
+        "space_group/number": 12861,
+        "crystal_system/crystal_system": 128609,
+        "metallicity/metallic": 62645,
+        "metallicity/non_metallic": 65940,
+        "bandgap_type/direct": 17222,
+        "bandgap_type/indirect": 48718,
+        "thermodynamic_stability/on_hull": 30352,
+        "thermodynamic_stability/above_hull": 98257,
+        "magnetic_status/magnetic": 59313,
+        "magnetic_status/non_magnetic": 68436,
+        "magnetic_order/ferromagnetic": 46545,
+        "magnetic_order/antiferromagnetic": 2542,
+        "magnetic_order/ferrimagnetic": 10226,
+        "magnetic_order/non_magnetic": 68436,
+        "bandgap/finite_nonnegative": 128585,
+        "formation_energy_per_atom/finite": 128609,
+        "energy_above_hull_per_atom/finite_nonnegative": 128609,
+        "basic_structure_description/basic_structure": 32152,
+        "basic_structure_description/electronic": 32152,
+        "basic_structure_description/magnetic": 32153,
+        "basic_structure_description/energetic": 32152
+      },
+      "skipped_task_reasons": {
+        "reduced_formula": {},
+        "space_group": {},
+        "crystal_system": {},
+        "metallicity": {
+          "metal_bandgap_consistent": 24
+        },
+        "bandgap_type": {
+          "bandgap_type_applicable": 62669,
+          "metal_bandgap_consistent": 24
+        },
+        "thermodynamic_stability": {},
+        "magnetic_status": {
+          "magnetic_labels_consistent": 860
+        },
+        "magnetic_order": {
+          "magnetic_labels_consistent": 860
+        },
+        "bandgap": {
+          "metal_bandgap_consistent": 24
+        },
+        "formation_energy_per_atom": {},
+        "energy_above_hull_per_atom": {},
+        "basic_structure_description": {}
+      },
+      "derived_field_counts": {},
+      "atomworldbench_shared_material_ids": 850,
+      "output_records": 1478871,
+      "structures": 128609,
+      "full_output_validation": "passed"
+    },
+    "val": {
+      "source_records": 14290,
+      "processed_records": 14290,
+      "source_sha256": "ded597fbd2a9f30727c4dab396430ff3a85c200931266bebad071cad9ee2ab51",
+      "failed_check_counts": {
+        "bandgap_type_applicable": 7089,
+        "magnetic_labels_consistent": 87,
+        "metal_bandgap_consistent": 4
+      },
+      "task_counts": {
+        "reduced_formula": 14290,
+        "space_group": 14290,
+        "crystal_system": 14290,
+        "metallicity": 14286,
+        "bandgap_type": 7201,
+        "thermodynamic_stability": 14290,
+        "magnetic_status": 14203,
+        "magnetic_order": 14203,
+        "bandgap": 14286,
+        "formation_energy_per_atom": 14290,
+        "energy_above_hull_per_atom": 14290,
+        "basic_structure_description": 14290
+      },
+      "subgroup_counts": {
+        "reduced_formula/reduced_formula": 12702,
+        "reduced_formula/elements": 1588,
+        "space_group/symbol": 12861,
+        "space_group/number": 1429,
+        "crystal_system/crystal_system": 14290,
+        "metallicity/metallic": 7085,
+        "metallicity/non_metallic": 7201,
+        "bandgap_type/direct": 1828,
+        "bandgap_type/indirect": 5373,
+        "thermodynamic_stability/on_hull": 3376,
+        "thermodynamic_stability/above_hull": 10914,
+        "magnetic_status/magnetic": 6644,
+        "magnetic_status/non_magnetic": 7559,
+        "magnetic_order/ferromagnetic": 5204,
+        "magnetic_order/antiferromagnetic": 275,
+        "magnetic_order/ferrimagnetic": 1165,
+        "magnetic_order/non_magnetic": 7559,
+        "bandgap/finite_nonnegative": 14286,
+        "formation_energy_per_atom/finite": 14290,
+        "energy_above_hull_per_atom/finite_nonnegative": 14290,
+        "basic_structure_description/basic_structure": 3573,
+        "basic_structure_description/electronic": 3572,
+        "basic_structure_description/magnetic": 3573,
+        "basic_structure_description/energetic": 3572
+      },
+      "skipped_task_reasons": {
+        "reduced_formula": {},
+        "space_group": {},
+        "crystal_system": {},
+        "metallicity": {
+          "metal_bandgap_consistent": 4
+        },
+        "bandgap_type": {
+          "bandgap_type_applicable": 7089,
+          "metal_bandgap_consistent": 4
+        },
+        "thermodynamic_stability": {},
+        "magnetic_status": {
+          "magnetic_labels_consistent": 87
+        },
+        "magnetic_order": {
+          "magnetic_labels_consistent": 87
+        },
+        "bandgap": {
+          "metal_bandgap_consistent": 4
+        },
+        "formation_energy_per_atom": {},
+        "energy_above_hull_per_atom": {},
+        "basic_structure_description": {}
+      },
+      "derived_field_counts": {},
+      "atomworldbench_shared_material_ids": 92,
+      "output_records": 164209,
+      "structures": 14290,
+      "full_output_validation": "passed"
+    },
+    "gnome": {
+      "source_records": 15483,
+      "processed_records": 15483,
+      "source_sha256": "7f36bb15cf2caecf1e9ef0a4fc168dff57505c18c926bed67f425b99a85940ad",
+      "failed_check_counts": {
+        "bandgap_type_applicable": 7872,
+        "magnetic_labels_consistent": 1
+      },
+      "task_counts": {
+        "reduced_formula": 15483,
+        "space_group": 15483,
+        "crystal_system": 15483,
+        "metallicity": 15483,
+        "bandgap_type": 7611,
+        "thermodynamic_stability": 15483,
+        "magnetic_status": 15482,
+        "magnetic_order": 15482,
+        "bandgap": 15483,
+        "formation_energy_per_atom": 15483,
+        "energy_above_hull_per_atom": 15483,
+        "basic_structure_description": 15483
+      },
+      "subgroup_counts": {
+        "reduced_formula/reduced_formula": 13763,
+        "reduced_formula/elements": 1720,
+        "space_group/symbol": 13935,
+        "space_group/number": 1548,
+        "crystal_system/crystal_system": 15483,
+        "metallicity/metallic": 7872,
+        "metallicity/non_metallic": 7611,
+        "bandgap_type/direct": 2001,
+        "bandgap_type/indirect": 5610,
+        "thermodynamic_stability/on_hull": 15264,
+        "thermodynamic_stability/above_hull": 219,
+        "magnetic_status/magnetic": 2716,
+        "magnetic_status/non_magnetic": 12766,
+        "magnetic_order/ferromagnetic": 2098,
+        "magnetic_order/antiferromagnetic": 28,
+        "magnetic_order/ferrimagnetic": 590,
+        "magnetic_order/non_magnetic": 12766,
+        "bandgap/finite_nonnegative": 15483,
+        "formation_energy_per_atom/finite": 15483,
+        "energy_above_hull_per_atom/finite_nonnegative": 15483,
+        "basic_structure_description/basic_structure": 3871,
+        "basic_structure_description/electronic": 3871,
+        "basic_structure_description/magnetic": 3871,
+        "basic_structure_description/energetic": 3870
+      },
+      "skipped_task_reasons": {
+        "reduced_formula": {},
+        "space_group": {},
+        "crystal_system": {},
+        "metallicity": {},
+        "bandgap_type": {
+          "bandgap_type_applicable": 7872
+        },
+        "thermodynamic_stability": {},
+        "magnetic_status": {
+          "magnetic_labels_consistent": 1
+        },
+        "magnetic_order": {
+          "magnetic_labels_consistent": 1
+        },
+        "bandgap": {},
+        "formation_energy_per_atom": {},
+        "energy_above_hull_per_atom": {},
+        "basic_structure_description": {}
+      },
+      "derived_field_counts": {
+        "reduced_formula": 15483,
+        "crystal_system": 15483
+      },
+      "atomworldbench_shared_material_ids": 0,
+      "output_records": 177922,
+      "structures": 15483,
+      "full_output_validation": "passed"
+    }
+  },
+  "limit_per_split": 0,
+  "verification_scope": "全量输出逐条回读核对；计算性质未重做 DFT；结构校验不等于实验或物理可实现性证明。",
+  "cross_dataset_policy": {
+    "reference": "/mnt/e/Datasets/Inorganic_Materials/AtomWorldBench/cif_pairs/bench/pairs.jsonl",
+    "reference_available": true,
+    "action": "mark_only_no_automatic_filtering",
+    "not_an_unseen_material_guarantee": true
+  },
+  "elapsed_seconds": 273.49,
+  "total_output_records": 1821002,
+  "preview_records": 144,
+  "split_material_id_overlap": 0,
+  "preview_validation": "exact_subset_passed",
+  "structure_export_validation": "hash_and_uniqueness_passed",
+  "output_sha256": {
+    "gnome.jsonl": "5ba7755f8b903fad4e3eb21b02a5f8cb7def71c79c733d078a03813976176766",
+    "preview.jsonl": "ff228602f90929710a4c7ab6b4c6cf4c41f1b6af6a332b91044c106b3d8004cf",
+    "skipped_tasks.jsonl": "a62e8fa925e86255c7f7ed7dad7fb713ab2354780001de8be6fe153e61e39001",
+    "structures.jsonl": "e7ac62f680bf82f3ba21022d53cb69f9abd895964683c0b774c3a8d4fa3f4ee4",
+    "train.jsonl": "6d14f9eba79fd6cf282246a25d151385a535a75ddc9472e44e0efe6021170a9d",
+    "val.jsonl": "a9e63b61dbb4aad1179d340a173f3822cc153a91f88e033c315db4b64d14cbfb"
+  },
+  "cif_path_update": {
+    "field": "cif_path",
+    "location": "top_level_outside_messages",
+    "path_base": "directory_containing_train_and_val_jsonl",
+    "updated_splits": [
+      "train",
+      "val"
+    ],
+    "updated_records": {
+      "train": 1478871,
+      "val": 164209
+    },
+    "verified_distinct_cif_paths": {
+      "train": 128609,
+      "val": 14290
+    },
+    "updated_preview_records": 96,
+    "cif_index_sha256": "29fa9360cfc18ad42a1c99b5749745dd6b84337cd296a19515856f67077e906b",
+    "updater_sha256": "c95c3673cc668ca12d57424316f17123c56e593c6c57a24e091d31a51134f92d",
+    "previous_output_sha256": {
+      "train.jsonl": "c089d446b67ca5079ee9930c1f6eca625553aec95d2d3380cc8d41b476310dbe",
+      "val.jsonl": "3b6bd39d914f627f4f0f03ac0bfa8155c89b5b0e6678135d72ffd30e98ea5963",
+      "preview.jsonl": "f1b05c8b849a51c3da98434326a72ee8cc4ab5a19f1fa4b1f80ece8333ebdd61"
+    },
+    "validation": "Every row reread: CIF file exists, split/ID/source geometry hash match the accepted index, all other fields and row order unchanged, preview is an exact subset.",
+    "gnome_jsonl": "unchanged"
+  }
+}

@@ -1,0 +1,19 @@
+data_structure
+_cell_length_a 2.7882483499999999
+_cell_length_b 2.7882483500000004
+_cell_length_c 4.4876870000000002
+_cell_angle_alpha 90.0000000000000000
+_cell_angle_beta 90.0000000000000000
+_cell_angle_gamma 120.0000082199999838
+loop_
+_space_group_symop_operation_xyz
+'x, y, z'
+loop_
+_atom_site_type_symbol
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Ru Ru1 0.3333333333333333 0.6666666666666666 0.5000000000000000 1
+W W2 0.0000000000000000 0.0000000000000000 0.0000000000000000 1

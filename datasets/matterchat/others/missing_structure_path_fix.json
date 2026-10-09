@@ -1,0 +1,15 @@
+{
+  "added_paths_by_file": {
+    "gnome.jsonl": 177922,
+    "train.jsonl": 0,
+    "val.jsonl": 0
+  },
+  "binding_key": [
+    "split",
+    "structure_id"
+  ],
+  "every_geometry_sha256_matches_export_index": true,
+  "full_rewritten_file_readback_verified": true,
+  "message_text_hashes_unchanged": true,
+  "train_and_val_files_unchanged": true
+}

@@ -1,0 +1,38 @@
+data_image0
+_chemical_formula_structural       Cr4N8Sn
+_chemical_formula_sum              "Cr4 N8 Sn1"
+_cell_length_a       5.7078
+_cell_length_b       5.7078
+_cell_length_c       5.8501
+_cell_angle_alpha    83.5757
+_cell_angle_beta     83.5757
+_cell_angle_gamma    101.9776
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  Cr  Cr1       1.0000  0.0444  0.9639  0.9974  1.0000
+  Cr  Cr2       1.0000  0.9639  0.0444  0.4974  1.0000
+  Cr  Cr3       1.0000  0.3728  0.5436  0.9155  1.0000
+  Cr  Cr4       1.0000  0.5436  0.3728  0.4155  1.0000
+  N   N1        1.0000  0.2785  0.1536  0.4661  1.0000
+  N   N2        1.0000  0.1536  0.2785  0.9661  1.0000
+  N   N3        1.0000  0.8982  0.8631  0.2812  1.0000
+  N   N4        1.0000  0.8631  0.8982  0.7812  1.0000
+  N   N5        1.0000  0.4805  0.5504  0.6258  1.0000
+  N   N6        1.0000  0.5504  0.4805  0.1258  1.0000
+  N   N7        1.0000  0.2621  0.7988  0.9636  1.0000
+  N   N8        1.0000  0.7988  0.2621  0.4636  1.0000
+  Sn  Sn1       1.0000  0.4578  0.3271  0.1152  1.0000

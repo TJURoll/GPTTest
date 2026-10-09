@@ -1,0 +1,81 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "mof_papers",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "data.jsonl",
+      "relative_path": "messages/data.jsonl",
+      "rows": 101991,
+      "original_sha256": "46ec14cf8262a8963c04023f685d62a7607d28fe3762c26da0e387d4fe81aa1e",
+      "sha256": "82a95fb33dc0a0cea22118432209f04b0a659afad07bfe9f00629da5d5df0b21",
+      "messages_sha256": "2b1b9d053a29838804e5a3f761cc1f57d07a62d43b19e892f59ca046514a887b",
+      "bytes": 66417423
+    },
+    {
+      "original_name": "provenance.jsonl",
+      "relative_path": "others/provenance.jsonl",
+      "rows": 13801,
+      "original_sha256": "393813c392b615a060a23de64e2bbb3356270b6d824cac01723b11dfef21f549",
+      "sha256": "23344a5958e4cdca3274d418bb746c88ca02125b682058e0c889e15479c1b8df",
+      "messages_sha256": null,
+      "bytes": 11237466
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 13302
+    },
+    "bytes": {
+      "structures": 122884196
+    },
+    "manifest_sha256": "913ca114ed5ac79ef1b8912e479c1d094533ad70715dcd3f60e340ce95eb89ae",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 115293
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 5,
+  "preview_matches_current_messages": true,
+  "preview_file": "others/preview.json",
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/mof_papers/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "data.jsonl"
+  ],
+  "unsplit_data_file_preserved": true,
+  "per_structure_record_hash_verification": {
+    "passed": true,
+    "qa_records": 101991,
+    "referenced_cifs": 13302,
+    "provenance_records": 13801,
+    "zero_qa_provenance_records": 499,
+    "qa_ids_unique": true,
+    "qa_id_and_structure_path_match": true,
+    "messages_and_order_unchanged": true,
+    "no_new_split": true,
+    "original_per_structure_qa_hashes_verified": true,
+    "current_per_structure_qa_hashes_updated_and_verified": true,
+    "records_sha256_definition": "SHA256 of the exact messages/data.jsonl line bytes belonging to this structure, in original order, including line terminators",
+    "source_records_sha256_definition": "The same calculation on the original exported data.jsonl before the path migration",
+    "preview_rows_match_current_messages": 5
+  },
+  "derived_checksum_fields_updated": [
+    "provenance.records_sha256"
+  ],
+  "source_checksum_fields_preserved": [
+    "provenance.source_records_sha256"
+  ],
+  "path_and_derived_checksums_only": true
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "dataset": "mof_papers",
+  "message_counts": {
+    "data.jsonl": 101991
+  },
+  "runtime_referenced_unique_files": 13302,
+  "asset_files": 13302,
+  "all_message_references_in_packaged_manifest": true,
+  "all_runtime_paths_relative_to_corpus_root": true,
+  "message_text_hashes_unchanged": true,
+  "file_hashes_and_counts_match_layout_manifest": true,
+  "final_location_sample_files_checked": 32
+}

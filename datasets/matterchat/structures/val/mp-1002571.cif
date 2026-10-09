@@ -1,0 +1,40 @@
+# generated using pymatgen
+data_NaMn2O4
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   3.0154930000000002
+_cell_length_b   5.1529369320341001
+_cell_length_c   5.8620460736231852
+_cell_angle_alpha   106.9405310991737679
+_cell_angle_beta   91.0559867001773142
+_cell_angle_gamma   93.3580972409926630
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   NaMn2O4
+_chemical_formula_sum   'Na1 Mn2 O4'
+_cell_volume   86.9259924774136579
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Na  Na0  1  0.5000000000000000  0.0000000000000000
+  0.5000000000000000  1.0
+  Mn  Mn1  1  0.0000000000000000  0.0000000000000000
+  0.0000000000000000  1.0
+  Mn  Mn2  1  0.5000000000000000  0.5000000000000000
+  0.0000000000000000  1.0
+  O  O3  1  0.4745970000000000  0.7839010000000000
+  0.8245650000000000  1.0
+  O  O4  1  0.0359030000000000  0.2490200000000000
+  0.8099910000000000  1.0
+  O  O5  1  0.9640970000000000  0.7509800000000000
+  0.1900090000000000  1.0
+  O  O6  1  0.5254030000000000  0.2160990000000000
+  0.1754350000000000  1.0

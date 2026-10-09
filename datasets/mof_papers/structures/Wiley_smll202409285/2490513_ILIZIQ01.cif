@@ -1,0 +1,191 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge 
+# Structural Database, then it will include bibliographic, chemical, 
+# crystal, experimental, refinement or atomic coordinate data resulting 
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_ILIZIQ01
+_audit_creation_date             2025-09-23
+_database_code_depnum_ccdc_archive 'CCDC 2490513'
+_chemical_formula_moiety         '(C18 H15 Mn1 N2 O6 1+)n,4(H2 O1),Cl1 1-'
+_chemical_name_systematic        
+'catena-[(\m-5-[4-(pyridin-4-yl)pyridin-1-ium-1-yl]benzene-1,3-dicarboxylato)-diaqua-manganese(ii) chloride tetrahydrate]'
+_journal_coden_Cambridge         772
+_journal_volume                  21
+_journal_year                    2025
+_journal_page_first              2409285
+_journal_name_full               Small
+_journal_paper_doi               10.1002/smll.202409285
+loop_
+_publ_author_name
+'Pei-Xin Li'
+'Xiao-Di Guo'
+'Yu-He Sun'
+'Guo-Cong Guo'
+_chemical_absolute_configuration unk
+_diffrn_ambient_temperature      298.12
+_exptl_crystal_density_diffrn    1.55896
+_refine_ls_R_factor_gt           0.0675
+_diffrn_radiation_probe          x-ray
+_diffrn_radiation_wavelength     0.71073
+_refine_ls_goodness_of_fit_ref   1.079
+_diffrn_reflns_theta_max         25.347
+_refine_ls_wR_factor_ref         0.2173
+_refine_ls_shift/su_max          0.001
+_refine_diff_density_max         1.14
+_refine_diff_density_min         -0.668
+_refine_ls_number_parameters     154
+_refine_ls_number_restraints     16
+_refine_ls_hydrogen_treatment    constr
+_symmetry_cell_setting           monoclinic
+_symmetry_space_group_name_H-M   'C 2/c'
+_symmetry_Int_Tables_number      15
+_space_group_name_Hall           '-C 2yc'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,y,1/2-z
+3 1/2+x,1/2+y,z
+4 1/2-x,1/2+y,1/2-z
+5 -x,-y,-z
+6 x,-y,1/2+z
+7 1/2-x,1/2-y,-z
+8 1/2+x,1/2-y,1/2+z
+_cell_length_a                   10.1220(5)
+_cell_length_b                   28.9568(12)
+_cell_length_c                   7.7664(4)
+_cell_angle_alpha                90
+_cell_angle_beta                 104.276(5)
+_cell_angle_gamma                90
+_cell_volume                     2206.04
+_exptl_crystal_colour            yellow
+_exptl_crystal_description       plate
+_cell_formula_units_Z            4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Mn1 Mn 1.000000 0.56352(2) 0.750000
+O1 O 0.8521(3) 0.50753(10) 0.7412(4)
+O1W O 1.0389(4) 0.56495(10) 1.0362(4)
+H1WA H 1.038693 0.592284 1.116554
+H1WB H 1.061509 0.538466 1.122947
+O2 O 0.7451(3) 0.57355(10) 0.7207(5)
+N1 N 0.500000 0.14089(15) 0.750000
+N2 N 0.500000 0.38432(15) 0.750000
+C1 C 0.4222(6) 0.16522(16) 0.6175(7)
+H1 H 0.366010 0.149200 0.523698
+C2 C 0.4202(6) 0.21295(16) 0.6117(7)
+H2 H 0.365194 0.228271 0.514984
+C3 C 0.500000 0.23755(18) 0.750000
+C4 C 0.500000 0.28888(18) 0.750000
+C5 C 0.4394(6) 0.31405(16) 0.5997(6)
+H5 H 0.397971 0.298699 0.495113
+C6 C 0.4397(6) 0.36156(16) 0.6035(6)
+H6 H 0.397141 0.377929 0.501937
+C7 C 0.500000 0.43460(17) 0.750000
+C8 C 0.6169(4) 0.45735(13) 0.7404(5)
+H8 H 0.694500 0.440968 0.733760
+C9 C 0.6171(3) 0.50569(13) 0.7409(5)
+C10 C 0.500000 0.52923(17) 0.750000
+H10 H 0.499999 0.561349 0.750000
+C11 C 0.7460(4) 0.53096(14) 0.7341(5)
+O4 O 0.1479(3) 0.50753(10) 0.7588(4)
+O5 O 0.2549(3) 0.57355(10) 0.7793(5)
+C12 C 0.5778(6) 0.16522(16) 0.8825(7)
+H9 H 0.633990 0.149200 0.976302
+C13 C 0.5798(6) 0.21295(16) 0.8883(7)
+H11 H 0.634806 0.228271 0.985016
+C14 C 0.5606(6) 0.31405(16) 0.9003(6)
+H12 H 0.602029 0.298699 1.004887
+C15 C 0.5603(6) 0.36156(16) 0.8965(6)
+H13 H 0.602859 0.377929 0.998063
+C16 C 0.3831(4) 0.45735(13) 0.7596(5)
+H14 H 0.305500 0.440968 0.766240
+C17 C 0.3829(3) 0.50569(13) 0.7591(5)
+C18 C 0.2540(4) 0.53096(14) 0.7659(5)
+O6 O 0.9611(4) 0.56495(10) 0.4638(4)
+H15 H 0.961307 0.592284 0.383446
+H16 H 0.938491 0.538466 0.377053
+Mn1_2 Mn 0.000000 0.56352(2) 0.750000
+Mn1_3 Mn 0.500000 0.06352(2) 0.750000
+O4_2 O 1.1479(3) 0.50753(10) 0.7588(4)
+N1_2 N 1.000000 0.64089(15) 0.750000
+Cl1 Cl 0.8475(7) 0.2523(4) 0.6694(8)
+O2W O 0.8958(11) 0.3645(4) 0.6968(18)
+H2WA H 0.829511 0.355298 0.737254
+H2WB H 0.869421 0.360008 0.585444
+O3W O 0.6863(11) 0.3609(4) 0.4561(16)
+H3WA H 0.674687 0.331930 0.440788
+H3WB H 0.697617 0.370690 0.357638
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_site_symmetry_1
+_geom_bond_site_symmetry_2
+Mn1 O1 1_555 1_555
+Mn1 O1W 1_555 1_555
+Mn1 O6 1_555 1_555
+Mn1 O4_2 1_555 1_555
+Mn1 N1_2 1_555 1_555
+O1 C11 1_555 1_555
+O1W H1WA 1_555 1_555
+O1W H1WB 1_555 1_555
+O2 C11 1_555 1_555
+N1 C1 1_555 1_555
+N1 C12 1_555 1_555
+N1 Mn1_3 1_555 1_555
+N2 C6 1_555 1_555
+N2 C7 1_555 1_555
+N2 C15 1_555 1_555
+C1 H1 1_555 1_555
+C1 C2 1_555 1_555
+C2 H2 1_555 1_555
+C2 C3 1_555 1_555
+C3 C4 1_555 1_555
+C3 C13 1_555 1_555
+C4 C5 1_555 1_555
+C4 C14 1_555 1_555
+C5 H5 1_555 1_555
+C5 C6 1_555 1_555
+C6 H6 1_555 1_555
+C7 C8 1_555 1_555
+C7 C16 1_555 1_555
+C8 H8 1_555 1_555
+C8 C9 1_555 1_555
+C9 C10 1_555 1_555
+C9 C11 1_555 1_555
+C10 H10 1_555 1_555
+C10 C17 1_555 1_555
+O4 C18 1_555 1_555
+O4 Mn1_2 1_555 1_555
+O5 C18 1_555 1_555
+C12 H9 1_555 1_555
+C12 C13 1_555 1_555
+C13 H11 1_555 1_555
+C14 H12 1_555 1_555
+C14 C15 1_555 1_555
+C15 H13 1_555 1_555
+C16 H14 1_555 1_555
+C16 C17 1_555 1_555
+C17 C18 1_555 1_555
+O6 H15 1_555 1_555
+O6 H16 1_555 1_555
+O2W H2WA 1_555 1_555
+O2W H2WB 1_555 1_555
+O3W H3WA 1_555 1_555
+O3W H3WB 1_555 1_555
+
+#END

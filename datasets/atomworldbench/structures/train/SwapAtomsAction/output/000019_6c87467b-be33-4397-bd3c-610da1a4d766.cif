@@ -1,0 +1,41 @@
+data_image0
+_chemical_formula_structural       Rb2Mg3MnMg9Mn
+_chemical_formula_sum              "Rb2 Mg12 Mn2"
+_cell_length_a       5.047298
+_cell_length_b       6.619425
+_cell_length_c       12.113575
+_cell_angle_alpha    90.0
+_cell_angle_beta     90.0
+_cell_angle_gamma    90.0
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  Rb  Rb1       1.0  0.49999999999999994  0.49999999999999983  0.171005  1.0000
+  Rb  Rb2       1.0  0.49999999999999994  0.0  0.671005  1.0000
+  Mg  Mg1       1.0  0.0  0.780546  0.060728  1.0000
+  Mg  Mg2       1.0  0.0  0.219454  0.060728  1.0000
+  Mg  Mg3       1.0  0.0  0.0  0.333843  1.0000
+  Mn  Mn1       1.0  0.49999999999999994  0.275999  0.411551  1.0000
+  Mg  Mg4       1.0  0.49999999999999994  0.724001  0.411551  1.0000
+  Mg  Mg5       1.0  0.49999999999999994  0.0  0.174517  1.0000
+  Mg  Mg6       1.0  0.0  0.280546  0.560728  1.0000
+  Mg  Mg7       1.0  0.0  0.7194539999999997  0.560728  1.0000
+  Mg  Mg8       1.0  0.0  0.49999999999999983  0.833843  1.0000
+  Mg  Mg9       1.0  0.49999999999999994  0.7759989999999998  0.911551  1.0000
+  Mg  Mg10      1.0  0.49999999999999994  0.22400099999999992  0.911551  1.0000
+  Mg  Mg11      1.0  0.49999999999999994  0.49999999999999983  0.6745169999999999  1.0000
+  Mg  Mg12      1.0  0.0  0.49999999999999983  0.376076  1.0000
+  Mn  Mn2       1.0  0.0  0.0  0.876076  1.0000

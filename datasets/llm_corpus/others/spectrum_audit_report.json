@@ -1,0 +1,711 @@
+{
+  "authority_records": 233948,
+  "files": {
+    "train_fg26_ir_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_ir_spectra.parquet",
+      "size_bytes": 6879303221,
+      "mtime_ns": 1780822796975024500,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_ir_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_ir_spectra.parquet",
+      "size_bytes": 764652653,
+      "mtime_ns": 1780818955480052200,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_raman_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_raman_spectra.parquet",
+      "size_bytes": 6880464841,
+      "mtime_ns": 1780822852323547400,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_raman_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_raman_spectra.parquet",
+      "size_bytes": 764806305,
+      "mtime_ns": 1780818975290471100,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_uv_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_uv_spectra.parquet",
+      "size_bytes": 5336158267,
+      "mtime_ns": 1780822142938861600,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_uv_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_uv_spectra.parquet",
+      "size_bytes": 590858850,
+      "mtime_ns": 1780818526276570300,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_broad-nmr-h_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_broad-nmr-h_spectra.parquet",
+      "size_bytes": 1659858360,
+      "mtime_ns": 1789008597985627800,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_broad-nmr-h_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_broad-nmr-h_spectra.parquet",
+      "size_bytes": 185547719,
+      "mtime_ns": 1789008381240764600,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_broad-nmr-c_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_broad-nmr-c_spectra.parquet",
+      "size_bytes": 1719373441,
+      "mtime_ns": 1789008596037029200,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_broad-nmr-c_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_broad-nmr-c_spectra.parquet",
+      "size_bytes": 191570577,
+      "mtime_ns": 1789008376749704600,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_xas-c_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-c_spectra.parquet",
+      "size_bytes": 5885464045,
+      "mtime_ns": 1789008621492876900,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_xas-c_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-c_spectra.parquet",
+      "size_bytes": 650767410,
+      "mtime_ns": 1789008500311394800,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_xas-n_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-n_spectra.parquet",
+      "size_bytes": 4611805598,
+      "mtime_ns": 1789008723083850300,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_xas-n_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-n_spectra.parquet",
+      "size_bytes": 509424864,
+      "mtime_ns": 1789008349333305000,
+      "rows": 23887,
+      "row_groups": 1
+    },
+    "train_fg26_xas-o_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-o_spectra.parquet",
+      "size_bytes": 4711369581,
+      "mtime_ns": 1789008735402370200,
+      "rows": 214982,
+      "row_groups": 840
+    },
+    "test_fg26_xas-o_spectra.parquet": {
+      "path": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-o_spectra.parquet",
+      "size_bytes": 523492644,
+      "mtime_ns": 1789008650506520200,
+      "rows": 23887,
+      "row_groups": 1
+    }
+  },
+  "by_type": {
+    "ir": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 233948
+    },
+    "raman": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 233948
+    },
+    "uv": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 233947,
+      "all_zero": 1
+    },
+    "broad-nmr-h": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 229308,
+      "all_zero": 4640
+    },
+    "broad-nmr-c": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 233033,
+      "all_zero": 915
+    },
+    "xas-c": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 233070,
+      "absent_element_empty": 563,
+      "all_zero": 315
+    },
+    "xas-n": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "valid": 194065,
+      "absent_element_empty": 36579,
+      "all_zero": 3304
+    },
+    "xas-o": {
+      "source_rows": 238869,
+      "outside_authority": 4921,
+      "absent_element_empty": 30766,
+      "valid": 201418,
+      "all_zero": 1764
+    }
+  },
+  "problems": [
+    {
+      "record_index": 55672,
+      "spectrum_type": "uv",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 52303,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 140763,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 48569,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 73095,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 4725,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 10319,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 4782,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 18814,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 133408,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 138481,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 131949,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 97840,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 120287,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 59860,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 74638,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 137402,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 224407,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 25825,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 31162,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 108592,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 145168,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 136438,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 157748,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 86327,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 49160,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 234100,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 193121,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 178179,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 68427,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 181916,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 223086,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 47278,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 4862,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 29531,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 126141,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 103282,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 141199,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 120239,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 140989,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 187826,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 98650,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 204829,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 82290,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 63438,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 5084,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 133,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 199653,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 201981,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 146937,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 89069,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 77758,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 85635,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 202892,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 197501,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 28746,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 197746,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 165295,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 203152,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 136957,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 121302,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 111572,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 126258,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 97098,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 122062,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 114644,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 203214,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 80263,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 213530,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 142533,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 166507,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 156209,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 54590,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 167324,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 179516,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 185599,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 4839,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 187056,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 166946,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 19452,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 141958,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 94573,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 91642,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 220071,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 19526,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 214420,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 32174,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 216343,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 188239,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 158491,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 173348,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 9900,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 153354,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 70521,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 194956,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 118124,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 147186,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 95259,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 31965,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    },
+    {
+      "record_index": 57098,
+      "spectrum_type": "broad-nmr-h",
+      "reason": "all_zero"
+    }
+  ],
+  "policy": "Use only finite nonempty nonzero source traces. Never zero-fill missing channels.",
+  "graph_check": "Source key canonical nonisomeric graph equals authority target.",
+  "physical_recalculation": false,
+  "valid_spectrum_count_distribution": {
+    "6": 8817,
+    "8": 165172,
+    "7": 59373,
+    "5": 504,
+    "4": 82
+  },
+  "available_type_patterns": {
+    "ir,raman,uv,broad-nmr-h,broad-nmr-c,xas-c": 6901,
+    "ir,raman,uv,broad-nmr-h,broad-nmr-c,xas-c,xas-n,xas-o": 165172,
+    "ir,raman,uv,broad-nmr-h,broad-nmr-c,xas-c,xas-o": 32010,
+    "ir,raman,uv,broad-nmr-h,broad-nmr-c,xas-c,xas-n": 24527,
+    "ir,raman,uv,broad-nmr-c,xas-c,xas-n,xas-o": 2831,
+    "ir,raman,uv,broad-nmr-c,xas-c,xas-n": 775,
+    "ir,raman,uv,broad-nmr-c,xas-c,xas-o": 662,
+    "ir,raman,uv,broad-nmr-h,xas-n,xas-o": 465,
+    "ir,raman,uv,broad-nmr-c,xas-c": 154,
+    "ir,raman,uv,xas-c,xas-o": 6,
+    "ir,raman,uv,xas-n,xas-o": 115,
+    "ir,raman,uv,xas-n": 38,
+    "ir,raman,uv,broad-nmr-h,xas-o": 104,
+    "ir,raman,uv,broad-nmr-h,xas-n": 120,
+    "ir,raman,uv,xas-c": 8,
+    "ir,raman,uv,xas-o": 36,
+    "ir,raman,uv,xas-c,xas-n,xas-o": 11,
+    "ir,raman,uv,xas-c,xas-n": 4,
+    "ir,raman,broad-nmr-h,broad-nmr-c,xas-c,xas-n,xas-o": 1,
+    "ir,raman,uv,broad-nmr-h,xas-c": 1,
+    "ir,raman,uv,broad-nmr-h,xas-c,xas-n,xas-o": 4,
+    "ir,raman,uv,broad-nmr-h,xas-c,xas-o": 1,
+    "ir,raman,uv,broad-nmr-h,xas-c,xas-n": 2
+  },
+  "spectrum_index_sha256": "46a8582ea8c4f29b372dc5f70fd41ec2cb1746b807feaa73cebfee729a1d47c7",
+  "source_hashes": {
+    "authority_path": "0689baeb9d17627b995da8f44d0c9b190e230c7be58330b2ea068065dfe9c300",
+    "split_path": "e4703dc225a36ed51295c8da32fe35c62e4269b6539e01323978d5feee215f44",
+    "metadata_path": "d37dae083244e1c8c68597c23bf014729f6879faaf6957a19455bbac457e3b07"
+  }
+}

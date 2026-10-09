@@ -1,0 +1,29 @@
+{
+  "status": "split_graph_complete",
+  "source_accepted_pairs": 200899,
+  "eligible_pairs": 14346,
+  "held_pairs": 186553,
+  "statuses": {
+    "inherit_train": 8528,
+    "hold_split_conflict": 9590,
+    "unassigned_new_component": 5564,
+    "inherit_val": 254,
+    "heldout_existing_eval": 176963
+  },
+  "comparison_statuses": {
+    "different": 112753
+  },
+  "old_nodes": 116712,
+  "nodes": 143427,
+  "actual_eval_endpoints": 4000,
+  "comparison_pairs": 112753,
+  "skipped_already_connected": 429392,
+  "output_sha256": {
+    "inputs.json": "9c3bbf96b0bfb2344644d8c0011f61c601dc496ad1ff1cee619feaff253a2344",
+    "split_geometry_checks.jsonl": "9530001b46110d5cdc8a1e8d745bf20ab871a74d4221d0a5e059a681ad42bbc2",
+    "split_nodes.jsonl": "2ddfa15adf76bc3776b1d378787ef0d88244e1940fa60b818430026a36747098",
+    "pair_selection.jsonl": "6685b99c3a25593aa851f6146854f32050dabd53fce5d63324318a57e161c9f9",
+    "excluded_from_corpus/split_holds.jsonl": "a4cc4eaefcf23fa9171225a76fc2e80ac5019c94e6928dd397038a5771ef11f3"
+  },
+  "policy": "Freeze old CSP, atomtxt and doping splits; join identity, strict geometry and pair edges transitively; hold whole components touching original ALM eval, conflicting old splits or unresolved comparisons. No volume prefilter; skip only pairs already in the same component. Same ID is a conservative leakage link, not geometry proof."
+}

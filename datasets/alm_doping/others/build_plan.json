@@ -1,0 +1,41 @@
+{
+  "status": "generated_pending_verification",
+  "created_utc": "2026-09-12T09:45:10.872282+00:00",
+  "seed": 20260912,
+  "validation_fraction_of_new_groups": 0.1,
+  "record_counts": {
+    "train": 6403,
+    "val": 525
+  },
+  "total_records": 6928,
+  "total_structure_files": 9098,
+  "split_group_counts": {
+    "train": 2929,
+    "val": 173
+  },
+  "original_split_status_counts": {
+    "unassigned_new_component": 1564,
+    "inherit_train": 1521,
+    "inherit_val": 17
+  },
+  "preview_source_rows": [
+    1,
+    2,
+    6,
+    7,
+    8
+  ],
+  "file_sha256": {
+    "inputs.json": "e9539a27037e16c59662d4438173c7ebef1787e55e271f466a17f2a88ac1290f",
+    "structure_index.jsonl": "1fc1bd0889f432e309de735d3608be8ffef57d384de25a2c3c3b9991d0ecafef",
+    "split_manifest.jsonl": "c308670056014dfac26fc6c9bb5a4f8f3dd7bd765c40607e775ff5f613545c2d",
+    "preview.jsonl": "a51df8691cd0c579ff70565ee89a673b9fe880f6e3c7cd336e25c285d7ed2286",
+    ".train.jsonl.pending": "e753121eb7d87f0d566426934a9b7cadf0014d58a55d1318929951a101e4b504",
+    ".val.jsonl.pending": "c0bdabe228a76dfe6cc28eb7c8cf1ff55c7031981bbb670ba30499092ed82c7e"
+  },
+  "full_corpus_verified": false,
+  "template_policy": "One conversation per selected ordered pair; query and response independently balanced within each split and the single task subgroup",
+  "split_policy": "Preserve inherited train/val assignments; split only new complete components by seeded 90/10 group allocation; never split endpoints or change old corpus",
+  "structure_policy": "Explicit full raw cells, pure geometry and identity symmetry operation only; negative-handed raw cells use a recorded integer basis change",
+  "scope": "Instruction editing only; no physical stability, DFT property, or relaxation-trajectory assertions"
+}

@@ -1,0 +1,102 @@
+{
+  "lcd": {
+    "source": "MOFX-DB Consistent Set",
+    "source_field": "lcd",
+    "unit": "angstrom",
+    "method": "Zeo++ v0.3 with UFF framework atom radii",
+    "quantity": "largest cavity diameter",
+    "required_query_conditions": [
+      "largest cavity diameter"
+    ]
+  },
+  "pld": {
+    "source": "MOFX-DB Consistent Set",
+    "source_field": "pld",
+    "unit": "angstrom",
+    "method": "Zeo++ v0.3 with UFF framework atom radii",
+    "quantity": "pore limiting diameter",
+    "required_query_conditions": [
+      "pore limiting diameter"
+    ]
+  },
+  "helium_void_fraction": {
+    "source": "MOFX-DB Consistent Set",
+    "source_field": "vf",
+    "unit": "fraction",
+    "method": "RASPA2 Widom insertion with UFF framework interactions",
+    "quantity": "helium void fraction, not geometric void fraction",
+    "temperature_kelvin": 298.0,
+    "required_query_conditions": [
+      "helium void fraction",
+      "298 K"
+    ]
+  },
+  "accessible_gravimetric_surface_area": {
+    "source": "MOFX-DB Consistent Set",
+    "source_field": "sa_acc_m2g",
+    "unit": "m2/g",
+    "method": "Zeo++ v0.3 with UFF framework atom radii",
+    "quantity": "accessible gravimetric surface area, not BET area",
+    "probe": "nitrogen",
+    "probe_radius_angstrom": 1.86,
+    "required_query_conditions": [
+      "accessible gravimetric surface area",
+      "nitrogen probe radius 1.86 angstrom"
+    ]
+  },
+  "total_gravimetric_surface_area": {
+    "source": "MOFX-DB Consistent Set",
+    "source_field": "sa_tot_m2g",
+    "unit": "m2/g",
+    "method": "Zeo++ v0.3 with UFF framework atom radii",
+    "quantity": "total accessible and inaccessible gravimetric surface area",
+    "probe": "nitrogen",
+    "probe_radius_angstrom": 1.86,
+    "required_query_conditions": [
+      "total gravimetric surface area",
+      "nitrogen probe radius 1.86 angstrom"
+    ]
+  },
+  "co2_uptake": {
+    "source": "JARVIS hMOF snapshot, original MOFX-DB CO2 isotherms",
+    "source_fields": [
+      "co2_pressures",
+      "co2_absp"
+    ],
+    "unit": "mol/kg",
+    "pressure_unit": "bar",
+    "method": "GCMC with UFF framework and TraPPE CO2 force fields",
+    "adsorbate": "CO2",
+    "mixture": "single component",
+    "temperature_kelvin": 298.0,
+    "adsorption_basis": "absolute",
+    "pressures_bar": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      2.5
+    ],
+    "required_query_conditions": [
+      "single-component CO2",
+      "298 K",
+      "pressure in bar"
+    ]
+  },
+  "description": {
+    "source": "accepted scalar tasks only",
+    "unit": null,
+    "method": "field selection without generated explanation",
+    "minimum_scalar_fields": 2,
+    "allowed_scalar_tasks": [
+      "lcd",
+      "pld",
+      "helium_void_fraction",
+      "accessible_gravimetric_surface_area",
+      "total_gravimetric_surface_area"
+    ],
+    "required_query_conditions": [
+      "conditions required by every selected scalar task"
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+AtomWorldBench 输出文本模板（Standalone Response）
+================================================
+
+设计目标
+--------
+1. user 和 assistant 的最终文本均不出现文件格式名称、文件路径、输入/输出结构标签或结构占位符。
+2. user 只包含填好参数的动作指令；assistant 只包含一条填好参数的完整回复。没有 system 消息。
+3. 回复独立成句，不使用 “The resulting structure is:” “Here is the structure:” 等等待后续结构内容的表达。
+4. 实际输入与输出结构由独立字段或模态传递，并保持和同一条记录配对；不能用文字确认代替真实结构输出。
+5. 仅覆盖当前启用的 12 种动作：AddAtomAction、ChangeAtomAction、DeleteAroundAtomAction、DeleteBelowAtomAction — Excluding、InsertBetweenAtomsAction、MoveAtomAction、MoveSelectedAtomsAction、MoveTowardsAtomAction、RemoveAtomAction、RotateAroundAtomAction、SuperCellAction、SwapAtomsAction。
+6. DeleteBelow-Including、MoveAroundAtomAction 和训练池中禁用的 InsertBetweenAtoms bench wording 不参与训练模板采样，不据此恢复隔离数据。
+7. 本文件中的参数槽位仅用于构建回复，必须填入对应原始 action_prompt 中提取的参数；最终消息不得残留任何未填槽位。
+8. 参数原样保留，不重算、不改写精度；{displacement}、{axis}、{cartesian_coordinate}、{atom_indices} 等列表保留完整格式，重复参数必须一致。
+9. 所有原子索引均指操作前输入结构中的零基原子顺序，不将删除、插入或重排后的输出索引当成输入索引。
+10. 保留建议比例：25% GENERAL、75% ACTION-SPECIFIC；各池内部 4 条模板等比例抽取，回复抽样与 user 模板抽样独立。
+11. 动作专属模板覆盖对应动作的全部参数；通用模板不需要参数。回复只陈述配对数据支持的编辑，不添加稳定性、能量、性质改善或额外计算结论。
+12. 不加入 “Okay”, “Sure”, “Successfully”, “We did ...” 等填充词；所有回复以句号结束。
+
+================================================
+GENERAL [25%]
+================================================
+
+The requested structural modification has been applied.
+
+The structure has been updated according to the requested operation.
+
+The specified structural edit has been completed.
+
+The requested operation has been applied to the structure.
+
+
+================================================
+01. AddAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{element}, {cartesian_coordinate}
+
+One {element} atom has been added at the Cartesian coordinates {cartesian_coordinate} angstrom.
+
+The structure has been updated by adding one {element} atom at the Cartesian coordinates {cartesian_coordinate} angstrom.
+
+A new {element} atom has been placed at the Cartesian position {cartesian_coordinate} angstrom.
+
+The requested {element} atom has been inserted at the Cartesian coordinates {cartesian_coordinate} angstrom.
+
+
+================================================
+02. ChangeAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{atom_index}, {element}
+
+The element of atom {atom_index} has been changed to {element}.
+
+Atom {atom_index} has been assigned the element {element}.
+
+The element at atom index {atom_index} has been replaced with {element}.
+
+The structure has been updated by changing the element of atom {atom_index} to {element}.
+
+
+================================================
+03. DeleteAroundAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{radius}, {center_index}
+
+All atoms whose periodic minimum-image distance from atom {center_index} is strictly less than {radius} angstrom have been removed, including the center atom.
+
+The center atom {center_index} and all atoms at periodic minimum-image distances of less than {radius} angstrom from it have been deleted.
+
+The atoms around atom {center_index} have been removed where their periodic minimum-image distance from it was strictly less than {radius} angstrom, with the center atom included.
+
+The structure has been updated by deleting the center atom {center_index} and every atom whose periodic minimum-image distance from it is strictly below {radius} angstrom.
+
+
+================================================
+04A. DeleteBelowAtomAction — Excluding [ACTION-SPECIFIC]
+================================================
+参数：{atom_index}
+
+Atoms with Cartesian z coordinates strictly lower than that of atom {atom_index} have been removed, while the reference atom and atoms at the same z coordinate were retained.
+
+All atoms strictly below atom {atom_index} in Cartesian z have been deleted, excluding the reference atom and atoms sharing its z coordinate.
+
+The structure has been updated by removing atoms at strictly lower Cartesian z coordinates than atom {atom_index}, while retaining the reference atom and all atoms at its z level.
+
+Atoms lying strictly below atom {atom_index} along Cartesian z have been removed, with the reference atom and equal-z atoms retained.
+
+
+================================================
+05A. InsertBetweenAtomsAction — train wording [ACTION-SPECIFIC]
+================================================
+参数：{element}, {first_index}, {second_index}, {distance}
+
+One {element} atom has been inserted on the direct Cartesian line segment between atoms {first_index} and {second_index}, {distance} angstrom from atom {first_index}.
+
+The structure has been updated by placing one {element} atom on the direct Cartesian line segment between atoms {first_index} and {second_index}, at a distance of {distance} angstrom from atom {first_index}.
+
+A new {element} atom has been positioned on the direct Cartesian line segment from atom {first_index} to atom {second_index}, {distance} angstrom from atom {first_index}.
+
+The requested {element} atom has been added on the direct Cartesian line segment connecting atoms {first_index} and {second_index}, at the specified distance of {distance} angstrom from atom {first_index}.
+
+
+================================================
+07. MoveAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{atom_index}, {displacement}
+
+Atom {atom_index} has been moved by the Cartesian displacement {displacement} angstrom.
+
+The Cartesian displacement {displacement} angstrom has been applied to atom {atom_index}.
+
+The structure has been updated by translating atom {atom_index} by the Cartesian displacement {displacement} angstrom.
+
+Atom {atom_index} has been shifted according to the requested Cartesian displacement {displacement} angstrom.
+
+
+================================================
+08. MoveSelectedAtomsAction [ACTION-SPECIFIC]
+================================================
+参数：{atom_indices}, {displacement}
+
+Atoms {atom_indices} have been moved by the Cartesian displacement {displacement} angstrom.
+
+The Cartesian displacement {displacement} angstrom has been applied to atoms {atom_indices}.
+
+The selected atoms {atom_indices} have each been translated by the Cartesian displacement {displacement} angstrom.
+
+The structure has been updated by shifting each atom in {atom_indices} by the requested Cartesian displacement {displacement} angstrom.
+
+
+================================================
+09. MoveTowardsAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{moving_index}, {target_index}, {distance}
+
+Atom {moving_index} has been moved the full {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}.
+
+The structure has been updated by displacing atom {moving_index} by the full {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}.
+
+Atom {moving_index} has been translated by {distance} angstrom along the initial direct Cartesian direction toward atom {target_index}, without clipping the displacement at the target.
+
+The full {distance}-angstrom displacement of atom {moving_index} along the initial direct Cartesian direction toward atom {target_index} has been applied.
+
+
+================================================
+10. RemoveAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{atom_index}
+
+Atom {atom_index} has been removed from the structure.
+
+The structure has been updated by deleting atom {atom_index}.
+
+The atom at index {atom_index} has been deleted.
+
+The requested removal of atom {atom_index} has been completed.
+
+
+================================================
+11. RotateAroundAtomAction [ACTION-SPECIFIC]
+================================================
+参数：{radius}, {center_index}, {angle}, {axis}
+
+The surrounding atoms with periodic minimum-image distances strictly less than {radius} angstrom from atom {center_index} have been rotated by {angle} degrees about the axis through the center atom with Cartesian direction {axis}, following the right-hand rule.
+
+A {angle}-degree right-hand-rule rotation has been applied to the surrounding atoms at periodic minimum-image distances of less than {radius} angstrom from atom {center_index}, about the axis passing through the center atom in Cartesian direction {axis}.
+
+The structure has been updated by rotating the surrounding atoms selected with a strictly less than {radius} angstrom periodic minimum-image cutoff around atom {center_index}, through {angle} degrees about the axis through the center atom with Cartesian direction {axis}, according to the right-hand rule.
+
+The requested {angle}-degree rotation about the axis through atom {center_index} in Cartesian direction {axis} has been applied to the surrounding atoms at periodic minimum-image distances strictly below {radius} angstrom from the center atom, following the right-hand rule.
+
+
+================================================
+12. SuperCellAction [ACTION-SPECIFIC]
+================================================
+参数：{repeat_a}, {repeat_b}, {repeat_c}
+
+A {repeat_a}×{repeat_b}×{repeat_c} supercell has been constructed using replication factors along the a, b, and c lattice vectors, respectively.
+
+A supercell has been generated by using {repeat_a}, {repeat_b}, and {repeat_c} repeats of the input unit cell along the a, b, and c lattice vectors, respectively.
+
+The input unit cell has been repeated with replication factors {repeat_a}, {repeat_b}, and {repeat_c} along the a, b, and c lattice vectors, respectively, to form the supercell.
+
+The requested supercell with replication factors {repeat_a}×{repeat_b}×{repeat_c} along the a, b, and c lattice vectors, respectively, has been constructed.
+
+
+================================================
+13. SwapAtomsAction [ACTION-SPECIFIC]
+================================================
+参数：{first_index}, {second_index}
+
+The spatial positions of atoms {first_index} and {second_index} have been swapped.
+
+Atoms {first_index} and {second_index} have exchanged their spatial positions.
+
+The structure has been updated by swapping the positions of atoms {first_index} and {second_index}.
+
+The requested position exchange between atoms {first_index} and {second_index} has been applied.
+
+
+================================================
+建议的实际采样规则
+================================================
+
+1. 每条训练记录仍只生成一条 user 消息和一条 assistant 消息，不因回复模板数量而复制记录。
+2. user 模板继续从对应动作/子组的 5 条启用模板中等比例分配，并用固定种子随机打乱。
+3. assistant 的 GENERAL/ACTION-SPECIFIC 目标比例为 25%/75%；记录数不能整除时用整数配额近似，不直接依赖独立伯努利抽样实现比例。
+4. 在对应的回复池中均衡分配 4 条模板，再随机打乱；回复抽样使用独立随机流，不把某条 user 模板固定绑定到某条 assistant 模板。
+5. ACTION-SPECIFIC 只按当前动作选择。SuperCell 的 5 个 user 子组共用本文件的 12 组回复，分别保留原始三个复制倍数。
+6. 将原始参数完整填入选定模板；不要重新计算坐标、距离、角度或元素，不把位移改写为终点坐标。
+7. 生成后的两条消息都不得包含文件格式名称、输入/输出结构占位符、未填参数槽位、结构正文、路径或要求后续结构文本的冒号式引导。
+8. 原始指令、参数、来源位置、结构路径和哈希可以保留在 metadata 中，但不能拼入 user 或 assistant 的文本。
+9. 实际输入和输出结构继续通过独立字段或模态配对传递；加载输入结构时必须保持原子顺序。
+10. 此采样比例只规定训练语料。评估记录仍独立保存、不混入训练；若将其转成新格式，其消息也必须满足相同的无格式名、无占位符要求。
+11. 上述说明、标题、参数清单和采样规则都不是回复模板，不能混入消息文本。
+
+
+================================================
+语义边界与检查
+================================================
+
+- GENERAL 共 4 条，12 种动作各 4 条，共 52 条回复模板。
+- DeleteAround 必须包含中心原子，邻域距离为周期最小镜像距离，且严格小于半径；四条回复均保留半径参数。
+- DeleteBelow 仅为 Excluding，比较操作前输入结构的 Cartesian z，不做周期包裹后再比较；保留参考原子和同高度原子。
+- InsertBetween 使用两原子的直接 Cartesian 线段，不是无限延长线或最短周期镜像线段。
+- MoveTowards 使用初始位置给出的直接 Cartesian 方向，并施加完整位移；允许越过目标，不声称距离必然缩短指定数值。
+- RotateAround 的选择使用周期最小镜像距离且严格小于半径，旋转轴通过中心原子、方向向量为 Cartesian 表示，遵循右手规则；旋转使用输入结构中相对中心的直接 Cartesian 位移，不先替换为最小镜像位移。
+- SuperCell 的三个整数是沿晶格矢量 a、b、c 的复制倍数，不是长度；回复里的乘号仅为展示，不改变参数。
+- 动作专属回复填入的参数集合必须完整，与对应原始动作一致；相同参数的所有重复位置必须一致。
+- 文本确认不等于额外科学验证，不新增“结构稳定”“能量降低”“性质改善”之类结论。

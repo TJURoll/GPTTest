@@ -1,0 +1,20 @@
+data_structure
+_cell_length_a 5.5049465399968920
+_cell_length_b 5.5050699599532429
+_cell_length_c 6.6264137500000002
+_cell_angle_alpha 90.0000199903006717
+_cell_angle_beta 90.0080916102781430
+_cell_angle_gamma 120.0007904900039648
+loop_
+_space_group_symop_operation_xyz
+'x, y, z'
+loop_
+_atom_site_type_symbol
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+Cs Cs1 0.3333792200000000 0.6666666667000001 0.2390192800000000 1
+Cs Cs2 0.6666666667000001 0.3333333333000000 0.7609807100000000 1
+Se Se3 0.9999999800000000 0.0000000000000000 0.0000000200000000 1

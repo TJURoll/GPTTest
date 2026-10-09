@@ -1,0 +1,68 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "hmof",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 70634,
+      "original_sha256": "4d8472e2bfbe5235e2a241dea3a389504a1dca65eb1b5efc542056bcd2bc9448",
+      "sha256": "15377b65883cf0af76bafb81141963fafb49606e9c31e8e3ab47c412cc1d140c",
+      "messages_sha256": null,
+      "bytes": 97501321
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 534879,
+      "original_sha256": "90887f9bd0d027000b6b636bfc6ccd65e0a1af913d421f80a247e98bffc91bfe",
+      "sha256": "9251588102b9f414f2bbbd08f185c60e6ff6bdb8cb4fffccc07f1cb48e40a0dc",
+      "messages_sha256": "9b9aa701f2c0e22f0bb95466a446aee4a4750cfaf2a22633100389aeea47651f",
+      "bytes": 729252584
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 28153,
+      "original_sha256": "93d1253af0ff4151b911d6d128a5b756b60df100dae0d89b4e98d12b8c6dc0a7",
+      "sha256": "121ad5ba2ca16953da7c2229c1860cf4b82458372877229e0336f00d1ba90a78",
+      "messages_sha256": "cc6356ec42192f567395507782bc585e05970f8af550d2aaa7237872be220c64",
+      "bytes": 38323925
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 70634
+    },
+    "bytes": {
+      "structures": 342757575
+    },
+    "manifest_sha256": "0587c489240cf65bb110831a768266225af9a6b1e92c194f58d9f156cdd063a9",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 633666,
+    "metadata.answer_schema_reference": 563032,
+    "metadata.template_bank_reference": 563032
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 24,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/hmof/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

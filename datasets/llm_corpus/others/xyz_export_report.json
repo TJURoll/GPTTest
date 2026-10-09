@@ -1,0 +1,1329 @@
+{
+  "status": "complete",
+  "authority_records": 233948,
+  "xyz_files": 233948,
+  "split_counts": {
+    "train": 222218,
+    "val": 11730
+  },
+  "unique_stored_nonisomeric_smiles": 226537,
+  "stored_nonisomeric_smiles_cross_split_overlap": 0,
+  "metadata_records_excluded_by_authority": [
+    39469
+  ],
+  "npz_records_excluded_by_authority": [
+    39469
+  ],
+  "metadata_old_split_disagreements": 22319,
+  "finite_metadata_values": {
+    "scf_energy_eV": 233948,
+    "homo_eV": 233948,
+    "lumo_eV": 233948,
+    "gap_eV": 233948,
+    "dipole_debye": 233948,
+    "polarizability_au": 233948,
+    "polarizability_A3": 233948
+  },
+  "valid_binary_annotation_values": {
+    "fg_alkene": 233948,
+    "fg_alkyne": 233948,
+    "fg_allene": 233948,
+    "fg_cyclopropane": 233948,
+    "fg_alcohol": 233948,
+    "fg_aldehyde": 233948,
+    "fg_ester": 233948,
+    "fg_ether": 233948,
+    "fg_ketone": 233948,
+    "fg_amide": 233948,
+    "fg_amidine": 233948,
+    "fg_amine": 233948,
+    "fg_azide": 233948,
+    "fg_azo": 233948,
+    "fg_carbamate": 233948,
+    "fg_enamine": 233948,
+    "fg_imine": 233948,
+    "fg_nitrile": 233948,
+    "fg_nitro": 233948,
+    "fg_urea": 233948,
+    "fg_sulfide": 233948,
+    "fg_sulfonamide": 233948,
+    "fg_sulfone": 233948,
+    "fg_sulfoxide": 233948,
+    "fg_thioester": 233948,
+    "fg_thiol": 233948,
+    "aromatic": 233948,
+    "aromatic_phase2_label": 233948
+  },
+  "npz_metadata_scalar_matches": {
+    "scf_energy_eV": 233948,
+    "homo_eV": 233948,
+    "lumo_eV": 233948,
+    "gap_eV": 233948,
+    "dipole_debye": 233948,
+    "polarizability_au": 233948
+  },
+  "raw_metadata_scalar_matches_at_cache_precision": {
+    "scf_energy_eV": 233948,
+    "homo_eV": 233948,
+    "lumo_eV": 233948,
+    "gap_eV": 233948,
+    "dipole_debye": 233948,
+    "polarizability_au": 233948
+  },
+  "max_gap_identity_residual_eV": 9.5367431640625e-07,
+  "max_polarizability_conversion_residual_A3": 0.0,
+  "raw_to_npz_max_coordinate_rounding_angstrom": 4.768066403926241e-07,
+  "xyz_vs_raw_coordinate_error_angstrom": 0.0,
+  "calculation_configurations": [
+    {
+      "basis_set": "AUG-CC-PVDZ",
+      "calculation_type": "OPT+FREQ",
+      "functional": "B3LYP",
+      "scf_method": "RB3LYP",
+      "count": 233948
+    }
+  ],
+  "source_status_counts": [
+    {
+      "normal_termination": true,
+      "parser_status": "ok",
+      "structure_source": "final Standard orientation",
+      "count": 233948
+    }
+  ],
+  "vibration_diagnostics": {
+    "finite_nonempty_frequencies": 233948,
+    "any_negative_frequency": 5780
+  },
+  "separate_followup_graph_audit": {
+    "records": 233948,
+    "rdkit_version": "2025.09.6",
+    "smiles_parse_failures": 0,
+    "formula_mismatches": 0,
+    "explicit_h_atom_count_mismatches": 0,
+    "corrected_aromatic_flag_mismatches": 0,
+    "existing_fg_policy_mismatches": 0,
+    "no_active_fg26_labels": 892,
+    "contains_excluded_author_group_other_than_aromatic_ring": 54009,
+    "formal_charge_counts": {"0": 233948},
+    "rdkit_radical_electron_counts": {"0": 233150, "2": 699, "4": 47, "6": 51, "8": 1},
+    "scope": "Recomputed from metadata canonical SMILES. Reproducing annotation rules does not validate their natural-language definitions, infer bonds from XYZ, or establish the actual electronic spin state."
+  },
+  "separate_followup_xyz_parser_sample": {
+    "parser": "ASE format=xyz",
+    "records": 32,
+    "record_indices": [7858, 7398, 2321, 3587, 917, 8072, 9448, 5683, 500, 2261, 8219, 9135, 2496, 7102, 3229, 7075, 9445, 2647, 4897, 5993, 4088, 7276, 262, 866, 1431, 8315, 3532, 8512, 1115, 3871, 8593, 6926],
+    "result": "Atom counts, formulas, blank comments and nonperiodic parsing passed.",
+    "scope": "Sampled from the first 10000 metadata records, not an independent full-library ASE audit."
+  },
+  "notes": [
+    "XYZ files have blank comment lines and retain raw coordinate text and atom order.",
+    "Completeness and source consistency are not independent DFT recalculations.",
+    "No global 3D bond or stereochemistry validation is claimed.",
+    "Normal termination alone does not establish a local minimum.",
+    "Spectra are not exported or newly validated by this script.",
+    "No train.jsonl, val.jsonl, preview.jsonl or query/response corpus has been generated."
+  ],
+  "source_sha256": {
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/phase15_aux/canonical_selfies_by_record_index_v17_nonisomeric.jsonl": "0689baeb9d17627b995da8f44d0c9b190e230c7be58330b2ea068065dfe9c300",
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/split_maps/phase2_v26_record_split_map.jsonl": "e4703dc225a36ed51295c8da32fe35c62e4269b6539e01323978d5feee215f44",
+    "/mnt/e/Datasets/fg26/01_source_data/metadata/molecule_tables/fg26_molecule_metadata_v2_corrected_units.csv": "d37dae083244e1c8c68597c23bf014729f6879faaf6957a19455bbac457e3b07",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/manifest.json": "7945a4358eeb313281a1be13ace59ffb6c4fa0065d72ed3b0f03f7eb4e60f983",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00000.npz": "87e032bad18e68e20ae51726483408cf404eccfc8163465628a2954cf3812432",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00001.npz": "512556a6039caf00715ae8705bed74a675989ff1531eceb89989fdaa8e642f79",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00002.npz": "f76884b465453624392e494a8279a4844c709fef38cf56f1c5f9b08e647f4090",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00003.npz": "4343a9cc8baa419eb1230df24ef1ec49be28a6ddc36f04172f8aa5835bf5aca9",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00004.npz": "96af15504334fb12016b5e0bdf6f93c91710b2c3a517f468aa6eeb38c01401a8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00005.npz": "21d8c1347d22c753f74d2f2034f26379a5636720d09991f201ed9d88b792e50b",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00006.npz": "36d948282c1412acbb798ad3f9f3285063d5ca84cafa1684bc88674ce1195746",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00007.npz": "b6d4a444da351e3d3c084ca2f93e6bebcaa4c3b56790bdba8b085294145ba08f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00008.npz": "3192c8ae8965970ac89fc219e84ad6dd09a0965aa3e03e6006028f48d78abce1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00009.npz": "89d32148c8d12658ff2a286b01ca606f258a95768dbf22d58bf3270ad01741a4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00010.npz": "01699f9e77ffdf91e8032a3eccb5eb672366864f2c16317e42490e82f5c526a4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00011.npz": "b039a98f89ad7485f036b40ebaa8bb12eb0e46be7eaa4f801e38b7ef42c6d917",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00012.npz": "7c2b59663853fb2d6896b237f0a956680974e6bb35378ec74785cc90bf092da3",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00013.npz": "b735b0e45ee368c34582448d115a0f75822aabec17a547ecfeb0f3bce0f89344",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00014.npz": "e6899c27182ac91cb8afb25aeb70133ead82c90d33aea14cec0c943d6b796f98",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00015.npz": "90099d61110d4a36639c60f3b9ee64ee5f1a6cd89eb14e47409b476f4f2fd841",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00016.npz": "e9a04707f1619e4bd38a3951e1b926ba195baa331fc64ba1d5c3e440c86e6944",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00017.npz": "f0f72520ec013446d19eb15193761d0f6c5ee705097593a1cbfda40c46b2b177",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00018.npz": "6c785d6cb3740f0ec02791ca012c542e68f44c1cbcb2bb8433008e3e4563f6b1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00019.npz": "38765ea31d396f581552a29f46a39f257778d492dbf4eaee3cd793f86b0d74cc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00020.npz": "b5b44cef6a1a3e22a27d25bdeffd78bcf32b04efb70a10307b26b7b200920e2a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00021.npz": "e82a9b27230f52d12a5bb5aaf106ef855caf83535d1c1e9815960fb6b5efd39b",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00022.npz": "d4497d4204480af6c60564b2d7b75c82ec068edf6215b71b671f66d9e825040b",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00023.npz": "8a2d99ab2ac9a744d72e7bb40e5ac34851907fb76a780da116e94cd393b91c9d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00024.npz": "ec6affe8a1300636f22fef4bac10826af8fb79d3240ecff8f5405b6b1098d701",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00025.npz": "1f918d58ac87269fe12cd4d934529c5dc83efad09ffdcc56999ace571a6404fc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00026.npz": "b65c1b7507303c1f10862c19d3532550917027923a2b6d27a90d038272abd5b2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00027.npz": "971ed1fdbd1f06bf355ccfb9d1236d385056e2ac0e2549610b560ed455e6ee0e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00028.npz": "92e1ab5b65c8c3a55c1edc632761127c1809be9dba9d565ea278d969f6077dd7",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00029.npz": "752dfa15900e2529c8c274b20704c462a94199195ca6fe5b344bd2dc77f2f3ce",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00030.npz": "c3501d0a0143a3fc8e120e63c64cf49630b55d2f1c41c14993dba93e3e27029f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00031.npz": "0ffc8fd2b6a93936a6289110cecc71a92b82eaa5286d549ce9529b86dd4c37f8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00032.npz": "cc09e13df74b65528c2ce9b0eaaf7f5920f2fb7409f304c0a1848c8ea9104fe9",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00033.npz": "240564e8dc91c4cf628acbeba86705ac6fecfa173716dd89c7846cea17e1c614",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00034.npz": "e9286bef2b936797e008a47e7789148815fc5b16b3655dad550e7fb0cbdb6372",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00035.npz": "342e5dc9ed9e80c137e0e72f87891ac7bdbf9aa3fa6e1205bb84a26b1938aeb1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00036.npz": "db45210b6405c1eb5a74bfd87f08c4686d107feb5ec39073a44e6039c26c7b96",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00037.npz": "1a2d8e60612b2af4be61cd43aba77dbf02da1f733d766ce99661292aa17d93bf",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00038.npz": "3b10ade227f59f04ceaf5317fbaee9c8f3ff3ef53ade9f95ee33ffe8b286049a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00039.npz": "73431c1d90655a45bbc7abbfe86f32e14801748647f56126e1705c49c51bc361",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00040.npz": "c064f8bf61bc35214a7a3a45619b73ac11aa1d854e7ea79be745e4e9856ea469",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00041.npz": "e7d5a948b005b5e38652f95c89c76ad8c44e88dad9d795a720350f0ca9a7eff5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00042.npz": "da1740fac1ef6ae5f25cc900fc765b91e2af44c3979ce235e35348319764bed8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00043.npz": "2d9972ffe8961ec91442f7654ec8458038008c98b8d3b39776aa648951a4c7c0",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00044.npz": "d99c0050fd2ee43b4a26c262a8e91ca211647de22ddcb1a6c277b3f4a3f8f6fb",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00045.npz": "1f950fa83aa1623499e4b908088d2a4c49c27aaf3ae4572be1da37c0a03171ce",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00046.npz": "0ff5009815592e87ecf5dc79fd70326596a058f9b8bed750428255bad6b201ad",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00047.npz": "0ef5173ec1041a2a2490dc6de30c2e41eb1d48c1353c7e7093ade6e92b95baad",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00048.npz": "71fbecc951896a3e5e0917438c80bd60b81ebd20a8fcc85a1099068859884237",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00049.npz": "d145fe768ed98c989219ecf3608537d6ec5b0e720d160318481b563681b928e1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00050.npz": "8ad7d7fecd7898bec265096b0316c1b3010cb688374db98a851a4a2c1e1c8240",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00051.npz": "911a1205034b36ffc27fd907d4ba28b1f4ecdb3f93234740f6772dc7c1dde9be",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00052.npz": "e57e9fdb489c16e26e324830e1abdcfb535d6f349e5cf34de42d7495f888d8a8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00053.npz": "3efc404fffd62d3de220df776eb60ddd7f084ba3d79e8ff851a4774be96f4479",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00054.npz": "5e376fb0e40811ec5623af826166b8594b363f5a219511dcc952c93ad283f12c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00055.npz": "978625e46fc54dacd7cead233f6647164cee22b157af8438e98c06c67f1730f5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00056.npz": "80b517dbe3064af982d6d39826947729958dc5f15a04b1d0acdd372d45a16768",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00057.npz": "710bf3e1eea8dabc20cb48091f0998c60da7e8189ab8e09437f2fd8cbca19cb0",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00058.npz": "43c2e4a8abd6497d351c3108392770d610821efe70f6a074a97add1b5a9e26e5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00059.npz": "bedb0b9fac2006a80935d2a8d3a7b6c6980e50e2e85af9d052db250077a072e1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00060.npz": "009deae58a0d31a2d7c8fbaa37829552a6031ebd19adc3070f233f87f442c677",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00061.npz": "f5f9679d91e1963eb4f760548a050502c670fcd96fc006161045ebdc2653b231",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00062.npz": "52ae28e5c85dfad8e4735170a4544ecf38e501c9333e3e8a6ac39e6b9c658168",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00063.npz": "57ef30635493fc50dfe2c93c22d13c855c39a83eb5a1c1bb686828c9987c33a9",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00064.npz": "dd842a0e899febb793c5664920f66d866bd3724ef912d53f1fac7b84cb596341",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00065.npz": "59df912551d64f734fe6bcd6618d80818892640723f41a7a6bac4d7a43096e6c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00066.npz": "56739c20723e89388feed217e910c4901d4b3c4c6902b96a75f61f92df128aea",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00067.npz": "6f2b8dc0a306e7ff1d297fa769d22f13362b4aa995c653e5cacb4167dac7764f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00068.npz": "86fb7d0c55a2994cad0aeb7b9e4b68d12fcc8e3584282e8ecbfdd88d45a682da",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00069.npz": "68fa5438adce87d2dbd66b3941caeed4af8f7d54d9fca190a6c630130c46af41",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00070.npz": "602769ced6c046aee5bbe581f1e96be2fa693c99c5b73e128255da845a4268d9",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00071.npz": "69af44bccb6dba5992b327cde793ccc3cf214484d60eeabdc3297ae8de328f44",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00072.npz": "10628b1b9d5add9d71bc9a3e4523cac8ade391fb37ed48ef485037ce1958a6fd",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00073.npz": "3a1a9c2c5a37dc6c7c503f733614934104ce8fd4f3b2d77bde4ebaa214ff0977",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00074.npz": "7ca06f44f8774de13b68c9117e798268e0e6cf62b79a70e8642280dce39b5888",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00075.npz": "7625c950dbd3e1d57a14f6dccbd7f78de164b1a85f265c5e4e23996c18af9126",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00076.npz": "80de41d1d3042fe88071801676a6625884457d407f2f10afe885ff7f16dbd53a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00077.npz": "91b409a01f2cc494f63085747d2ca0d037b4b363343d92a3545b0ca59c1b9ced",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00078.npz": "b9bf669b23ff4dc03930a2381ff179fbf8946f0835b3ffdb755919ca0a8617a1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00079.npz": "d3d180ecd9faa987ca8d81fda075422b64ef548fe77e47a613faa347d4acbc4f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00080.npz": "a9e3b9b3555beca49cfd67e2a943e2f1d3edea1f0d9ee2b5ccdc8d5404aaa0cb",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00081.npz": "e1c136fb885b270aaf663b1566224c016ea8d358261737d2822b76334d0f8280",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00082.npz": "c174c283008f6ec983402b295a964440c115f5b368e663a6d4281edf05221f89",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00083.npz": "2549d22c2b6cdb292e601e3e486985688c2f1f6a7ed58d49761f766fc80a0bb3",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00084.npz": "e023f5033e1be1ad7adfc4561747966d6c36f3e9dc817cc9ea22a908c8bb0159",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00085.npz": "e48a6d874284d12747a04ea80213bdcd6d3a7f74a2927afebfcd1c1ace452e90",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00086.npz": "fffbd99302e70ea74a55d4bc713ae80f0ab758df8aebe65efc8d5c47a92c8664",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00087.npz": "53e2758f850654ff2455b69c0c9858cf7649fc7db5179a92436af4740886be78",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00088.npz": "00124db4684d5250d6e6da882db094bc0263535036fc8c789b9c8fb78e7855ae",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00089.npz": "09dd6e842739176676834804a2c7a359590062f741a96e8be35c139593b1deb6",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00090.npz": "ab79298db65567584ba6f6b4b75875b2055eacad87cef95fc48384e4687f7221",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00091.npz": "989e4535b171fd14cefd10b3f68f7a030e721cc6be4644df64401c2192585e4a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00092.npz": "4ff90e5d7439861863904c91ba2a29e74930d9864ac12203c096a11f5f570600",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00093.npz": "1fb1e357153a56fcb98ee1ca4e4dd8f2294aa58f7fb7556f5dfcfc4dbdd61e1e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00094.npz": "7c4bea5e212f1441c83b477a41cc4e42f361d2413487a995a66929be840c7920",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00095.npz": "efb6fbac45d307e0ec50d02173444f69a7632d6cd4a6256685fe55ec04da1d2c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00096.npz": "76f9f71942128c3ecaa3b751857c4b5735447d1c7ceeb675bdad9bbe795b1527",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00097.npz": "d2c2b535a52ddf975d1963f070d38b64d84d3a75b71ce8478b8a3a2e65f2c275",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00098.npz": "553324204787a42bb66d57cc972723a650d85fc14a0483b8b26cbecedc1d300f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00099.npz": "0c72f1fa7709f2b288800bc934d618e6d999ee00b541a3395488aa048fab6d47",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00100.npz": "b1df3bece57021beb754715d6ece58e2aab876cd7661eb088572905e31ee0536",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00101.npz": "69a2e706baed5cf776980a755518d64e06c71cf2961218210e6e62944f131e61",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00102.npz": "bde6e2ac0f77cf05cdc09bc8d7269daa863cdda68cc12c5d14b081eb35f2cb33",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00103.npz": "a87bc22789768350de8a6ffd7234b63cccbf873f393b5e326fefd2b55df5eff5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00104.npz": "2874738d00e8087eb92f1c22ce6576d2f58b2b63596fe29bdcfad8bc011c839f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00105.npz": "5cb61183ce34e276d8808e2fce95ba4c1bf9a6e4d230f8ad5c3f4d6a822d561f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00106.npz": "5b0d7abcca305814dc6ae2dcc505788d1226ade3f5890a35d8f1294ece4d5adb",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00107.npz": "4e5c77346fc0dfe08e6ebf1bd8c0b139bf6f58061daf016facc72a9b3b379e30",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00108.npz": "516b66ea63142f5df55c07e787e942da4be505fc499119ecb7eeec109618cd1f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00109.npz": "b4583ff5a91f6e2befcaea12dd4757d1e4be4184167d2567fd3449e48d3501d4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00110.npz": "f8fb753393a669bf3ba99e4acd2023fb396d6de541e704ef603e1c3ba23498bf",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00111.npz": "141e1f9e1c69361f111f63a6a1e39d1ed92b89fd799b8db11202adc3132d0023",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00112.npz": "4a974aced3b73363e9b10d4b92d12a7cb15e0cf2e9d2b1f41f83f84579438aa4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00113.npz": "b4075f154f98d0f60d7de799a78e819c1b28083119e5c78b8883bfa2e9f891a7",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00114.npz": "b65205bbd5f0f33fc03ec04457590d65b207f4273afee043e23933366f518751",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00115.npz": "bdea6bb0776dc6d0dc18791452e69e4a8c0c699bc66ac11ecf7e3a886162a4f2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00116.npz": "6b4d4279f6ae0661a110a9bc6009f065814b948c07109f2876bf15c817655609",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00117.npz": "b256a0c8cd98ae0f43b7ec341cacbe737c0585df804d70fe426ceff2a8e2c093",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00118.npz": "7a31408ab0bd09d310b3962dcb6888cd5e518997bf6a10f8496d92b48848ca76",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00119.npz": "6ab99f3beed8e0db9070107363e4e30e0ef4446e52f6c4c8baef018c95025a25",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00120.npz": "c7b9b1b4b0bef322cd153e90dc455daf1076643013ff671659c1b397669b12ab",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00121.npz": "fc03f6aebe5f57fc01a249dd448178dee006f2eef8a3418957f0498433021ab5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00122.npz": "905dfd76abc1ad88ddcd04e8c9d2a09c858d8b411ea756fc903308a790774719",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00123.npz": "d52edb4fd470f7c78ad9a5148810bf07708fc3427a291965692c6fafa44041bc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00124.npz": "a91e64822d6ec19e6f71d323c3223d8010cdedf65db72d4aefbea1f74241978d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00125.npz": "f6ee2b871e181ce9c0ede8975d0fa9ba29a028fcbe637c0cbda473f3db0528a5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00126.npz": "60d24f151edddf990ed9ac372925f974d45d22166842e27060a3076d574d5f23",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00127.npz": "6769c363e936dd85ada1581e0eab57f55bfa104229c5019bcee01aa3f6161a90",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00128.npz": "e18848a16bf40f7cddebbcd38a5bba21192e81fb5da77c45ffb83d28e3e2f91d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00129.npz": "84f4a2eedc59e6a931516c3282d96c299bf8dfdf0943cf6d762934c2a7075f6e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00130.npz": "b6de940dd845db41b6a0cd7013a0a09bc121271c2c9b604aff05d9ef2083dbb6",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00131.npz": "2ce9c18b2f77b61fff74541f8177510fef803de575439d95ea45210a43ba1f6f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00132.npz": "d37c909157c818838d8c8599ca1267e0f3d983ecdc7875d6967698e42778d51f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00133.npz": "6450a428f0f72e3f477e5d43de28c3b5dfda75032d39f1125a936cc6fc6bb381",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00134.npz": "bb0c366bacb7e515dedc25f8984770df700c68ceeb82e6cdf800e9284d793712",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00135.npz": "ad7d725bc43d12704b5aeef3d6913abbc9de10dfc82be99bb218a40ed3925417",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00136.npz": "9bf4455a43543de43977a460848049c51ce95e5efb5f9e33f7a79fc8f99b977d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00137.npz": "57ef12fb00177ff3d6e9441836c7adcf78a063641f88cb358e219628698dfa0c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00138.npz": "0ac7e3fb77eae18272f23ab41e976bcd376e8fa32f90144c3c035a0ce370521a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00139.npz": "d15258a462119272c0ae43e59449d0d60bd6407febe4d3f724d73bdf4658c715",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00140.npz": "b0016a6720354aa7bb0f768cbce71cb005fcc5ca4778cb7a67e3519a06b28bba",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00141.npz": "a904bbcb1a4d465ebbb42973df7597cdb0b47dedc8271fa809b0c40c79c8a0e4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00142.npz": "813e873d6d1655ef2a4323b4aec76fc744751f9da771d273fe7c5fcf7167a49b",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00143.npz": "0ccf0e5c920c87cf4567ac046694563d555efe3c4a42956e5b7350f3403dd054",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00144.npz": "d85f37541deb4feab72115ade617e4241bc27b84caa97824b26930481d4ef614",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00145.npz": "860fa5ceedcff98538cff35d732572364aefae7707eb777bbb6eba33d412268d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00146.npz": "58e5d6f77a91881c02fcbe02ecec2b42ed597ceec01e58b8d539c19ac153cfd7",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00147.npz": "84232db1e770a56fe10be49bf1d341f7806e2323893f859f6add6a299d1ae242",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00148.npz": "7e355c3b1020495dbeccfe6746be2b7b0fa28ac06c04c90641f5339a4ff48b7c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00149.npz": "2992e6cffb498c5d5c18813f1a3f99fd25058765600ec5cb89f73475d8e42fc5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00150.npz": "598336ca2be1373c8759ca611858b2ebe9bd3a21b67864fa7a7da0bad617a918",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00151.npz": "e06661eeaf25629cffed4b01fd8ed50645f40ec92ae394f125af362255ce2d30",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00152.npz": "2662ba887fa1f7ef9869709520541e2b5176ef2ab6a22af194dcfe26435fcd25",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00153.npz": "946a5797ce5ba8dbaedab86f3298bb14badf98095f4aeefdc8f39c77747ddc06",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00154.npz": "6d13345f890faf05f4afd240527cccbff33105534b32ef684789da708cb93414",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00155.npz": "d4fd1f36c1da6451fe92d8fca61c00d810996059e1aa6726f0939f28386932ad",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00156.npz": "8002ab8ccaa7301c4ea2863278d6229b94c5d006b2c091f89bcde2dfb3851b7c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00157.npz": "aa7e10ca2abc41115c763e22ca4ebd3bf66246baf9b731ee0096201be9322e3a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00158.npz": "aa2d8696c331c871dadeb36d7b12ab947b030690f03e872b60b346438793359f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00159.npz": "f9c19383ed038af5de69ce6a8a6b62a19c4f4a129016d015cfbcd626834ea27c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00160.npz": "bb95c711c2c8a7effaacd27be66ebb843f19da7253c056e34bde95b08c3ed26e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00161.npz": "1a8dc2de7b4efcc61eb33b102ceb5edb0597b96b53f0139d7f0e93778a86d94e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00162.npz": "9022917ab7c4d20a3a1bd21dfbb40632f93cdfc29cdd9ad3bb93d7cb9a5deb0a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00163.npz": "7a506972e8d3d664d1aa2f37f5d9be2772fdfc46e97c229f34232a4f99f65de2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00164.npz": "4cf959cb4e704ecc8e22e786cde6bc065680e6ee465f2a6b0c27b7a636754fad",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00165.npz": "d08e89547286440850b84665f13dccab4242aa3b1041b6b89ca9cbd1f4418987",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00166.npz": "ebfce07e38ae92d44de6ff85aa544ac10d8559399a6f42741ce4d7a77fad8ce2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00167.npz": "183e9dea1ebf3cdb8f581037f4971d2326d7eaf969a9252a14e4f0619e447437",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00168.npz": "969a919faa16a9a632be02f18680b85d53126e967becd7635944bafba78387d3",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00169.npz": "1ddc8c5dcc5f43e599a844aa5618a516dc980ed89fa3dac7906fec0cbfe48830",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00170.npz": "1b18637b2944b75b6d831fc38af53f409699ef356ffd846de869b6e830154fc4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00171.npz": "bc36a2db65522fa931f927c6a458bf3fdad1b08886148352fd51c219ab046bfe",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00172.npz": "c514d14a585ff9063065f8b63858fe3a288dd6311a86d265b482b37fc3e0e7ad",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00173.npz": "df43a230828269c7c0ac44dc2f9759d6175263c5f860e7ffa13e2fd8fb84547f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00174.npz": "188e8a3142906bba8f5660234019918e50e3523c2e6049eba516c4c17db8b1cc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00175.npz": "ad3cb75b0973375c1488fd2b1995fbdc2a803bded2d55ea85cd22df65a95c58a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00176.npz": "482d040bc2e105e019ce8b84c050d4237e75695b49184f4bb400f36fba5286de",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00177.npz": "1d92f5fda7ed5fd4ac206a799340867ac219ce6ad40b649f9f2c35f48812c79e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00178.npz": "05e02a9a53b9d9a5757a4311ce65e460b3d51a4785bb846db74ae2db8594a846",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00179.npz": "8ba5ad04ca545f91b23efd184a75665cdd9fd4f85df61c81ee2f6f5d4fcc2a89",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00180.npz": "b0553a62ff83caf95d3b532ea857ac23a9e12362e7bc9db6d9bf64803591c21f",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00181.npz": "9810508f65ebdbd145837f95b91537fd424e90e448bb33d8de733f739404b1e6",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00182.npz": "29402dcfa5c280f76dd33515afac9ac5ea5199d195916984500e29461dae0e80",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00183.npz": "2d8d17b5bdbe842986cbde50b8c0f904c2973d0b80157ee3ccbfae0d6af59d7d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00184.npz": "26a1331b1d73184c7141f086a454f0c88bd3b70f1b79117c5cbed9e2cdc9fb89",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00185.npz": "d1e9b66f720b705997461be3eff2f1afdbe3f673f820dbeb7a04a1f8d8541970",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00186.npz": "e77d66545fb9353df6c16cdbf436293e0714521a83e0cf92f682e207a4a09922",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00187.npz": "a11495c3e0125ade6c4fc472a6c67e5a645af126d8a60951ab0daf928ef6da47",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00188.npz": "2e1af991a9f5bbf75a951f4e5a31ae7c59d3bffd1a81db65ceac769358dc932c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00189.npz": "a5fa05673665616d9ce67d650e75117551ec3bfd213bee26bfdf9a8a1844ea4c",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00190.npz": "0762e91d24ac3ea2acab82d8bd02818c6870a1223d13b4bc2a0f5c77ba3b44e2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00191.npz": "9aefb932f9025ae61faf4557fbd04b0c0a4ced3d50d385d3528b0b4f521a5bce",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00192.npz": "1234b38edf16402bacef4a66bbe6764b1abae4695685ee9f33db4f81564621b3",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00193.npz": "80611d4220e6208058a0fb7a2439b57d3a8ef2884f19dc4d490ea8ad9b052399",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00194.npz": "bebfdde5c9e076626ed151540332c750aae3839172469d20b367f410c939d9d1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00195.npz": "ded80e532dd6d4c12f6ca92c6ea8e5aabc2715bf4bb5ddde08dbfc4af5b205f4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00196.npz": "86aa4e2c758c2d48c25d69e33892133a1d6ab0a22228e5b2b143fa19d0619ef5",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00197.npz": "509f2c8dabe0a15725a45591729340b1581ca213f2fdebc0d8951ed1a10fa7dd",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00198.npz": "de870447b286eb08432605228211511437f58c54f8204219c646e070699e2939",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00199.npz": "275d063f903d0985034321be25d7d62286a5319ec504120a13bd63565594f476",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00200.npz": "dbed9554e73196f1a24f121280c7c0ffed2f405060d0d2f209e6e17f8fd99c67",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00201.npz": "44a2fb9b14b79e874f25b981ce30607e319716c3094455a268b5f18557602f7a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00202.npz": "2b1c3a0afb9a9b215450d15ecb9def27d467270359c054c9fff53c723eed6fa1",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00203.npz": "7a9598ad07656945b9c1511900c3c2e913552f30aad70ee417c75ab6e4e6a8b2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00204.npz": "205053fbeb17b19e8343f90fb8e5b5456f9660a6e6a49784cd90096861a7d5e3",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00205.npz": "2c8ccb269baaaf98047909635e290c7cc278fc9a5042855bba4ec803e19543cc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00206.npz": "a01c46b74da1a5230a2bcd66b07e420695d9936bbe92ef43080298774e9c9d6d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00207.npz": "e423da87015136ccef81b123eb2738c113e9fb9c7a3924ba93d66f0ac3cd84a8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00208.npz": "0bb87e22c589a76ee56611baeb06da37deb467c0809fc7550db3cb63eb57038e",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00209.npz": "2745a57151fa28cf8ff33ad62bdbc9066ada25694c976cb8d3409bd2c909a3fe",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00210.npz": "63e211725b83c3936310ab5c8ec044e67783efeadf0b84610a184abd2047ad15",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00211.npz": "dc9b3a5b5d21a08a50a46759e1f53a59ff5561e0cacb552dd7aa607cad5b3755",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00212.npz": "6c3095dbf1811533e3a509bc420e5d0fd8ccbbe16d1625d2ba1c00ec7e96c1b8",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00213.npz": "986d8f868021f93d656700236370ed3d07d6678ef19c0ef58d1acc28c26796d0",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00214.npz": "3a6daf5fa18fc236f3a22e276cea03926cc16a81c2d60abfe76aca34de4e5dba",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00215.npz": "fff189e691849d5f5a06a31bd962888a0b56d7ba844185ccc703dc30f000f566",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00216.npz": "0901e4e6247ec5611b3b71123bd5db1567eeff1caf83a52c7143babf7418e728",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00217.npz": "536ddb592e09bcb862e24299fe4b4c9e123ea0a6c87eda813c6637624833b7f4",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00218.npz": "be8cf385375385df0713d532b9a49ce09765e9323be61a713ad2f6e3acc7bed6",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00219.npz": "e76575fef683e72ccfed11a11feb7dae0566eafd17e2e22509ef078c11f472fc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00220.npz": "d39b2c250cf868ecaf75ab9f713f9a804e4878d86dfe626b3fe4913af949bef6",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00221.npz": "bffd9f6e34e4e82bdef363ffe0b6efce10e78fa827472b82798dbe6416b5101d",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00222.npz": "421d65090174afb47375537cee6d5da796435803a3c6495ea6075602a24f8528",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00223.npz": "8d51ddc11adcb6ed8075f6ed6837395be2ebbb6b2b527b2d5d15e4c2884774b2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00224.npz": "43446f2fcf649808ee4d0c65d6647261fab9a0f5d9c1b62c7a09e215b2251858",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00225.npz": "7ef38516ac708c94bccd9af7ab4c3b3bc8f3d213857c83a9205729908ce688a2",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00226.npz": "363339a0ff2b767930229590d2208d596ce099eb11c0220ad646ff42cdb5f84a",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00227.npz": "00889576b0ac80588c2be9aa2d021384354843c45b6bbd0840acfb0bfdcd9efc",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00228.npz": "c356d7d0e14db4c67576e312484bf0dc84521ae5e1a417033af99a8eb4ff9789",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00229.npz": "b226675328a846e6f003ab1990313e3c633417d04d6a38b6fcfec4f811d8f998",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00230.npz": "1180347200c938c5f6a4ccb82eb0a8a05ed8471805f82396c6064a070fd3ba90",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00231.npz": "126c0a85a5aa913dc320dc33aaec33a55e0ac9a469e9993efc4829c49af09dda",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00232.npz": "611e9901318c8a66ade46e6603513d073c7ec1b3ff37faedc01503a2fe1e99d7",
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00233.npz": "a503749ad813594221f7f76e52ceefbec0d45daa46610b1fbe90b270f3c6606c",
+    "/mnt/e/Datasets/fg26/01_source_data/parsed_exact/parsed_exact_v1_234554.tar": "7fd9a48c088db29d6364ba530ef4092d26c8af88cf981cf8f1704ce6bfa744d4"
+  },
+  "source_stamps": {
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/phase15_aux/canonical_selfies_by_record_index_v17_nonisomeric.jsonl": {
+      "size": 140599623,
+      "mtime_ns": 1782875737316852691
+    },
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/split_maps/phase2_v26_record_split_map.jsonl": {
+      "size": 9223641,
+      "mtime_ns": 1784347246088014039
+    },
+    "/mnt/e/Datasets/fg26/01_source_data/metadata/molecule_tables/fg26_molecule_metadata_v2_corrected_units.csv": {
+      "size": 70191623,
+      "mtime_ns": 1787538423990928900
+    },
+    "/mnt/e/Datasets/fg26/01_source_data/parsed_exact/parsed_exact_v1_234554.tar": {
+      "size": 35007846400,
+      "mtime_ns": 1780882949618787000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/manifest.json": {
+      "size": 38368,
+      "mtime_ns": 1782137112484978500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00000.npz": {
+      "size": 411186,
+      "mtime_ns": 1782137102121380700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00001.npz": {
+      "size": 414052,
+      "mtime_ns": 1782137102165911600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00002.npz": {
+      "size": 420657,
+      "mtime_ns": 1782137102210439500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00003.npz": {
+      "size": 411600,
+      "mtime_ns": 1782137102253956900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00004.npz": {
+      "size": 415970,
+      "mtime_ns": 1782137102297855200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00005.npz": {
+      "size": 416441,
+      "mtime_ns": 1782137102341884400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00006.npz": {
+      "size": 411828,
+      "mtime_ns": 1782137102388903000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00007.npz": {
+      "size": 418353,
+      "mtime_ns": 1782137102433427200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00008.npz": {
+      "size": 411951,
+      "mtime_ns": 1782137102478049900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00009.npz": {
+      "size": 416439,
+      "mtime_ns": 1782137102523581400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00010.npz": {
+      "size": 414511,
+      "mtime_ns": 1782137102569599400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00011.npz": {
+      "size": 416672,
+      "mtime_ns": 1782137102614131800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00012.npz": {
+      "size": 415085,
+      "mtime_ns": 1782137102658655500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00013.npz": {
+      "size": 418062,
+      "mtime_ns": 1782137102703171200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00014.npz": {
+      "size": 414322,
+      "mtime_ns": 1782137102749199300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00015.npz": {
+      "size": 413734,
+      "mtime_ns": 1782137102795216500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00016.npz": {
+      "size": 418067,
+      "mtime_ns": 1782137102841256900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00017.npz": {
+      "size": 414923,
+      "mtime_ns": 1782137102885268900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00018.npz": {
+      "size": 412369,
+      "mtime_ns": 1782137102929294700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00019.npz": {
+      "size": 417319,
+      "mtime_ns": 1782137102974817900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00020.npz": {
+      "size": 416571,
+      "mtime_ns": 1782137103020355600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00021.npz": {
+      "size": 411517,
+      "mtime_ns": 1782137103065373300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00022.npz": {
+      "size": 421055,
+      "mtime_ns": 1782137103110400600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00023.npz": {
+      "size": 420528,
+      "mtime_ns": 1782137103154426100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00024.npz": {
+      "size": 417745,
+      "mtime_ns": 1782137103198442300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00025.npz": {
+      "size": 415187,
+      "mtime_ns": 1782137103242466900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00026.npz": {
+      "size": 416636,
+      "mtime_ns": 1782137103286489500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00027.npz": {
+      "size": 413806,
+      "mtime_ns": 1782137103330529300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00028.npz": {
+      "size": 422877,
+      "mtime_ns": 1782137103375543000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00029.npz": {
+      "size": 415158,
+      "mtime_ns": 1782137103420078300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00030.npz": {
+      "size": 415795,
+      "mtime_ns": 1782137103464098200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00031.npz": {
+      "size": 411764,
+      "mtime_ns": 1782137103510443500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00032.npz": {
+      "size": 415285,
+      "mtime_ns": 1782137103554960800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00033.npz": {
+      "size": 417230,
+      "mtime_ns": 1782137103599000000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00034.npz": {
+      "size": 418417,
+      "mtime_ns": 1782137103643039200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00035.npz": {
+      "size": 420114,
+      "mtime_ns": 1782137103687063100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00036.npz": {
+      "size": 416505,
+      "mtime_ns": 1782137103732584200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00037.npz": {
+      "size": 416599,
+      "mtime_ns": 1782137103777116100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00038.npz": {
+      "size": 416573,
+      "mtime_ns": 1782137103821641300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00039.npz": {
+      "size": 412751,
+      "mtime_ns": 1782137103865162300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00040.npz": {
+      "size": 410997,
+      "mtime_ns": 1782137103909506600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00041.npz": {
+      "size": 418053,
+      "mtime_ns": 1782137103953034400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00042.npz": {
+      "size": 418512,
+      "mtime_ns": 1782137103998052500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00043.npz": {
+      "size": 418753,
+      "mtime_ns": 1782137104042825300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00044.npz": {
+      "size": 416580,
+      "mtime_ns": 1782137104087344300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00045.npz": {
+      "size": 417826,
+      "mtime_ns": 1782137104130865500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00046.npz": {
+      "size": 416100,
+      "mtime_ns": 1782137104174878400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00047.npz": {
+      "size": 416508,
+      "mtime_ns": 1782137104218413200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00048.npz": {
+      "size": 411968,
+      "mtime_ns": 1782137104262424500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00049.npz": {
+      "size": 417059,
+      "mtime_ns": 1782137104306943400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00050.npz": {
+      "size": 415430,
+      "mtime_ns": 1782137104351967600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00051.npz": {
+      "size": 418597,
+      "mtime_ns": 1782137104396096300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00052.npz": {
+      "size": 416701,
+      "mtime_ns": 1782137104441489900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00053.npz": {
+      "size": 421493,
+      "mtime_ns": 1782137104487521500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00054.npz": {
+      "size": 421156,
+      "mtime_ns": 1782137104534547700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00055.npz": {
+      "size": 415655,
+      "mtime_ns": 1782137104580566700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00056.npz": {
+      "size": 415458,
+      "mtime_ns": 1782137104625594300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00057.npz": {
+      "size": 413363,
+      "mtime_ns": 1782137104670125000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00058.npz": {
+      "size": 416510,
+      "mtime_ns": 1782137104715672600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00059.npz": {
+      "size": 420834,
+      "mtime_ns": 1782137104762200800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00060.npz": {
+      "size": 414915,
+      "mtime_ns": 1782137104807725200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00061.npz": {
+      "size": 416573,
+      "mtime_ns": 1782137104853260900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00062.npz": {
+      "size": 408611,
+      "mtime_ns": 1782137104898321400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00063.npz": {
+      "size": 416096,
+      "mtime_ns": 1782137104943841200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00064.npz": {
+      "size": 420448,
+      "mtime_ns": 1782137104989873300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00065.npz": {
+      "size": 417730,
+      "mtime_ns": 1782137105036281200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00066.npz": {
+      "size": 414023,
+      "mtime_ns": 1782137105080338900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00067.npz": {
+      "size": 414909,
+      "mtime_ns": 1782137105125877400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00068.npz": {
+      "size": 412536,
+      "mtime_ns": 1782137105170902900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00069.npz": {
+      "size": 418171,
+      "mtime_ns": 1782137105215933700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00070.npz": {
+      "size": 413170,
+      "mtime_ns": 1782137105260328800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00071.npz": {
+      "size": 417268,
+      "mtime_ns": 1782137105305491800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00072.npz": {
+      "size": 417027,
+      "mtime_ns": 1782137105350521800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00073.npz": {
+      "size": 416154,
+      "mtime_ns": 1782137105395109400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00074.npz": {
+      "size": 413637,
+      "mtime_ns": 1782137105439760800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00075.npz": {
+      "size": 417213,
+      "mtime_ns": 1782137105484788800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00076.npz": {
+      "size": 415029,
+      "mtime_ns": 1782137105530326300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00077.npz": {
+      "size": 414122,
+      "mtime_ns": 1782137105574857200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00078.npz": {
+      "size": 413850,
+      "mtime_ns": 1782137105619892400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00079.npz": {
+      "size": 414085,
+      "mtime_ns": 1782137105664935200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00080.npz": {
+      "size": 412465,
+      "mtime_ns": 1782137105709963600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00081.npz": {
+      "size": 416599,
+      "mtime_ns": 1782137105755040700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00082.npz": {
+      "size": 414399,
+      "mtime_ns": 1782137105800574900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00083.npz": {
+      "size": 415094,
+      "mtime_ns": 1782137105845618100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00084.npz": {
+      "size": 422054,
+      "mtime_ns": 1782137105891143100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00085.npz": {
+      "size": 413325,
+      "mtime_ns": 1782137105937176300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00086.npz": {
+      "size": 417710,
+      "mtime_ns": 1782137105983201000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00087.npz": {
+      "size": 416063,
+      "mtime_ns": 1782137106028943500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00088.npz": {
+      "size": 418398,
+      "mtime_ns": 1782137106075462500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00089.npz": {
+      "size": 419925,
+      "mtime_ns": 1782137106120206800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00090.npz": {
+      "size": 407432,
+      "mtime_ns": 1782137106165226100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00091.npz": {
+      "size": 410085,
+      "mtime_ns": 1782137106210758500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00092.npz": {
+      "size": 416526,
+      "mtime_ns": 1782137106255782900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00093.npz": {
+      "size": 414518,
+      "mtime_ns": 1782137106300509400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00094.npz": {
+      "size": 409197,
+      "mtime_ns": 1782137106346130600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00095.npz": {
+      "size": 424008,
+      "mtime_ns": 1782137106392142700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00096.npz": {
+      "size": 417565,
+      "mtime_ns": 1782137106436667100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00097.npz": {
+      "size": 412980,
+      "mtime_ns": 1782137106481691700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00098.npz": {
+      "size": 417110,
+      "mtime_ns": 1782137106527235700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00099.npz": {
+      "size": 417764,
+      "mtime_ns": 1782137106572753900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00100.npz": {
+      "size": 412189,
+      "mtime_ns": 1782137106618310200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00101.npz": {
+      "size": 411588,
+      "mtime_ns": 1782137106661827900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00102.npz": {
+      "size": 416632,
+      "mtime_ns": 1782137106705844400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00103.npz": {
+      "size": 420028,
+      "mtime_ns": 1782137106750363500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00104.npz": {
+      "size": 418949,
+      "mtime_ns": 1782137106794378600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00105.npz": {
+      "size": 422812,
+      "mtime_ns": 1782137106838896900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00106.npz": {
+      "size": 416950,
+      "mtime_ns": 1782137106882909200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00107.npz": {
+      "size": 414847,
+      "mtime_ns": 1782137106927430300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00108.npz": {
+      "size": 411545,
+      "mtime_ns": 1782137106971442900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00109.npz": {
+      "size": 408471,
+      "mtime_ns": 1782137107016466800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00110.npz": {
+      "size": 417514,
+      "mtime_ns": 1782137107061498000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00111.npz": {
+      "size": 416336,
+      "mtime_ns": 1782137107106516800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00112.npz": {
+      "size": 415361,
+      "mtime_ns": 1782137107150034200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00113.npz": {
+      "size": 417304,
+      "mtime_ns": 1782137107193549800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00114.npz": {
+      "size": 417271,
+      "mtime_ns": 1782137107237668200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00115.npz": {
+      "size": 416168,
+      "mtime_ns": 1782137107281374800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00116.npz": {
+      "size": 416443,
+      "mtime_ns": 1782137107324891000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00117.npz": {
+      "size": 417317,
+      "mtime_ns": 1782137107369407800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00118.npz": {
+      "size": 412929,
+      "mtime_ns": 1782137107412929600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00119.npz": {
+      "size": 414091,
+      "mtime_ns": 1782137107455940400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00120.npz": {
+      "size": 418953,
+      "mtime_ns": 1782137107500958300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00121.npz": {
+      "size": 420219,
+      "mtime_ns": 1782137107545103500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00122.npz": {
+      "size": 420281,
+      "mtime_ns": 1782137107589116200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00123.npz": {
+      "size": 412814,
+      "mtime_ns": 1782137107633145600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00124.npz": {
+      "size": 425554,
+      "mtime_ns": 1782137107677658000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00125.npz": {
+      "size": 416899,
+      "mtime_ns": 1782137107721918000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00126.npz": {
+      "size": 417851,
+      "mtime_ns": 1782137107764929900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00127.npz": {
+      "size": 410457,
+      "mtime_ns": 1782137107807944600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00128.npz": {
+      "size": 415533,
+      "mtime_ns": 1782137107851982200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00129.npz": {
+      "size": 416600,
+      "mtime_ns": 1782137107895500300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00130.npz": {
+      "size": 411701,
+      "mtime_ns": 1782137107938682900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00131.npz": {
+      "size": 412706,
+      "mtime_ns": 1782137107984201700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00132.npz": {
+      "size": 420421,
+      "mtime_ns": 1782137108028723800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00133.npz": {
+      "size": 415728,
+      "mtime_ns": 1782137108072235700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00134.npz": {
+      "size": 418955,
+      "mtime_ns": 1782137108116253900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00135.npz": {
+      "size": 414036,
+      "mtime_ns": 1782137108159275600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00136.npz": {
+      "size": 411055,
+      "mtime_ns": 1782137108203284600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00137.npz": {
+      "size": 418345,
+      "mtime_ns": 1782137108248853000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00138.npz": {
+      "size": 415511,
+      "mtime_ns": 1782137108291872100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00139.npz": {
+      "size": 415921,
+      "mtime_ns": 1782137108335394900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00140.npz": {
+      "size": 412990,
+      "mtime_ns": 1782137108379405800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00141.npz": {
+      "size": 411708,
+      "mtime_ns": 1782137108423422200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00142.npz": {
+      "size": 414822,
+      "mtime_ns": 1782137108466933000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00143.npz": {
+      "size": 416753,
+      "mtime_ns": 1782137108511950000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00144.npz": {
+      "size": 411770,
+      "mtime_ns": 1782137108555470500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00145.npz": {
+      "size": 413261,
+      "mtime_ns": 1782137108599485000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00146.npz": {
+      "size": 413921,
+      "mtime_ns": 1782137108643075400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00147.npz": {
+      "size": 416699,
+      "mtime_ns": 1782137108686586800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00148.npz": {
+      "size": 421415,
+      "mtime_ns": 1782137108730608500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00149.npz": {
+      "size": 420319,
+      "mtime_ns": 1782137108774119800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00150.npz": {
+      "size": 414847,
+      "mtime_ns": 1782137108818627800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00151.npz": {
+      "size": 413737,
+      "mtime_ns": 1782137108862151300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00152.npz": {
+      "size": 411423,
+      "mtime_ns": 1782137108906167300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00153.npz": {
+      "size": 416021,
+      "mtime_ns": 1782137108949685600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00154.npz": {
+      "size": 412042,
+      "mtime_ns": 1782137108994199200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00155.npz": {
+      "size": 410047,
+      "mtime_ns": 1782137109038149400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00156.npz": {
+      "size": 417009,
+      "mtime_ns": 1782137109083981100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00157.npz": {
+      "size": 421860,
+      "mtime_ns": 1782137109129006800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00158.npz": {
+      "size": 420887,
+      "mtime_ns": 1782137109173519800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00159.npz": {
+      "size": 409058,
+      "mtime_ns": 1782137109216546700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00160.npz": {
+      "size": 421985,
+      "mtime_ns": 1782137109261563300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00161.npz": {
+      "size": 416264,
+      "mtime_ns": 1782137109306573600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00162.npz": {
+      "size": 418842,
+      "mtime_ns": 1782137109350100800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00163.npz": {
+      "size": 416004,
+      "mtime_ns": 1782137109393112600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00164.npz": {
+      "size": 415773,
+      "mtime_ns": 1782137109436641100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00165.npz": {
+      "size": 419358,
+      "mtime_ns": 1782137109480654200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00166.npz": {
+      "size": 417753,
+      "mtime_ns": 1782137109525173900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00167.npz": {
+      "size": 413054,
+      "mtime_ns": 1782137109569169200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00168.npz": {
+      "size": 418511,
+      "mtime_ns": 1782137109612687500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00169.npz": {
+      "size": 416047,
+      "mtime_ns": 1782137109655706300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00170.npz": {
+      "size": 416233,
+      "mtime_ns": 1782137109700728400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00171.npz": {
+      "size": 418400,
+      "mtime_ns": 1782137109744246100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00172.npz": {
+      "size": 416440,
+      "mtime_ns": 1782137109789263900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00173.npz": {
+      "size": 413454,
+      "mtime_ns": 1782137109831804100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00174.npz": {
+      "size": 408868,
+      "mtime_ns": 1782137109876323300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00175.npz": {
+      "size": 415165,
+      "mtime_ns": 1782137109920347000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00176.npz": {
+      "size": 418351,
+      "mtime_ns": 1782137109965867400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00177.npz": {
+      "size": 416921,
+      "mtime_ns": 1782137110010377000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00178.npz": {
+      "size": 415389,
+      "mtime_ns": 1782137110054900000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00179.npz": {
+      "size": 417609,
+      "mtime_ns": 1782137110107910500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00180.npz": {
+      "size": 420024,
+      "mtime_ns": 1782137110152946400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00181.npz": {
+      "size": 418080,
+      "mtime_ns": 1782137110196534900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00182.npz": {
+      "size": 417716,
+      "mtime_ns": 1782137110240939000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00183.npz": {
+      "size": 409576,
+      "mtime_ns": 1782137110283951800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00184.npz": {
+      "size": 415311,
+      "mtime_ns": 1782137110327484900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00185.npz": {
+      "size": 418807,
+      "mtime_ns": 1782137110371000900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00186.npz": {
+      "size": 414675,
+      "mtime_ns": 1782137110413955500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00187.npz": {
+      "size": 419484,
+      "mtime_ns": 1782137110457467200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00188.npz": {
+      "size": 413991,
+      "mtime_ns": 1782137110500483100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00189.npz": {
+      "size": 414821,
+      "mtime_ns": 1782137110544502200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00190.npz": {
+      "size": 418039,
+      "mtime_ns": 1782137110588017200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00191.npz": {
+      "size": 415980,
+      "mtime_ns": 1782137110631544400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00192.npz": {
+      "size": 416027,
+      "mtime_ns": 1782137110675560100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00193.npz": {
+      "size": 417931,
+      "mtime_ns": 1782137110719081500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00194.npz": {
+      "size": 413934,
+      "mtime_ns": 1782137110762593800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00195.npz": {
+      "size": 413079,
+      "mtime_ns": 1782137110806703000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00196.npz": {
+      "size": 417168,
+      "mtime_ns": 1782137110850730800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00197.npz": {
+      "size": 412973,
+      "mtime_ns": 1782137110893751500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00198.npz": {
+      "size": 418154,
+      "mtime_ns": 1782137110938271900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00199.npz": {
+      "size": 416599,
+      "mtime_ns": 1782137110981784900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00200.npz": {
+      "size": 413585,
+      "mtime_ns": 1782137111026807200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00201.npz": {
+      "size": 413240,
+      "mtime_ns": 1782137111071116000
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00202.npz": {
+      "size": 418626,
+      "mtime_ns": 1782137111116144500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00203.npz": {
+      "size": 414083,
+      "mtime_ns": 1782137111160160700
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00204.npz": {
+      "size": 413091,
+      "mtime_ns": 1782137111204173400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00205.npz": {
+      "size": 411882,
+      "mtime_ns": 1782137111247691600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00206.npz": {
+      "size": 420587,
+      "mtime_ns": 1782137111292204600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00207.npz": {
+      "size": 420571,
+      "mtime_ns": 1782137111336867800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00208.npz": {
+      "size": 417108,
+      "mtime_ns": 1782137111380370100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00209.npz": {
+      "size": 419545,
+      "mtime_ns": 1782137111425396500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00210.npz": {
+      "size": 411317,
+      "mtime_ns": 1782137111470908800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00211.npz": {
+      "size": 410349,
+      "mtime_ns": 1782137111516989200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00212.npz": {
+      "size": 420082,
+      "mtime_ns": 1782137111561026600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00213.npz": {
+      "size": 409758,
+      "mtime_ns": 1782137111605541400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00214.npz": {
+      "size": 418746,
+      "mtime_ns": 1782137111649609100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00215.npz": {
+      "size": 415269,
+      "mtime_ns": 1782137111693122900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00216.npz": {
+      "size": 412812,
+      "mtime_ns": 1782137111736639600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00217.npz": {
+      "size": 419822,
+      "mtime_ns": 1782137111780108300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00218.npz": {
+      "size": 414932,
+      "mtime_ns": 1782137111824131200
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00219.npz": {
+      "size": 412427,
+      "mtime_ns": 1782137111867648800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00220.npz": {
+      "size": 416679,
+      "mtime_ns": 1782137111911165400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00221.npz": {
+      "size": 416099,
+      "mtime_ns": 1782137111954681800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00222.npz": {
+      "size": 414809,
+      "mtime_ns": 1782137112000201500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00223.npz": {
+      "size": 409771,
+      "mtime_ns": 1782137112045212800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00224.npz": {
+      "size": 418632,
+      "mtime_ns": 1782137112088728600
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00225.npz": {
+      "size": 417611,
+      "mtime_ns": 1782137112133244400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00226.npz": {
+      "size": 420007,
+      "mtime_ns": 1782137112177260500
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00227.npz": {
+      "size": 414028,
+      "mtime_ns": 1782137112221281400
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00228.npz": {
+      "size": 414022,
+      "mtime_ns": 1782137112264292300
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00229.npz": {
+      "size": 413063,
+      "mtime_ns": 1782137112307807900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00230.npz": {
+      "size": 416664,
+      "mtime_ns": 1782137112351931100
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00231.npz": {
+      "size": 418699,
+      "mtime_ns": 1782137112395441900
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00232.npz": {
+      "size": 412587,
+      "mtime_ns": 1782137112438963800
+    },
+    "/mnt/e/Datasets/fg26/03_feature_caches/structures/fg26_structure_npz/structures_clean_muse_v1/shards/shard_00233.npz": {
+      "size": 401459,
+      "mtime_ns": 1782137112481476100
+    }
+  },
+  "structure_index_sha256": "7dff12ded3a2bd5212ffd4d9c8b6e4c611bf833eaeb9f8a6371bbdd012d61250",
+  "export_script_sha256": "55d40eb7369964ba9223c0c3e951dbba9fc4d89e68fa3e04baadc48770634500",
+  "elapsed_seconds": 508.371
+}

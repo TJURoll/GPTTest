@@ -1,0 +1,240 @@
+{
+  "schema_version": "hmof_query_response_templates_v1",
+  "language": "en",
+  "status": "template_bank_not_corpus",
+  "scientific_task_count": 7,
+  "template_group_count": 8,
+  "query_template_count": 64,
+  "response_template_count": 32,
+  "scientific_task_schema": "hmof_checked/task_schema.json",
+  "policy": {
+    "natural_query_fraction": 0.5,
+    "explicit_query_fraction": 0.5,
+    "condition_placement": {"natural": "response", "explicit": "query_and_response"},
+    "condition_placement_update": "The user approved natural questions that omit detailed conditions. This changes the earlier query-only condition requirement, not the scientific labels, methods, units, or admission rules. Every response must state the applicable conditions, including when the question omits them.",
+    "system_message": false,
+    "structure_content_in_messages": false,
+    "structure_reference_location": "Outside the user and assistant messages",
+    "forbidden_in_conversation": ["CIF", "input CIF", "output CIF", "structure placeholders", "English colon", "dataset-dependent explanations"],
+    "parameter_policy": "Braced parameters are template variables for verified scalar values or composed property text, never structure placeholders. Replace every parameter before emitting a conversation.",
+    "label_policy": "Generate only tasks listed in the material's accepted_tasks. Read labels unchanged from its tasks object. Do not average, smooth, interpolate, or invent values.",
+    "number_policy": "Preserve the stored numerical values and units. Do not silently convert fractions to percentages or mass-normalized quantities to volume-normalized quantities.",
+    "response_selection": "Select a response only from the same template group as the query. Natural and explicit questions share the same scientifically qualified response bank.",
+    "co2_without_pressure": "Questions with no specified pressure belong exclusively to co2_five_points and receive the same five source pressure-uptake pairs at 298 K, never a randomly chosen single-pressure value.",
+    "co2_single_point": "The query always contains pressure_bar. Select it only from the five source pressures and use the uptake at that exact index. The response always states pure CO2, 298 K, the same pressure, and mol/kg.",
+    "co2_curve": "Use all five pairs from one accepted source curve. Do not describe them as a continuous isotherm, interpolate extra points, or call the final point saturation capacity.",
+    "surface_area": "Natural single-property questions still distinguish accessible from total area. Responses specify mass normalization, a nitrogen probe radius of 1.86 Å, and the area type. Total area includes accessible and inaccessible pores. Neither target is BET area.",
+    "helium_void_fraction": "Natural questions may ask about porosity or void fraction, but the response explicitly identifies the reported quantity as the helium void fraction at 298 K. It must not relabel this quantity as geometric void fraction.",
+    "description": "Require the description task to be accepted. Select a listed recipe only when every field is present in the accepted description fields and its scalar task is accepted. Use the same selected fields for requested_properties and property_sentences. Natural descriptions may omit the field list, but their answers remain restricted to that selected recipe.",
+    "description_conditions": "Helium temperature belongs only to the helium void fraction; nitrogen probe radius belongs only to the surface areas. Never apply those conditions indiscriminately to all properties.",
+    "description_scope": "Use only the five admitted pore-property tasks. Do not introduce CO2, density, formula, stability, synthesizability, applications, or mechanism explanations into this description bank.",
+    "split_policy": "All generated views of a structure keep the split in the checked master. This template bank does not allocate corpus counts or create new splits."
+  },
+  "co2_pressures_bar": [0.01, 0.05, 0.1, 0.5, 2.5],
+  "description_field_phrases": {
+    "lcd": "its largest cavity diameter",
+    "pld": "its pore limiting diameter",
+    "helium_void_fraction": "its helium void fraction at 298 K",
+    "accessible_gravimetric_surface_area": "its accessible gravimetric surface area for a nitrogen probe with a radius of 1.86 Å",
+    "total_gravimetric_surface_area": "its total gravimetric surface area for a nitrogen probe with a radius of 1.86 Å"
+  },
+  "description_recipes": [
+    {"id": "pore_diameters", "fields": ["lcd", "pld"]},
+    {"id": "diameters_and_helium", "fields": ["lcd", "pld", "helium_void_fraction"]},
+    {"id": "two_surface_areas", "fields": ["accessible_gravimetric_surface_area", "total_gravimetric_surface_area"]},
+    {"id": "diameters_and_areas", "fields": ["lcd", "pld", "accessible_gravimetric_surface_area", "total_gravimetric_surface_area"]},
+    {"id": "helium_and_areas", "fields": ["helium_void_fraction", "accessible_gravimetric_surface_area", "total_gravimetric_surface_area"]},
+    {"id": "all_five", "fields": ["lcd", "pld", "helium_void_fraction", "accessible_gravimetric_surface_area", "total_gravimetric_surface_area"]}
+  ],
+  "description_assembly": {
+    "requested_properties": "Look up each selected field in description_field_phrases. Join two phrases with ' and '; join three or more with commas and a final ', and '. Preserve the recipe order.",
+    "property_sentences": "For each selected field, choose one response from that field's scalar group and fill value with its accepted label. Join the resulting complete sentences with single spaces, preserving the same field order. Fill the description response frame with that text.",
+    "record_metadata": "Keep query_template_id, response_template_id, selected_fields, and every scalar response template ID outside the conversation text for traceability."
+  },
+  "groups": {
+    "lcd": {
+      "task_id": "lcd",
+      "queries": {
+        "natural": [
+          {"id": "LCD_N01", "text": "What is the largest cavity diameter of this MOF?"},
+          {"id": "LCD_N02", "text": "Can you tell me the largest cavity diameter of this framework?"},
+          {"id": "LCD_N03", "text": "We give you a crystal structure. What is its largest cavity diameter?"},
+          {"id": "LCD_N04", "text": "I would like to know this material's largest cavity diameter."}
+        ],
+        "explicit": [
+          {"id": "LCD_E01", "text": "Report the largest cavity diameter of this framework in Å."},
+          {"id": "LCD_E02", "text": "For this MOF, estimate the largest cavity diameter and express the result in angstroms."},
+          {"id": "LCD_E03", "text": "What is the diameter in Å of the largest sphere that can fit inside a cavity of this framework, corresponding to its largest cavity diameter?"},
+          {"id": "LCD_E04", "text": "Use this crystal structure to determine the largest cavity diameter, LCD, in Å."}
+        ]
+      },
+      "responses": [
+        {"id": "LCD_R01", "text": "The largest cavity diameter is {value} Å."},
+        {"id": "LCD_R02", "text": "This framework has a largest cavity diameter of {value} Å."},
+        {"id": "LCD_R03", "text": "The framework's largest cavity diameter measures {value} Å."},
+        {"id": "LCD_R04", "text": "For this structure, the largest cavity diameter is {value} Å."}
+      ]
+    },
+    "pld": {
+      "task_id": "pld",
+      "queries": {
+        "natural": [
+          {"id": "PLD_N01", "text": "What is the pore limiting diameter of this MOF?"},
+          {"id": "PLD_N02", "text": "Could you tell me this framework's pore limiting diameter?"},
+          {"id": "PLD_N03", "text": "We give you a MOF structure. What pore limiting diameter does it have?"},
+          {"id": "PLD_N04", "text": "I need an estimate of the pore limiting diameter for this material."}
+        ],
+        "explicit": [
+          {"id": "PLD_E01", "text": "Report the pore limiting diameter of this framework in Å."},
+          {"id": "PLD_E02", "text": "For this MOF, determine the pore limiting diameter, PLD, expressed in angstroms."},
+          {"id": "PLD_E03", "text": "Estimate the diameter in Å of the largest spherical probe that can follow a continuous path through this framework in at least one periodic direction, corresponding to its pore limiting diameter."},
+          {"id": "PLD_E04", "text": "Use this crystal structure to estimate the pore limiting diameter and give the answer in Å."}
+        ]
+      },
+      "responses": [
+        {"id": "PLD_R01", "text": "The pore limiting diameter is {value} Å."},
+        {"id": "PLD_R02", "text": "This framework has a pore limiting diameter of {value} Å."},
+        {"id": "PLD_R03", "text": "The framework's pore limiting diameter measures {value} Å."},
+        {"id": "PLD_R04", "text": "For this structure, the pore limiting diameter is {value} Å."}
+      ]
+    },
+    "helium_void_fraction": {
+      "task_id": "helium_void_fraction",
+      "queries": {
+        "natural": [
+          {"id": "VF_N01", "text": "What is the helium void fraction of this MOF?"},
+          {"id": "VF_N02", "text": "How porous is this framework?"},
+          {"id": "VF_N03", "text": "We give you a MOF structure. What is its void fraction?"},
+          {"id": "VF_N04", "text": "Can you report the helium void fraction of this material?"}
+        ],
+        "explicit": [
+          {"id": "VF_E01", "text": "What is the helium void fraction of this framework at 298 K?"},
+          {"id": "VF_E02", "text": "At 298 K, estimate this MOF's helium void fraction and express it as a dimensionless fraction."},
+          {"id": "VF_E03", "text": "For this crystal structure, report the helium void fraction at 298 K as a fraction rather than a percentage."},
+          {"id": "VF_E04", "text": "We give you a MOF structure. Determine its helium void fraction at a temperature of 298 K."}
+        ]
+      },
+      "responses": [
+        {"id": "VF_R01", "text": "The helium void fraction at 298 K is {value}."},
+        {"id": "VF_R02", "text": "At 298 K, this framework has a helium void fraction of {value}."},
+        {"id": "VF_R03", "text": "Using helium at 298 K, the void fraction is {value}."},
+        {"id": "VF_R04", "text": "For this MOF, the helium void fraction is {value} at 298 K, expressed as a dimensionless fraction."}
+      ]
+    },
+    "accessible_gravimetric_surface_area": {
+      "task_id": "accessible_gravimetric_surface_area",
+      "queries": {
+        "natural": [
+          {"id": "ASA_N01", "text": "What is the accessible surface area of this MOF?"},
+          {"id": "ASA_N02", "text": "How much accessible surface area does this framework have per gram?"},
+          {"id": "ASA_N03", "text": "We give you a MOF structure. Estimate its accessible surface area."},
+          {"id": "ASA_N04", "text": "Can you tell me the accessible surface area per unit mass of this material?"}
+        ],
+        "explicit": [
+          {"id": "ASA_E01", "text": "Using a nitrogen probe with a radius of 1.86 Å, what is the accessible gravimetric surface area of this framework in m²/g?"},
+          {"id": "ASA_E02", "text": "Estimate the accessible surface area per unit mass of this MOF for a nitrogen probe of radius 1.86 Å. Give the result in m²/g."},
+          {"id": "ASA_E03", "text": "We give you a crystal structure. With a nitrogen probe radius of 1.86 Å, how much accessible surface area does it have per gram?"},
+          {"id": "ASA_E04", "text": "Use a nitrogen probe with a radius of 1.86 Å. Report this framework's accessible gravimetric surface area in m²/g."}
+        ]
+      },
+      "responses": [
+        {"id": "ASA_R01", "text": "For a nitrogen probe with a radius of 1.86 Å, the accessible gravimetric surface area is {value} m²/g."},
+        {"id": "ASA_R02", "text": "The accessible surface area per unit mass is {value} m²/g when evaluated with a nitrogen probe of radius 1.86 Å."},
+        {"id": "ASA_R03", "text": "This framework has an accessible gravimetric surface area of {value} m²/g for a nitrogen probe with a radius of 1.86 Å."},
+        {"id": "ASA_R04", "text": "Using a nitrogen probe radius of 1.86 Å gives an accessible surface area of {value} m²/g on a mass-normalized basis."}
+      ]
+    },
+    "total_gravimetric_surface_area": {
+      "task_id": "total_gravimetric_surface_area",
+      "queries": {
+        "natural": [
+          {"id": "TSA_N01", "text": "What is the total surface area of this MOF?"},
+          {"id": "TSA_N02", "text": "How much total surface area does this framework have per gram?"},
+          {"id": "TSA_N03", "text": "We give you a MOF structure. Estimate its total surface area."},
+          {"id": "TSA_N04", "text": "Can you tell me the total surface area per unit mass of this material?"}
+        ],
+        "explicit": [
+          {"id": "TSA_E01", "text": "What is the total gravimetric surface area of this framework in m²/g for a nitrogen probe with a radius of 1.86 Å, including accessible and inaccessible pores?"},
+          {"id": "TSA_E02", "text": "Estimate the total surface area per unit mass, counting accessible and inaccessible pores, for this MOF using a nitrogen probe of radius 1.86 Å."},
+          {"id": "TSA_E03", "text": "We give you a crystal structure. For a nitrogen probe radius of 1.86 Å, report its total gravimetric surface area in m²/g, including both accessible and inaccessible pores."},
+          {"id": "TSA_E04", "text": "Use a nitrogen probe with a radius of 1.86 Å. Determine this material's total surface area per gram, including accessible and inaccessible pores."}
+        ]
+      },
+      "responses": [
+        {"id": "TSA_R01", "text": "For a nitrogen probe with a radius of 1.86 Å, the total gravimetric surface area, including accessible and inaccessible pores, is {value} m²/g."},
+        {"id": "TSA_R02", "text": "Including accessible and inaccessible pores, the total surface area per unit mass is {value} m²/g for a nitrogen probe of radius 1.86 Å."},
+        {"id": "TSA_R03", "text": "This framework has a total gravimetric surface area of {value} m²/g for a nitrogen probe with a radius of 1.86 Å, counting accessible and inaccessible pores."},
+        {"id": "TSA_R04", "text": "Using a nitrogen probe radius of 1.86 Å gives a total surface area of {value} m²/g on a mass-normalized basis, including accessible and inaccessible pores."}
+      ]
+    },
+    "co2_single_point": {
+      "task_id": "co2_uptake",
+      "queries": {
+        "natural": [
+          {"id": "CO2P_N01", "text": "What is this MOF's CO2 uptake at {pressure_bar} bar?"},
+          {"id": "CO2P_N02", "text": "How much CO2 does this framework adsorb at {pressure_bar} bar?"},
+          {"id": "CO2P_N03", "text": "We give you a MOF structure. Estimate its CO2 uptake at {pressure_bar} bar."},
+          {"id": "CO2P_N04", "text": "Can you tell me the CO2 adsorption amount for this material at {pressure_bar} bar?"}
+        ],
+        "explicit": [
+          {"id": "CO2P_E01", "text": "What is the uptake of pure CO2 by this framework at 298 K and {pressure_bar} bar, in mol/kg?"},
+          {"id": "CO2P_E02", "text": "For single-component CO2 at {pressure_bar} bar and 298 K, estimate this MOF's uptake in mol/kg."},
+          {"id": "CO2P_E03", "text": "We give you a MOF structure. Report its adsorption of pure CO2 at 298 K and {pressure_bar} bar in mol/kg."},
+          {"id": "CO2P_E04", "text": "At a temperature of 298 K and a pressure of {pressure_bar} bar, how much pure carbon dioxide does this material adsorb per kilogram?"}
+        ]
+      },
+      "responses": [
+        {"id": "CO2P_R01", "text": "For pure CO2 at 298 K and {pressure_bar} bar, the uptake is {value} mol/kg."},
+        {"id": "CO2P_R02", "text": "This framework adsorbs {value} mol/kg of pure CO2 at 298 K and {pressure_bar} bar."},
+        {"id": "CO2P_R03", "text": "At {pressure_bar} bar and 298 K, the single-component CO2 uptake is {value} mol/kg."},
+        {"id": "CO2P_R04", "text": "The CO2 uptake is {value} mol/kg for a pure gas at a temperature of 298 K and a pressure of {pressure_bar} bar."}
+      ]
+    },
+    "co2_five_points": {
+      "task_id": "co2_uptake",
+      "queries": {
+        "natural": [
+          {"id": "CO2C_N01", "text": "What is the CO2 uptake of this MOF?"},
+          {"id": "CO2C_N02", "text": "How does CO2 uptake change with pressure for this framework?"},
+          {"id": "CO2C_N03", "text": "We give you a MOF structure. What does its CO2 adsorption profile look like?"},
+          {"id": "CO2C_N04", "text": "Can you report CO2 uptake values across different pressures for this material?"}
+        ],
+        "explicit": [
+          {"id": "CO2C_E01", "text": "Give the uptake of pure CO2 by this MOF at 298 K for pressures of 0.01, 0.05, 0.1, 0.5, and 2.5 bar. Use mol/kg."},
+          {"id": "CO2C_E02", "text": "We want five points on this framework's adsorption isotherm for single-component CO2 at 298 K. Report the uptake in mol/kg at 0.01, 0.05, 0.1, 0.5, and 2.5 bar."},
+          {"id": "CO2C_E03", "text": "List the five pressure-uptake pairs for pure CO2 adsorption in this material at 298 K, using pressures of 0.01, 0.05, 0.1, 0.5, and 2.5 bar and uptake in mol/kg."},
+          {"id": "CO2C_E04", "text": "For pure CO2 at 298 K, how much does this framework adsorb at each of 0.01, 0.05, 0.1, 0.5, and 2.5 bar? Express the uptake values in mol/kg."}
+        ]
+      },
+      "responses": [
+        {"id": "CO2C_R01", "text": "For pure CO2 at 298 K, the uptake is {uptake_0p01} mol/kg at 0.01 bar, {uptake_0p05} mol/kg at 0.05 bar, {uptake_0p1} mol/kg at 0.1 bar, {uptake_0p5} mol/kg at 0.5 bar, and {uptake_2p5} mol/kg at 2.5 bar."},
+        {"id": "CO2C_R02", "text": "At 298 K, the five uptake values for pure CO2 are {uptake_0p01}, {uptake_0p05}, {uptake_0p1}, {uptake_0p5}, and {uptake_2p5} mol/kg, corresponding to 0.01, 0.05, 0.1, 0.5, and 2.5 bar, respectively."},
+        {"id": "CO2C_R03", "text": "The pressure-uptake pairs for pure CO2 at 298 K are (0.01 bar, {uptake_0p01} mol/kg), (0.05 bar, {uptake_0p05} mol/kg), (0.1 bar, {uptake_0p1} mol/kg), (0.5 bar, {uptake_0p5} mol/kg), and (2.5 bar, {uptake_2p5} mol/kg)."},
+        {"id": "CO2C_R04", "text": "This framework's pure CO2 uptake at 298 K is {uptake_0p01} mol/kg at 0.01 bar; {uptake_0p05} mol/kg at 0.05 bar; {uptake_0p1} mol/kg at 0.1 bar; {uptake_0p5} mol/kg at 0.5 bar; and {uptake_2p5} mol/kg at 2.5 bar."}
+      ]
+    },
+    "description": {
+      "task_id": "description",
+      "queries": {
+        "natural": [
+          {"id": "DESC_N01", "text": "Can you describe this MOF?"},
+          {"id": "DESC_N02", "text": "What can you tell me about the pore characteristics of this framework?"},
+          {"id": "DESC_N03", "text": "We give you a MOF structure. Could you provide a brief description?"},
+          {"id": "DESC_N04", "text": "Give a short description of this material's pore characteristics."}
+        ],
+        "explicit": [
+          {"id": "DESC_E01", "text": "Describe this MOF in terms of {requested_properties}."},
+          {"id": "DESC_E02", "text": "Summarize {requested_properties} for this framework."},
+          {"id": "DESC_E03", "text": "We give you a MOF structure. Report {requested_properties}."},
+          {"id": "DESC_E04", "text": "Provide a concise description covering {requested_properties} for this material."}
+        ]
+      },
+      "responses": [
+        {"id": "DESC_R01", "text": "{property_sentences}"},
+        {"id": "DESC_R02", "text": "This framework has the following pore characteristics. {property_sentences}"},
+        {"id": "DESC_R03", "text": "Here is a summary of the framework's pore properties. {property_sentences}"},
+        {"id": "DESC_R04", "text": "The pore properties of this MOF can be summarized as follows. {property_sentences}"}
+      ]
+    }
+  }
+}

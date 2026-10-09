@@ -1,0 +1,145 @@
+AtomWorldBench 动作扩写模板（2026-09-09 修订）
+
+不使用 system prompt：每条启用的英文模板均自带所需的索引、坐标或边界约定。
+仅使用 [ENABLED] 分组下的英文模板；[DISABLED] 分组及带 DISABLED: 前缀的原文仅供追溯，不参与当前训练。
+当前共 80 条启用模板，覆盖 12 种动作；另保留 15 条禁用原文。中文说明、标题和禁用原文都不是训练 prompt。
+训练只读取清洗后 train 数据，bench 和 discarded 数据不混入训练；本次仅修改模板，不修改 CIF、原始 action_prompt 或数据划分。
+参数直接从原始 action_prompt 提取，不重算或改写数值；重复占位符必须填入相同值，坐标、位移和索引列表保持原有完整列表格式。
+对象称呼采用 the structure、the crystal structure、the atomic structure、the crystalline structure、the periodic structure、the periodic atomic structure、the structural model；不再使用文件格式名称。
+最终 user 消息只保留填好参数的动作指令，不附加输入结构标签、文件路径、结构正文或结构占位符。
+启用模板的索引和坐标约定统一指向 input structure。独立结构输入必须保持原始原子顺序，否则索引操作会失配；禁用原文仍仅供追溯。
+
+01. AddAtomAction [ENABLED]
+
+原参数：{element}, {cartesian_coordinate}
+
+Add a {element} atom to the structure at the Cartesian coordinate {cartesian_coordinate}, with coordinates in angstrom.
+Place one {element} atom at the Cartesian coordinate {cartesian_coordinate} in the structure, with coordinates in angstrom.
+Insert a {element} atom at Cartesian coordinate {cartesian_coordinate} into the crystal structure, with coordinates in angstrom.
+Add one atom of {element} at the Cartesian position {cartesian_coordinate} in the atomic structure, with coordinates in angstrom.
+Introduce a {element} atom into the crystalline structure at the Cartesian coordinate {cartesian_coordinate}, with coordinates in angstrom.
+02. ChangeAtomAction [ENABLED]
+Change the element of the atom at index {atom_index} to {element} in the periodic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Replace the atom at index {atom_index} with {element} in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Set the atom at index {atom_index} to element {element} in the structural model. Atom indices are zero-based and follow the atom order in the input structure.
+Convert the atom at index {atom_index} into {element} in the crystal structure. Atom indices are zero-based and follow the atom order in the input structure.
+Substitute the atom at index {atom_index} with an atom of {element} in the structure. Atom indices are zero-based and follow the atom order in the input structure.
+03. DeleteAroundAtomAction [ENABLED]
+Delete all atoms whose periodic minimum-image distance from the atom at index {center_index} is strictly less than {radius} angstrom in the crystal structure, including the center atom. Atom indices are zero-based and follow the atom order in the input structure.
+Remove every atom at a periodic minimum-image distance of less than {radius} angstrom from atom {center_index} in the atomic structure. Include the center atom in the deletion. Atom indices are zero-based and follow the atom order in the input structure.
+Delete every atom in the crystalline structure with a periodic minimum-image distance strictly below {radius} angstrom from the atom at index {center_index}, including that atom itself. Atom indices are zero-based and follow the atom order in the input structure.
+Remove all atoms whose periodic minimum-image distance from atom {center_index} is less than {radius} angstrom in the periodic structure. Delete the center atom as well. Atom indices are zero-based and follow the atom order in the input structure.
+Delete the atoms at periodic minimum-image distances strictly less than {radius} angstrom from the center atom at index {center_index} in the periodic atomic structure, including the center atom. Atom indices are zero-based and follow the atom order in the input structure.
+04A. DeleteBelowAtomAction — Excluding [ENABLED]
+
+必须保持：比较输入 CIF 导出的 Cartesian z；不包括基准原子，也不包括相同 z 坐标的原子。
+
+Delete all atoms with a z coordinate below that of the atom at index {atom_index} in the structural model. Exclude the atom itself and all atoms having the same z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure.
+Remove every atom whose z coordinate is lower than that of atom {atom_index} in the atomic structure, excluding the reference atom and atoms at the same z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure.
+Delete atoms lying below the atom at index {atom_index} along the z coordinate in the structure. Do not delete the reference atom or atoms sharing its z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure.
+Remove all atoms in the crystal structure whose z coordinate is less than that of the atom at index {atom_index}. Keep the atom itself and all atoms with an equal z coordinate. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure.
+Delete every atom with z lower than the z coordinate of atom {atom_index}. The reference atom and atoms with the same z coordinate must be excluded. Compare the Cartesian z coordinates derived from the input structure without periodic wrapping. Atom indices are zero-based and follow the atom order in the input structure.
+04B. DeleteBelowAtomAction — Including [DISABLED]
+禁用原因：当前 Including 样本均已隔离；这些模板的包含边界语义本身正确，但没有已验收的对应训练数据。
+
+这里相反：包括基准原子以及相同 z 坐标的原子。
+
+DISABLED: Delete all atoms with a z coordinate lower than or equal to that of the atom at index {atom_index} in the cif file, including the atom itself.
+DISABLED: Remove every atom whose z coordinate is below or the same as that of atom {atom_index}, including the reference atom itself.
+DISABLED: Delete atoms lying at or below the z coordinate of the atom at index {atom_index} in the cif file, including the reference atom.
+DISABLED: Remove all atoms in the cif file whose z coordinate is no greater than that of the atom at index {atom_index}, including atoms at the same z coordinate and the atom itself.
+DISABLED: Delete every atom with z lower than or equal to the z coordinate of atom {atom_index}, including the reference atom and atoms sharing its z coordinate.
+
+Including 与 Excluding 是不同边界条件，不能把一组模板用于另一组的结构输出。
+
+05A. InsertBetweenAtomsAction — train wording [ENABLED]
+Insert a {element} atom on the line segment between the atoms at indices {first_index} and {second_index}, at a distance of {distance} angstrom from atom {first_index} in the atomic structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure.
+Place a {element} atom on the line segment between atoms {first_index} and {second_index}, {distance} angstrom from atom {first_index}, in the crystalline structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure.
+Add a {element} atom on the line segment between atoms at indices {first_index} and {second_index}, with the new atom {distance} angstrom from atom {first_index}. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure.
+Introduce a {element} atom on the line segment between atoms {first_index} and {second_index}, positioned {distance} angstrom from atom {first_index} in the periodic structure. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure.
+Add a {element} atom between atoms at indices {first_index} and {second_index} so that it lies on their connecting line segment and is {distance} angstrom from atom {first_index}. Use the direct Cartesian line segment from the input structure, not a minimum-image segment. Atom indices are zero-based and follow the atom order in the input structure.
+05B. InsertBetweenAtomsAction — bench wording [DISABLED]
+当前不启用：保留 bench wording 作措辞参考，不放入本次训练模板池，也不改写实际 bench prompt；不能仅凭模板措辞相同判定数据泄漏。
+DISABLED: Insert {element} between the atoms at indices {first_index} and {second_index}, at a distance of {distance} angstrom from atom {first_index}, in the cif file.
+DISABLED: Place {element} between atoms {first_index} and {second_index}, {distance} angstrom away from atom {first_index}.
+DISABLED: Add a {element} atom between atoms at indices {first_index} and {second_index}, with a distance of {distance} angstrom from atom {first_index}.
+DISABLED: Position a {element} atom between atoms {first_index} and {second_index} so that it is {distance} angstrom from atom {first_index} in the cif file.
+DISABLED: Introduce {element} between the atoms at indices {first_index} and {second_index}, located {distance} angstrom from atom {first_index}.
+06. MoveAroundAtomAction [DISABLED]
+暂时禁用：当前 MoveAround 样本全部隔离；中心原子是否移动需先明确并重新验收，不在此擅自选择一种解释。
+DISABLED: Move all surrounding atoms within {radius} angstrom of the center atom at index {center_index} by the displacement {displacement} angstrom in the cif file.
+DISABLED: Translate all surrounding atoms located within {radius} angstrom around atom {center_index} by {displacement} angstrom in the cif file.
+DISABLED: Shift every surrounding atom within a radius of {radius} angstrom from the center atom at index {center_index} by {displacement} angstrom.
+DISABLED: Apply a displacement of {displacement} angstrom to all surrounding atoms within {radius} angstrom of atom {center_index} in the cif file.
+DISABLED: Translate the surrounding atoms within {radius} angstrom around the center atom at index {center_index} by {displacement} angstrom.
+07. MoveAtomAction [ENABLED]
+Move the atom at index {atom_index} by the Cartesian displacement {displacement} angstrom in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Translate atom {atom_index} by the Cartesian displacement {displacement} angstrom in the structural model. Atom indices are zero-based and follow the atom order in the input structure.
+Shift the atom at index {atom_index} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure.
+Apply a Cartesian displacement of {displacement} angstrom to the atom at index {atom_index} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure.
+Translate the position of atom {atom_index} by the Cartesian displacement {displacement} angstrom in the structure. Atom indices are zero-based and follow the atom order in the input structure.
+08. MoveSelectedAtomsAction [ENABLED]
+Move the atoms at indices {atom_indices} by the Cartesian displacement {displacement} angstrom in the crystal structure. Atom indices are zero-based and follow the atom order in the input structure.
+Translate all atoms listed in {atom_indices} by the Cartesian displacement {displacement} angstrom in the atomic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Shift the atoms with indices {atom_indices} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure.
+Apply a Cartesian displacement of {displacement} angstrom to the atoms at indices {atom_indices} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure.
+Translate the selected atoms at indices {atom_indices} by the Cartesian displacement {displacement} angstrom. Atom indices are zero-based and follow the atom order in the input structure.
+09. MoveTowardsAtomAction [ENABLED]
+Move the atom at index {moving_index} by {distance} angstrom toward the atom at index {target_index} in the periodic structure. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure.
+Translate atom {moving_index} a distance of {distance} angstrom in the direction of atom {target_index}. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure.
+Shift the atom at index {moving_index} toward atom {target_index} by {distance} angstrom in the periodic atomic structure. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure.
+Move atom {moving_index} along the direction toward atom {target_index} by {distance} angstrom. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure.
+Displace the atom at index {moving_index} by {distance} angstrom toward the atom at index {target_index}. Use the direct Cartesian direction from the initial positions in the input structure, not a minimum-image vector; the full displacement may pass the target. Atom indices are zero-based and follow the atom order in the input structure.
+10. RemoveAtomAction [ENABLED]
+Delete the atom at index {atom_index} from the structural model. Atom indices are zero-based and follow the atom order in the input structure.
+Remove atom {atom_index} from the periodic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Delete the atom whose index is {atom_index} from the structure. Atom indices are zero-based and follow the atom order in the input structure.
+Remove the atom with index {atom_index} from the crystal structure. Atom indices are zero-based and follow the atom order in the input structure.
+Delete atom {atom_index} from the atomic structure. Atom indices are zero-based and follow the atom order in the input structure.
+11. RotateAroundAtomAction [ENABLED]
+Rotate all surrounding atoms within {radius} angstrom of the center atom at index {center_index} by {angle} degree about the axis {axis}, following the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure.
+Rotate the surrounding atoms located within {radius} angstrom of atom {center_index} through {angle} degree around the axis {axis} according to the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure.
+Apply a {angle} degree rotation about the axis {axis} to all surrounding atoms within {radius} angstrom of the center atom at index {center_index}, using the right-hand rule. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure.
+Rotate every surrounding atom within a radius of {radius} angstrom from atom {center_index} by {angle} degree around {axis}. Use the right-hand rule for the rotation direction. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure.
+Perform a {angle} degree right-hand-rule rotation around the axis {axis} for all surrounding atoms within {radius} angstrom of the center atom at index {center_index}. For selection, use periodic minimum-image distances strictly less than the radius. The axis is a Cartesian direction vector through the center atom. Rotate the Cartesian offsets relative to the center as derived from the input structure, without minimum-image adjustment. Atom indices are zero-based and follow the atom order in the input structure.
+12. SuperCellAction
+
+原始数据有 5 种 separator 写法，两个 split 都存在；保留这些表面符号变体。
+三个正整数分别表示沿晶格矢量 a、b、c 的复制倍数，不是以 angstrom 表示的尺寸。
+
+12A. {repeat_a}x{repeat_b}x{repeat_c} [ENABLED]
+Generate a supercell of size {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Build a {repeat_a}x{repeat_b}x{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Construct a supercell with replication factors {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Expand the structure into a {repeat_a}x{repeat_b}x{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Make a supercell using replication factors {repeat_a}x{repeat_b}x{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+12B. {repeat_a}X{repeat_b}X{repeat_c} [ENABLED]
+Generate a supercell of size {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Build a {repeat_a}X{repeat_b}X{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Construct a supercell with replication factors {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Expand the structure into a {repeat_a}X{repeat_b}X{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Make a supercell using replication factors {repeat_a}X{repeat_b}X{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+12C. {repeat_a}×{repeat_b}×{repeat_c} [ENABLED]
+Generate a supercell of size {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Build a {repeat_a}×{repeat_b}×{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Construct a supercell with replication factors {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Expand the structure into a {repeat_a}×{repeat_b}×{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Make a supercell using replication factors {repeat_a}×{repeat_b}×{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+12D. {repeat_a}*{repeat_b}*{repeat_c} [ENABLED]
+Generate a supercell of size {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Build a {repeat_a}*{repeat_b}*{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Construct a supercell with replication factors {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Expand the structure into a {repeat_a}*{repeat_b}*{repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Make a supercell using replication factors {repeat_a}*{repeat_b}*{repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+12E. {repeat_a} by {repeat_b} by {repeat_c} [ENABLED]
+Generate a supercell of size {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Build a {repeat_a} by {repeat_b} by {repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Construct a supercell with replication factors {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Expand the structure into a {repeat_a} by {repeat_b} by {repeat_c} supercell. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+Make a supercell using replication factors {repeat_a} by {repeat_b} by {repeat_c}. The three integer replication factors apply along the a, b, and c lattice vectors, respectively.
+13. SwapAtomsAction [ENABLED]
+Swap the spatial positions of the atoms at indices {first_index} and {second_index} in the crystalline structure. Atom indices are zero-based and follow the atom order in the input structure.
+Exchange the positions of atoms {first_index} and {second_index} in the periodic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Switch the spatial coordinates of the atoms at indices {first_index} and {second_index}. Atom indices are zero-based and follow the atom order in the input structure.
+Exchange the spatial locations of atom {first_index} and atom {second_index} in the periodic atomic structure. Atom indices are zero-based and follow the atom order in the input structure.
+Swap the positions occupied by atoms at indices {first_index} and {second_index} in the structural model. Atom indices are zero-based and follow the atom order in the input structure.

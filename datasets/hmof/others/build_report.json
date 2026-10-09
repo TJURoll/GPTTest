@@ -1,0 +1,2239 @@
+{
+  "passed": true,
+  "total_rows": 563032,
+  "rows_by_split": {
+    "train": 534879,
+    "val": 28153
+  },
+  "structures": 70634,
+  "structure_counts_by_split": {
+    "train": 67102,
+    "val": 3532
+  },
+  "rows_by_template_group": {
+    "train": {
+      "co2_five_points": 66362,
+      "helium_void_fraction": 66872,
+      "description": 67099,
+      "lcd": 67098,
+      "accessible_gravimetric_surface_area": 67001,
+      "co2_single_point": 66362,
+      "total_gravimetric_surface_area": 66985,
+      "pld": 67100
+    },
+    "val": {
+      "pld": 3532,
+      "description": 3532,
+      "co2_five_points": 3493,
+      "accessible_gravimetric_surface_area": 3525,
+      "total_gravimetric_surface_area": 3525,
+      "co2_single_point": 3493,
+      "lcd": 3532,
+      "helium_void_fraction": 3521
+    }
+  },
+  "preview_rows": 24,
+  "template_balance_max_difference": 1,
+  "full_row_readback_and_reconstruction": true,
+  "every_cif_rehashed": true,
+  "no_structure_split_overlap": true,
+  "preview_matches_actual_rows": true,
+  "ase_independent_parser_samples": [
+    {
+      "hmof_id": "hMOF-1001814",
+      "n_atoms": 18,
+      "matched": true,
+      "max_displacement_angstrom": 7.588599744428075e-15
+    },
+    {
+      "hmof_id": "hMOF-1003054",
+      "n_atoms": 52,
+      "matched": true,
+      "max_displacement_angstrom": 1.3250315287503592e-14
+    },
+    {
+      "hmof_id": "hMOF-10857",
+      "n_atoms": 184,
+      "matched": true,
+      "max_displacement_angstrom": 7.477597271989533e-14
+    },
+    {
+      "hmof_id": "hMOF-17294",
+      "n_atoms": 232,
+      "matched": true,
+      "max_displacement_angstrom": 1.7962296908674955e-14
+    },
+    {
+      "hmof_id": "hMOF-17304",
+      "n_atoms": 85,
+      "matched": true,
+      "max_displacement_angstrom": 1.1548454303019402e-14
+    },
+    {
+      "hmof_id": "hMOF-2000932",
+      "n_atoms": 990,
+      "matched": true,
+      "max_displacement_angstrom": 2.864289338439558e-14
+    },
+    {
+      "hmof_id": "hMOF-25001",
+      "n_atoms": 96,
+      "matched": true,
+      "max_displacement_angstrom": 1.146543825085178e-14
+    },
+    {
+      "hmof_id": "hMOF-25288",
+      "n_atoms": 80,
+      "matched": true,
+      "max_displacement_angstrom": 1.5744825799789052e-14
+    },
+    {
+      "hmof_id": "hMOF-29906",
+      "n_atoms": 44,
+      "matched": true,
+      "max_displacement_angstrom": 4.6151104473205536e-15
+    },
+    {
+      "hmof_id": "hMOF-34469",
+      "n_atoms": 64,
+      "matched": true,
+      "max_displacement_angstrom": 1.0997374119838626e-14
+    },
+    {
+      "hmof_id": "hMOF-37490",
+      "n_atoms": 58,
+      "matched": true,
+      "max_displacement_angstrom": 6.9384771734179635e-15
+    },
+    {
+      "hmof_id": "hMOF-37693",
+      "n_atoms": 102,
+      "matched": true,
+      "max_displacement_angstrom": 9.057678187205884e-15
+    },
+    {
+      "hmof_id": "hMOF-5004481",
+      "n_atoms": 90,
+      "matched": true,
+      "max_displacement_angstrom": 8.379058453350832e-15
+    },
+    {
+      "hmof_id": "hMOF-5019314",
+      "n_atoms": 286,
+      "matched": true,
+      "max_displacement_angstrom": 1.8202241076109964e-14
+    },
+    {
+      "hmof_id": "hMOF-5031223",
+      "n_atoms": 169,
+      "matched": true,
+      "max_displacement_angstrom": 1.467511591522657e-14
+    },
+    {
+      "hmof_id": "hMOF-5041410",
+      "n_atoms": 69,
+      "matched": true,
+      "max_displacement_angstrom": 7.448341029842521e-15
+    },
+    {
+      "hmof_id": "hMOF-5056085",
+      "n_atoms": 116,
+      "matched": true,
+      "max_displacement_angstrom": 8.67197662081021e-15
+    },
+    {
+      "hmof_id": "hMOF-5056241",
+      "n_atoms": 134,
+      "matched": true,
+      "max_displacement_angstrom": 2.5137175360052498e-14
+    },
+    {
+      "hmof_id": "hMOF-5075212",
+      "n_atoms": 108,
+      "matched": true,
+      "max_displacement_angstrom": 1.0805156823142815e-14
+    },
+    {
+      "hmof_id": "hMOF-5075321",
+      "n_atoms": 156,
+      "matched": true,
+      "max_displacement_angstrom": 2.161031364628563e-14
+    },
+    {
+      "hmof_id": "hMOF-5079371",
+      "n_atoms": 74,
+      "matched": true,
+      "max_displacement_angstrom": 1.1382899616642114e-14
+    },
+    {
+      "hmof_id": "hMOF-5080513",
+      "n_atoms": 145,
+      "matched": true,
+      "max_displacement_angstrom": 1.507288760336424e-14
+    },
+    {
+      "hmof_id": "hMOF-6004914",
+      "n_atoms": 124,
+      "matched": true,
+      "max_displacement_angstrom": 8.981148454337477e-15
+    },
+    {
+      "hmof_id": "hMOF-6004955",
+      "n_atoms": 202,
+      "matched": true,
+      "max_displacement_angstrom": 2.0734733982992197e-14
+    }
+  ],
+  "sampling_counts": {
+    "rows_by_split": {
+      "train": 534879,
+      "val": 28153
+    },
+    "style/train/co2_five_points": {
+      "explicit": 33181,
+      "natural": 33181
+    },
+    "query/train/co2_five_points": {
+      "CO2C_E03": 8295,
+      "CO2C_N04": 8295,
+      "CO2C_N02": 8295,
+      "CO2C_N01": 8296,
+      "CO2C_E04": 8295,
+      "CO2C_E02": 8295,
+      "CO2C_N03": 8295,
+      "CO2C_E01": 8296
+    },
+    "response/train/co2_five_points": {
+      "CO2C_R04": 16591,
+      "CO2C_R03": 16591,
+      "CO2C_R01": 16590,
+      "CO2C_R02": 16590
+    },
+    "joint/train/co2_five_points/all/CO2C_E03": {
+      "CO2C_R04": 2074,
+      "CO2C_R03": 2074,
+      "CO2C_R02": 2074,
+      "CO2C_R01": 2073
+    },
+    "style/train/helium_void_fraction": {
+      "natural": 33436,
+      "explicit": 33436
+    },
+    "query/train/helium_void_fraction": {
+      "VF_N01": 8359,
+      "VF_N04": 8359,
+      "VF_E01": 8359,
+      "VF_N03": 8359,
+      "VF_E04": 8359,
+      "VF_E03": 8359,
+      "VF_N02": 8359,
+      "VF_E02": 8359
+    },
+    "response/train/helium_void_fraction": {
+      "VF_R01": 16718,
+      "VF_R03": 16718,
+      "VF_R04": 16718,
+      "VF_R02": 16718
+    },
+    "joint/train/helium_void_fraction/all/VF_N01": {
+      "VF_R01": 2089,
+      "VF_R02": 2090,
+      "VF_R04": 2090,
+      "VF_R03": 2090
+    },
+    "style/train/description": {
+      "explicit": 33549,
+      "natural": 33550
+    },
+    "query/train/description": {
+      "DESC_E02": 8387,
+      "DESC_N03": 8388,
+      "DESC_E04": 8387,
+      "DESC_N01": 8387,
+      "DESC_E01": 8387,
+      "DESC_N02": 8387,
+      "DESC_E03": 8388,
+      "DESC_N04": 8388
+    },
+    "response/train/description": {
+      "DESC_R04": 16775,
+      "DESC_R03": 16775,
+      "DESC_R01": 16775,
+      "DESC_R02": 16774
+    },
+    "recipe/train": {
+      "helium_and_areas": 11183,
+      "diameters_and_areas": 11183,
+      "all_five": 11183,
+      "pore_diameters": 11183,
+      "two_surface_areas": 11183,
+      "diameters_and_helium": 11184
+    },
+    "joint/train/description/helium_and_areas/DESC_E02": {
+      "DESC_R04": 349,
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R01": 350
+    },
+    "style/train/lcd": {
+      "natural": 33549,
+      "explicit": 33549
+    },
+    "query/train/lcd": {
+      "LCD_N03": 8388,
+      "LCD_E01": 8387,
+      "LCD_E03": 8387,
+      "LCD_N02": 8387,
+      "LCD_E04": 8387,
+      "LCD_E02": 8388,
+      "LCD_N01": 8387,
+      "LCD_N04": 8387
+    },
+    "response/train/lcd": {
+      "LCD_R01": 16775,
+      "LCD_R04": 16774,
+      "LCD_R02": 16774,
+      "LCD_R03": 16775
+    },
+    "joint/train/lcd/all/LCD_N03": {
+      "LCD_R01": 2097,
+      "LCD_R02": 2097,
+      "LCD_R03": 2097,
+      "LCD_R04": 2097
+    },
+    "style/train/accessible_gravimetric_surface_area": {
+      "explicit": 33500,
+      "natural": 33501
+    },
+    "query/train/accessible_gravimetric_surface_area": {
+      "ASA_E03": 8375,
+      "ASA_E01": 8375,
+      "ASA_N04": 8376,
+      "ASA_N02": 8375,
+      "ASA_E02": 8375,
+      "ASA_E04": 8375,
+      "ASA_N01": 8375,
+      "ASA_N03": 8375
+    },
+    "response/train/accessible_gravimetric_surface_area": {
+      "ASA_R03": 16750,
+      "ASA_R01": 16750,
+      "ASA_R04": 16750,
+      "ASA_R02": 16751
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_E03": {
+      "ASA_R03": 2094,
+      "ASA_R02": 2094,
+      "ASA_R01": 2094,
+      "ASA_R04": 2093
+    },
+    "style/train/co2_single_point": {
+      "explicit": 33181,
+      "natural": 33181
+    },
+    "query/train/co2_single_point": {
+      "CO2P_E04": 8295,
+      "CO2P_N01": 8295,
+      "CO2P_E01": 8296,
+      "CO2P_N03": 8295,
+      "CO2P_E03": 8295,
+      "CO2P_N02": 8295,
+      "CO2P_N04": 8296,
+      "CO2P_E02": 8295
+    },
+    "response/train/co2_single_point": {
+      "CO2P_R01": 16590,
+      "CO2P_R04": 16590,
+      "CO2P_R02": 16591,
+      "CO2P_R03": 16591
+    },
+    "pressure/train": {
+      "0.5": 13272,
+      "2.5": 13272,
+      "0.1": 13272,
+      "0.01": 13273,
+      "0.05": 13273
+    },
+    "joint/train/co2_single_point/0.5/CO2P_E04": {
+      "CO2P_R01": 414,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_E01": {
+      "ASA_R01": 2094,
+      "ASA_R02": 2093,
+      "ASA_R03": 2094,
+      "ASA_R04": 2094
+    },
+    "style/train/total_gravimetric_surface_area": {
+      "natural": 33493,
+      "explicit": 33492
+    },
+    "query/train/total_gravimetric_surface_area": {
+      "TSA_N02": 8373,
+      "TSA_E04": 8373,
+      "TSA_N04": 8373,
+      "TSA_E03": 8373,
+      "TSA_E02": 8373,
+      "TSA_N03": 8374,
+      "TSA_E01": 8373,
+      "TSA_N01": 8373
+    },
+    "response/train/total_gravimetric_surface_area": {
+      "TSA_R04": 16746,
+      "TSA_R02": 16746,
+      "TSA_R01": 16747,
+      "TSA_R03": 16746
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_N02": {
+      "TSA_R04": 2093,
+      "TSA_R02": 2094,
+      "TSA_R03": 2093,
+      "TSA_R01": 2093
+    },
+    "joint/train/co2_single_point/0.5/CO2P_N01": {
+      "CO2P_R04": 415,
+      "CO2P_R02": 415,
+      "CO2P_R01": 415,
+      "CO2P_R03": 414
+    },
+    "style/train/pld": {
+      "natural": 33550,
+      "explicit": 33550
+    },
+    "query/train/pld": {
+      "PLD_N04": 8387,
+      "PLD_N03": 8388,
+      "PLD_N02": 8387,
+      "PLD_E03": 8388,
+      "PLD_E01": 8387,
+      "PLD_E04": 8387,
+      "PLD_N01": 8388,
+      "PLD_E02": 8388
+    },
+    "response/train/pld": {
+      "PLD_R03": 16775,
+      "PLD_R01": 16775,
+      "PLD_R04": 16775,
+      "PLD_R02": 16775
+    },
+    "joint/train/pld/all/PLD_N04": {
+      "PLD_R03": 2097,
+      "PLD_R02": 2097,
+      "PLD_R04": 2096,
+      "PLD_R01": 2097
+    },
+    "joint/train/pld/all/PLD_N03": {
+      "PLD_R01": 2097,
+      "PLD_R04": 2097,
+      "PLD_R02": 2097,
+      "PLD_R03": 2097
+    },
+    "joint/train/lcd/all/LCD_E01": {
+      "LCD_R04": 2097,
+      "LCD_R02": 2097,
+      "LCD_R01": 2096,
+      "LCD_R03": 2097
+    },
+    "joint/train/pld/all/PLD_N02": {
+      "PLD_R01": 2096,
+      "PLD_R04": 2097,
+      "PLD_R02": 2097,
+      "PLD_R03": 2097
+    },
+    "joint/train/lcd/all/LCD_E03": {
+      "LCD_R03": 2097,
+      "LCD_R01": 2097,
+      "LCD_R04": 2096,
+      "LCD_R02": 2097
+    },
+    "joint/train/pld/all/PLD_E03": {
+      "PLD_R03": 2097,
+      "PLD_R04": 2097,
+      "PLD_R01": 2097,
+      "PLD_R02": 2097
+    },
+    "joint/train/co2_five_points/all/CO2C_N04": {
+      "CO2C_R03": 2074,
+      "CO2C_R01": 2074,
+      "CO2C_R04": 2073,
+      "CO2C_R02": 2074
+    },
+    "joint/train/co2_five_points/all/CO2C_N02": {
+      "CO2C_R03": 2074,
+      "CO2C_R02": 2074,
+      "CO2C_R01": 2073,
+      "CO2C_R04": 2074
+    },
+    "joint/train/co2_single_point/2.5/CO2P_E01": {
+      "CO2P_R02": 415,
+      "CO2P_R01": 415,
+      "CO2P_R03": 414,
+      "CO2P_R04": 415
+    },
+    "joint/train/lcd/all/LCD_N02": {
+      "LCD_R01": 2097,
+      "LCD_R03": 2097,
+      "LCD_R04": 2097,
+      "LCD_R02": 2096
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_E04": {
+      "TSA_R02": 2093,
+      "TSA_R04": 2093,
+      "TSA_R01": 2094,
+      "TSA_R03": 2093
+    },
+    "joint/train/helium_void_fraction/all/VF_N04": {
+      "VF_R03": 2090,
+      "VF_R04": 2089,
+      "VF_R01": 2090,
+      "VF_R02": 2090
+    },
+    "joint/train/description/diameters_and_areas/DESC_N03": {
+      "DESC_R01": 349,
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/lcd/all/LCD_E04": {
+      "LCD_R04": 2097,
+      "LCD_R03": 2097,
+      "LCD_R02": 2096,
+      "LCD_R01": 2097
+    },
+    "joint/train/co2_single_point/0.5/CO2P_N03": {
+      "CO2P_R04": 414,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/helium_void_fraction/all/VF_E01": {
+      "VF_R01": 2089,
+      "VF_R03": 2090,
+      "VF_R04": 2090,
+      "VF_R02": 2090
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_N04": {
+      "ASA_R04": 2094,
+      "ASA_R03": 2094,
+      "ASA_R02": 2094,
+      "ASA_R01": 2094
+    },
+    "joint/train/co2_five_points/all/CO2C_N01": {
+      "CO2C_R01": 2074,
+      "CO2C_R02": 2074,
+      "CO2C_R03": 2074,
+      "CO2C_R04": 2074
+    },
+    "joint/train/lcd/all/LCD_E02": {
+      "LCD_R03": 2097,
+      "LCD_R04": 2097,
+      "LCD_R01": 2097,
+      "LCD_R02": 2097
+    },
+    "joint/train/description/all_five/DESC_E04": {
+      "DESC_R01": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 350,
+      "DESC_R03": 349
+    },
+    "joint/train/co2_five_points/all/CO2C_E04": {
+      "CO2C_R03": 2074,
+      "CO2C_R01": 2074,
+      "CO2C_R04": 2074,
+      "CO2C_R02": 2073
+    },
+    "joint/train/helium_void_fraction/all/VF_N03": {
+      "VF_R04": 2090,
+      "VF_R01": 2090,
+      "VF_R02": 2089,
+      "VF_R03": 2090
+    },
+    "joint/train/description/pore_diameters/DESC_N01": {
+      "DESC_R01": 350,
+      "DESC_R03": 349,
+      "DESC_R02": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/lcd/all/LCD_N01": {
+      "LCD_R03": 2097,
+      "LCD_R01": 2097,
+      "LCD_R02": 2097,
+      "LCD_R04": 2096
+    },
+    "joint/train/pld/all/PLD_E01": {
+      "PLD_R03": 2096,
+      "PLD_R04": 2097,
+      "PLD_R02": 2097,
+      "PLD_R01": 2097
+    },
+    "joint/train/description/two_surface_areas/DESC_E01": {
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R01": 350,
+      "DESC_R02": 349
+    },
+    "joint/train/co2_single_point/0.1/CO2P_E03": {
+      "CO2P_R04": 414,
+      "CO2P_R03": 415,
+      "CO2P_R02": 415,
+      "CO2P_R01": 415
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_N02": {
+      "ASA_R02": 2094,
+      "ASA_R01": 2094,
+      "ASA_R04": 2093,
+      "ASA_R03": 2094
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_E02": {
+      "ASA_R04": 2094,
+      "ASA_R03": 2094,
+      "ASA_R02": 2094,
+      "ASA_R01": 2093
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_N04": {
+      "TSA_R01": 2094,
+      "TSA_R02": 2093,
+      "TSA_R04": 2093,
+      "TSA_R03": 2093
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_E04": {
+      "ASA_R02": 2094,
+      "ASA_R04": 2094,
+      "ASA_R01": 2094,
+      "ASA_R03": 2093
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_E03": {
+      "TSA_R04": 2093,
+      "TSA_R01": 2093,
+      "TSA_R03": 2094,
+      "TSA_R02": 2093
+    },
+    "joint/train/co2_five_points/all/CO2C_E02": {
+      "CO2C_R01": 2074,
+      "CO2C_R02": 2074,
+      "CO2C_R04": 2074,
+      "CO2C_R03": 2073
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_N01": {
+      "ASA_R03": 2094,
+      "ASA_R04": 2094,
+      "ASA_R02": 2094,
+      "ASA_R01": 2093
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_E02": {
+      "TSA_R03": 2093,
+      "TSA_R02": 2093,
+      "TSA_R01": 2093,
+      "TSA_R04": 2094
+    },
+    "joint/train/description/diameters_and_helium/DESC_N02": {
+      "DESC_R02": 349,
+      "DESC_R03": 350,
+      "DESC_R01": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/description/diameters_and_areas/DESC_N02": {
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/helium_void_fraction/all/VF_E04": {
+      "VF_R04": 2089,
+      "VF_R03": 2090,
+      "VF_R02": 2090,
+      "VF_R01": 2090
+    },
+    "joint/train/pld/all/PLD_E04": {
+      "PLD_R04": 2097,
+      "PLD_R02": 2096,
+      "PLD_R03": 2097,
+      "PLD_R01": 2097
+    },
+    "joint/train/co2_single_point/0.01/CO2P_N02": {
+      "CO2P_R01": 414,
+      "CO2P_R02": 415,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/co2_single_point/0.5/CO2P_N04": {
+      "CO2P_R04": 415,
+      "CO2P_R01": 414,
+      "CO2P_R02": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/co2_single_point/0.05/CO2P_N01": {
+      "CO2P_R03": 415,
+      "CO2P_R02": 414,
+      "CO2P_R01": 415,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/pore_diameters/DESC_E03": {
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R02": 349,
+      "DESC_R01": 350
+    },
+    "joint/train/co2_single_point/0.01/CO2P_E01": {
+      "CO2P_R02": 414,
+      "CO2P_R01": 415,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/description/two_surface_areas/DESC_E03": {
+      "DESC_R04": 349,
+      "DESC_R01": 349,
+      "DESC_R03": 350,
+      "DESC_R02": 350
+    },
+    "joint/train/co2_five_points/all/CO2C_N03": {
+      "CO2C_R04": 2074,
+      "CO2C_R03": 2074,
+      "CO2C_R02": 2073,
+      "CO2C_R01": 2074
+    },
+    "joint/train/description/pore_diameters/DESC_E01": {
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R03": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/pld/all/PLD_N01": {
+      "PLD_R04": 2097,
+      "PLD_R03": 2097,
+      "PLD_R01": 2097,
+      "PLD_R02": 2097
+    },
+    "joint/train/co2_single_point/0.1/CO2P_N02": {
+      "CO2P_R03": 415,
+      "CO2P_R04": 415,
+      "CO2P_R02": 414,
+      "CO2P_R01": 415
+    },
+    "joint/train/accessible_gravimetric_surface_area/all/ASA_N03": {
+      "ASA_R03": 2093,
+      "ASA_R01": 2094,
+      "ASA_R04": 2094,
+      "ASA_R02": 2094
+    },
+    "joint/train/lcd/all/LCD_N04": {
+      "LCD_R02": 2097,
+      "LCD_R03": 2096,
+      "LCD_R01": 2097,
+      "LCD_R04": 2097
+    },
+    "joint/train/description/all_five/DESC_N03": {
+      "DESC_R03": 350,
+      "DESC_R01": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/helium_void_fraction/all/VF_E03": {
+      "VF_R03": 2090,
+      "VF_R04": 2090,
+      "VF_R01": 2090,
+      "VF_R02": 2089
+    },
+    "joint/train/co2_single_point/0.05/CO2P_E01": {
+      "CO2P_R04": 415,
+      "CO2P_R01": 415,
+      "CO2P_R03": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_N03": {
+      "TSA_R01": 2093,
+      "TSA_R02": 2093,
+      "TSA_R03": 2094,
+      "TSA_R04": 2094
+    },
+    "joint/train/pld/all/PLD_E02": {
+      "PLD_R01": 2097,
+      "PLD_R04": 2097,
+      "PLD_R02": 2097,
+      "PLD_R03": 2097
+    },
+    "joint/train/description/two_surface_areas/DESC_N02": {
+      "DESC_R01": 349,
+      "DESC_R03": 349,
+      "DESC_R04": 350,
+      "DESC_R02": 350
+    },
+    "joint/train/description/pore_diameters/DESC_E02": {
+      "DESC_R02": 350,
+      "DESC_R01": 349,
+      "DESC_R04": 350,
+      "DESC_R03": 349
+    },
+    "joint/train/description/all_five/DESC_N02": {
+      "DESC_R02": 350,
+      "DESC_R01": 349,
+      "DESC_R03": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/co2_single_point/0.1/CO2P_N01": {
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R04": 415,
+      "CO2P_R03": 414
+    },
+    "joint/train/co2_five_points/all/CO2C_E01": {
+      "CO2C_R02": 2074,
+      "CO2C_R03": 2074,
+      "CO2C_R04": 2074,
+      "CO2C_R01": 2074
+    },
+    "joint/train/co2_single_point/0.1/CO2P_E02": {
+      "CO2P_R01": 415,
+      "CO2P_R02": 414,
+      "CO2P_R03": 415,
+      "CO2P_R04": 415
+    },
+    "joint/train/co2_single_point/0.5/CO2P_E02": {
+      "CO2P_R02": 414,
+      "CO2P_R03": 415,
+      "CO2P_R01": 415,
+      "CO2P_R04": 415
+    },
+    "joint/train/co2_single_point/0.01/CO2P_N04": {
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/helium_void_fraction/all/VF_N02": {
+      "VF_R03": 2089,
+      "VF_R01": 2090,
+      "VF_R02": 2090,
+      "VF_R04": 2090
+    },
+    "joint/train/co2_single_point/0.01/CO2P_E02": {
+      "CO2P_R03": 415,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R04": 414
+    },
+    "joint/train/co2_single_point/2.5/CO2P_N04": {
+      "CO2P_R01": 414,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/co2_single_point/0.1/CO2P_E04": {
+      "CO2P_R01": 414,
+      "CO2P_R03": 415,
+      "CO2P_R04": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/co2_single_point/0.5/CO2P_N02": {
+      "CO2P_R04": 415,
+      "CO2P_R02": 414,
+      "CO2P_R01": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_E01": {
+      "TSA_R03": 2093,
+      "TSA_R01": 2093,
+      "TSA_R02": 2094,
+      "TSA_R04": 2093
+    },
+    "joint/train/description/diameters_and_areas/DESC_E02": {
+      "DESC_R01": 350,
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/description/helium_and_areas/DESC_N03": {
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R01": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/total_gravimetric_surface_area/all/TSA_N01": {
+      "TSA_R02": 2093,
+      "TSA_R01": 2094,
+      "TSA_R04": 2093,
+      "TSA_R03": 2093
+    },
+    "joint/train/co2_single_point/2.5/CO2P_E04": {
+      "CO2P_R01": 414,
+      "CO2P_R02": 415,
+      "CO2P_R04": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/description/pore_diameters/DESC_N04": {
+      "DESC_R01": 349,
+      "DESC_R04": 350,
+      "DESC_R03": 349,
+      "DESC_R02": 350
+    },
+    "joint/train/co2_single_point/0.5/CO2P_E01": {
+      "CO2P_R04": 415,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R03": 414
+    },
+    "joint/train/co2_single_point/0.1/CO2P_N03": {
+      "CO2P_R02": 415,
+      "CO2P_R04": 414,
+      "CO2P_R03": 415,
+      "CO2P_R01": 415
+    },
+    "joint/train/co2_single_point/0.05/CO2P_N04": {
+      "CO2P_R02": 415,
+      "CO2P_R03": 414,
+      "CO2P_R01": 415,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/diameters_and_helium/DESC_N04": {
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/description/helium_and_areas/DESC_N01": {
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R04": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/description/diameters_and_areas/DESC_E01": {
+      "DESC_R01": 349,
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/co2_single_point/0.05/CO2P_E02": {
+      "CO2P_R02": 414,
+      "CO2P_R03": 415,
+      "CO2P_R04": 415,
+      "CO2P_R01": 415
+    },
+    "joint/train/co2_single_point/0.5/CO2P_E03": {
+      "CO2P_R02": 415,
+      "CO2P_R01": 415,
+      "CO2P_R03": 415,
+      "CO2P_R04": 414
+    },
+    "joint/train/description/helium_and_areas/DESC_N02": {
+      "DESC_R01": 350,
+      "DESC_R02": 349,
+      "DESC_R03": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/co2_single_point/0.01/CO2P_E03": {
+      "CO2P_R03": 415,
+      "CO2P_R01": 414,
+      "CO2P_R02": 415,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/two_surface_areas/DESC_N01": {
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R03": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/description/diameters_and_helium/DESC_N03": {
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R04": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/co2_single_point/0.01/CO2P_E04": {
+      "CO2P_R04": 415,
+      "CO2P_R03": 414,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/helium_void_fraction/all/VF_E02": {
+      "VF_R03": 2089,
+      "VF_R02": 2090,
+      "VF_R04": 2090,
+      "VF_R01": 2090
+    },
+    "joint/train/description/two_surface_areas/DESC_N04": {
+      "DESC_R01": 349,
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/description/diameters_and_areas/DESC_E04": {
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R03": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/co2_single_point/0.01/CO2P_N01": {
+      "CO2P_R03": 415,
+      "CO2P_R04": 414,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/co2_single_point/0.1/CO2P_N04": {
+      "CO2P_R03": 415,
+      "CO2P_R02": 415,
+      "CO2P_R01": 414,
+      "CO2P_R04": 415
+    },
+    "joint/train/co2_single_point/0.05/CO2P_E03": {
+      "CO2P_R04": 414,
+      "CO2P_R03": 415,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/co2_single_point/0.01/CO2P_N03": {
+      "CO2P_R02": 415,
+      "CO2P_R01": 415,
+      "CO2P_R03": 414,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/two_surface_areas/DESC_E02": {
+      "DESC_R03": 349,
+      "DESC_R04": 350,
+      "DESC_R02": 349,
+      "DESC_R01": 349
+    },
+    "joint/train/description/helium_and_areas/DESC_N04": {
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R04": 349
+    },
+    "joint/train/description/all_five/DESC_E02": {
+      "DESC_R01": 350,
+      "DESC_R04": 350,
+      "DESC_R03": 349,
+      "DESC_R02": 349
+    },
+    "joint/train/description/two_surface_areas/DESC_N03": {
+      "DESC_R02": 349,
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R01": 350
+    },
+    "joint/train/description/diameters_and_helium/DESC_E02": {
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R02": 349,
+      "DESC_R01": 350
+    },
+    "joint/train/description/diameters_and_helium/DESC_E03": {
+      "DESC_R04": 350,
+      "DESC_R03": 349,
+      "DESC_R01": 349,
+      "DESC_R02": 350
+    },
+    "joint/train/description/diameters_and_areas/DESC_E03": {
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/description/pore_diameters/DESC_N03": {
+      "DESC_R02": 349,
+      "DESC_R01": 350,
+      "DESC_R04": 349,
+      "DESC_R03": 350
+    },
+    "joint/train/description/all_five/DESC_N04": {
+      "DESC_R04": 350,
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/description/all_five/DESC_E01": {
+      "DESC_R01": 349,
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/description/all_five/DESC_N01": {
+      "DESC_R01": 350,
+      "DESC_R03": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 349
+    },
+    "joint/train/description/diameters_and_areas/DESC_N01": {
+      "DESC_R03": 350,
+      "DESC_R01": 349,
+      "DESC_R04": 349,
+      "DESC_R02": 350
+    },
+    "joint/train/co2_single_point/0.05/CO2P_N02": {
+      "CO2P_R01": 415,
+      "CO2P_R04": 414,
+      "CO2P_R03": 415,
+      "CO2P_R02": 415
+    },
+    "joint/train/description/diameters_and_helium/DESC_E04": {
+      "DESC_R01": 350,
+      "DESC_R04": 349,
+      "DESC_R03": 350,
+      "DESC_R02": 349
+    },
+    "joint/train/description/helium_and_areas/DESC_E04": {
+      "DESC_R02": 349,
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R01": 349
+    },
+    "joint/train/co2_single_point/0.1/CO2P_E01": {
+      "CO2P_R04": 415,
+      "CO2P_R02": 415,
+      "CO2P_R03": 414,
+      "CO2P_R01": 415
+    },
+    "joint/train/co2_single_point/2.5/CO2P_E03": {
+      "CO2P_R01": 415,
+      "CO2P_R03": 415,
+      "CO2P_R04": 414,
+      "CO2P_R02": 415
+    },
+    "joint/train/description/diameters_and_areas/DESC_N04": {
+      "DESC_R01": 350,
+      "DESC_R02": 349,
+      "DESC_R04": 349,
+      "DESC_R03": 350
+    },
+    "joint/train/co2_single_point/0.05/CO2P_N03": {
+      "CO2P_R01": 414,
+      "CO2P_R04": 415,
+      "CO2P_R02": 415,
+      "CO2P_R03": 415
+    },
+    "joint/train/description/diameters_and_helium/DESC_E01": {
+      "DESC_R04": 350,
+      "DESC_R01": 349,
+      "DESC_R03": 349,
+      "DESC_R02": 350
+    },
+    "joint/train/co2_single_point/2.5/CO2P_N03": {
+      "CO2P_R03": 415,
+      "CO2P_R02": 415,
+      "CO2P_R04": 414,
+      "CO2P_R01": 415
+    },
+    "joint/train/co2_single_point/2.5/CO2P_N01": {
+      "CO2P_R04": 415,
+      "CO2P_R01": 415,
+      "CO2P_R02": 415,
+      "CO2P_R03": 414
+    },
+    "joint/train/description/helium_and_areas/DESC_E03": {
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R04": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/co2_single_point/2.5/CO2P_N02": {
+      "CO2P_R03": 415,
+      "CO2P_R01": 415,
+      "CO2P_R04": 415,
+      "CO2P_R02": 414
+    },
+    "joint/train/description/pore_diameters/DESC_E04": {
+      "DESC_R01": 349,
+      "DESC_R03": 349,
+      "DESC_R02": 350,
+      "DESC_R04": 350
+    },
+    "joint/train/description/all_five/DESC_E03": {
+      "DESC_R03": 350,
+      "DESC_R04": 349,
+      "DESC_R02": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/description/helium_and_areas/DESC_E01": {
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350,
+      "DESC_R01": 349
+    },
+    "joint/train/description/pore_diameters/DESC_N02": {
+      "DESC_R01": 349,
+      "DESC_R02": 350,
+      "DESC_R03": 349,
+      "DESC_R04": 350
+    },
+    "joint/train/co2_single_point/0.05/CO2P_E04": {
+      "CO2P_R02": 415,
+      "CO2P_R03": 415,
+      "CO2P_R01": 414,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/diameters_and_helium/DESC_N01": {
+      "DESC_R02": 350,
+      "DESC_R04": 350,
+      "DESC_R03": 349,
+      "DESC_R01": 349
+    },
+    "joint/train/co2_single_point/2.5/CO2P_E02": {
+      "CO2P_R03": 415,
+      "CO2P_R01": 415,
+      "CO2P_R02": 414,
+      "CO2P_R04": 415
+    },
+    "joint/train/description/two_surface_areas/DESC_E04": {
+      "DESC_R02": 349,
+      "DESC_R03": 349,
+      "DESC_R04": 350,
+      "DESC_R01": 350
+    },
+    "style/val/pld": {
+      "explicit": 1766,
+      "natural": 1766
+    },
+    "query/val/pld": {
+      "PLD_E03": 441,
+      "PLD_N04": 442,
+      "PLD_N03": 441,
+      "PLD_E02": 441,
+      "PLD_N02": 442,
+      "PLD_E04": 442,
+      "PLD_E01": 442,
+      "PLD_N01": 441
+    },
+    "response/val/pld": {
+      "PLD_R04": 883,
+      "PLD_R01": 883,
+      "PLD_R02": 883,
+      "PLD_R03": 883
+    },
+    "joint/val/pld/all/PLD_E03": {
+      "PLD_R04": 110,
+      "PLD_R01": 110,
+      "PLD_R02": 110,
+      "PLD_R03": 111
+    },
+    "style/val/description": {
+      "explicit": 1766,
+      "natural": 1766
+    },
+    "query/val/description": {
+      "DESC_E02": 442,
+      "DESC_E04": 442,
+      "DESC_N01": 442,
+      "DESC_N02": 442,
+      "DESC_N03": 441,
+      "DESC_E03": 441,
+      "DESC_E01": 441,
+      "DESC_N04": 441
+    },
+    "response/val/description": {
+      "DESC_R01": 883,
+      "DESC_R02": 883,
+      "DESC_R04": 883,
+      "DESC_R03": 883
+    },
+    "recipe/val": {
+      "diameters_and_helium": 588,
+      "pore_diameters": 589,
+      "diameters_and_areas": 589,
+      "all_five": 589,
+      "two_surface_areas": 588,
+      "helium_and_areas": 589
+    },
+    "joint/val/description/diameters_and_helium/DESC_E02": {
+      "DESC_R01": 19,
+      "DESC_R04": 18,
+      "DESC_R02": 18,
+      "DESC_R03": 18
+    },
+    "style/val/co2_five_points": {
+      "explicit": 1746,
+      "natural": 1747
+    },
+    "query/val/co2_five_points": {
+      "CO2C_E03": 436,
+      "CO2C_E01": 436,
+      "CO2C_E02": 437,
+      "CO2C_N03": 437,
+      "CO2C_N01": 436,
+      "CO2C_N02": 437,
+      "CO2C_E04": 437,
+      "CO2C_N04": 437
+    },
+    "response/val/co2_five_points": {
+      "CO2C_R02": 874,
+      "CO2C_R01": 873,
+      "CO2C_R03": 873,
+      "CO2C_R04": 873
+    },
+    "joint/val/co2_five_points/all/CO2C_E03": {
+      "CO2C_R02": 109,
+      "CO2C_R01": 109,
+      "CO2C_R04": 109,
+      "CO2C_R03": 109
+    },
+    "joint/val/description/pore_diameters/DESC_E02": {
+      "DESC_R02": 19,
+      "DESC_R01": 18,
+      "DESC_R03": 18,
+      "DESC_R04": 18
+    },
+    "style/val/accessible_gravimetric_surface_area": {
+      "natural": 1762,
+      "explicit": 1763
+    },
+    "query/val/accessible_gravimetric_surface_area": {
+      "ASA_N03": 440,
+      "ASA_N04": 440,
+      "ASA_E03": 441,
+      "ASA_N02": 441,
+      "ASA_E01": 440,
+      "ASA_E04": 441,
+      "ASA_N01": 441,
+      "ASA_E02": 441
+    },
+    "response/val/accessible_gravimetric_surface_area": {
+      "ASA_R04": 881,
+      "ASA_R03": 882,
+      "ASA_R02": 881,
+      "ASA_R01": 881
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_N03": {
+      "ASA_R04": 110,
+      "ASA_R02": 110,
+      "ASA_R01": 110,
+      "ASA_R03": 110
+    },
+    "joint/val/description/diameters_and_areas/DESC_E04": {
+      "DESC_R04": 18,
+      "DESC_R03": 19,
+      "DESC_R01": 18,
+      "DESC_R02": 18
+    },
+    "style/val/total_gravimetric_surface_area": {
+      "natural": 1762,
+      "explicit": 1763
+    },
+    "query/val/total_gravimetric_surface_area": {
+      "TSA_N03": 440,
+      "TSA_N01": 441,
+      "TSA_E02": 441,
+      "TSA_N04": 441,
+      "TSA_E03": 441,
+      "TSA_E01": 440,
+      "TSA_N02": 440,
+      "TSA_E04": 441
+    },
+    "response/val/total_gravimetric_surface_area": {
+      "TSA_R03": 881,
+      "TSA_R04": 881,
+      "TSA_R02": 882,
+      "TSA_R01": 881
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_N03": {
+      "TSA_R03": 110,
+      "TSA_R02": 110,
+      "TSA_R01": 110,
+      "TSA_R04": 110
+    },
+    "style/val/co2_single_point": {
+      "natural": 1747,
+      "explicit": 1746
+    },
+    "query/val/co2_single_point": {
+      "CO2P_N01": 437,
+      "CO2P_E02": 437,
+      "CO2P_N02": 437,
+      "CO2P_E03": 437,
+      "CO2P_N04": 436,
+      "CO2P_E01": 436,
+      "CO2P_N03": 437,
+      "CO2P_E04": 436
+    },
+    "response/val/co2_single_point": {
+      "CO2P_R03": 873,
+      "CO2P_R01": 874,
+      "CO2P_R04": 873,
+      "CO2P_R02": 873
+    },
+    "pressure/val": {
+      "0.05": 698,
+      "2.5": 699,
+      "0.5": 699,
+      "0.01": 698,
+      "0.1": 699
+    },
+    "joint/val/co2_single_point/0.05/CO2P_N01": {
+      "CO2P_R03": 22,
+      "CO2P_R01": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22
+    },
+    "style/val/lcd": {
+      "explicit": 1766,
+      "natural": 1766
+    },
+    "query/val/lcd": {
+      "LCD_E01": 441,
+      "LCD_N01": 441,
+      "LCD_N03": 441,
+      "LCD_E02": 441,
+      "LCD_E04": 442,
+      "LCD_N02": 442,
+      "LCD_E03": 442,
+      "LCD_N04": 442
+    },
+    "response/val/lcd": {
+      "LCD_R01": 883,
+      "LCD_R03": 883,
+      "LCD_R04": 883,
+      "LCD_R02": 883
+    },
+    "joint/val/lcd/all/LCD_E01": {
+      "LCD_R01": 111,
+      "LCD_R02": 110,
+      "LCD_R04": 110,
+      "LCD_R03": 110
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_N04": {
+      "ASA_R03": 110,
+      "ASA_R04": 110,
+      "ASA_R02": 110,
+      "ASA_R01": 110
+    },
+    "joint/val/co2_single_point/2.5/CO2P_E02": {
+      "CO2P_R01": 22,
+      "CO2P_R02": 21,
+      "CO2P_R04": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/co2_five_points/all/CO2C_E01": {
+      "CO2C_R02": 109,
+      "CO2C_R01": 109,
+      "CO2C_R04": 109,
+      "CO2C_R03": 109
+    },
+    "joint/val/co2_single_point/0.05/CO2P_N02": {
+      "CO2P_R04": 21,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/co2_single_point/0.05/CO2P_E03": {
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R04": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/pld/all/PLD_N04": {
+      "PLD_R04": 110,
+      "PLD_R02": 111,
+      "PLD_R03": 111,
+      "PLD_R01": 110
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_N01": {
+      "TSA_R04": 110,
+      "TSA_R02": 111,
+      "TSA_R03": 110,
+      "TSA_R01": 110
+    },
+    "joint/val/co2_single_point/0.5/CO2P_N04": {
+      "CO2P_R04": 22,
+      "CO2P_R02": 22,
+      "CO2P_R03": 22,
+      "CO2P_R01": 21
+    },
+    "joint/val/co2_five_points/all/CO2C_E02": {
+      "CO2C_R01": 109,
+      "CO2C_R02": 109,
+      "CO2C_R03": 109,
+      "CO2C_R04": 110
+    },
+    "style/val/helium_void_fraction": {
+      "natural": 1761,
+      "explicit": 1760
+    },
+    "query/val/helium_void_fraction": {
+      "VF_N03": 440,
+      "VF_N01": 440,
+      "VF_E02": 440,
+      "VF_E03": 440,
+      "VF_N02": 440,
+      "VF_E01": 440,
+      "VF_E04": 440,
+      "VF_N04": 441
+    },
+    "response/val/helium_void_fraction": {
+      "VF_R04": 881,
+      "VF_R03": 880,
+      "VF_R02": 880,
+      "VF_R01": 880
+    },
+    "joint/val/helium_void_fraction/all/VF_N03": {
+      "VF_R04": 110,
+      "VF_R01": 110,
+      "VF_R03": 110,
+      "VF_R02": 110
+    },
+    "joint/val/lcd/all/LCD_N01": {
+      "LCD_R03": 110,
+      "LCD_R02": 111,
+      "LCD_R01": 110,
+      "LCD_R04": 110
+    },
+    "joint/val/lcd/all/LCD_N03": {
+      "LCD_R03": 111,
+      "LCD_R04": 110,
+      "LCD_R02": 110,
+      "LCD_R01": 110
+    },
+    "joint/val/co2_single_point/2.5/CO2P_N02": {
+      "CO2P_R03": 22,
+      "CO2P_R01": 22,
+      "CO2P_R04": 21,
+      "CO2P_R02": 22
+    },
+    "joint/val/pld/all/PLD_N03": {
+      "PLD_R01": 111,
+      "PLD_R02": 110,
+      "PLD_R03": 110,
+      "PLD_R04": 110
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_E03": {
+      "ASA_R01": 110,
+      "ASA_R04": 110,
+      "ASA_R02": 111,
+      "ASA_R03": 110
+    },
+    "joint/val/co2_five_points/all/CO2C_N03": {
+      "CO2C_R01": 110,
+      "CO2C_R03": 109,
+      "CO2C_R02": 109,
+      "CO2C_R04": 109
+    },
+    "joint/val/helium_void_fraction/all/VF_N01": {
+      "VF_R03": 110,
+      "VF_R02": 110,
+      "VF_R04": 110,
+      "VF_R01": 110
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_N02": {
+      "ASA_R02": 110,
+      "ASA_R03": 110,
+      "ASA_R01": 110,
+      "ASA_R04": 111
+    },
+    "joint/val/lcd/all/LCD_E02": {
+      "LCD_R03": 111,
+      "LCD_R04": 110,
+      "LCD_R02": 110,
+      "LCD_R01": 110
+    },
+    "joint/val/helium_void_fraction/all/VF_E02": {
+      "VF_R04": 110,
+      "VF_R02": 110,
+      "VF_R01": 110,
+      "VF_R03": 110
+    },
+    "joint/val/co2_single_point/0.01/CO2P_E01": {
+      "CO2P_R03": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22,
+      "CO2P_R01": 21
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_E02": {
+      "TSA_R01": 110,
+      "TSA_R04": 110,
+      "TSA_R02": 110,
+      "TSA_R03": 111
+    },
+    "joint/val/helium_void_fraction/all/VF_E03": {
+      "VF_R02": 110,
+      "VF_R01": 110,
+      "VF_R03": 110,
+      "VF_R04": 110
+    },
+    "joint/val/description/diameters_and_areas/DESC_N01": {
+      "DESC_R04": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 19,
+      "DESC_R03": 19
+    },
+    "joint/val/helium_void_fraction/all/VF_N02": {
+      "VF_R03": 110,
+      "VF_R04": 110,
+      "VF_R02": 110,
+      "VF_R01": 110
+    },
+    "joint/val/pld/all/PLD_E02": {
+      "PLD_R01": 110,
+      "PLD_R03": 110,
+      "PLD_R04": 110,
+      "PLD_R02": 111
+    },
+    "joint/val/co2_five_points/all/CO2C_N01": {
+      "CO2C_R04": 109,
+      "CO2C_R03": 109,
+      "CO2C_R01": 109,
+      "CO2C_R02": 109
+    },
+    "joint/val/co2_single_point/0.01/CO2P_E02": {
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/description/all_five/DESC_N02": {
+      "DESC_R02": 18,
+      "DESC_R01": 19,
+      "DESC_R03": 18,
+      "DESC_R04": 19
+    },
+    "joint/val/co2_five_points/all/CO2C_N02": {
+      "CO2C_R03": 109,
+      "CO2C_R01": 109,
+      "CO2C_R02": 110,
+      "CO2C_R04": 109
+    },
+    "joint/val/lcd/all/LCD_E04": {
+      "LCD_R02": 110,
+      "LCD_R04": 110,
+      "LCD_R01": 111,
+      "LCD_R03": 111
+    },
+    "joint/val/co2_single_point/2.5/CO2P_N03": {
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_N04": {
+      "TSA_R01": 110,
+      "TSA_R04": 111,
+      "TSA_R03": 110,
+      "TSA_R02": 110
+    },
+    "joint/val/co2_five_points/all/CO2C_E04": {
+      "CO2C_R02": 110,
+      "CO2C_R03": 109,
+      "CO2C_R04": 109,
+      "CO2C_R01": 109
+    },
+    "joint/val/description/diameters_and_areas/DESC_N03": {
+      "DESC_R01": 18,
+      "DESC_R04": 18,
+      "DESC_R03": 19,
+      "DESC_R02": 19
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_E03": {
+      "TSA_R02": 110,
+      "TSA_R01": 111,
+      "TSA_R03": 110,
+      "TSA_R04": 110
+    },
+    "joint/val/pld/all/PLD_N02": {
+      "PLD_R02": 110,
+      "PLD_R01": 110,
+      "PLD_R03": 111,
+      "PLD_R04": 111
+    },
+    "joint/val/co2_single_point/0.05/CO2P_E04": {
+      "CO2P_R01": 21,
+      "CO2P_R02": 22,
+      "CO2P_R03": 22,
+      "CO2P_R04": 22
+    },
+    "joint/val/helium_void_fraction/all/VF_E01": {
+      "VF_R02": 110,
+      "VF_R01": 110,
+      "VF_R04": 110,
+      "VF_R03": 110
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_E01": {
+      "TSA_R04": 110,
+      "TSA_R01": 110,
+      "TSA_R03": 110,
+      "TSA_R02": 110
+    },
+    "joint/val/description/two_surface_areas/DESC_N01": {
+      "DESC_R03": 19,
+      "DESC_R01": 18,
+      "DESC_R04": 18,
+      "DESC_R02": 19
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_E01": {
+      "ASA_R03": 110,
+      "ASA_R04": 110,
+      "ASA_R02": 110,
+      "ASA_R01": 110
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_E04": {
+      "ASA_R04": 110,
+      "ASA_R03": 111,
+      "ASA_R01": 110,
+      "ASA_R02": 110
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_N01": {
+      "ASA_R04": 110,
+      "ASA_R02": 110,
+      "ASA_R03": 111,
+      "ASA_R01": 110
+    },
+    "joint/val/helium_void_fraction/all/VF_E04": {
+      "VF_R04": 110,
+      "VF_R01": 110,
+      "VF_R03": 110,
+      "VF_R02": 110
+    },
+    "joint/val/description/pore_diameters/DESC_E03": {
+      "DESC_R03": 19,
+      "DESC_R04": 18,
+      "DESC_R01": 19,
+      "DESC_R02": 18
+    },
+    "joint/val/description/diameters_and_helium/DESC_E03": {
+      "DESC_R01": 18,
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R02": 18
+    },
+    "joint/val/pld/all/PLD_E04": {
+      "PLD_R03": 110,
+      "PLD_R02": 110,
+      "PLD_R04": 111,
+      "PLD_R01": 111
+    },
+    "joint/val/description/helium_and_areas/DESC_N02": {
+      "DESC_R01": 18,
+      "DESC_R03": 18,
+      "DESC_R02": 19,
+      "DESC_R04": 18
+    },
+    "joint/val/pld/all/PLD_E01": {
+      "PLD_R02": 110,
+      "PLD_R01": 111,
+      "PLD_R03": 110,
+      "PLD_R04": 111
+    },
+    "joint/val/co2_single_point/0.01/CO2P_N02": {
+      "CO2P_R03": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/lcd/all/LCD_N02": {
+      "LCD_R03": 110,
+      "LCD_R01": 111,
+      "LCD_R02": 110,
+      "LCD_R04": 111
+    },
+    "joint/val/co2_single_point/0.05/CO2P_N04": {
+      "CO2P_R04": 22,
+      "CO2P_R03": 21,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/description/two_surface_areas/DESC_E01": {
+      "DESC_R02": 18,
+      "DESC_R04": 18,
+      "DESC_R03": 18,
+      "DESC_R01": 19
+    },
+    "joint/val/helium_void_fraction/all/VF_N04": {
+      "VF_R04": 111,
+      "VF_R03": 110,
+      "VF_R02": 110,
+      "VF_R01": 110
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_N02": {
+      "TSA_R01": 110,
+      "TSA_R02": 110,
+      "TSA_R04": 110,
+      "TSA_R03": 110
+    },
+    "joint/val/co2_single_point/2.5/CO2P_N04": {
+      "CO2P_R01": 21,
+      "CO2P_R04": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/co2_five_points/all/CO2C_N04": {
+      "CO2C_R03": 110,
+      "CO2C_R02": 109,
+      "CO2C_R01": 109,
+      "CO2C_R04": 109
+    },
+    "joint/val/co2_single_point/0.5/CO2P_N01": {
+      "CO2P_R04": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 21,
+      "CO2P_R01": 22
+    },
+    "joint/val/description/two_surface_areas/DESC_E02": {
+      "DESC_R03": 18,
+      "DESC_R02": 19,
+      "DESC_R04": 19,
+      "DESC_R01": 18
+    },
+    "joint/val/co2_single_point/0.5/CO2P_E02": {
+      "CO2P_R03": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.01/CO2P_N03": {
+      "CO2P_R03": 22,
+      "CO2P_R01": 22,
+      "CO2P_R02": 21,
+      "CO2P_R04": 22
+    },
+    "joint/val/description/two_surface_areas/DESC_N04": {
+      "DESC_R03": 19,
+      "DESC_R04": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 18
+    },
+    "joint/val/lcd/all/LCD_E03": {
+      "LCD_R04": 111,
+      "LCD_R03": 110,
+      "LCD_R01": 110,
+      "LCD_R02": 111
+    },
+    "joint/val/description/pore_diameters/DESC_E04": {
+      "DESC_R03": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 18,
+      "DESC_R04": 19
+    },
+    "joint/val/co2_single_point/0.05/CO2P_E01": {
+      "CO2P_R02": 21,
+      "CO2P_R03": 22,
+      "CO2P_R04": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.1/CO2P_N01": {
+      "CO2P_R01": 22,
+      "CO2P_R04": 22,
+      "CO2P_R02": 22,
+      "CO2P_R03": 21
+    },
+    "joint/val/lcd/all/LCD_N04": {
+      "LCD_R04": 111,
+      "LCD_R01": 110,
+      "LCD_R02": 111,
+      "LCD_R03": 110
+    },
+    "joint/val/pld/all/PLD_N01": {
+      "PLD_R03": 110,
+      "PLD_R01": 110,
+      "PLD_R02": 111,
+      "PLD_R04": 110
+    },
+    "joint/val/co2_single_point/0.05/CO2P_E02": {
+      "CO2P_R04": 21,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/description/all_five/DESC_E02": {
+      "DESC_R02": 19,
+      "DESC_R04": 18,
+      "DESC_R03": 19,
+      "DESC_R01": 18
+    },
+    "joint/val/co2_single_point/0.5/CO2P_N02": {
+      "CO2P_R03": 22,
+      "CO2P_R01": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22
+    },
+    "joint/val/description/all_five/DESC_E04": {
+      "DESC_R04": 19,
+      "DESC_R01": 18,
+      "DESC_R02": 19,
+      "DESC_R03": 18
+    },
+    "joint/val/description/pore_diameters/DESC_N02": {
+      "DESC_R03": 19,
+      "DESC_R02": 19,
+      "DESC_R01": 18,
+      "DESC_R04": 18
+    },
+    "joint/val/description/pore_diameters/DESC_N03": {
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 19
+    },
+    "joint/val/description/all_five/DESC_E03": {
+      "DESC_R03": 18,
+      "DESC_R01": 19,
+      "DESC_R04": 18,
+      "DESC_R02": 18
+    },
+    "joint/val/co2_single_point/2.5/CO2P_E04": {
+      "CO2P_R02": 22,
+      "CO2P_R03": 22,
+      "CO2P_R04": 21,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.01/CO2P_N01": {
+      "CO2P_R03": 21,
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/description/helium_and_areas/DESC_E02": {
+      "DESC_R04": 18,
+      "DESC_R01": 19,
+      "DESC_R03": 19,
+      "DESC_R02": 18
+    },
+    "joint/val/accessible_gravimetric_surface_area/all/ASA_E02": {
+      "ASA_R01": 111,
+      "ASA_R03": 110,
+      "ASA_R02": 110,
+      "ASA_R04": 110
+    },
+    "joint/val/co2_single_point/0.1/CO2P_E02": {
+      "CO2P_R02": 22,
+      "CO2P_R01": 21,
+      "CO2P_R04": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/description/two_surface_areas/DESC_N02": {
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 19
+    },
+    "joint/val/description/diameters_and_helium/DESC_N02": {
+      "DESC_R03": 18,
+      "DESC_R01": 18,
+      "DESC_R02": 19,
+      "DESC_R04": 19
+    },
+    "joint/val/description/diameters_and_areas/DESC_E01": {
+      "DESC_R04": 18,
+      "DESC_R02": 19,
+      "DESC_R01": 18,
+      "DESC_R03": 18
+    },
+    "joint/val/description/all_five/DESC_E01": {
+      "DESC_R03": 18,
+      "DESC_R02": 18,
+      "DESC_R01": 19,
+      "DESC_R04": 19
+    },
+    "joint/val/description/diameters_and_areas/DESC_N02": {
+      "DESC_R02": 18,
+      "DESC_R03": 18,
+      "DESC_R01": 18,
+      "DESC_R04": 19
+    },
+    "joint/val/co2_single_point/0.1/CO2P_E03": {
+      "CO2P_R03": 21,
+      "CO2P_R01": 22,
+      "CO2P_R02": 22,
+      "CO2P_R04": 22
+    },
+    "joint/val/co2_single_point/0.5/CO2P_E01": {
+      "CO2P_R03": 22,
+      "CO2P_R04": 22,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.5/CO2P_E03": {
+      "CO2P_R04": 22,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 21
+    },
+    "joint/val/co2_single_point/0.5/CO2P_N03": {
+      "CO2P_R04": 21,
+      "CO2P_R02": 22,
+      "CO2P_R03": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/description/all_five/DESC_N01": {
+      "DESC_R01": 18,
+      "DESC_R02": 19,
+      "DESC_R03": 19,
+      "DESC_R04": 18
+    },
+    "joint/val/description/diameters_and_areas/DESC_N04": {
+      "DESC_R03": 18,
+      "DESC_R04": 19,
+      "DESC_R01": 19,
+      "DESC_R02": 18
+    },
+    "joint/val/co2_single_point/0.1/CO2P_E04": {
+      "CO2P_R04": 22,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/description/helium_and_areas/DESC_E01": {
+      "DESC_R02": 19,
+      "DESC_R04": 18,
+      "DESC_R01": 18,
+      "DESC_R03": 18
+    },
+    "joint/val/co2_single_point/0.5/CO2P_E04": {
+      "CO2P_R04": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 21,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.1/CO2P_N04": {
+      "CO2P_R03": 22,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22,
+      "CO2P_R04": 22
+    },
+    "joint/val/description/diameters_and_areas/DESC_E02": {
+      "DESC_R02": 18,
+      "DESC_R01": 19,
+      "DESC_R04": 18,
+      "DESC_R03": 19
+    },
+    "joint/val/description/helium_and_areas/DESC_E03": {
+      "DESC_R02": 19,
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R01": 18
+    },
+    "joint/val/description/diameters_and_helium/DESC_N04": {
+      "DESC_R01": 19,
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R02": 18
+    },
+    "joint/val/description/two_surface_areas/DESC_E03": {
+      "DESC_R04": 18,
+      "DESC_R02": 18,
+      "DESC_R03": 19,
+      "DESC_R01": 18
+    },
+    "joint/val/description/diameters_and_helium/DESC_E04": {
+      "DESC_R02": 19,
+      "DESC_R04": 18,
+      "DESC_R01": 18,
+      "DESC_R03": 19
+    },
+    "joint/val/description/diameters_and_helium/DESC_N01": {
+      "DESC_R03": 18,
+      "DESC_R01": 19,
+      "DESC_R04": 18,
+      "DESC_R02": 18
+    },
+    "joint/val/description/diameters_and_helium/DESC_N03": {
+      "DESC_R02": 18,
+      "DESC_R01": 18,
+      "DESC_R03": 19,
+      "DESC_R04": 18
+    },
+    "joint/val/description/helium_and_areas/DESC_N01": {
+      "DESC_R03": 18,
+      "DESC_R01": 19,
+      "DESC_R02": 18,
+      "DESC_R04": 19
+    },
+    "joint/val/description/two_surface_areas/DESC_E04": {
+      "DESC_R02": 18,
+      "DESC_R04": 19,
+      "DESC_R01": 19,
+      "DESC_R03": 18
+    },
+    "joint/val/co2_single_point/2.5/CO2P_N01": {
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/total_gravimetric_surface_area/all/TSA_E04": {
+      "TSA_R01": 110,
+      "TSA_R02": 111,
+      "TSA_R04": 110,
+      "TSA_R03": 110
+    },
+    "joint/val/description/diameters_and_areas/DESC_E03": {
+      "DESC_R03": 18,
+      "DESC_R01": 18,
+      "DESC_R02": 19,
+      "DESC_R04": 19
+    },
+    "joint/val/description/helium_and_areas/DESC_N04": {
+      "DESC_R03": 18,
+      "DESC_R01": 18,
+      "DESC_R02": 18,
+      "DESC_R04": 19
+    },
+    "joint/val/description/pore_diameters/DESC_N01": {
+      "DESC_R03": 18,
+      "DESC_R01": 18,
+      "DESC_R04": 19,
+      "DESC_R02": 18
+    },
+    "joint/val/description/pore_diameters/DESC_N04": {
+      "DESC_R02": 19,
+      "DESC_R01": 18,
+      "DESC_R03": 19,
+      "DESC_R04": 18
+    },
+    "joint/val/description/two_surface_areas/DESC_N03": {
+      "DESC_R01": 18,
+      "DESC_R03": 18,
+      "DESC_R02": 19,
+      "DESC_R04": 18
+    },
+    "joint/val/co2_single_point/0.01/CO2P_E03": {
+      "CO2P_R01": 22,
+      "CO2P_R04": 22,
+      "CO2P_R03": 21,
+      "CO2P_R02": 22
+    },
+    "joint/val/co2_single_point/0.1/CO2P_E01": {
+      "CO2P_R02": 22,
+      "CO2P_R01": 22,
+      "CO2P_R04": 21,
+      "CO2P_R03": 22
+    },
+    "joint/val/description/helium_and_areas/DESC_E04": {
+      "DESC_R04": 18,
+      "DESC_R01": 19,
+      "DESC_R03": 19,
+      "DESC_R02": 18
+    },
+    "joint/val/co2_single_point/0.1/CO2P_N03": {
+      "CO2P_R04": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22,
+      "CO2P_R01": 22
+    },
+    "joint/val/co2_single_point/0.05/CO2P_N03": {
+      "CO2P_R02": 22,
+      "CO2P_R04": 22,
+      "CO2P_R03": 22,
+      "CO2P_R01": 21
+    },
+    "joint/val/description/diameters_and_helium/DESC_E01": {
+      "DESC_R04": 18,
+      "DESC_R01": 18,
+      "DESC_R03": 19,
+      "DESC_R02": 19
+    },
+    "joint/val/co2_single_point/2.5/CO2P_E03": {
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22,
+      "CO2P_R02": 22
+    },
+    "joint/val/co2_single_point/0.01/CO2P_E04": {
+      "CO2P_R04": 22,
+      "CO2P_R01": 22,
+      "CO2P_R02": 21,
+      "CO2P_R03": 22
+    },
+    "joint/val/co2_single_point/2.5/CO2P_E01": {
+      "CO2P_R01": 22,
+      "CO2P_R04": 22,
+      "CO2P_R03": 21,
+      "CO2P_R02": 22
+    },
+    "joint/val/description/all_five/DESC_N04": {
+      "DESC_R04": 18,
+      "DESC_R01": 18,
+      "DESC_R02": 18,
+      "DESC_R03": 19
+    },
+    "joint/val/co2_single_point/0.01/CO2P_N04": {
+      "CO2P_R02": 22,
+      "CO2P_R04": 21,
+      "CO2P_R01": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/co2_single_point/0.1/CO2P_N02": {
+      "CO2P_R01": 22,
+      "CO2P_R02": 21,
+      "CO2P_R04": 22,
+      "CO2P_R03": 22
+    },
+    "joint/val/description/all_five/DESC_N03": {
+      "DESC_R04": 18,
+      "DESC_R02": 19,
+      "DESC_R01": 18,
+      "DESC_R03": 18
+    },
+    "joint/val/description/pore_diameters/DESC_E01": {
+      "DESC_R02": 18,
+      "DESC_R04": 19,
+      "DESC_R03": 18,
+      "DESC_R01": 19
+    },
+    "joint/val/description/helium_and_areas/DESC_N03": {
+      "DESC_R02": 18,
+      "DESC_R01": 19,
+      "DESC_R04": 18,
+      "DESC_R03": 19
+    }
+  },
+  "status": "complete",
+  "sampling_seed": 20260914,
+  "source_files": [
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/checked_materials.jsonl",
+      "bytes": 199165337,
+      "sha256": "518ebc58c721e38e5a91e524395283ac071d3d405265332be462bf13213cb6d1"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/task_schema.json",
+      "bytes": 2925,
+      "sha256": "995c93f5da5da71be6d5fd9f39fc561b036a64b1ab59f8e82604c2adf3ddb264"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/audit_summary.json",
+      "bytes": 2769,
+      "sha256": "aeeabce702432df517af894db3af9c06240aa41d716af1f1b3bc34a586a1d2ce"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/audit/output_verification.json",
+      "bytes": 623,
+      "sha256": "e61c705587458f3236fe631bf8c081fa85b93ae9660a010b0ccf19e69dfaf086"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/build_checked_master.py",
+      "bytes": 13672,
+      "sha256": "87ec66746f8912c6054454f1c536ab801053616f020a7d45c26296d22374a526"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/geometry_checks.py",
+      "bytes": 16776,
+      "sha256": "075766e1fa2d11d31716d4fa711f215c9851a2e86b4f06480108ff118f2043a7"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/sources/hMOF_CO2_mofdb_dc8a0295db.zip",
+      "bytes": 982292348,
+      "sha256": "89cc2277506345d0d2a17276804d68d65697ff70d8f0c449abb4c329df564f25"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hMOF_query_response_templates.json",
+      "bytes": 19916,
+      "sha256": "ab9edfd448e34aeaf7b3597010657b57178fc435253f5d6fca2d0bd0fe39c137"
+    }
+  ],
+  "artifact_sha256": {
+    "train.jsonl": "90887f9bd0d027000b6b636bfc6ccd65e0a1af913d421f80a247e98bffc91bfe",
+    "val.jsonl": "93d1253af0ff4151b911d6d128a5b756b60df100dae0d89b4e98d12b8c6dc0a7",
+    "structure_index.jsonl": "4d8472e2bfbe5235e2a241dea3a389504a1dca65eb1b5efc542056bcd2bc9448",
+    "preview.jsonl": "d176bf88657f6602a00f40b4ce80f55ff1404410964a318d3c0602f03c9118f5",
+    "templates.json": "ab9edfd448e34aeaf7b3597010657b57178fc435253f5d6fca2d0bd0fe39c137",
+    "task_schema.json": "995c93f5da5da71be6d5fd9f39fc561b036a64b1ab59f8e82604c2adf3ddb264"
+  },
+  "generator_sha256": "2a4f50b445a8309e943d8a091ecbcaf2bb397f4cc5b512fd56631205ea027520",
+  "software_versions": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pymatgen": "2026.3.23",
+    "ase": "3.27.0"
+  },
+  "raw_source_modified": false,
+  "published_properties_recomputed": false,
+  "official_evaluation_split": false,
+  "generation_rule": "One row per accepted scalar task, one single-point and one five-point row per accepted CO2 task, and one row per accepted description task",
+  "geometry_sha256_definition": "SHA256 of parsed explicit P1 elements, fractional coordinates, and lattice JSON with sorted keys and compact separators, without coordinate rounding; distinct from the exact CIF byte hash"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "molopt",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 340294,
+      "original_sha256": "1dee330072801b276676c9088c57645048f95bcfe431819c2f3f074f3eadb4e7",
+      "sha256": "db391eb01405a2ecf1c7bb47e533304e10bb7ba992c782edb546f3741693fc4f",
+      "messages_sha256": "a125a78bbc38609a1d47f014bbca41a16f0124581f5d740d0fe437dc2c8c1020",
+      "bytes": 591340385
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 19624,
+      "original_sha256": "3b0fdd0930d1dc6e388977052e7483c3383c57b8624e62023e586c531e14341f",
+      "sha256": "0d3a407e191e7052659bab1b130589754b158e9c818f7d9afff4ebee469bee3e",
+      "messages_sha256": "270d5c0b995fd39888f284c133e227b392f940099c760b328ee399ed9109ead8",
+      "bytes": 33856030
+    }
+  ],
+  "assets": {
+    "counts": {},
+    "bytes": {},
+    "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {},
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 12,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/molopt/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "dataset": "qmof",
+  "message_counts": {
+    "train.jsonl": 311695,
+    "val.jsonl": 34629
+  },
+  "runtime_referenced_unique_files": 20372,
+  "asset_files": 20372,
+  "all_message_references_in_packaged_manifest": true,
+  "all_runtime_paths_relative_to_corpus_root": true,
+  "message_text_hashes_unchanged": true,
+  "file_hashes_and_counts_match_layout_manifest": true,
+  "final_location_sample_files_checked": 32
+}

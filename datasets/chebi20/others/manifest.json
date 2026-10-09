@@ -1,0 +1,101 @@
+{
+  "dataset": "ChEBI-20",
+  "format": "JSONL with messages, id and provenance metadata",
+  "seed": 20260909,
+  "template_allocation": "Normalize supplied weights, use largest-remainder integer quotas, then shuffle template assignments within each split with a deterministic seed",
+  "source_order_preserved": true,
+  "one_output_record_per_source_record": true,
+  "smiles_and_descriptions_preserved_verbatim": true,
+  "source_directory": "/mnt/e/Datasets/Molecules/ChEBI-20",
+  "source_sha256": {
+    "template.txt": "ddba8a2ca320eb0c1437b6dfb2ae9189e1501fd8d6bdac526cd689b0e3c7ed8b",
+    "train.txt": "f8ad6001a1302fa5e1c7f3dbbe62d6c57deef475d51f417178382f7cda655a32",
+    "validation.txt": "f410b58e6825986577d01b4f0c14b59ed61c1343a15118ba584de4bbcea1508c",
+    "test.txt": "91776254b54ef13ad701ede0ecdbd7bcd30c19a66e52aa34a6dac8d0e7306d72"
+  },
+  "supplied_weight_sum_percent": "100.02",
+  "templates": [
+    {
+      "id": 1,
+      "query": "Describe the molecule represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    },
+    {
+      "id": 2,
+      "query": "Provide a chemical description of the molecule represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    },
+    {
+      "id": 3,
+      "query": "Describe the chemical entity represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    },
+    {
+      "id": 4,
+      "query": "Describe the compound represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    },
+    {
+      "id": 5,
+      "query": "Provide a description of the molecule represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    },
+    {
+      "id": 6,
+      "query": "Give a chemical description of the molecule represented by the following SMILES.",
+      "supplied_percent": "16.67",
+      "normalized_fraction": 0.16666666666666666
+    }
+  ],
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "records": 26407,
+      "template_counts": {
+        "1": 4402,
+        "2": 4401,
+        "3": 4401,
+        "4": 4401,
+        "5": 4401,
+        "6": 4401
+      },
+      "sha256": "1f8c92d9e359eabb2d99122d4a590f967af44e7195fdda087b46eb4d35e6c890",
+      "all_records_roundtrip_verified": true
+    },
+    "validation": {
+      "file": "validation.jsonl",
+      "records": 3301,
+      "template_counts": {
+        "1": 551,
+        "2": 550,
+        "3": 550,
+        "4": 550,
+        "5": 550,
+        "6": 550
+      },
+      "sha256": "110a3cbc2d42bbe37c5758800aed42c0dbf60d1381fc190b380491b821c3dea2",
+      "all_records_roundtrip_verified": true
+    },
+    "test": {
+      "file": "test.jsonl",
+      "records": 3300,
+      "template_counts": {
+        "1": 550,
+        "2": 550,
+        "3": 550,
+        "4": 550,
+        "5": 550,
+        "6": 550
+      },
+      "sha256": "feb66a3277b8a9c7057c73a81e05356c2b854be4612ce2123810ad77d724ce28",
+      "all_records_roundtrip_verified": true
+    }
+  },
+  "source_hashes_unchanged": true,
+  "unique_cids_across_all_splits": 33008
+}

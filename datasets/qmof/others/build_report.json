@@ -1,0 +1,842 @@
+{
+  "status": "corpus_ready",
+  "seed": 20260910,
+  "materials": 20372,
+  "material_counts": {
+    "train": 18335,
+    "val": 2037
+  },
+  "record_counts": {
+    "train": 311695,
+    "val": 34629
+  },
+  "total_records": 346324,
+  "tasks_per_material": 17,
+  "task_counts": {
+    "train": {
+      "description": 18335,
+      "density": 18335,
+      "pbe.energy_total": 18335,
+      "atom_count": 18335,
+      "space_group": 18335,
+      "cell_parameters": 18335,
+      "pbe.net_magmom": 18335,
+      "thermo.formation_energy": 18335,
+      "crystal_system": 18335,
+      "formula": 18335,
+      "thermo.energy_above_hull": 18335,
+      "largest_cavity_diameter": 18335,
+      "element_composition": 18335,
+      "pore_limiting_diameter": 18335,
+      "pbe.bandgap": 18335,
+      "point_group": 18335,
+      "cell_volume": 18335
+    },
+    "val": {
+      "atom_count": 2037,
+      "description": 2037,
+      "pore_limiting_diameter": 2037,
+      "thermo.formation_energy": 2037,
+      "density": 2037,
+      "crystal_system": 2037,
+      "thermo.energy_above_hull": 2037,
+      "cell_volume": 2037,
+      "point_group": 2037,
+      "pbe.net_magmom": 2037,
+      "space_group": 2037,
+      "largest_cavity_diameter": 2037,
+      "element_composition": 2037,
+      "cell_parameters": 2037,
+      "formula": 2037,
+      "pbe.energy_total": 2037,
+      "pbe.bandgap": 2037
+    }
+  },
+  "query_template_count": 136,
+  "response_template_count": 63,
+  "template_usage": {
+    "train": {
+      "query_templates": {
+        "description": {
+          "Q01": 2292,
+          "Q06": 2292,
+          "Q08": 2292,
+          "Q07": 2292,
+          "Q02": 2291,
+          "Q03": 2292,
+          "Q04": 2292,
+          "Q05": 2292
+        },
+        "density": {
+          "Q05": 2292,
+          "Q04": 2291,
+          "Q01": 2292,
+          "Q06": 2292,
+          "Q07": 2292,
+          "Q02": 2292,
+          "Q08": 2292,
+          "Q03": 2292
+        },
+        "pbe.energy_total": {
+          "Q08": 2292,
+          "Q07": 2292,
+          "Q04": 2292,
+          "Q03": 2292,
+          "Q02": 2292,
+          "Q06": 2291,
+          "Q01": 2292,
+          "Q05": 2292
+        },
+        "atom_count": {
+          "Q07": 2292,
+          "Q08": 2291,
+          "Q01": 2292,
+          "Q05": 2292,
+          "Q04": 2292,
+          "Q02": 2292,
+          "Q03": 2292,
+          "Q06": 2292
+        },
+        "space_group": {
+          "Q06": 2292,
+          "Q03": 2292,
+          "Q02": 2291,
+          "Q08": 2292,
+          "Q04": 2292,
+          "Q01": 2292,
+          "Q05": 2292,
+          "Q07": 2292
+        },
+        "cell_parameters": {
+          "Q01": 2292,
+          "Q04": 2292,
+          "Q06": 2292,
+          "Q02": 2292,
+          "Q08": 2292,
+          "Q05": 2292,
+          "Q07": 2291,
+          "Q03": 2292
+        },
+        "pbe.net_magmom": {
+          "Q03": 2292,
+          "Q06": 2292,
+          "Q07": 2292,
+          "Q01": 2291,
+          "Q02": 2292,
+          "Q08": 2292,
+          "Q05": 2292,
+          "Q04": 2292
+        },
+        "thermo.formation_energy": {
+          "Q04": 2292,
+          "Q01": 2292,
+          "Q05": 2291,
+          "Q06": 2292,
+          "Q02": 2292,
+          "Q07": 2292,
+          "Q03": 2292,
+          "Q08": 2292
+        },
+        "crystal_system": {
+          "Q05": 2292,
+          "Q01": 2292,
+          "Q06": 2292,
+          "Q07": 2292,
+          "Q04": 2292,
+          "Q08": 2292,
+          "Q03": 2292,
+          "Q02": 2291
+        },
+        "formula": {
+          "Q07": 2292,
+          "Q03": 2292,
+          "Q06": 2291,
+          "Q01": 2292,
+          "Q08": 2292,
+          "Q05": 2292,
+          "Q04": 2292,
+          "Q02": 2292
+        },
+        "thermo.energy_above_hull": {
+          "Q06": 2292,
+          "Q05": 2292,
+          "Q01": 2292,
+          "Q03": 2291,
+          "Q04": 2292,
+          "Q08": 2292,
+          "Q07": 2292,
+          "Q02": 2292
+        },
+        "largest_cavity_diameter": {
+          "Q01": 2292,
+          "Q05": 2292,
+          "Q08": 2292,
+          "Q03": 2291,
+          "Q04": 2292,
+          "Q02": 2292,
+          "Q06": 2292,
+          "Q07": 2292
+        },
+        "element_composition": {
+          "Q03": 2292,
+          "Q08": 2291,
+          "Q01": 2292,
+          "Q05": 2292,
+          "Q04": 2292,
+          "Q06": 2292,
+          "Q07": 2292,
+          "Q02": 2292
+        },
+        "pore_limiting_diameter": {
+          "Q05": 2292,
+          "Q07": 2292,
+          "Q03": 2292,
+          "Q06": 2292,
+          "Q08": 2292,
+          "Q02": 2292,
+          "Q01": 2292,
+          "Q04": 2291
+        },
+        "pbe.bandgap": {
+          "Q01": 2292,
+          "Q06": 2292,
+          "Q04": 2292,
+          "Q03": 2292,
+          "Q02": 2291,
+          "Q08": 2292,
+          "Q07": 2292,
+          "Q05": 2292
+        },
+        "point_group": {
+          "Q05": 2292,
+          "Q06": 2292,
+          "Q07": 2292,
+          "Q03": 2292,
+          "Q04": 2291,
+          "Q01": 2292,
+          "Q02": 2292,
+          "Q08": 2292
+        },
+        "cell_volume": {
+          "Q06": 2292,
+          "Q05": 2292,
+          "Q03": 2292,
+          "Q07": 2292,
+          "Q02": 2292,
+          "Q08": 2292,
+          "Q04": 2291,
+          "Q01": 2292
+        }
+      },
+      "response_templates": {
+        "description": {
+          "R10": 1223,
+          "R12": 1222,
+          "R04": 1222,
+          "R14": 1222,
+          "R01": 1222,
+          "R06": 1223,
+          "R03": 1222,
+          "R08": 1222,
+          "R15": 1223,
+          "R07": 1222,
+          "R02": 1223,
+          "R11": 1222,
+          "R05": 1222,
+          "R13": 1222,
+          "R09": 1223
+        },
+        "density": {
+          "R01": 6112,
+          "R03": 6112,
+          "R02": 6111
+        },
+        "pbe.energy_total": {
+          "R01": 6111,
+          "R03": 6112,
+          "R02": 6112
+        },
+        "atom_count": {
+          "R03": 6112,
+          "R02": 6111,
+          "R01": 6112
+        },
+        "space_group": {
+          "R02": 6112,
+          "R03": 6111,
+          "R01": 6112
+        },
+        "cell_parameters": {
+          "R03": 6112,
+          "R02": 6112,
+          "R01": 6111
+        },
+        "pbe.net_magmom": {
+          "R02": 6112,
+          "R01": 6112,
+          "R03": 6111
+        },
+        "thermo.formation_energy": {
+          "R02": 6111,
+          "R01": 6112,
+          "R03": 6112
+        },
+        "crystal_system": {
+          "R02": 6112,
+          "R01": 6112,
+          "R03": 6111
+        },
+        "formula": {
+          "R02": 6111,
+          "R03": 6112,
+          "R01": 6112
+        },
+        "thermo.energy_above_hull": {
+          "R01": 6111,
+          "R02": 6112,
+          "R03": 6112
+        },
+        "largest_cavity_diameter": {
+          "R03": 6111,
+          "R01": 6112,
+          "R02": 6112
+        },
+        "element_composition": {
+          "R03": 6111,
+          "R01": 6112,
+          "R02": 6112
+        },
+        "pore_limiting_diameter": {
+          "R01": 6112,
+          "R03": 6112,
+          "R02": 6111
+        },
+        "pbe.bandgap": {
+          "R03": 6112,
+          "R01": 6111,
+          "R02": 6112
+        },
+        "point_group": {
+          "R03": 6111,
+          "R01": 6112,
+          "R02": 6112
+        },
+        "cell_volume": {
+          "R02": 6112,
+          "R01": 6111,
+          "R03": 6112
+        }
+      },
+      "description_groups": {
+        "thermodynamics": 3667,
+        "pore_features": 3667,
+        "combined": 3667,
+        "structure_geometry": 3667,
+        "electronic_magnetic": 3667
+      }
+    },
+    "val": {
+      "query_templates": {
+        "atom_count": {
+          "Q02": 255,
+          "Q03": 254,
+          "Q01": 254,
+          "Q05": 255,
+          "Q08": 255,
+          "Q07": 254,
+          "Q06": 255,
+          "Q04": 255
+        },
+        "description": {
+          "Q03": 255,
+          "Q02": 254,
+          "Q08": 255,
+          "Q04": 255,
+          "Q07": 255,
+          "Q06": 254,
+          "Q01": 255,
+          "Q05": 254
+        },
+        "pore_limiting_diameter": {
+          "Q07": 254,
+          "Q04": 255,
+          "Q03": 255,
+          "Q02": 255,
+          "Q08": 254,
+          "Q05": 254,
+          "Q06": 255,
+          "Q01": 255
+        },
+        "thermo.formation_energy": {
+          "Q08": 254,
+          "Q02": 254,
+          "Q04": 255,
+          "Q06": 255,
+          "Q03": 255,
+          "Q01": 255,
+          "Q07": 254,
+          "Q05": 255
+        },
+        "density": {
+          "Q07": 255,
+          "Q06": 255,
+          "Q05": 254,
+          "Q04": 254,
+          "Q08": 255,
+          "Q01": 255,
+          "Q03": 255,
+          "Q02": 254
+        },
+        "crystal_system": {
+          "Q04": 254,
+          "Q05": 255,
+          "Q08": 255,
+          "Q03": 255,
+          "Q01": 254,
+          "Q02": 254,
+          "Q06": 255,
+          "Q07": 255
+        },
+        "thermo.energy_above_hull": {
+          "Q08": 255,
+          "Q05": 255,
+          "Q03": 254,
+          "Q06": 255,
+          "Q01": 255,
+          "Q04": 255,
+          "Q02": 254,
+          "Q07": 254
+        },
+        "cell_volume": {
+          "Q07": 254,
+          "Q02": 254,
+          "Q08": 255,
+          "Q01": 255,
+          "Q04": 255,
+          "Q03": 255,
+          "Q06": 254,
+          "Q05": 255
+        },
+        "point_group": {
+          "Q08": 255,
+          "Q03": 254,
+          "Q01": 255,
+          "Q02": 255,
+          "Q04": 255,
+          "Q07": 255,
+          "Q05": 254,
+          "Q06": 254
+        },
+        "pbe.net_magmom": {
+          "Q02": 255,
+          "Q05": 255,
+          "Q01": 254,
+          "Q04": 254,
+          "Q08": 255,
+          "Q06": 255,
+          "Q07": 255,
+          "Q03": 254
+        },
+        "space_group": {
+          "Q04": 255,
+          "Q02": 255,
+          "Q03": 255,
+          "Q05": 254,
+          "Q06": 254,
+          "Q07": 255,
+          "Q08": 255,
+          "Q01": 254
+        },
+        "largest_cavity_diameter": {
+          "Q07": 255,
+          "Q05": 255,
+          "Q01": 255,
+          "Q02": 254,
+          "Q03": 254,
+          "Q08": 255,
+          "Q06": 255,
+          "Q04": 254
+        },
+        "element_composition": {
+          "Q06": 254,
+          "Q02": 255,
+          "Q08": 254,
+          "Q07": 254,
+          "Q04": 255,
+          "Q03": 255,
+          "Q05": 255,
+          "Q01": 255
+        },
+        "cell_parameters": {
+          "Q04": 255,
+          "Q06": 254,
+          "Q01": 255,
+          "Q07": 255,
+          "Q08": 254,
+          "Q05": 254,
+          "Q02": 255,
+          "Q03": 255
+        },
+        "formula": {
+          "Q07": 255,
+          "Q01": 254,
+          "Q05": 254,
+          "Q08": 254,
+          "Q06": 255,
+          "Q03": 255,
+          "Q04": 255,
+          "Q02": 255
+        },
+        "pbe.energy_total": {
+          "Q08": 255,
+          "Q04": 255,
+          "Q07": 255,
+          "Q01": 255,
+          "Q03": 255,
+          "Q06": 254,
+          "Q02": 254,
+          "Q05": 254
+        },
+        "pbe.bandgap": {
+          "Q08": 255,
+          "Q05": 254,
+          "Q07": 255,
+          "Q06": 255,
+          "Q04": 254,
+          "Q03": 254,
+          "Q01": 255,
+          "Q02": 255
+        }
+      },
+      "response_templates": {
+        "atom_count": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "description": {
+          "R01": 136,
+          "R11": 136,
+          "R05": 136,
+          "R03": 136,
+          "R08": 135,
+          "R04": 136,
+          "R14": 136,
+          "R09": 136,
+          "R10": 136,
+          "R12": 135,
+          "R13": 136,
+          "R15": 136,
+          "R06": 135,
+          "R02": 136,
+          "R07": 136
+        },
+        "pore_limiting_diameter": {
+          "R02": 679,
+          "R03": 679,
+          "R01": 679
+        },
+        "thermo.formation_energy": {
+          "R02": 679,
+          "R03": 679,
+          "R01": 679
+        },
+        "density": {
+          "R02": 679,
+          "R01": 679,
+          "R03": 679
+        },
+        "crystal_system": {
+          "R03": 679,
+          "R02": 679,
+          "R01": 679
+        },
+        "thermo.energy_above_hull": {
+          "R03": 679,
+          "R01": 679,
+          "R02": 679
+        },
+        "cell_volume": {
+          "R02": 679,
+          "R01": 679,
+          "R03": 679
+        },
+        "point_group": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "pbe.net_magmom": {
+          "R02": 679,
+          "R03": 679,
+          "R01": 679
+        },
+        "space_group": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "largest_cavity_diameter": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "element_composition": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "cell_parameters": {
+          "R02": 679,
+          "R01": 679,
+          "R03": 679
+        },
+        "formula": {
+          "R01": 679,
+          "R02": 679,
+          "R03": 679
+        },
+        "pbe.energy_total": {
+          "R02": 679,
+          "R03": 679,
+          "R01": 679
+        },
+        "pbe.bandgap": {
+          "R03": 679,
+          "R01": 679,
+          "R02": 679
+        }
+      },
+      "description_groups": {
+        "structure_geometry": 408,
+        "thermodynamics": 407,
+        "pore_features": 407,
+        "electronic_magnetic": 407,
+        "combined": 408
+      }
+    }
+  },
+  "description_combinations": {
+    "R01": [
+      "structure_geometry"
+    ],
+    "R02": [
+      "structure_geometry"
+    ],
+    "R03": [
+      "structure_geometry"
+    ],
+    "R04": [
+      "pore_features"
+    ],
+    "R05": [
+      "pore_features"
+    ],
+    "R06": [
+      "pore_features"
+    ],
+    "R07": [
+      "electronic_magnetic"
+    ],
+    "R08": [
+      "electronic_magnetic"
+    ],
+    "R09": [
+      "electronic_magnetic"
+    ],
+    "R10": [
+      "thermodynamics"
+    ],
+    "R11": [
+      "thermodynamics"
+    ],
+    "R12": [
+      "thermodynamics"
+    ],
+    "R13": [
+      "structure_geometry",
+      "pore_features"
+    ],
+    "R14": [
+      "pore_features",
+      "electronic_magnetic"
+    ],
+    "R15": [
+      "structure_geometry",
+      "thermodynamics"
+    ]
+  },
+  "description_sampling_policy": "One description per material. Balance five groups within each split, then balance the three templates within each group.",
+  "split_policy": {
+    "validation_fraction": 0.1,
+    "group_before_expanding_tasks": true,
+    "llm4mat_members_and_structure_group_neighbors_forced_to_train": true,
+    "llm4mat_member_count": 1526,
+    "forced_training_materials": 1529,
+    "cross_split_material_or_structure_group_overlap": 0
+  },
+  "duplicate_handling": {
+    "strict_equivalent_pairs": 0,
+    "near_structure_pairs": 15,
+    "matched_structure_groups": 15,
+    "grouped_materials": 30,
+    "records_removed": 0,
+    "labels_averaged_or_replaced": false,
+    "details_file": "structure_groups.json"
+  },
+  "geometry_export": {
+    "decimal_places": 12,
+    "allowed_tags": [
+      "_atom_site_fract_x",
+      "_atom_site_fract_y",
+      "_atom_site_fract_z",
+      "_atom_site_label",
+      "_atom_site_occupancy",
+      "_atom_site_type_symbol",
+      "_cell_angle_alpha",
+      "_cell_angle_beta",
+      "_cell_angle_gamma",
+      "_cell_length_a",
+      "_cell_length_b",
+      "_cell_length_c",
+      "_space_group_symop_operation_xyz"
+    ],
+    "original_cell_preserved": true,
+    "primitive_or_conventional_conversion": false,
+    "computed_site_labels_included": false,
+    "formula_volume_or_spacegroup_answer_tags_included": false,
+    "cif_parser_frac_tolerance": 0,
+    "cif_parser_check_cif": false,
+    "composition_and_geometry_checked_separately": true,
+    "roundtrip_checked": 20372,
+    "maximum_site_difference_A": 4.4342516419062536e-11,
+    "parser_warning_records": 0
+  },
+  "exported_geometry_files": 20372,
+  "total_sites": 2312743,
+  "cif_validation_this_run": {
+    "all_files_exist_and_sha256_match": 20372,
+    "all_files_have_only_geometry_tags": true,
+    "all_paths_match_material_ids": true,
+    "reexported": false
+  },
+  "validation": {
+    "all_records_reread_and_reconstructed": 346324,
+    "all_material_task_pairs_unique_and_complete": true,
+    "all_llm4mat_members_in_train": true,
+    "queries_balanced_within_each_task_and_split": true,
+    "ordinary_responses_balanced_within_each_task_and_split": true,
+    "description_groups_and_within_group_templates_balanced": true,
+    "preview_records_exact_subsets_of_train_val": 47,
+    "scientific_scope": "Field correspondence, serialization, units and split checks; no independent DFT or pore/hull recomputation"
+  },
+  "preview_records": 47,
+  "display_decimal_places": {
+    "length_a": 6,
+    "length_b": 6,
+    "length_c": 6,
+    "angle_alpha": 6,
+    "angle_beta": 6,
+    "angle_gamma": 6,
+    "cell_volume": 3,
+    "density": 6,
+    "pore_limiting_diameter": 5,
+    "largest_cavity_diameter": 5,
+    "bandgap": 6,
+    "net_magmom": 2,
+    "energy_total": 8,
+    "formation_energy": 6,
+    "energy_above_hull": 6
+  },
+  "source_files_sha256": {
+    "QMOF_query_templates.txt": "81ea7a086adff1cf6648513f96a60aacb89695c8621fdb00b1a30b2c6c66809b",
+    "QMOF_response_templates.txt": "ece53c32241bee9a486a81157067f01ab70df7dc913687ee20e65386aa495a22",
+    "audit_qmof_thermo.py": "08c1eed2b852fe4b9399db20d6f8a2fdf0641a37f13ddfbc3a3c81b0379e3a10",
+    "paired_audit/report.json": "c9ce1f268a0e28082b600c94f783d70a06176b2f4c478edeba526383a88913c1",
+    "paired_audit/paired_materials.jsonl": "d9b91f8ba6a4547c7c3dafb39d70dbb18896fbe3f3c6c185c288a7e6d2d5407f",
+    "qmof_database/qmof_structure_data.json": "5f5d28263b1108c0b0f1645a7d9201d6b21d63037b6f9f02149b0de624f3e09f",
+    "build_qmof_preview.py": "962019437351c6cfa0fc894a3959da539344c933edd133e6a6cfcb0aeb5a7fce"
+  },
+  "builder_sha256": "9d21b500f56bd4f40a8e9a1020d59b5203bd8922758f1ca63e8821047f81b7d3",
+  "previous_preview_checks": {
+    "geometry_and_field_checks": {
+      "status": "passed",
+      "all_structure_id_path_bindings_checked": 20372,
+      "manual_geometry_checks": 98,
+      "geometry_sample": "All 34 preview structures plus 64 other structures sampled with seed 20260910",
+      "geometry_check_method": "Independent CIF table parsing, species and count checks, original fractional coordinates and lattice Gram matrices",
+      "maximum_sample_coordinate_error_A": 4.4342516419062536e-11,
+      "preview_answers_checked_against_raw_qmof_and_thermo": 34,
+      "preview_spacegroup_pointgroup_crystal_system_recomputed": 34,
+      "llm4mat_marks_retained": 1526,
+      "scope": "Geometry serialization and question-answer-field correspondence, not physical-property recomputation",
+      "historical_preview_note": "The 34-example answer check predates the grouped-description update; geometry checks remain applicable."
+    },
+    "description_checks": {
+      "status": "passed",
+      "description_answers_checked_against_raw_qmof_and_thermo": 15,
+      "group_composition_and_units_checked": true,
+      "ordinary_preview_records_byte_equivalent_in_canonical_json": 32,
+      "structure_index_and_paired_materials_hash_unchanged": true,
+      "preview_records": 47,
+      "no_train_val_test": true
+    }
+  },
+  "limitations": [
+    "Structure matching searches exact reduced-composition buckets with the recorded tolerances; different-composition analogues and all other datasets are outside its scope",
+    "Near-equivalent structures are grouped, not deleted or assigned an averaged label",
+    "Data-label pairing is not a guarantee of experimental accuracy, physical plausibility, or DFT convergence",
+    "Metadata contains answer values and must not be fed to the model as input"
+  ],
+  "output_files": {
+    "train.jsonl": {
+      "size_bytes": 414174789,
+      "sha256": "5081319dea5673bfdc5f18700305ec2f760a851251abfc560c8f62532d6ee0a8"
+    },
+    "val.jsonl": {
+      "size_bytes": 44629579,
+      "sha256": "122caa1043c117b3722a30cc10250ea70e0e8a497c7394d5d2dfb6c54a17f544"
+    },
+    "preview.jsonl": {
+      "size_bytes": 79847,
+      "sha256": "430e9341a9a62f6c6029293b0c20ba48a538f4728688bdb5cf22dd85aa05121b"
+    },
+    "preview.md": {
+      "size_bytes": 20851,
+      "sha256": "604759fafec49602b2bf1e2068c56f2d81ba9c24264c0b16971c0956da778363"
+    },
+    "README_zh.md": {
+      "size_bytes": 2903,
+      "sha256": "8f04d08c14718e5a9168c376745914ffc9b8dc790c370ebcd86df41aebe46b72"
+    },
+    "split_manifest.jsonl": {
+      "size_bytes": 6654515,
+      "sha256": "d9136edea71656998c1fc0b06e4ae64d53b946eabe2cc1430c28f5df40dfd82c"
+    },
+    "structure_groups.json": {
+      "size_bytes": 1022696,
+      "sha256": "71377671bdae0eeeb735b27a25bfedb70f74035035364385d1302ff4c6ec0715"
+    },
+    "structure_index.jsonl": {
+      "size_bytes": 16839461,
+      "sha256": "0e2b6c79767caef02e763b8b5fc7a6bbdeb9f68fa32f8a41bd34f6a2f0226121"
+    }
+  },
+  "independent_corpus_postcheck": {
+    "status": "passed",
+    "raw_qmof_thermo_records_rechecked": 20372,
+    "all_corpus_rows_rechecked_independently": 346324,
+    "answers_rendered_independently_from_source_values": true,
+    "source_material_and_cif_id_paths_checked": true,
+    "cross_split_material_and_matched_group_overlap": 0,
+    "all_identified_llm4mat_members_in_train": 1526,
+    "preview_records_verified_as_exact_subsets": 47,
+    "all_output_hashes_verified": true
+  },
+  "generation_software_versions": {
+    "pymatgen": "2026.3.23",
+    "spglib": "2.7.0",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  }
+}

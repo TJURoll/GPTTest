@@ -1,0 +1,220 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "fg26",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "spectrum_index.jsonl",
+      "relative_path": "others/spectrum_index.jsonl",
+      "rows": 233948,
+      "original_sha256": "46a8582ea8c4f29b372dc5f70fd41ec2cb1746b807feaa73cebfee729a1d47c7",
+      "sha256": "2e0f0fef031469b0ca57cfd99c5cd81a5593d53566550d49107016cb7a97b94b",
+      "messages_sha256": null,
+      "bytes": 681145083
+    },
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 233948,
+      "original_sha256": "7dff12ded3a2bd5212ffd4d9c8b6e4c611bf833eaeb9f8a6371bbdd012d61250",
+      "sha256": "13d1132f3e3b5ab7050639e0500c7c6e43830f6a5f5d9c9c6792b9c8afacbe5f",
+      "messages_sha256": null,
+      "bytes": 431163781
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 1355530,
+      "original_sha256": "d96f9f468dd8a5ea3506de55966082dbb890532dc14ca380bb2c50e96736ad22",
+      "sha256": "b8650cf0c1e2c53f702a75a23c471084380a221bdcb8c1869603389266b6f661",
+      "messages_sha256": "f1b58b1be863c1cff3e81e875142ae6a61ca618e2c8f36bd89f3f11ca8cf3c54",
+      "bytes": 2000638005
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 71552,
+      "original_sha256": "a70b772cc1b038feb375448ae696a92f66acd3584671ec4309ea1c9d8fa38861",
+      "sha256": "5e7149f0eb1e51eee5d228dbdcdfb36419a444ec18fb5875a3248a58ca29a7e9",
+      "messages_sha256": "0fb800336fdc8ff5a5f14ce6078c37802086c45467d770a9431a2c0429717a39",
+      "bytes": 105466927
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 233948,
+      "spectra": 16
+    },
+    "bytes": {
+      "structures": 216079948,
+      "spectra": 41864918376
+    },
+    "manifest_sha256": "5bc45c04c597a2201c6460d4c7bd4c4fa4c7239f58f18afe006ad7b25c6f8efd",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "spectra.ir.source_path": 233948,
+    "spectra.raman.source_path": 233948,
+    "spectra.uv.source_path": 233947,
+    "spectra.broad-nmr-h.source_path": 229308,
+    "spectra.broad-nmr-c.source_path": 233033,
+    "spectra.xas-c.source_path": 233070,
+    "spectra.xas-n.source_path": 194065,
+    "spectra.xas-o.source_path": 201418,
+    "input_xyz_path": 947489,
+    "input_spectrum_refs[].source_path": 2005064
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 140,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/fg26/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": true,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ],
+  "spectrum_copy_proof": {
+    "passed": true,
+    "files": [
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_broad-nmr-c_spectra.parquet",
+        "relative_path": "spectra/test_fg26_broad-nmr-c_spectra.parquet",
+        "bytes": 191570577,
+        "sha256": "9093ac154f46fd95e5ee95c422d1258f2cc9454c512aa10d1be2e9f44b4b63e7",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_broad-nmr-h_spectra.parquet",
+        "relative_path": "spectra/test_fg26_broad-nmr-h_spectra.parquet",
+        "bytes": 185547719,
+        "sha256": "3aed1a063df62985f8a96ca5e501fd0978e6a937abdbbfe4b45b61dd780cc604",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_ir_spectra.parquet",
+        "relative_path": "spectra/test_fg26_ir_spectra.parquet",
+        "bytes": 764652653,
+        "sha256": "42438e4a4f3e16b92b191f87bbf6043ed778e6c12195f84d2a45de5d8c63854b",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_raman_spectra.parquet",
+        "relative_path": "spectra/test_fg26_raman_spectra.parquet",
+        "bytes": 764806305,
+        "sha256": "56c47ee28ee5e23491de902d256369bfa13443f7232270e06d671c964c553a9b",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_uv_spectra.parquet",
+        "relative_path": "spectra/test_fg26_uv_spectra.parquet",
+        "bytes": 590858850,
+        "sha256": "9df80dde8a02644c8704f7fad6ffd0a9996406d666663b2c45c02b3566d1791c",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-c_spectra.parquet",
+        "relative_path": "spectra/test_fg26_xas-c_spectra.parquet",
+        "bytes": 650767410,
+        "sha256": "4383807f5b3e326047e05a65909afccd6b366a43699c3154d18f8aaefb9fd95a",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-n_spectra.parquet",
+        "relative_path": "spectra/test_fg26_xas-n_spectra.parquet",
+        "bytes": 509424864,
+        "sha256": "948a1e2e83172bc9a70af27ab35e5e051a8ed39235a73b846f998a5c949304f6",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/test_fg26_xas-o_spectra.parquet",
+        "relative_path": "spectra/test_fg26_xas-o_spectra.parquet",
+        "bytes": 523492644,
+        "sha256": "967a1afc6be643cb86b6a9598a91fe93af9b195fb73457fdd0d3bb47d3c81dc2",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_broad-nmr-c_spectra.parquet",
+        "relative_path": "spectra/train_fg26_broad-nmr-c_spectra.parquet",
+        "bytes": 1719373441,
+        "sha256": "71a19d5b68535054b7f790edcd04f4da40c2262860bbdec6fd81876aa5a16c34",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_broad-nmr-h_spectra.parquet",
+        "relative_path": "spectra/train_fg26_broad-nmr-h_spectra.parquet",
+        "bytes": 1659858360,
+        "sha256": "77e366c33231dc61ed8ddda5aaec264c865d93c751122b28065a94f6526f084c",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_ir_spectra.parquet",
+        "relative_path": "spectra/train_fg26_ir_spectra.parquet",
+        "bytes": 6879303221,
+        "sha256": "60740cea5d8c92e1afb83093ef8b9f50cc9a397fa0c29bef956a6df96db5b7d0",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_raman_spectra.parquet",
+        "relative_path": "spectra/train_fg26_raman_spectra.parquet",
+        "bytes": 6880464841,
+        "sha256": "ff3359bdbfeb863cb779a97d1af21433e657fd338f5475c6ebe70df8c2cd7164",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_uv_spectra.parquet",
+        "relative_path": "spectra/train_fg26_uv_spectra.parquet",
+        "bytes": 5336158267,
+        "sha256": "293ab6b2f67f825266c2a5eea5bfe8b389f08772e38a54027dbd7be845cb0824",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-c_spectra.parquet",
+        "relative_path": "spectra/train_fg26_xas-c_spectra.parquet",
+        "bytes": 5885464045,
+        "sha256": "54261f92cb5f009d60c56d0de23a74020316d9690063f0b9f93ac553ff9c8fd8",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-n_spectra.parquet",
+        "relative_path": "spectra/train_fg26_xas-n_spectra.parquet",
+        "bytes": 4611805598,
+        "sha256": "9cc8d0974548904d01816406b4f41fbf4a7845fd58c3d93c96ddec34e7b38587",
+        "source_unchanged": true,
+        "destination_verified": true
+      },
+      {
+        "source": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet/train_fg26_xas-o_spectra.parquet",
+        "relative_path": "spectra/train_fg26_xas-o_spectra.parquet",
+        "bytes": 4711369581,
+        "sha256": "e5d9c15cedd28021adf685dead08011c514216934fb2ee8b6bdbc56424829704",
+        "source_unchanged": true,
+        "destination_verified": true
+      }
+    ],
+    "total_bytes": 41864918376
+  }
+}

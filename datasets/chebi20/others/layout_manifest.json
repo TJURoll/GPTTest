@@ -1,0 +1,61 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "chebi20",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "test.jsonl",
+      "relative_path": "messages/test.jsonl",
+      "rows": 3300,
+      "original_sha256": "feb66a3277b8a9c7057c73a81e05356c2b854be4612ce2123810ad77d724ce28",
+      "sha256": "ae423ae1e15e78f37f25561826b185fb64f621c7c88dba4ffbd1705ea30cde29",
+      "messages_sha256": "e0d2a249e896748e5f844d518656148e43105e21a7aa7c6d12a10976af3b7d38",
+      "bytes": 2262322
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 26407,
+      "original_sha256": "1f8c92d9e359eabb2d99122d4a590f967af44e7195fdda087b46eb4d35e6c890",
+      "sha256": "5fb9afa03f68fef1812705d655bf8908502ef06fb6478356ecd922844025213f",
+      "messages_sha256": "8d74a996fb3ecb61eb232c7007f36fbbdbf86ced39b8135ad9977dc99ac6b744",
+      "bytes": 18169811
+    },
+    {
+      "original_name": "validation.jsonl",
+      "relative_path": "messages/validation.jsonl",
+      "rows": 3301,
+      "original_sha256": "110a3cbc2d42bbe37c5758800aed42c0dbf60d1381fc190b380491b821c3dea2",
+      "sha256": "991f1163e4b6d02f4c25012d761819c57627b53dd4b61a1691e42ae0aae035ee",
+      "messages_sha256": "efb0555c3211e91457686adad464a499ebc777e06e2b2050e067a4ac538cd964",
+      "bytes": 2317060
+    }
+  ],
+  "assets": {
+    "counts": {},
+    "bytes": {},
+    "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {},
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 0,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/chebi20/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "test.jsonl",
+    "train.jsonl",
+    "validation.jsonl"
+  ]
+}

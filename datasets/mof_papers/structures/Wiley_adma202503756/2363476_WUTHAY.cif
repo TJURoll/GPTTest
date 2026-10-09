@@ -1,0 +1,240 @@
+
+#######################################################################
+#
+#                 Cambridge Crystallographic Data Centre
+#                                CCDC 
+#
+#######################################################################
+#
+# If this CIF has been generated from an entry in the Cambridge 
+# Structural Database, then it will include bibliographic, chemical, 
+# crystal, experimental, refinement or atomic coordinate data resulting 
+# from the CCDC's data processing and validation procedures.
+#
+#######################################################################
+
+data_WUTHAY
+_audit_creation_date             2025-04-30
+_database_code_depnum_ccdc_archive 'CCDC 2363476'
+_chemical_formula_moiety         '(C20 H19 Cl2 Cu4 N4 S5)n,C3 H7 N1 O1'
+_chemical_name_systematic        
+'catena-[bis(\m-4-(pyridin-4-yl)-1,3-thiazole-2-thiolato)-(\m-2-methylpropane-2-thiolato)-bis(\m-chloro)-tetra-copper N,N-dimethylformamide solvate]'
+_journal_coden_Cambridge         1089
+_journal_volume                  37
+_journal_year                    2025
+_journal_page_first              2503756
+_journal_name_full               Adv.Mater.
+_journal_paper_doi               10.1002/adma.202503756
+loop_
+_publ_author_name
+'Yu-Jia Cheng'
+'Jian-Qiang Zhao'
+'Xiong-Feng Ma'
+'Hui-Li Zheng'
+'Liang He'
+'Jian Zhang'
+'Qipu Lin'
+_chemical_absolute_configuration unk
+_diffrn_ambient_temperature      100
+_exptl_crystal_density_diffrn    1.99902
+_refine_ls_R_factor_gt           0.0515
+_diffrn_radiation_probe          x-ray
+_diffrn_radiation_wavelength     1.3405
+_refine_ls_goodness_of_fit_ref   1.026
+_diffrn_reflns_theta_max         60.099
+_refine_ls_wR_factor_ref         0.1509
+_refine_ls_shift/su_max          0.001
+_refine_diff_density_max         1.369
+_refine_diff_density_min         -0.75
+_refine_ls_number_parameters     357
+_refine_ls_number_restraints     0
+_refine_ls_hydrogen_treatment    constr
+_symmetry_cell_setting           monoclinic
+_symmetry_space_group_name_H-M   'P 21/c'
+_symmetry_Int_Tables_number      14
+_space_group_name_Hall           '-P 2ybc'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,1/2+y,1/2-z
+3 -x,-y,-z
+4 x,1/2-y,1/2+z
+_cell_length_a                   8.7945(2)
+_cell_length_b                   18.4560(4)
+_cell_length_c                   17.8930(3)
+_cell_angle_alpha                90
+_cell_angle_beta                 91.085(2)
+_cell_angle_gamma                90
+_cell_volume                     2903.72
+_exptl_crystal_colour            'light orange'
+_exptl_crystal_description       block
+_cell_formula_units_Z            4
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+Cu1 Cu 1.14541(7) 0.47158(3) 0.96779(3)
+Cu2 Cu 0.94252(7) 0.53091(3) 0.87075(3)
+Cu3 Cu 0.54020(7) 0.57199(4) 0.51837(4)
+Cu4 Cu 0.06746(7) 0.87978(3) 0.49084(3)
+Cl1 Cl 0.62885(12) 0.51366(6) 0.40874(6)
+S1 S 1.27429(11) 0.57493(6) 0.93705(5)
+S2 S 1.36321(12) 0.63326(7) 0.78783(6)
+S3 S -0.26343(11) 0.92171(6) 0.42768(6)
+S4 S -0.33713(12) 0.76252(6) 0.40311(7)
+S5 S 0.03244(12) 0.91186(6) 0.60939(6)
+N1 N 1.0954(4) 0.58397(19) 0.81025(19)
+N2 N 0.7179(4) 0.5857(2) 0.58686(19)
+N3 N 0.3667(4) 0.6312(2) 0.4823(2)
+N4 N -0.0743(4) 0.8064(2) 0.44538(19)
+C1 C 1.2281(4) 0.5955(2) 0.8444(2)
+C2 C 1.2368(5) 0.6305(2) 0.7140(2)
+H2 H 1.2585 0.6459 0.6647
+C3 C 1.1022(5) 0.6035(2) 0.7354(2)
+C4 C 0.9685(5) 0.5957(2) 0.6854(2)
+C5 C 0.8194(5) 0.6064(3) 0.7095(2)
+H5 H 0.8011 0.6167 0.7606
+C6 C 0.7009(5) 0.6021(3) 0.6597(3)
+H6 H 0.6012 0.6111 0.6770
+C7 C 0.8611(5) 0.5747(3) 0.5640(3)
+H7 H 0.8760 0.5632 0.5129
+C8 C 0.9859(5) 0.5792(2) 0.6102(2)
+H8 H 1.0845 0.5711 0.5910
+C9 C -0.2115(5) 0.8305(2) 0.4271(2)
+C10 C -0.1971(5) 0.6993(3) 0.4156(3)
+H10 H -0.2095 0.6487 0.4079
+C11 C -0.0646(5) 0.7320(2) 0.4384(2)
+C12 C 0.0822(5) 0.6963(2) 0.4539(2)
+C13 C 0.1235(5) 0.6331(3) 0.4176(3)
+H13 H 0.0558 0.6108 0.3826
+C14 C 0.2649(5) 0.6029(3) 0.4332(3)
+H14 H 0.2916 0.5597 0.4078
+C15 C 0.3254(5) 0.6924(3) 0.5176(2)
+H15 H 0.3945 0.7135 0.5528
+C16 C 0.1861(5) 0.7258(2) 0.5048(2)
+H16 H 0.1617 0.7689 0.5310
+C17 C -0.0808(5) 0.8537(3) 0.6733(3)
+C18 C -0.1732(5) 0.9027(3) 0.7238(3)
+H18A H -0.1042 0.9336 0.7534
+H18B H -0.2339 0.8730 0.7574
+H18C H -0.2409 0.9332 0.6931
+C19 C 0.0338(6) 0.8096(3) 0.7195(3)
+H19A H 0.0969 0.7808 0.6860
+H19B H -0.0205 0.7771 0.7532
+H19C H 0.0988 0.8424 0.7490
+C20 C -0.1808(6) 0.8031(3) 0.6286(3)
+H20A H -0.2524 0.8313 0.5978
+H20B H -0.2374 0.7719 0.6626
+H20C H -0.1177 0.7731 0.5964
+Cu1_2 Cu -0.14541(7) 0.97158(3) 0.53221(3)
+Cu2_2 Cu 0.05748(7) 1.03091(3) 0.62925(3)
+Cu2_3 Cu -0.05748(7) 0.96909(3) 0.37075(3)
+Cu3_2 Cu 0.45980(7) 0.42801(4) 0.48163(4)
+Cu4_2 Cu 1.06746(7) 0.62022(3) 0.99084(3)
+Cl2 Cl 0.37115(12) 0.48634(6) 0.59126(6)
+S1_2 S 0.27429(11) 0.92507(6) 0.43705(5)
+S3_2 S 1.26343(11) 0.42171(6) 1.07232(6)
+S3_3 S 0.73657(11) 0.57829(6) 0.92768(6)
+S5_2 S 0.96756(12) 0.41186(6) 0.89061(6)
+O1 O 1.4586(5) 0.7554(2) 0.6748(3)
+N5 N 1.4410(5) 0.8758(3) 0.6887(3)
+C21 C 1.4468(7) 0.8097(4) 0.7130(4)
+H21 H 1.4412 0.8029 0.7655
+C22 C 1.4185(7) 0.9394(4) 0.7325(4)
+H22A H 1.3170 0.9591 0.7217
+H22B H 1.4955 0.9756 0.7201
+H22C H 1.4275 0.9271 0.7857
+C23 C 1.4506(7) 0.8908(4) 0.6065(3)
+H23A H 1.3547 0.9122 0.5884
+H23B H 1.4691 0.8454 0.5798
+H23C H 1.5342 0.9246 0.5976
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_site_symmetry_1
+_geom_bond_site_symmetry_2
+Cu1 S1 1_555 1_555
+Cu1 S3_2 1_555 1_555
+Cu1 S5_2 1_555 1_555
+Cu2 N1 1_555 1_555
+Cu2 S3_3 1_555 1_555
+Cu2 S5_2 1_555 1_555
+Cu3 Cl1 1_555 1_555
+Cu3 N2 1_555 1_555
+Cu3 N3 1_555 1_555
+Cu3 Cl2 1_555 1_555
+Cu4 S5 1_555 1_555
+Cu4 N4 1_555 1_555
+Cu4 S1_2 1_555 1_555
+Cl1 Cu3_2 1_555 1_555
+S1 C1 1_555 1_555
+S1 Cu4_2 1_555 1_555
+S2 C1 1_555 1_555
+S2 C2 1_555 1_555
+S3 C9 1_555 1_555
+S3 Cu1_2 1_555 1_555
+S3 Cu2_3 1_555 1_555
+S4 C9 1_555 1_555
+S4 C10 1_555 1_555
+S5 C17 1_555 1_555
+S5 Cu1_2 1_555 1_555
+S5 Cu2_2 1_555 1_555
+N1 C1 1_555 1_555
+N1 C3 1_555 1_555
+N2 C6 1_555 1_555
+N2 C7 1_555 1_555
+N3 C14 1_555 1_555
+N3 C15 1_555 1_555
+N4 C9 1_555 1_555
+N4 C11 1_555 1_555
+C2 H2 1_555 1_555
+C2 C3 1_555 1_555
+C3 C4 1_555 1_555
+C4 C5 1_555 1_555
+C4 C8 1_555 1_555
+C5 H5 1_555 1_555
+C5 C6 1_555 1_555
+C6 H6 1_555 1_555
+C7 H7 1_555 1_555
+C7 C8 1_555 1_555
+C8 H8 1_555 1_555
+C10 H10 1_555 1_555
+C10 C11 1_555 1_555
+C11 C12 1_555 1_555
+C12 C13 1_555 1_555
+C12 C16 1_555 1_555
+C13 H13 1_555 1_555
+C13 C14 1_555 1_555
+C14 H14 1_555 1_555
+C15 H15 1_555 1_555
+C15 C16 1_555 1_555
+C16 H16 1_555 1_555
+C17 C18 1_555 1_555
+C17 C19 1_555 1_555
+C17 C20 1_555 1_555
+C18 H18A 1_555 1_555
+C18 H18B 1_555 1_555
+C18 H18C 1_555 1_555
+C19 H19A 1_555 1_555
+C19 H19B 1_555 1_555
+C19 H19C 1_555 1_555
+C20 H20A 1_555 1_555
+C20 H20B 1_555 1_555
+C20 H20C 1_555 1_555
+Cu3_2 Cl2 1_555 1_555
+O1 C21 1_555 1_555
+N5 C21 1_555 1_555
+N5 C22 1_555 1_555
+N5 C23 1_555 1_555
+C21 H21 1_555 1_555
+C22 H22A 1_555 1_555
+C22 H22B 1_555 1_555
+C22 H22C 1_555 1_555
+C23 H23A 1_555 1_555
+C23 H23B 1_555 1_555
+C23 H23C 1_555 1_555
+
+#END

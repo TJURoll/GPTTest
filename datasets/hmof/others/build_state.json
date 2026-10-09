@@ -1,0 +1,45 @@
+{
+  "seed": 20260914,
+  "source_files": [
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/checked_materials.jsonl",
+      "bytes": 199165337,
+      "sha256": "518ebc58c721e38e5a91e524395283ac071d3d405265332be462bf13213cb6d1"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/task_schema.json",
+      "bytes": 2925,
+      "sha256": "995c93f5da5da71be6d5fd9f39fc561b036a64b1ab59f8e82604c2adf3ddb264"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/audit_summary.json",
+      "bytes": 2769,
+      "sha256": "aeeabce702432df517af894db3af9c06240aa41d716af1f1b3bc34a586a1d2ce"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/audit/output_verification.json",
+      "bytes": 623,
+      "sha256": "e61c705587458f3236fe631bf8c081fa85b93ae9660a010b0ccf19e69dfaf086"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/build_checked_master.py",
+      "bytes": 13672,
+      "sha256": "87ec66746f8912c6054454f1c536ab801053616f020a7d45c26296d22374a526"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/geometry_checks.py",
+      "bytes": 16776,
+      "sha256": "075766e1fa2d11d31716d4fa711f215c9851a2e86b4f06480108ff118f2043a7"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hmof_checked/sources/hMOF_CO2_mofdb_dc8a0295db.zip",
+      "bytes": 982292348,
+      "sha256": "89cc2277506345d0d2a17276804d68d65697ff70d8f0c449abb4c329df564f25"
+    },
+    {
+      "path": "/mnt/e/Datasets/Inorganic_Materials/LLM4Mat-Bench/data/hmof/hMOF_query_response_templates.json",
+      "bytes": 19916,
+      "sha256": "ab9edfd448e34aeaf7b3597010657b57178fc435253f5d6fca2d0bd0fe39c137"
+    }
+  ]
+}

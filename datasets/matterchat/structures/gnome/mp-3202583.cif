@@ -1,0 +1,36 @@
+# generated using pymatgen
+data_BaTiP2Ir
+_symmetry_space_group_name_H-M   'P 1'
+_cell_length_a   7.1823256094601744
+_cell_length_b   7.1823259731604336
+_cell_length_c   7.1823262670906525
+_cell_angle_alpha   147.8660459967237273
+_cell_angle_beta   147.8660505916976717
+_cell_angle_gamma   46.0831434235709949
+_symmetry_Int_Tables_number   1
+_chemical_formula_structural   BaTiP2Ir
+_chemical_formula_sum   'Ba1 Ti1 P2 Ir1'
+_cell_volume   104.4616242133066493
+_cell_formula_units_Z   1
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Ba  Ba0  1  0.0000000000000000  0.0000000000000000
+  0.0000000000000000  1.0
+  Ti  Ti1  1  0.2500000000000000  0.7500000000000000
+  0.5000000000000000  1.0
+  P  P2  1  0.6447834406473580  0.6447834406462071
+  0.0000000000020535  1.0
+  P  P3  1  0.3552165593526410  0.3552165593537920
+  0.9999999999979461  1.0
+  Ir  Ir4  1  0.7500000000000000  0.2500000000000000
+  0.5000000000000000  1.0

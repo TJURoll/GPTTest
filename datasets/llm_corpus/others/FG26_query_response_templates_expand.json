@@ -1,0 +1,1375 @@
+{
+  "schema_version": 4,
+  "dataset": "FG26",
+  "status": "templates_reviewed_for_corpus_generation",
+  "scope_zh": "保留原 26 类官能团标签、SMARTS、优先级、结构和 split。本文件只定义问答模板，不重打标签、不删除分子，也不是全库三维图对应验收。",
+  "record_selection": {
+    "authority_path": "/mnt/e/Datasets/fg26/04_training_data/repository_data/phase15_aux/canonical_selfies_by_record_index_v17_nonisomeric.jsonl",
+    "split_path": "/mnt/e/Datasets/fg26/04_training_data/repository_data/split_maps/phase2_v26_record_split_map.jsonl",
+    "metadata_path": "/mnt/e/Datasets/fg26/01_source_data/metadata/molecule_tables/fg26_molecule_metadata_v2_corrected_units.csv",
+    "join_key": "record_index",
+    "authority_records": 233948,
+    "split_counts": {
+      "train": 222218,
+      "val": 11730
+    },
+    "never_use_metadata_split": true,
+    "aromatic_field": "aromatic",
+    "excluded_aromatic_field": "aromatic_phase2_label",
+    "aromatic_positive_records": 27562,
+    "aromatic_negative_records": 206386,
+    "corrected_vs_old_aromatic_disagreements": 16846,
+    "fg_nonempty_records": 233056,
+    "fg_empty_records": 892,
+    "eligibility_note_zh": "上述是字段适用数量，不是承诺最终每个任务均生成该数量，更不代表新增全量 XYZ 键级核验。"
+  },
+  "message_contract": {
+    "roles": [
+      "user",
+      "assistant"
+    ],
+    "system_message": false,
+    "structure_placeholders": false,
+    "colons_in_messages": false,
+    "unfilled_text_slots": false,
+    "structure_metadata_outside_messages": [
+      "input_xyz_path",
+      "input_xyz_relative_path",
+      "input_xyz_sha256"
+    ],
+    "provenance_outside_messages": [
+      "record_index",
+      "key_id",
+      "split",
+      "task",
+      "query_template_id",
+      "input_preamble_template_id",
+      "response_template_id",
+      "description_combination_id",
+      "selected_fg_labels",
+      "calculation",
+      "input_mode",
+      "spectrum_types",
+      "selfies_policy"
+    ],
+    "selection": "Select a query and a compatible response only within the same task and any required label subgroup.",
+    "balance": "Balance template usage within split, task and response-label subgroup. This does not imply resampling aromatic positive and negative records to equal counts.",
+    "expansion": "Use the explicit corpus_recipe quotas. Do not emit the Cartesian product of wordings or description schemes.",
+    "unsupported_claims": [
+      "experiment",
+      "stability",
+      "synthesis",
+      "causal explanations",
+      "optical band gap",
+      "formation energy",
+      "functional-group counts",
+      "all functional groups"
+    ],
+    "excluded_target_fields": [
+      "gap_eV",
+      "scf_energy_eV"
+    ],
+    "excluded_target_policy": "Do not emit excluded properties in dedicated questions or factual descriptions, including values derived from other fields. Preserve the original source values outside the generated conversation.",
+    "raw_input_geometry_or_spectra_in_messages": false,
+    "input_preamble_in_messages": true,
+    "file_or_geometry_format_references_in_messages": false,
+    "permitted_output_representation_names": [
+      "SELFIES"
+    ],
+    "selfies_target_exception": "The explicitly requested molecular representation is permitted as an assistant target. It is not an input geometry placeholder.",
+    "spectrum_metadata_outside_messages": [
+      "input_spectrum_refs"
+    ],
+    "modality_rule": "Select exactly one input mode per example. Spectrum inputs may contain a declared, verified combination of spectrum types. Do not require both spectra and 3D structure.",
+    "query_rule": "Every user message starts with a truthful input preamble selected by the actual input mode, followed by one existing task query. Spectrum preambles name exactly the one to eight spectrum types actually supplied. The task query itself remains modality-neutral.",
+    "no_target_leakage": "Feed only the selected input payload and query to the model. Record identifiers, molecular strings, scalar labels, other answers and source properties must not be included in the input payload."
+  },
+  "user_prompt_composition": {
+    "required": true,
+    "assembly": "{input_preamble} {task_query}",
+    "separator": " ",
+    "preamble_selection": {
+      "structure_3d": "structure_3d",
+      "one_spectrum_type": "single_spectrum",
+      "two_to_eight_spectrum_types": "multiple_spectra"
+    },
+    "spectrum_type_source": "input_spectrum_refs[*].spectrum_type after selecting and validating the actual input payload",
+    "spectrum_type_names": {
+      "ir": "infrared",
+      "raman": "Raman",
+      "uv": "UV",
+      "broad-nmr-h": "broadened hydrogen NMR",
+      "broad-nmr-c": "broadened carbon NMR",
+      "xas-c": "carbon X-ray absorption",
+      "xas-n": "nitrogen X-ray absorption",
+      "xas-o": "oxygen X-ray absorption"
+    },
+    "spectrum_type_order": [
+      "ir",
+      "raman",
+      "uv",
+      "broad-nmr-h",
+      "broad-nmr-c",
+      "xas-c",
+      "xas-n",
+      "xas-o"
+    ],
+    "spectrum_name_join": "One name unchanged. Two names joined by and. Three to eight names joined by commas and a final comma followed by and.",
+    "payload_order_rule": "Arrange the selected spectrum references and payloads in spectrum_type_order, and list the same ordered types in the preamble. Do not reorder only the names while leaving unlabelled payloads in another order.",
+    "validation_rules": [
+      "Use the actual selected payload, not all source types available for a record, to choose the preamble.",
+      "Spectrum mode requires one to eight distinct known spectrum types, with one reference per type.",
+      "Every selected spectrum must correspond to the same authority record and target molecule.",
+      "Reject empty selections, duplicate types, unknown types and references from another record.",
+      "Structure mode requires its own matched structure reference and must not claim spectra were supplied.",
+      "Every rendered user message has exactly one preamble and one task query, with no unfilled slots.",
+      "Preambles describe the provided modality only, not target properties, stereochemistry, experimental provenance or uniqueness of inverse identification."
+    ],
+    "sampling_rule": "Select spectrum subsets using subset_sampling, then choose one compatible preamble wording and one task-query wording. Do not create fixed complete versus partial views, and do not expand all spectrum subsets or every wording combination into training records.",
+    "subset_sampling": {
+      "policy": "small_spectrum_subsets_first",
+      "status": "initial_adjustable_training_recipe_not_an_empirically_optimal_distribution",
+      "candidate_types": "user_prompt_composition.spectrum_type_order",
+      "candidate_type_count": 8,
+      "count_weights_percent": {
+        "1": 25,
+        "2": 25,
+        "3": 20,
+        "4": 15,
+        "5": 8,
+        "6": 4,
+        "7": 2,
+        "8": 1
+      },
+      "allocation_scope": "Across spectral examples within each original split and enabled task, not separately within each molecule.",
+      "count_allocation": "Allocate spectrum-count quotas by the listed percentages using largest-remainder rounding, with deterministic ties in ascending spectrum-count order.",
+      "within_count_selection": "Uniformly choose distinct types among the current molecule's audited nonempty finite nonzero traces. Allocate cardinalities globally within split and task, subject to availability and no repeated subset.",
+      "duplicate_key": [
+        "record_index",
+        "task",
+        "sorted_spectrum_types"
+      ],
+      "duplicate_handling": "Avoid repeating the same spectrum subset for the same record and task. Retry within the planned count quota; if infeasible, report the unmet quota rather than silently changing the distribution.",
+      "random_seed": 20260913,
+      "view_partition": "No mandatory main, full-input, single-spectrum or missing-modality view per record.",
+      "reporting": "Report target and realized counts by split, task, spectrum count and spectrum type, together with failed input bindings and unfilled quotas.",
+      "readiness": "Generation requires spectrum_index.jsonl and spectrum_audit_report.json; empty channels are excluded, never zero-filled."
+    },
+    "templates": {
+      "structure_3d": [
+        "The three-dimensional structure of a molecule is provided.",
+        "You are given the three-dimensional structure of a molecule.",
+        "The input contains the three-dimensional structure of a molecule.",
+        "A molecule's three-dimensional structure is supplied.",
+        "We give you the three-dimensional structure of a molecule.",
+        "We supply a molecule's three-dimensional structure for this task.",
+        "We are sharing the three-dimensional structure of a molecule with you.",
+        "Let's work with the three-dimensional structure of this molecule.",
+        "For this question, use the molecule's three-dimensional structure.",
+        "Take the three-dimensional structure of this molecule as your input.",
+        "Use this molecule's three-dimensional structure to answer the question.",
+        "Examine the three-dimensional structure of this molecule before answering.",
+        "Consider the molecule's three-dimensional structure when responding.",
+        "Start from the three-dimensional structure of this molecule.",
+        "Base your answer on the molecule's three-dimensional structure.",
+        "This task uses a molecule's three-dimensional structure as the input.",
+        "Your input is the three-dimensional structure of a molecule.",
+        "The accompanying input gives the three-dimensional structure of a molecule.",
+        "Work from the molecule's three-dimensional structure.",
+        "You have a molecule's three-dimensional structure available for this question."
+      ],
+      "single_spectrum": [
+        "The {spectrum_name} spectrum of a molecule is provided.",
+        "You are given the {spectrum_name} spectrum of a molecule.",
+        "The input contains the {spectrum_name} spectrum of a molecule.",
+        "A molecule's {spectrum_name} spectrum is supplied.",
+        "We give you the {spectrum_name} spectrum of a molecule.",
+        "We supply a molecule's {spectrum_name} spectrum for this task.",
+        "We are sharing the {spectrum_name} spectrum of a molecule with you.",
+        "Let's work with the {spectrum_name} spectrum of this molecule.",
+        "For this question, use the molecule's {spectrum_name} spectrum.",
+        "Take the {spectrum_name} spectrum of this molecule as your input.",
+        "Use this molecule's {spectrum_name} spectrum to answer the question.",
+        "Examine the {spectrum_name} spectrum of this molecule before answering.",
+        "Consider the molecule's {spectrum_name} spectrum when responding.",
+        "Start from the {spectrum_name} spectrum of this molecule.",
+        "Base your answer on the molecule's {spectrum_name} spectrum.",
+        "This task uses a molecule's {spectrum_name} spectrum as the input.",
+        "Your input is the {spectrum_name} spectrum of a molecule.",
+        "The accompanying input gives the {spectrum_name} spectrum of a molecule.",
+        "Work from the molecule's {spectrum_name} spectrum.",
+        "You have a molecule's {spectrum_name} spectrum available for this question."
+      ],
+      "multiple_spectra": [
+        "The {spectrum_names} spectra of the same molecule are provided.",
+        "You are given the {spectrum_names} spectra of the same molecule.",
+        "The input contains the {spectrum_names} spectra of a single molecule.",
+        "The supplied {spectrum_names} spectra correspond to the same molecule.",
+        "We give you the {spectrum_names} spectra of the same molecule.",
+        "We supply one molecule's {spectrum_names} spectra for this task.",
+        "We are sharing the {spectrum_names} spectra of the same molecule with you.",
+        "Let's work with the {spectrum_names} spectra of this molecule.",
+        "For this question, use the molecule's {spectrum_names} spectra.",
+        "Take the {spectrum_names} spectra of the same molecule as your input.",
+        "Use this molecule's {spectrum_names} spectra to answer the question.",
+        "Examine the {spectrum_names} spectra of this molecule before answering.",
+        "Consider the molecule's {spectrum_names} spectra when responding.",
+        "Start from the {spectrum_names} spectra of the same molecule.",
+        "Base your answer on this molecule's {spectrum_names} spectra.",
+        "This task uses one molecule's {spectrum_names} spectra as the input.",
+        "Your inputs are the {spectrum_names} spectra of the same molecule.",
+        "The accompanying inputs give the {spectrum_names} spectra of a single molecule.",
+        "Work from the molecule's {spectrum_names} spectra.",
+        "You have one molecule's {spectrum_names} spectra available for this question."
+      ]
+    }
+  },
+  "numeric_format": {
+    "formula": {
+      "source_field": "formula",
+      "format": "unchanged"
+    },
+    "homo_eV": {
+      "source_field": "homo_eV",
+      "format": ".4f",
+      "unit": "eV"
+    },
+    "lumo_eV": {
+      "source_field": "lumo_eV",
+      "format": ".4f",
+      "unit": "eV"
+    },
+    "dipole_debye": {
+      "source_field": "dipole_debye",
+      "format": ".4f",
+      "unit": "D"
+    },
+    "polarizability_au": {
+      "source_field": "polarizability_au",
+      "format": ".2f",
+      "unit": "a.u."
+    },
+    "policy_zh": "直接格式化原值，只做显示取舍，不把小数位数解释为科学精度。rounded zero 统一显示正零，非有限值不得填入。极化率的另一单位不是新增性质。"
+  },
+  "calculation_provenance": {
+    "functional": "B3LYP",
+    "basis_set": "AUG-CC-PVDZ",
+    "calculation_type": "OPT+FREQ",
+    "scf_method": "RB3LYP",
+    "placement": "outside_messages",
+    "evidence": "Existing raw properties.json declarations, not a new DFT calculation or independent log audit."
+  },
+  "functional_group_policy": {
+    "policy_path": "/home/lmy/SpectraAtom-LLM/scripts/fg_author_47_policy.py",
+    "matching_path": "/home/lmy/SpectraAtom-LLM/scripts/build_fg_author_47_preview.py",
+    "active_labels": [
+      "alkene",
+      "alkyne",
+      "allene",
+      "cyclopropane",
+      "alcohol",
+      "aldehyde",
+      "ester",
+      "ether",
+      "ketone",
+      "amide",
+      "amidine",
+      "amine",
+      "azide",
+      "azo",
+      "carbamate",
+      "enamine",
+      "imine",
+      "nitrile",
+      "nitro",
+      "urea",
+      "sulfide",
+      "sulfonamide",
+      "sulfone",
+      "sulfoxide",
+      "thioester",
+      "thiol"
+    ],
+    "preserve_labels": true,
+    "preserve_smarts_and_precedence": true,
+    "response_scope": "Positive non-exhaustive structural features. All original class names remain in metadata; broad SMARTS classes use literal motif wording in prose.",
+    "zero_labels_do_not_imply_general_absence": true,
+    "no_label_redefinition_or_record_discard": true,
+    "label_wording": {
+      "alkene": {
+        "canonical_label": "alkene",
+        "smarts": "[CX3]=[CX3]",
+        "positive_motif_phrase": "an alkene carbon–carbon double bond",
+        "negative_caution": "A zero label does not exclude every carbon–carbon double bond, including bonds at allene centers."
+      },
+      "alkyne": {
+        "canonical_label": "alkyne",
+        "smarts": "[CX2]#[CX2]",
+        "positive_motif_phrase": "an alkyne carbon–carbon triple bond"
+      },
+      "allene": {
+        "canonical_label": "allene",
+        "smarts": "[CX3]=C=[CX3]",
+        "positive_motif_phrase": "an allene C=C=C unit"
+      },
+      "cyclopropane": {
+        "canonical_label": "cyclopropane",
+        "smarts": "C1CC1",
+        "positive_motif_phrase": "a three-membered carbon ring with only single bonds around the ring"
+      },
+      "alcohol": {
+        "canonical_label": "alcohol",
+        "smarts": "C-[OX2H]",
+        "positive_motif_phrase": "an O–H group attached to a nonaromatic carbon atom",
+        "reason": "The carbon is not required to be saturated. The descriptive phrase avoids excluding enolic matches.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "aldehyde": {
+        "canonical_label": "aldehyde",
+        "smarts": "[CX3H]=[OX1]",
+        "positive_motif_phrase": "a carbonyl carbon bearing one hydrogen",
+        "reason": "The other substituent is not constrained. The motif also matches formic acid.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "ester": {
+        "canonical_label": "ester",
+        "smarts": "C(=O)-O-[CX4]",
+        "positive_motif_phrase": "a C(=O)–O–C linkage ending at a four-connected carbon atom"
+      },
+      "ether": {
+        "canonical_label": "ether",
+        "smarts": "C-[OX2]-[C]",
+        "positive_motif_phrase": "a C–O–C linkage through a two-connected oxygen atom",
+        "negative_caution": "The rule excludes aromatic carbon and precedence can suppress oxygen linkages within more specific groups."
+      },
+      "ketone": {
+        "canonical_label": "ketone",
+        "smarts": "C-C(=O)-C",
+        "positive_motif_phrase": "a ketone carbonyl group"
+      },
+      "amide": {
+        "canonical_label": "amide",
+        "smarts": "C(=O)-[NX3]",
+        "positive_motif_phrase": "an amide C(=O)–N linkage"
+      },
+      "amidine": {
+        "canonical_label": "amidine",
+        "smarts": "[CX3](=[NX2])-[NX3]",
+        "positive_motif_phrase": "a C(=N)–N unit"
+      },
+      "amine": {
+        "canonical_label": "amine",
+        "smarts": "[NX3]",
+        "positive_motif_phrase": "a nonaromatic nitrogen atom connected to three atoms, counting attached hydrogens",
+        "reason": "The matching rule does not require carbon substituents or all nitrogen bonds to be single. Specific-group precedence narrows some but not every non-amine match.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "azide": {
+        "canonical_label": "azide",
+        "smarts": "[NX2]=[N+X2]=[N-X1]",
+        "positive_motif_phrase": "an azide group"
+      },
+      "azo": {
+        "canonical_label": "azo",
+        "smarts": "[NX2]=[NX2]",
+        "positive_motif_phrase": "an N=N linkage between two-connected nitrogen atoms"
+      },
+      "carbamate": {
+        "canonical_label": "carbamate",
+        "smarts": "[OX2]-[CX3](=O)-[NX3]",
+        "positive_motif_phrase": "an O–C(=O)–N unit with two-connected oxygen and three-connected nitrogen",
+        "reason": "The singly bonded oxygen need not have an organic substituent, so the motif includes carbamic acid forms.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "enamine": {
+        "canonical_label": "enamine",
+        "smarts": "[NX3]-[CX3]=[CX3]",
+        "positive_motif_phrase": "an N–C=C unit with three-connected nitrogen"
+      },
+      "imine": {
+        "canonical_label": "imine",
+        "smarts": "[CX3]=[NX2]",
+        "positive_motif_phrase": "a C=N bond to a two-connected nitrogen atom"
+      },
+      "nitrile": {
+        "canonical_label": "nitrile",
+        "smarts": "C#N",
+        "positive_motif_phrase": "a nitrile C≡N unit"
+      },
+      "nitro": {
+        "canonical_label": "nitro",
+        "smarts": "[NX3](=O)-O",
+        "positive_motif_phrase": "an N(=O)–O unit with three-connected nitrogen",
+        "reason": "The third nitrogen substituent and the singly bonded oxygen environment are not constrained. Do not assert a carbon-bound nitro group from this rule alone.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "urea": {
+        "canonical_label": "urea",
+        "smarts": "[NX3H]-[CX3](=O)-[NX3H]",
+        "positive_motif_phrase": "a urea N–C(=O)–N unit in which both nitrogens carry one hydrogen",
+        "negative_caution": "A zero label does not exclude urea units with different nitrogen hydrogen counts."
+      },
+      "sulfide": {
+        "canonical_label": "sulfide",
+        "smarts": "[SX2]",
+        "positive_motif_phrase": "a sulfur atom connected to two atoms, counting attached hydrogens",
+        "reason": "Do not translate this label to thioether or require a C–S–C group. The raw rule also matches thiol sulfur, among other environments.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "sulfonamide": {
+        "canonical_label": "sulfonamide",
+        "smarts": "[SX4](=O)(=O)-[NX3]",
+        "positive_motif_phrase": "an S(=O)2–N unit with four-connected sulfur and three-connected nitrogen"
+      },
+      "sulfone": {
+        "canonical_label": "sulfone",
+        "smarts": "[SX4](=O)=[OX1]",
+        "positive_motif_phrase": "a four-connected sulfur atom bearing two S=O bonds",
+        "reason": "The other sulfur substituents need not be carbon atoms. Do not silently require a carbon-bound sulfone.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "sulfoxide": {
+        "canonical_label": "sulfoxide",
+        "smarts": "[SX3]=[OX1]",
+        "positive_motif_phrase": "an S=O bond between three-connected sulfur and terminal oxygen",
+        "reason": "The other sulfur substituents need not be carbon atoms. Do not silently require a carbon-bound sulfoxide.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "thioester": {
+        "canonical_label": "thioester",
+        "smarts": "[CX3](=O)-[SX2]",
+        "positive_motif_phrase": "a C(=O)–S linkage through a two-connected sulfur atom",
+        "reason": "The sulfur substituent is not required to be carbon, so the motif also matches C(=O)SH.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      },
+      "thiol": {
+        "canonical_label": "thiol",
+        "smarts": "[SX2H]",
+        "positive_motif_phrase": "an S–H group on a two-connected sulfur atom",
+        "reason": "The non-hydrogen sulfur neighbor is not required to be carbon.",
+        "rendering_policy": "Use the stated structural motif wording rather than an unsupported narrower class name."
+      }
+    }
+  },
+  "groups": [
+    {
+      "id": "formula",
+      "source_fields": [
+        "formula"
+      ],
+      "queries": [
+        "What is the molecular formula of this molecule?",
+        "Give the molecular formula for this molecule.",
+        "Identify this molecule's molecular formula.",
+        "State the molecular formula for this molecule.",
+        "How would you write the molecular formula of this molecule?",
+        "Determine this molecule's elemental composition as a molecular formula.",
+        "Which molecular formula describes this molecule's elemental composition?",
+        "Write the molecular formula corresponding to this molecule.",
+        "Express this molecule's composition using a molecular formula.",
+        "Provide the molecular formula that represents this molecule.",
+        "What formula gives the numbers of atoms of each element in this molecule?",
+        "Report this molecule's molecular formula.",
+        "How can this molecule's elemental composition be written as a molecular formula?",
+        "Specify the molecular formula of the molecule.",
+        "Use a molecular formula to summarize this molecule's elemental composition.",
+        "Give this molecule's formula without reducing it to an empirical formula."
+      ],
+      "responses": [
+        "The molecular formula is {formula}.",
+        "This molecule has the molecular formula {formula}.",
+        "Its molecular formula is {formula}.",
+        "The molecular formula of this molecule is {formula}.",
+        "The molecule's elemental composition is expressed by the formula {formula}.",
+        "The formula {formula} represents this molecule's elemental composition."
+      ],
+      "source_field_eligible_records": 233948,
+      "eligibility": {
+        "all_fields_present": true,
+        "finite_numeric_fields": false
+      },
+      "input_modes": [
+        "spectra",
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "homo_energy",
+      "source_fields": [
+        "homo_eV"
+      ],
+      "queries": [
+        "What is the HOMO energy of this molecule?",
+        "Give this molecule's HOMO energy in eV.",
+        "What is the energy of the highest occupied molecular orbital?",
+        "State the HOMO energy for this molecule.",
+        "Report the energy of this molecule's highest occupied molecular orbital.",
+        "What value does the HOMO energy have for this molecule?",
+        "Provide the highest occupied molecular orbital energy in eV.",
+        "Determine the HOMO energy of this molecule.",
+        "What energy corresponds to this molecule's highest occupied molecular orbital?",
+        "Express the HOMO energy of this molecule in electronvolts.",
+        "Specify the energy level of the highest occupied molecular orbital.",
+        "What is the energy of this molecule's HOMO in eV?",
+        "Give the energy associated with the highest occupied molecular orbital of this molecule.",
+        "Report this molecule's HOMO energy as a value in eV.",
+        "At what energy does this molecule's highest occupied molecular orbital lie?",
+        "Provide the energy of this molecule's HOMO."
+      ],
+      "responses": [
+        "The HOMO energy is {homo_eV} eV.",
+        "This molecule's highest occupied molecular orbital has an energy of {homo_eV} eV.",
+        "The energy of the HOMO is {homo_eV} eV.",
+        "For this molecule, the HOMO energy is {homo_eV} eV.",
+        "The highest occupied molecular orbital lies at {homo_eV} eV.",
+        "Its HOMO has an energy of {homo_eV} eV."
+      ],
+      "source_field_eligible_records": 233948,
+      "eligibility": {
+        "all_fields_present": true,
+        "finite_numeric_fields": true
+      },
+      "input_modes": [
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "lumo_energy",
+      "source_fields": [
+        "lumo_eV"
+      ],
+      "queries": [
+        "What is the LUMO energy of this molecule?",
+        "Give this molecule's LUMO energy in eV.",
+        "What is the energy of the lowest unoccupied molecular orbital?",
+        "State the LUMO energy for this molecule.",
+        "Report the energy of this molecule's lowest unoccupied molecular orbital.",
+        "What value does the LUMO energy have for this molecule?",
+        "Provide the lowest unoccupied molecular orbital energy in eV.",
+        "Determine the LUMO energy of this molecule.",
+        "What energy corresponds to this molecule's lowest unoccupied molecular orbital?",
+        "Express the LUMO energy of this molecule in electronvolts.",
+        "Specify the energy level of the lowest unoccupied molecular orbital.",
+        "What is the energy of this molecule's LUMO in eV?",
+        "Give the energy associated with the lowest unoccupied molecular orbital of this molecule.",
+        "Report this molecule's LUMO energy as a value in eV.",
+        "At what energy does this molecule's lowest unoccupied molecular orbital lie?",
+        "Provide the energy of this molecule's LUMO."
+      ],
+      "responses": [
+        "The LUMO energy is {lumo_eV} eV.",
+        "This molecule's lowest unoccupied molecular orbital has an energy of {lumo_eV} eV.",
+        "The energy of the LUMO is {lumo_eV} eV.",
+        "For this molecule, the LUMO energy is {lumo_eV} eV.",
+        "The lowest unoccupied molecular orbital lies at {lumo_eV} eV.",
+        "Its LUMO has an energy of {lumo_eV} eV."
+      ],
+      "source_field_eligible_records": 233948,
+      "eligibility": {
+        "all_fields_present": true,
+        "finite_numeric_fields": true
+      },
+      "input_modes": [
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "dipole_magnitude",
+      "source_fields": [
+        "dipole_debye"
+      ],
+      "queries": [
+        "What is the dipole moment magnitude of this molecule?",
+        "Give the magnitude of this molecule's dipole moment in debye.",
+        "How large is the molecular dipole moment?",
+        "State the dipole moment magnitude for this molecule.",
+        "Report the magnitude of the electric dipole moment of this molecule.",
+        "What value does this molecule's dipole moment magnitude have?",
+        "Provide the dipole moment's magnitude rather than its vector components.",
+        "Determine the magnitude of this molecule's electric dipole moment.",
+        "Express the magnitude of the molecular dipole moment in debye.",
+        "What is the magnitude of this molecule's total electric dipole moment?",
+        "Give the size of this molecule's dipole moment, expressed in debye.",
+        "Specify the dipole moment magnitude of the molecule.",
+        "What numerical value represents the magnitude of this molecule's dipole moment?",
+        "Report a scalar magnitude for this molecule's electric dipole moment.",
+        "State the magnitude, not the direction, of this molecule's dipole moment.",
+        "How many debye is the magnitude of this molecule's dipole moment?"
+      ],
+      "responses": [
+        "The dipole moment magnitude is {dipole_debye} D.",
+        "This molecule's dipole moment has a magnitude of {dipole_debye} D.",
+        "The magnitude of the molecular electric dipole moment is {dipole_debye} D.",
+        "For this molecule, the dipole moment magnitude is {dipole_debye} D.",
+        "Its electric dipole moment has a magnitude of {dipole_debye} D.",
+        "The total molecular dipole moment has a magnitude of {dipole_debye} D."
+      ],
+      "source_field_eligible_records": 233948,
+      "eligibility": {
+        "all_fields_present": true,
+        "finite_numeric_fields": true
+      },
+      "input_modes": [
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "isotropic_polarizability",
+      "source_fields": [
+        "polarizability_au"
+      ],
+      "queries": [
+        "What is the isotropic polarizability of this molecule?",
+        "Give this molecule's isotropic polarizability in atomic units.",
+        "State the isotropic polarizability for this molecule.",
+        "How large is the isotropic molecular polarizability?",
+        "Report this molecule's isotropic polarizability.",
+        "What value does this molecule's isotropic polarizability have?",
+        "Provide the isotropic polarizability in a.u.",
+        "Determine the isotropic polarizability of this molecule.",
+        "Express this molecule's isotropic polarizability in atomic units.",
+        "Specify the isotropic molecular polarizability.",
+        "What numerical value represents this molecule's isotropic polarizability?",
+        "Give the isotropic polarizability as a single value in atomic units.",
+        "Report the isotropic polarizability rather than its tensor components.",
+        "State the value of the isotropic polarizability for the molecule.",
+        "What is this molecule's isotropic polarizability in atomic units?",
+        "Provide this molecule's isotropic polarizability as a scalar quantity."
+      ],
+      "responses": [
+        "The isotropic polarizability is {polarizability_au} a.u.",
+        "This molecule has an isotropic polarizability of {polarizability_au} a.u.",
+        "Its isotropic molecular polarizability is {polarizability_au} a.u.",
+        "For this molecule, the isotropic polarizability is {polarizability_au} a.u.",
+        "The molecule's isotropic polarizability equals {polarizability_au} a.u.",
+        "The value of the isotropic polarizability is {polarizability_au} a.u."
+      ],
+      "source_field_eligible_records": 233948,
+      "eligibility": {
+        "all_fields_present": true,
+        "finite_numeric_fields": true
+      },
+      "input_modes": [
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "functional_group_motifs_positive_identification",
+      "source_fields": [
+        "fg_alkene",
+        "fg_alkyne",
+        "fg_allene",
+        "fg_cyclopropane",
+        "fg_alcohol",
+        "fg_aldehyde",
+        "fg_ester",
+        "fg_ether",
+        "fg_ketone",
+        "fg_amide",
+        "fg_amidine",
+        "fg_amine",
+        "fg_azide",
+        "fg_azo",
+        "fg_carbamate",
+        "fg_enamine",
+        "fg_imine",
+        "fg_nitrile",
+        "fg_nitro",
+        "fg_urea",
+        "fg_sulfide",
+        "fg_sulfonamide",
+        "fg_sulfone",
+        "fg_sulfoxide",
+        "fg_thioester",
+        "fg_thiol"
+      ],
+      "queries": [
+        "Identify some functional groups or structural motifs present in this molecule.",
+        "Name one or more functional groups or structural motifs found in this molecule.",
+        "Which functional groups or structural motifs can you identify in this molecule?",
+        "Point out functional groups or structural motifs that occur in this molecule.",
+        "Give examples of functional groups or structural motifs present in this molecule.",
+        "Describe some identifiable functional groups or structural motifs in this molecule.",
+        "What are some functional groups or structural motifs present in this molecule?",
+        "Report some functional groups or structural motifs that this molecule contains.",
+        "Mention one or more functional groups or structural motifs in this molecule.",
+        "List some recognizable functional groups or structural motifs of this molecule.",
+        "What functional groups or structural motifs are among this molecule's features?",
+        "Name some structural motifs or functional groups that the molecule contains.",
+        "Provide examples of this molecule's functional groups or structural motifs.",
+        "Highlight some functional groups or structural motifs found within this molecule.",
+        "Describe one or more functional groups or structural motifs that are present.",
+        "Identify examples of functional groups or structural motifs within the molecule."
+      ],
+      "responses": [
+        "This molecule contains {functional_groups}.",
+        "Identifiable structural features include {functional_groups}.",
+        "The molecular structure contains {functional_groups}.",
+        "Its structural features include {functional_groups}.",
+        "This molecule features {functional_groups}.",
+        "The molecule's structural motifs include {functional_groups}.",
+        "Examples of features in this molecule include {functional_groups}.",
+        "The identified structural features include {functional_groups}."
+      ],
+      "rendering": {
+        "slot": "functional_groups",
+        "label_order": "functional_group_policy.active_labels",
+        "phrase_source": "functional_group_policy.label_wording[label].positive_motif_phrase",
+        "selection": "Include all existing positive active labels in their fixed order without changing them.",
+        "join_policy": "One phrase directly; two phrases joined with and; three or more joined with commas and a final and.",
+        "empty_policy": "Skip this task only. Keep the record for other eligible tasks. Never claim no functional groups.",
+        "count_policy": "Binary labels establish presence only, not counts or independent disjoint sites.",
+        "negative_policy": "Do not generate generic absence answers from suppressed or unselected labels."
+      },
+      "source_field_eligible_records": 233056,
+      "eligibility": {
+        "positive_label_count_at_least": 1
+      },
+      "input_modes": [
+        "spectra",
+        "structure_3d"
+      ]
+    },
+    {
+      "source_semantics": "At least one atom has the RDKit aromatic flag in the corrected molecular graph",
+      "positive_value": 1,
+      "negative_value": 0,
+      "queries": [
+        "Does this molecule contain an aromatic ring system?",
+        "Are any aromatic ring systems present in this molecule?",
+        "Does this molecule include an aromatic ring system?",
+        "Is there an aromatic ring system within this molecule?",
+        "Does this molecule have any aromatic ring systems?",
+        "Can any aromatic ring system be identified in this molecule?",
+        "Is any part of this molecule an aromatic ring system?",
+        "Does the molecule contain any aromatic ring systems?",
+        "Determine whether an aromatic ring system is present in this molecule.",
+        "Indicate whether this molecule contains an aromatic ring system.",
+        "Is an aromatic ring system among this molecule's structural features?",
+        "Would you identify an aromatic ring system in this molecule?",
+        "State whether the molecule includes any aromatic ring systems.",
+        "Can an aromatic ring system be found within the molecule?",
+        "Is at least one aromatic ring system present in this molecule?",
+        "Report whether this molecule has an aromatic ring system."
+      ],
+      "responses_positive": [
+        "Yes, the molecule contains an aromatic ring system.",
+        "Yes, at least one aromatic ring system is present.",
+        "Yes, an aromatic ring system is present in this molecule.",
+        "Yes, the molecule includes an aromatic ring system.",
+        "Yes, this molecule has an aromatic ring system.",
+        "An aromatic ring system is present in the molecule.",
+        "Yes, an aromatic ring system can be identified in this molecule.",
+        "The molecule does contain an aromatic ring system."
+      ],
+      "responses_negative": [
+        "No, the molecule does not contain an aromatic ring system.",
+        "No aromatic ring systems are present in this molecule.",
+        "No, this molecule has no aromatic ring system.",
+        "The molecule contains no aromatic ring systems.",
+        "No, an aromatic ring system is not present in this molecule.",
+        "No, the molecule does not include any aromatic ring systems.",
+        "This molecule has no aromatic ring systems.",
+        "There is no aromatic ring system in the molecule."
+      ],
+      "id": "aromatic_presence",
+      "source_fields": [
+        "aromatic"
+      ],
+      "source_field_eligible_records": 233948,
+      "label_counts": {
+        "0": 206386,
+        "1": 27562
+      },
+      "eligibility": {
+        "binary_field": "aromatic"
+      },
+      "response_selection": {
+        "0": "responses_negative",
+        "1": "responses_positive"
+      },
+      "input_modes": [
+        "spectra",
+        "structure_3d"
+      ]
+    },
+    {
+      "id": "selfies_nonisomeric",
+      "source_fields": [
+        "canonical_selfies"
+      ],
+      "source_table": "record_selection.authority_path",
+      "source_field_eligible_records": 233948,
+      "input_modes": [
+        "spectra",
+        "structure_3d"
+      ],
+      "queries": [
+        "Represent this molecule in SELFIES.",
+        "Write a SELFIES string for this molecule.",
+        "Provide the SELFIES representation of this molecule.",
+        "Encode this molecule as SELFIES.",
+        "Give the molecular connectivity in SELFIES.",
+        "What is the SELFIES representation of this molecule?",
+        "Express this molecule using SELFIES.",
+        "Return only a SELFIES string for this molecule.",
+        "Describe the molecular connectivity using a SELFIES string.",
+        "Supply a SELFIES encoding of this molecule.",
+        "How can this molecule be represented in SELFIES?",
+        "Write this molecule's connectivity as SELFIES.",
+        "Return a SELFIES string describing this molecule without stereochemical details.",
+        "How is this molecule represented in SELFIES when stereochemistry is omitted?",
+        "Encode the molecular connectivity in SELFIES without stereochemical annotations.",
+        "Provide a SELFIES representation that omits stereochemistry."
+      ],
+      "responses": [
+        "{canonical_selfies}"
+      ],
+      "rendering": {
+        "output": "Copy the complete canonical_selfies value from the authority row unchanged.",
+        "wrapper": "No preamble, punctuation, code fence, colon or explanatory text.",
+        "eligibility": "Nonempty target with a successful decode to the authority nonisomeric molecular graph, plus the selected input mode's record-linkage checks.",
+        "no_reconstruction_from_llm": true
+      }
+    },
+    {
+      "queries": [
+        "Can you describe this molecule?",
+        "Give a brief factual description of this molecule.",
+        "Summarize a few characteristics of this molecule.",
+        "Provide a concise overview of this molecule.",
+        "Describe some basic features of this molecule.",
+        "What can you tell me about this molecule?",
+        "Present a short factual summary of this molecule.",
+        "Give a compact description of this molecule.",
+        "Offer a brief summary of this molecule's characteristics.",
+        "Describe this molecule in a few factual statements.",
+        "What are some features of this molecule?",
+        "Provide a short description covering a few molecular characteristics.",
+        "Summarize selected features of this molecule.",
+        "Give a concise factual account of this molecule.",
+        "Present an overview of some characteristics of the molecule.",
+        "Write a brief description highlighting a few features of this molecule."
+      ],
+      "responses": [
+        "{description}",
+        "Here is a brief description of the molecule. {description}",
+        "This molecule can be described as follows. {description}",
+        "A concise description of this molecule follows. {description}",
+        "Here are a few characteristics of the molecule. {description}",
+        "The following statements describe this molecule. {description}"
+      ],
+      "description_modules": {
+        "formula": [
+          "The molecular formula is {formula}.",
+          "This molecule has the formula {formula}.",
+          "Its molecular formula is {formula}.",
+          "The molecule's elemental composition is expressed by {formula}."
+        ],
+        "homo_eV": [
+          "The HOMO energy is {homo_eV} eV.",
+          "Its highest occupied molecular orbital has an energy of {homo_eV} eV.",
+          "The energy of the HOMO is {homo_eV} eV.",
+          "The highest occupied molecular orbital lies at {homo_eV} eV."
+        ],
+        "lumo_eV": [
+          "The LUMO energy is {lumo_eV} eV.",
+          "Its lowest unoccupied molecular orbital has an energy of {lumo_eV} eV.",
+          "The energy of the LUMO is {lumo_eV} eV.",
+          "The lowest unoccupied molecular orbital lies at {lumo_eV} eV."
+        ],
+        "dipole_debye": [
+          "The dipole moment magnitude is {dipole_debye} D.",
+          "Its molecular dipole moment has a magnitude of {dipole_debye} D.",
+          "The magnitude of the molecular electric dipole moment is {dipole_debye} D.",
+          "The molecule's dipole moment has a magnitude of {dipole_debye} D."
+        ],
+        "polarizability_au": [
+          "The isotropic polarizability is {polarizability_au} a.u.",
+          "This molecule has an isotropic polarizability of {polarizability_au} a.u.",
+          "Its isotropic molecular polarizability is {polarizability_au} a.u.",
+          "The value of the isotropic polarizability is {polarizability_au} a.u."
+        ],
+        "aromatic": {
+          "source_field": "aromatic",
+          "positive_value": 1,
+          "negative_value": 0,
+          "responses_positive": [
+            "The molecule contains an aromatic ring system.",
+            "An aromatic ring system is present in this molecule.",
+            "This molecule includes an aromatic ring system.",
+            "At least one aromatic ring system is present."
+          ],
+          "responses_negative": [
+            "The molecule does not contain an aromatic ring system.",
+            "No aromatic ring systems are present in this molecule.",
+            "This molecule has no aromatic ring systems.",
+            "The molecule does not include an aromatic ring system."
+          ]
+        },
+        "functional_groups": [
+          "Identifiable structural features include {functional_groups}.",
+          "This molecule contains {functional_groups}.",
+          "The molecule's structural motifs include {functional_groups}.",
+          "Its structural features include {functional_groups}."
+        ]
+      },
+      "combination_schemes": [
+        {
+          "combination_id": "formula_and_frontier_levels",
+          "modules": [
+            "formula",
+            "homo_eV",
+            "lumo_eV"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "frontier_levels",
+          "modules": [
+            "homo_eV",
+            "lumo_eV"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_and_electrical_properties",
+          "modules": [
+            "formula",
+            "dipole_debye",
+            "polarizability_au"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "electrical_properties",
+          "modules": [
+            "dipole_debye",
+            "polarizability_au"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_orbitals_and_electrical_properties",
+          "modules": [
+            "formula",
+            "homo_eV",
+            "lumo_eV",
+            "dipole_debye",
+            "polarizability_au"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_aromaticity_and_motifs",
+          "modules": [
+            "formula",
+            "aromatic",
+            "functional_groups"
+          ],
+          "input_modes": [
+            "spectra",
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_and_motifs",
+          "modules": [
+            "formula",
+            "functional_groups"
+          ],
+          "input_modes": [
+            "spectra",
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_aromaticity_and_electrical_properties",
+          "modules": [
+            "formula",
+            "aromatic",
+            "dipole_debye",
+            "polarizability_au"
+          ],
+          "input_modes": [
+            "structure_3d"
+          ]
+        },
+        {
+          "combination_id": "formula_and_aromaticity",
+          "modules": [
+            "formula",
+            "aromatic"
+          ],
+          "input_modes": [
+            "spectra",
+            "structure_3d"
+          ]
+        }
+      ],
+      "composition_policy": {
+        "eligibility": "Choose only schemes whose fields are present and finite. Schemes with functional_groups require at least one original positive label.",
+        "sampling_rule": "Balance scheme and wording usage within each existing split and eligible subgroup, without duplicating every record across all schemes.",
+        "assembly_rule": "Choose one wording per included module, join complete sentences with single spaces, then fill the description slot.",
+        "ordering_rule": "Use the module order in the selected scheme. HOMO precedes LUMO when both are included.",
+        "duplicate_rule": "Include each property at most once. Do not append modules beyond the selected scheme.",
+        "aromatic_rule": "Use positive or negative module sentences according to corrected aromatic, never aromatic_phase2_label.",
+        "functional_group_rule": "Use the same positive labels and wording policy as the dedicated motif task.",
+        "numeric_rule": "Format the stored values. Do not recalculate properties from rounded displayed text.",
+        "selfies_rule": "Keep the molecular representation as a dedicated output task. Do not append SELFIES to broad factual descriptions.",
+        "modality_rule": "In spectra mode, choose only schemes explicitly allowing spectra and containing only formula, aromatic and functional_groups modules. In structure_3d mode, every listed eligible scheme is allowed.",
+        "fg_empty_rule": "For spectra with no original positive functional-group labels, select formula_and_aromaticity. Do not generate an absence claim about functional groups."
+      },
+      "id": "factual_description",
+      "source_fields": [
+        "formula",
+        "homo_eV",
+        "lumo_eV",
+        "dipole_debye",
+        "polarizability_au",
+        "aromatic",
+        "fg_alkene",
+        "fg_alkyne",
+        "fg_allene",
+        "fg_cyclopropane",
+        "fg_alcohol",
+        "fg_aldehyde",
+        "fg_ester",
+        "fg_ether",
+        "fg_ketone",
+        "fg_amide",
+        "fg_amidine",
+        "fg_amine",
+        "fg_azide",
+        "fg_azo",
+        "fg_carbamate",
+        "fg_enamine",
+        "fg_imine",
+        "fg_nitrile",
+        "fg_nitro",
+        "fg_urea",
+        "fg_sulfide",
+        "fg_sulfonamide",
+        "fg_sulfone",
+        "fg_sulfoxide",
+        "fg_thioester",
+        "fg_thiol"
+      ],
+      "source_field_eligible_records": 233948,
+      "input_modes": [
+        "spectra",
+        "structure_3d"
+      ]
+    }
+  ],
+  "counts": {
+    "task_groups": 9,
+    "query_templates": 144,
+    "response_templates": 61,
+    "description_schemes": 9,
+    "description_module_sentences": 32,
+    "functional_group_phrase_mappings": 26,
+    "input_modes": 2,
+    "direct_target_groups": 8,
+    "input_preamble_templates": 60
+  },
+  "verification_scope": {
+    "source_fields": "Existing full-authority SMILES-based FG and corrected aromatic checks matched metadata.",
+    "geometry_sample": {
+      "records": 20,
+      "connectivity_matches": 20,
+      "bond_graph_matches_including_representation_equivalence": 19,
+      "unresolved_record_indices": [
+        138629
+      ]
+    },
+    "limitation_zh": "抽样不能保证全库三维键图均已独立恢复。138629 是自动键级恢复未解决，不据此判定原标签错误或删除数据。模板验收只确认措辞、字段、单位、条件分支与回填兼容性。",
+    "no_corpus_generated": true
+  },
+  "source_sha256": {
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/phase15_aux/canonical_selfies_by_record_index_v17_nonisomeric.jsonl": "0689baeb9d17627b995da8f44d0c9b190e230c7be58330b2ea068065dfe9c300",
+    "/mnt/e/Datasets/fg26/04_training_data/repository_data/split_maps/phase2_v26_record_split_map.jsonl": "e4703dc225a36ed51295c8da32fe35c62e4269b6539e01323978d5feee215f44",
+    "/mnt/e/Datasets/fg26/01_source_data/metadata/molecule_tables/fg26_molecule_metadata_v2_corrected_units.csv": "d37dae083244e1c8c68597c23bf014729f6879faaf6957a19455bbac457e3b07",
+    "/mnt/e/Datasets/fg26/04_training_data/llm_corpus/structure_index.jsonl": "7dff12ded3a2bd5212ffd4d9c8b6e4c611bf833eaeb9f8a6371bbdd012d61250",
+    "/home/lmy/SpectraAtom-LLM/scripts/fg_author_47_policy.py": "bcb5a1bcc2ac195e37383052b0298207d96d61cd2a56295550ee468497630a7a",
+    "/home/lmy/SpectraAtom-LLM/scripts/build_fg_author_47_preview.py": "95cdc2cbab0cfde654480f21fb711e14ae170b84afb956563e1768172dacd2f8"
+  },
+  "input_modes": {
+    "structure_3d": {
+      "payload": "Existing exported Cartesian coordinates and elements",
+      "reference_index": "/mnt/e/Datasets/fg26/04_training_data/llm_corpus/structure_index.jsonl",
+      "reference_field": "input_xyz_path",
+      "record_join": "record_index and key_id",
+      "readiness": "Exported coordinates verified against source; previous graph-binding audit is sampled, not full-library certification."
+    },
+    "spectra": {
+      "payload": "Numerical spectrum data with the modality and axis/unit metadata required to interpret it",
+      "source_root": "/mnt/e/Datasets/fg26/01_source_data/official/spectra_parquet",
+      "source_filename_pattern": "{train,test}_fg26_{spectrum_type}_spectra.parquet",
+      "available_source_types": [
+        "ir",
+        "raman",
+        "uv",
+        "broad-nmr-h",
+        "broad-nmr-c",
+        "xas-c",
+        "xas-n",
+        "xas-o"
+      ],
+      "reference_field": "input_spectrum_refs",
+      "join_rule": "Use record_index to obtain key_id from metadata; official parquet SHA256(key) must equal key_id.",
+      "required_checks": [
+        "authority membership",
+        "same record and key_id as target",
+        "unambiguous source locator",
+        "expected nonempty shape",
+        "finite values",
+        "valid axis and unit metadata",
+        "explicit handling of inapplicable element-specific channels"
+      ],
+      "split_rule": "Use the authority Phase2 split map for all examples. Official train/test filenames are source locations, not the output split.",
+      "readiness": "Generation uses the full official trace audit and per-record spectrum index. Missing or empty element-specific channels are not selectable.",
+      "inverse_target_note": "A paired SELFIES target is a supervised target, not a claim that every individual spectrum uniquely determines molecular connectivity or stereochemistry.",
+      "axis_metadata": {
+        "ir": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none",
+          "additional_local_axis_evidence": {
+            "axis": "1..4000 cm^-1, 4000 points",
+            "scope": "Prior local sampled kernel alignment, not per-record official metadata",
+            "path": "/mnt/e/Datasets/fg26/09_workspaces/data_preparation/fg26_alignment_work/validation/tests_20260717/kernel_consistency_width8_check_sample500.json"
+          }
+        },
+        "raman": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none",
+          "additional_local_axis_evidence": {
+            "axis": "1..4000 cm^-1, 4000 points",
+            "scope": "Prior local sampled kernel alignment, not per-record official metadata",
+            "path": "/mnt/e/Datasets/fg26/09_workspaces/data_preparation/fg26_alignment_work/validation/tests_20260717/kernel_consistency_width8_check_sample500.json"
+          }
+        },
+        "uv": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        },
+        "broad-nmr-h": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        },
+        "broad-nmr-c": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        },
+        "xas-c": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        },
+        "xas-n": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        },
+        "xas-o": {
+          "representation": "raw_official_dense_trace",
+          "dtype": "<f8",
+          "shape": [
+            4000
+          ],
+          "axis": {
+            "kind": "sample_index",
+            "start": 0,
+            "step": 1,
+            "count": 4000
+          },
+          "physical_axis": null,
+          "physical_axis_status": "not_verified_from_release",
+          "intensity_unit": null,
+          "intensity_unit_status": "not_specified_in_release",
+          "normalization": "none",
+          "interpolation": "none"
+        }
+      }
+    }
+  },
+  "selfies_policy": {
+    "source_path": "/mnt/e/Datasets/fg26/04_training_data/repository_data/phase15_aux/canonical_selfies_by_record_index_v17_nonisomeric.jsonl",
+    "source_field": "canonical_selfies",
+    "reference_smiles_field": "canonical_smiles",
+    "join_key": "record_index",
+    "policy": "rdkit_canonical_nonisomeric_muse_style",
+    "preserve_original_target": true,
+    "stereo_encoded": false,
+    "original_records_with_stereochemistry_removed": 66455,
+    "template_scope": "All targets retain the existing nonisomeric policy. Six questions use unqualified SELFIES wording and two explicitly omit stereochemistry. The wording choice does not change the target. Do not claim chiral or E/Z recovery from these targets.",
+    "validation": {
+      "records": 233948,
+      "decoded_nonisomeric_graph_matches": 233948,
+      "failures": 0,
+      "rdkit_version": "2025.09.6",
+      "selfies_version": "2.1.1",
+      "scope": "SELFIES decoded and compared with authority nonisomeric SMILES; not a full spectrum or XYZ inverse-reconstruction audit."
+    }
+  },
+  "corpus_recipe": {
+    "random_seed": 20260913,
+    "record_unit": "Authority record_index, not a claim that all records have distinct nonisomeric connectivity.",
+    "target_total": 1427082,
+    "per_task_mode_counts": {
+      "selfies_nonisomeric": {
+        "structure_3d": 233948,
+        "spectra": 467896
+      },
+      "homo_energy": {
+        "structure_3d": 58487,
+        "spectra": 0
+      },
+      "lumo_energy": {
+        "structure_3d": 58487,
+        "spectra": 0
+      },
+      "dipole_magnitude": {
+        "structure_3d": 58487,
+        "spectra": 0
+      },
+      "isotropic_polarizability": {
+        "structure_3d": 58487,
+        "spectra": 0
+      },
+      "formula": {
+        "structure_3d": 116974,
+        "spectra": 116974
+      },
+      "functional_group_motifs_positive_identification": {
+        "structure_3d": 116974,
+        "spectra": 116974
+      },
+      "aromatic_presence": {
+        "structure_3d": 5849,
+        "spectra": 5848
+      },
+      "factual_description": {
+        "structure_3d": 5848,
+        "spectra": 5849
+      }
+    },
+    "selection_policy": "Preserve original split. Formula and FG each use the same selected half-record set in both modes. Select FG only among nonempty positive-label records. Four scalar tasks partition all records, one scalar task per record. SELFIES uses all records once for structure and twice with distinct spectral subsets. Auxiliary selections preserve split proportions by largest-remainder rounding.",
+    "template_balance": "Independently shuffled wording decks within split, task, input mode and applicable label subgroup. Preambles also stratified by single versus multiple spectra. No repeated fixed query-response pairing.",
+    "physical_axis_policy": "Original parquet data are unchanged dense traces indexed 0 to 3999. Unknown physical axis or intensity units remain null. Do not infer spectral peak positions or silently invent units.",
+    "failure_policy": "Abort rather than silently change task quotas or fill missing spectra. Report unavailable channels separately without discarding otherwise usable molecules."
+  }
+}

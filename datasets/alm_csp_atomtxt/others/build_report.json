@@ -1,0 +1,1165 @@
+{
+  "status": "complete",
+  "created_utc": "2026-09-11T09:48:41.767644+00:00",
+  "seed": 20260911,
+  "validation_fraction_of_groups": 0.1,
+  "input_sha256": {
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/csp.parquet": "da35a1189c12cf77d33f16d4a6f3cd7b1fc1861d790e86cae8ebd2e83e295316",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/atomtxt.parquet": "7f3f4d6f6a9ba3a7718979b955dceb775b845442b97b7c5aeb2c6051e5ccd50e",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/structure_provenance.parquet": "6ca1abe1ccbb9772029bd2425d0029d13d3c7844c8d891445123f7e4c8869bb7",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/geometry_groups.parquet": "64cd63ac557a04ae6a8f6c28e2522c6e8926cc004c47669fa9c513bb6cadbd9a",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/ALM_csp_query_response_templates_expand.txt": "8fa6e82bfe19c29623487219eb61807921565b5a6ad19e6d3d3804b74967e084",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/ALM_atomtxt_query_response_templates_expand.txt": "82ccf33549da11327739df4be2709434b9626971aaa5d0e1ce5414b42b31f5f6",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/ALM_atomtxt_query_templates_corrected.txt": "2a3ad646527efde9a3301692b3528b6b5fd6f308fc8a51f2a5e7b3b5ddf14df0",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/report.json": "8cc60f36e29a1128111251b15b179c8cddfff9f1a3b48904e3b1c869a3362a12",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/mp_jarvis_selected/verification.json": "a0bbb1a2cfe77a70764fc406b4b4897dc05f8c17432c1c463bb9e159803e436f",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/ALM_query_response_templates_validation.json": "024ee9e384caf9a3143a244a714faadff89019924677bef14a250f09f91c81f7",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/atomtxt_checked/report.json": "a6c630b476bc2002ed6f787e8ef09b67d39ed4e9aab40ea0850a1a0dc107f8a2",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/build_mp_jarvis_corpus.py": "01bbfb1eb2cd7076da89b8fe07edc296abf3249c7cb741a17d600c6a5d30bcc4",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/verify_mp_jarvis_corpus.py": "a5f49232a4495f08314c15cb59b745f8c6f675021f8f55a95dad0de972afcde6",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/check_alm_query_response_templates.py": "7f02c474f8fbde643395d20a941b3e5ce4b2a9b3118e5ff9e94812d76e73c2ae",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/filter_csp.py": "485e3f28a82092b576c6bc0b1737be5bdc717518ab21b7cbb1df61668f35c7b1",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/apply_atomtxt_templates.py": "90a862728f5b1c77147a80d85d31c5b239906f38ba71c7296fac5cdc50a0e3ce",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/verify_atomtxt.py": "a6b3684715689e9ae113bd3f6f5e66a433257182b4b2d223e95e2458d4136871",
+    "/mnt/e/Datasets/Inorganic_Materials/ALM_dataset/audit_atomtxt_dft_provenance.py": "1360c2e8809e1690a3aa939b6c271e567a0d4a179587e60f68842a0ef0b2281f"
+  },
+  "versions": {
+    "pymatgen": "2026.3.23",
+    "spglib": "2.7.0",
+    "numpy": "2.4.4",
+    "pyarrow": "23.0.1"
+  },
+  "preview_ids": [
+    "alm.csp.dft_3d-9165",
+    "alm.csp.mp_3d_2020-27429",
+    "alm.csp.dft_3d-18092",
+    "alm.csp.mp_3d_2020-67651",
+    "alm.csp.mp_3d_2020-37574",
+    "alm.atomtxt.atomtxt-dft_3d-48945-to-52610-formation_energy-lower",
+    "alm.atomtxt.atomtxt-mp_3d_2020-66424-to-113600-band_gap-higher",
+    "alm.atomtxt.atomtxt-dft_3d-19819-to-8662-band_gap-lower",
+    "alm.atomtxt.atomtxt-mp_3d_2020-33555-to-19946-density-higher",
+    "alm.atomtxt.atomtxt-dft_3d-36969-to-28561-volume-smaller"
+  ],
+  "preview_sha256": "9be2427ee76e193a95d4cb10be2ec50a7da750cce57625902b21c704d00a4b2e",
+  "planned_counts": {
+    "train.csp": 101252,
+    "val.csp": 11233,
+    "train.atomtxt": 4446,
+    "val.atomtxt": 472
+  },
+  "planned_records": 117403,
+  "planned_structures": 112485,
+  "planned_split_groups": 107449,
+  "preview_verification": {
+    "status": "passed",
+    "verified_utc": "2026-09-11T09:48:58.120119+00:00",
+    "records_reread": 10,
+    "structure_files_independently_reread": 15,
+    "polymorph_pairs_rematched_with_and_without_scaling": 2,
+    "max_periodic_site_error_A": 2.2090925698631505e-15,
+    "preview_records_exactly_matched": 10,
+    "cross_split_group_overlap": 0,
+    "cross_split_raw_geometry_overlap": 0,
+    "known_alm_eval_connected_records": 0,
+    "input_files_unchanged": 18,
+    "regressions": {
+      "geometry_cases": 5,
+      "forbidden_text_cases": 4,
+      "formula_and_space_group_not_corrupted": 1,
+      "balanced_sampling_sizes": 51
+    },
+    "scope": "Correspondence and serialization checks against the previously audited selected records; no new DFT or physical stability verification"
+  },
+  "record_counts": {
+    "train.csp": 101252,
+    "val.csp": 11233,
+    "train.atomtxt": 4446,
+    "val.atomtxt": 472
+  },
+  "total_records": 117403,
+  "total_structure_files": 112485,
+  "parser_warning_summary": {
+    "missing_Pauling_electronegativity_Ne": 6,
+    "missing_Pauling_electronegativity_He": 13,
+    "missing_Pauling_electronegativity_Ar": 9,
+    "interpretation": "Optional parser electronegativity lookup warnings, not geometry or task-label failures. Electronegativity is neither filled nor exported; all affected structures passed the same geometry checks. Per-file warning strings are retained in structure_index.jsonl."
+  },
+  "split_group_counts": {
+    "val": 10745,
+    "train": 96704
+  },
+  "structure_index_sha256": "bf5c575095ecaa2ced8c7d29c844cade68ffe98add823c573c4efb2ce3290510",
+  "split_manifest_sha256": "fd58d46127dd02273b820b87e020add225d0c5bd8f196fde8d5041f2248d86e1",
+  "pending_sha256": {
+    "train": "10bb94659c6790821a64b3002cc3e9f56a29ee5984acfbddc71969a3d0cc0701",
+    "val": "582f4990d46b9447b7aa96e9af8bb383baede36ba463a43d4ba7736e643b283a"
+  },
+  "template_policy": "One conversation per selected row; query and response independently balanced within split/task/exact subgroup, never cross subgroup",
+  "structure_policy": "Pure geometry, all sites explicit, identity operation only, no physical space-group or DFT labels; exact raw geometry hashes share files without merging distinct cells",
+  "split_policy": "Seeded whole-group 90/10 train/val shared by both tasks; prior ALM eval-connected groups remain excluded; no new test set",
+  "records_removed": 0,
+  "labels_recomputed_by_dft": false,
+  "original_data_modified": false,
+  "verification": {
+    "status": "passed",
+    "verified_utc": "2026-09-11T09:55:18.410537+00:00",
+    "records_reread": 117403,
+    "structure_files_independently_reread": 112485,
+    "polymorph_pairs_rematched_with_and_without_scaling": 1289,
+    "max_periodic_site_error_A": 2.4240420111265044e-14,
+    "preview_records_exactly_matched": 10,
+    "cross_split_group_overlap": 0,
+    "cross_split_raw_geometry_overlap": 0,
+    "known_alm_eval_connected_records": 0,
+    "input_files_unchanged": 18,
+    "regressions": {
+      "geometry_cases": 5,
+      "forbidden_text_cases": 4,
+      "formula_and_space_group_not_corrupted": 1,
+      "balanced_sampling_sizes": 51
+    },
+    "scope": "Correspondence and serialization checks against the previously audited selected records; no new DFT or physical stability verification"
+  },
+  "template_usage": [
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_01": 12,
+        "query_03": 11,
+        "query_05": 12,
+        "query_04": 12,
+        "query_02": 11
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_02": 19,
+        "response_03": 19,
+        "response_01": 20
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_05": 22,
+        "query_01": 22,
+        "query_02": 21,
+        "query_03": 22,
+        "query_04": 22
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 36,
+        "response_02": 37,
+        "response_01": 36
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_03": 45,
+        "query_05": 44,
+        "query_01": 45,
+        "query_02": 44,
+        "query_04": 44
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_03": 74,
+        "response_01": 74,
+        "response_02": 74
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_01": 15,
+        "query_05": 14,
+        "query_02": 14,
+        "query_04": 14,
+        "query_03": 15
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 24,
+        "response_01": 24,
+        "response_02": 24
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_04": 23,
+        "query_03": 23,
+        "query_05": 22,
+        "query_02": 23,
+        "query_01": 22
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 38,
+        "response_03": 38,
+        "response_01": 37
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_01": 39,
+        "query_03": 38,
+        "query_05": 38,
+        "query_04": 38,
+        "query_02": 39
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_02": 64,
+        "response_03": 64,
+        "response_01": 64
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_05": 22,
+        "query_04": 22,
+        "query_03": 22,
+        "query_01": 22,
+        "query_02": 22
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_02": 37,
+        "response_01": 36,
+        "response_03": 37
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_04": 50,
+        "query_01": 51,
+        "query_03": 51,
+        "query_05": 50,
+        "query_02": 51
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 84,
+        "response_03": 85,
+        "response_01": 84
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_05": 24,
+        "query_02": 24,
+        "query_04": 25,
+        "query_03": 24,
+        "query_01": 24
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_01": 40,
+        "response_02": 41,
+        "response_03": 40
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_02": 48,
+        "query_04": 48,
+        "query_03": 48,
+        "query_01": 48,
+        "query_05": 49
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 80,
+        "response_01": 81,
+        "response_02": 80
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_01": 80,
+        "query_02": 81,
+        "query_04": 81,
+        "query_05": 81,
+        "query_03": 81
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 135,
+        "response_02": 134,
+        "response_01": 135
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_04": 76,
+        "query_01": 76,
+        "query_05": 76,
+        "query_03": 76,
+        "query_02": 76
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 127,
+        "response_01": 127,
+        "response_02": 126
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_02": 41,
+        "query_05": 42,
+        "query_01": 42,
+        "query_03": 42,
+        "query_04": 42
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_02": 70,
+        "response_01": 69,
+        "response_03": 70
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_01": 80,
+        "query_02": 80,
+        "query_05": 80,
+        "query_04": 80,
+        "query_03": 80
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 134,
+        "response_03": 133,
+        "response_01": 133
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_04": 227,
+        "query_02": 227,
+        "query_01": 228,
+        "query_05": 228,
+        "query_03": 228
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_01": 379,
+        "response_03": 380,
+        "response_02": 379
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_04": 20,
+        "query_05": 21,
+        "query_02": 20,
+        "query_03": 21,
+        "query_01": 20
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_02": 34,
+        "response_03": 34,
+        "response_01": 34
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_05": 21,
+        "query_01": 21,
+        "query_03": 21,
+        "query_02": 20,
+        "query_04": 20
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 34,
+        "response_03": 35,
+        "response_01": 34
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_01": 23,
+        "query_04": 23,
+        "query_02": 23,
+        "query_05": 24,
+        "query_03": 23
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 39,
+        "response_01": 39,
+        "response_02": 38
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_03": 21,
+        "query_02": 20,
+        "query_01": 20,
+        "query_05": 21,
+        "query_04": 21
+      }
+    },
+    {
+      "split": "train",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 34,
+        "response_01": 34,
+        "response_03": 35
+      }
+    },
+    {
+      "split": "train",
+      "task": "csp",
+      "group": "formula_crystal_system_space_group",
+      "role": "query",
+      "counts": {
+        "query_04": 6746,
+        "query_03": 6746,
+        "query_01": 6746,
+        "query_02": 6746,
+        "query_07": 6746,
+        "query_09": 6746,
+        "query_06": 6747,
+        "query_08": 6746,
+        "query_05": 6747,
+        "query_10": 6746
+      }
+    },
+    {
+      "split": "train",
+      "task": "csp",
+      "group": "formula_crystal_system_space_group",
+      "role": "response",
+      "counts": {
+        "response_04": 13492,
+        "response_05": 13492,
+        "response_02": 13493,
+        "response_03": 13493,
+        "response_01": 13492
+      }
+    },
+    {
+      "split": "train",
+      "task": "csp",
+      "group": "formula_space_group",
+      "role": "query",
+      "counts": {
+        "query_06": 3379,
+        "query_04": 3379,
+        "query_10": 3379,
+        "query_09": 3379,
+        "query_08": 3379,
+        "query_03": 3379,
+        "query_07": 3379,
+        "query_05": 3379,
+        "query_01": 3379,
+        "query_02": 3379
+      }
+    },
+    {
+      "split": "train",
+      "task": "csp",
+      "group": "formula_space_group",
+      "role": "response",
+      "counts": {
+        "response_01": 6758,
+        "response_05": 6758,
+        "response_04": 6758,
+        "response_03": 6758,
+        "response_02": 6758
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_05": 2,
+        "query_02": 2,
+        "query_04": 2,
+        "query_03": 2,
+        "query_01": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 3,
+        "response_01": 3,
+        "response_02": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_03": 3,
+        "query_05": 3,
+        "query_04": 3,
+        "query_02": 2,
+        "query_01": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 5,
+        "response_01": 4,
+        "response_02": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_01": 5,
+        "query_04": 6,
+        "query_05": 6,
+        "query_03": 5,
+        "query_02": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.higher.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_01": 9,
+        "response_03": 9,
+        "response_02": 9
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_03": 2,
+        "query_02": 1,
+        "query_05": 2,
+        "query_04": 1,
+        "query_01": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_01": 3,
+        "response_02": 2,
+        "response_03": 2
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_01": 1,
+        "query_04": 1,
+        "query_02": 1,
+        "query_05": 1,
+        "query_03": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 2,
+        "response_02": 1,
+        "response_01": 2
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_03": 5,
+        "query_01": 6,
+        "query_02": 5,
+        "query_04": 6,
+        "query_05": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "band_gap.lower.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_01": 9,
+        "response_02": 9,
+        "response_03": 9
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_02": 3,
+        "query_05": 3,
+        "query_03": 4,
+        "query_01": 3,
+        "query_04": 4
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 6,
+        "response_01": 5,
+        "response_02": 6
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_02": 5,
+        "query_04": 6,
+        "query_01": 6,
+        "query_03": 6,
+        "query_05": 6
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 10,
+        "response_01": 10,
+        "response_02": 9
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_01": 2,
+        "query_05": 2,
+        "query_02": 2,
+        "query_04": 2,
+        "query_03": 2
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_01": 4,
+        "response_02": 3,
+        "response_03": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_05": 6,
+        "query_04": 6,
+        "query_03": 7,
+        "query_01": 7,
+        "query_02": 7
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "density.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 11,
+        "response_03": 11,
+        "response_01": 11
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_03": 5,
+        "query_01": 5,
+        "query_04": 5,
+        "query_05": 5,
+        "query_02": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_01": 8,
+        "response_03": 9,
+        "response_02": 8
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_04": 9,
+        "query_03": 9,
+        "query_02": 9,
+        "query_05": 9,
+        "query_01": 9
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.higher.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_03": 15,
+        "response_02": 15,
+        "response_01": 15
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_04": 3,
+        "query_01": 3,
+        "query_03": 4,
+        "query_05": 3,
+        "query_02": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 5,
+        "response_01": 6,
+        "response_02": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_03": 8,
+        "query_01": 8,
+        "query_05": 8,
+        "query_02": 7,
+        "query_04": 8
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_01": 13,
+        "response_02": 13,
+        "response_03": 13
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_element_set.design",
+      "role": "query",
+      "counts": {
+        "query_01": 26,
+        "query_04": 26,
+        "query_05": 26,
+        "query_02": 26,
+        "query_03": 26
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "formation_energy.lower.same_element_set.design",
+      "role": "response",
+      "counts": {
+        "response_03": 44,
+        "response_02": 43,
+        "response_01": 43
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_02": 1,
+        "query_04": 1,
+        "query_05": 1,
+        "query_03": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_03": 1,
+        "response_01": 2,
+        "response_02": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_05": 3,
+        "query_01": 3,
+        "query_02": 3,
+        "query_04": 4,
+        "query_03": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.larger.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_02": 5,
+        "response_01": 6,
+        "response_03": 5
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.polymorph",
+      "role": "query",
+      "counts": {
+        "query_02": 2,
+        "query_03": 2,
+        "query_04": 2,
+        "query_05": 2,
+        "query_01": 1
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.polymorph",
+      "role": "response",
+      "counts": {
+        "response_02": 3,
+        "response_01": 3,
+        "response_03": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.variant",
+      "role": "query",
+      "counts": {
+        "query_05": 2,
+        "query_03": 2,
+        "query_04": 2,
+        "query_02": 2,
+        "query_01": 2
+      }
+    },
+    {
+      "split": "val",
+      "task": "atomtxt",
+      "group": "volume.smaller.same_composition.variant",
+      "role": "response",
+      "counts": {
+        "response_01": 4,
+        "response_02": 3,
+        "response_03": 3
+      }
+    },
+    {
+      "split": "val",
+      "task": "csp",
+      "group": "formula_crystal_system_space_group",
+      "role": "query",
+      "counts": {
+        "query_06": 747,
+        "query_09": 746,
+        "query_07": 747,
+        "query_08": 746,
+        "query_05": 746,
+        "query_10": 747,
+        "query_02": 746,
+        "query_01": 746,
+        "query_04": 746,
+        "query_03": 746
+      }
+    },
+    {
+      "split": "val",
+      "task": "csp",
+      "group": "formula_crystal_system_space_group",
+      "role": "response",
+      "counts": {
+        "response_01": 1493,
+        "response_04": 1493,
+        "response_05": 1492,
+        "response_02": 1492,
+        "response_03": 1493
+      }
+    },
+    {
+      "split": "val",
+      "task": "csp",
+      "group": "formula_space_group",
+      "role": "query",
+      "counts": {
+        "query_02": 377,
+        "query_06": 377,
+        "query_07": 377,
+        "query_04": 377,
+        "query_09": 377,
+        "query_10": 377,
+        "query_03": 377,
+        "query_08": 377,
+        "query_05": 377,
+        "query_01": 377
+      }
+    },
+    {
+      "split": "val",
+      "task": "csp",
+      "group": "formula_space_group",
+      "role": "response",
+      "counts": {
+        "response_02": 754,
+        "response_03": 754,
+        "response_05": 754,
+        "response_04": 754,
+        "response_01": 754
+      }
+    }
+  ],
+  "output_sha256": {
+    "train.jsonl": "10bb94659c6790821a64b3002cc3e9f56a29ee5984acfbddc71969a3d0cc0701",
+    "val.jsonl": "582f4990d46b9447b7aa96e9af8bb383baede36ba463a43d4ba7736e643b283a"
+  }
+}

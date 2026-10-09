@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "qa_records": 101991,
+  "referenced_cifs": 13302,
+  "provenance_records": 13801,
+  "zero_qa_provenance_records": 499,
+  "qa_ids_unique": true,
+  "qa_id_and_structure_path_match": true,
+  "messages_and_order_unchanged": true,
+  "no_new_split": true,
+  "original_per_structure_qa_hashes_verified": true,
+  "current_per_structure_qa_hashes_updated_and_verified": true,
+  "records_sha256_definition": "SHA256 of the exact messages/data.jsonl line bytes belonging to this structure, in original order, including line terminators",
+  "source_records_sha256_definition": "The same calculation on the original exported data.jsonl before the path migration",
+  "preview_rows_match_current_messages": 5
+}

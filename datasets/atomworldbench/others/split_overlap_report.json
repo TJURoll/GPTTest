@@ -1,0 +1,432 @@
+{
+  "automatic_filtering": false,
+  "limitations": "Hash equality checks identical CIF text, not symmetry/rounding-invariant structure equality. Shared mp_id is reported, not automatically considered leakage. No full structural similarity audit was performed.",
+  "checks": {
+    "problem_id": {
+      "shared_distinct_values": 0,
+      "train_records_in_shared_values": 0,
+      "bench_records_in_shared_values": 0,
+      "within_split_duplicate_excess": {
+        "train": 0,
+        "bench": 0
+      },
+      "examples": [],
+      "examples_limit": 20
+    },
+    "mp_id": {
+      "shared_distinct_values": 28,
+      "train_records_in_shared_values": 519,
+      "bench_records_in_shared_values": 265,
+      "within_split_duplicate_excess": {
+        "train": 54314,
+        "bench": 8424
+      },
+      "examples": [
+        {
+          "value": "mp-1027965",
+          "train_problem_ids": [
+            "b42c658d-c461-42dc-85f6-1fbe56993277",
+            "b8da5fdd-9eac-4930-b6f0-c53c1f8d24e5",
+            "6844629f-21cc-48d6-9392-bf654ef798ee",
+            "8310db96-5841-4b66-987e-6dc7c8f5c9f3",
+            "9aca8f92-30d1-4956-8d23-3d6cbe09fe3e"
+          ],
+          "bench_problem_ids": [
+            "fc217a56-37d1-466d-aafb-e48b24bea9fb",
+            "63a871fe-0fa0-465d-b6a8-c05f3c9a0673",
+            "1c79ed87-2459-4183-94b2-884125a897c5",
+            "17e44bbd-fdde-4439-bc8d-27dce988c380",
+            "6910a313-d971-4c00-b275-793fdfa7386d"
+          ]
+        },
+        {
+          "value": "mp-1033383",
+          "train_problem_ids": [
+            "77e89691-9016-4f74-bd49-37cc859f40d7",
+            "75d46c79-f08c-43a3-be2b-88f9173dd1d3",
+            "1a37636a-3080-479a-8d77-1a51d3c6654d",
+            "03455886-8a1f-488c-bbea-e1fcc993dcfa",
+            "14066045-ce1c-48dd-a8a6-8742fed2d240"
+          ],
+          "bench_problem_ids": [
+            "8d30f694-ca75-44ee-844f-e4954d0aca9b",
+            "8629de40-7036-4a70-9592-3ff79903c372",
+            "6a3a2a1b-e413-4f9c-b328-41666a0db895",
+            "32f4fc3e-867e-4e27-a537-638b8e893a08",
+            "2350da14-610c-4e4c-a2b3-d4cf4d99d648"
+          ]
+        },
+        {
+          "value": "mp-1039951",
+          "train_problem_ids": [
+            "78a3529c-56a9-401e-95fb-53812618ef05",
+            "c9411877-9b1e-464d-bd84-d56559456cb5",
+            "59a7bc1f-0c7b-42a6-95be-116f083fc701",
+            "09098576-c486-4de9-83b7-03b6754d2bdf",
+            "da1914ba-02a9-4924-8d00-dbbc06fbe7ca"
+          ],
+          "bench_problem_ids": [
+            "fd092859-d218-4f1e-88e3-d29f4b1c522c",
+            "ae1d7016-7d42-4711-bdd6-37b36dd59609",
+            "a1c41474-d601-42c5-b3ad-049741acf9c3",
+            "94a8343c-f9cc-46c3-b28b-4b6f120b2d68",
+            "44574b01-ab93-445f-9ed4-6ac4505e2048"
+          ]
+        },
+        {
+          "value": "mp-1095677",
+          "train_problem_ids": [
+            "bdd9f59b-613c-4307-8e6a-9ccc1881cc4f",
+            "3c95a668-1580-4897-927c-1543ea3144c6",
+            "912f0109-420a-4252-9fe3-b5cc25db343b",
+            "fd75ed49-20c6-4e2b-9d01-153f32adf734",
+            "2e045246-c3bd-4688-9bc4-50befb8b3138"
+          ],
+          "bench_problem_ids": [
+            "1d6a28ec-b8f0-4c75-86c3-ff1df06dba34",
+            "20a9e4c0-fff7-4b2d-abe8-5ca7a4c5f80d",
+            "a097dc3f-0548-47ef-8352-0142b947ea2d",
+            "a9115a58-932d-4a83-91f6-f668b7bc433b",
+            "72324128-2427-416f-aeb6-73e0fbace96e"
+          ]
+        },
+        {
+          "value": "mp-1174010",
+          "train_problem_ids": [
+            "fbd26eff-707f-4263-9e78-e9c6d8e77644",
+            "ffb6cfbf-19e2-45d5-b873-411b5c690470",
+            "dad1c7f5-47a0-4054-b589-ecb1ded58ba2",
+            "f7518c6e-5c8c-470d-8f64-c6e0fc888c80",
+            "52789ad9-d146-4f12-87e8-1795b1b33e08"
+          ],
+          "bench_problem_ids": [
+            "b8c541e5-98f3-42cd-a497-e01cb43c21b8",
+            "159c7a42-5fcf-4eaa-bcfe-022a42d30f9e",
+            "139a3608-e8d7-4e8d-8a61-e0a951028daf",
+            "ddef0799-be1c-48a7-b7ea-d45e5685ff57",
+            "f44bfea1-f53f-4b54-91e8-6a423e526226"
+          ]
+        },
+        {
+          "value": "mp-1181584",
+          "train_problem_ids": [
+            "e95b19db-ca4f-4471-b13e-35beb63d2e14",
+            "b34da61d-88e0-428b-a3d9-7a0df1de3f79",
+            "8755e0f3-931f-4bfc-9965-2d7e8bf72f10",
+            "fb728bec-24c4-4892-88c9-4e1529693cc4",
+            "f9b11826-a146-46b4-a6cb-93d3aacc7712"
+          ],
+          "bench_problem_ids": [
+            "43b21061-683c-421c-89aa-f464b0ac9bad",
+            "0b421ee1-a07d-43e8-9dda-8baa11a38d85",
+            "1356328e-f00a-4a72-8af4-883a5e73ba81",
+            "e399ef3a-f7e5-445d-9362-294f99e52cb6",
+            "5cc63dba-c13c-4419-b4fe-bff891c00ecb"
+          ]
+        },
+        {
+          "value": "mp-1195087",
+          "train_problem_ids": [
+            "95830657-3742-46c0-987f-3e5bb085ac3c",
+            "666932cb-e530-4de3-bb76-0203bafd6120",
+            "a283f7b6-d932-4b43-aa84-12e2d1837ee0",
+            "57565e99-c90f-461c-a440-ea52a1b482ef",
+            "a815a5f4-d710-44d3-8352-a351d56381eb"
+          ],
+          "bench_problem_ids": [
+            "60ad4835-e8cb-427a-bf9b-42cc27587cc9",
+            "858df63c-4389-4a61-aa22-da7865e8fbaa",
+            "ef144e72-fa75-4528-a8ad-e80ed99ca233",
+            "c1b64e19-7e38-4127-a434-37721b4ba755",
+            "0b9103ba-f5d2-474f-83d6-e8fb1b90326f"
+          ]
+        },
+        {
+          "value": "mp-1195337",
+          "train_problem_ids": [
+            "6401af77-e301-4aef-94fe-98c95f733170",
+            "14896025-cb08-4cb4-a791-71add4c3de64",
+            "91af1003-0aff-4cf3-a525-a26c5bd031db",
+            "f69bf6a1-a8f7-43e6-b40d-d719bb0f42c1",
+            "69aa1aba-53bb-4d23-85b0-5ccddb6f4f99"
+          ],
+          "bench_problem_ids": [
+            "ec17d7b8-5b3d-443b-afd2-c92c539ae1dd",
+            "251a1225-d1d1-43ac-90c7-d0e30f71c75f",
+            "22872606-0b3d-423d-bb54-05591383c398",
+            "a43d1a0b-2dac-40a3-83be-9e6e7b790806",
+            "eb2ebfec-814a-4d4b-afce-f8d0ffed08a7"
+          ]
+        },
+        {
+          "value": "mp-1198574",
+          "train_problem_ids": [
+            "14b40950-3843-4a1b-af41-fa0b3dd4ee41",
+            "003a80d9-7227-4542-a8a8-2a070142c5c1",
+            "271cecd8-5b6c-49ab-af4f-6ad51f8116ae",
+            "646f8358-1715-491d-bd66-eefd178fad59",
+            "352156c6-5092-44d4-b946-9aa23c4cac49"
+          ],
+          "bench_problem_ids": [
+            "e78dad49-db2b-4017-a367-30ece980202d",
+            "fa182dc0-84c6-4de1-96e6-5fb616bba4d1",
+            "6ad5b96e-929c-44da-b9ed-c7135055a07c",
+            "46f1f152-e8a3-41ca-b507-2ef3cc1540f9",
+            "bddf3f94-4f07-4dd3-8b23-2c2f6411e729"
+          ]
+        },
+        {
+          "value": "mp-1202898",
+          "train_problem_ids": [
+            "55043271-17de-499e-8231-89b23ee8e72c",
+            "d7317cee-0a91-44a2-b6f0-95e74594c25c",
+            "69c62acc-6b91-418e-b92c-b9d66502509b",
+            "7e5c6709-ce6f-42ee-9ab1-e9190105c691",
+            "4af95580-3dd5-46a7-a066-279476b9b3d1"
+          ],
+          "bench_problem_ids": [
+            "f32257ff-c5fd-4cbc-b32a-33bd61d9485f",
+            "0d6f626f-6bed-499b-86a8-69becb3c1f10",
+            "dce4f6c5-9296-4185-9065-89c68f8b1f02",
+            "439684aa-7da6-45e0-b7fc-8e31f6829e0e",
+            "13f24094-fb76-4042-8fc5-bdd3a1ca623e"
+          ]
+        },
+        {
+          "value": "mp-1212504",
+          "train_problem_ids": [
+            "0402dac6-b7f1-42fa-81c8-0770fa3e5e14",
+            "5fc6fa79-eb4b-4543-b29e-b845ba1c056c",
+            "232e09ec-5bef-4be7-ab05-72ed33f92f2e",
+            "4831fa24-e446-40cf-8c06-7efd58a9269c",
+            "da0e98f1-f139-46ae-a482-41f6b279363a"
+          ],
+          "bench_problem_ids": [
+            "b83ea31c-407f-4976-9e8b-3c8b1fb5fa3b",
+            "5422f946-21b3-4e08-a8bf-6f2d50db1fc4",
+            "4d439946-4624-4aa3-a366-656e96cae86c",
+            "5935e0b6-cde0-4ec2-953b-c270f369562e",
+            "954ef7b5-32e4-41c4-acfd-c9eb8ca99aea"
+          ]
+        },
+        {
+          "value": "mp-1212621",
+          "train_problem_ids": [
+            "8542e93f-cf72-433a-b82a-d6f6e161dfd7",
+            "8ad91568-598f-45cd-bb0e-c316de96c1f3",
+            "fd3c6540-a77d-4d52-aa54-0078d37a224c",
+            "3f0d1b3a-2207-4fa5-b711-52987f4a39aa",
+            "356bdcc7-91b5-4096-9278-57e154af3e91"
+          ],
+          "bench_problem_ids": [
+            "35f48902-e5f2-4661-9c42-c934c4509c2f",
+            "c3be2040-6c7f-46a7-94fb-3eb4d64ddfb5",
+            "6cd285e2-f49d-4f5d-a90e-a75d9a6e5e45",
+            "10f3c709-ccc2-4189-a908-81c178157b3f",
+            "3fa7cdb6-d7e6-4869-bb7b-bdc4dee0e86d"
+          ]
+        },
+        {
+          "value": "mp-1214464",
+          "train_problem_ids": [
+            "f0ac4a04-714b-4267-8315-da43dea5d3ae",
+            "d680162c-f6e2-4a9d-8f8f-3498c31cd922",
+            "2ddb16cc-5f9d-4088-9055-b1bed055d369",
+            "373eac8c-e854-4c39-bc32-27c7d108250d",
+            "48d289b0-cc85-4a1c-aa0d-ad91e3062034"
+          ],
+          "bench_problem_ids": [
+            "b4bc2a06-f598-41af-b781-0ab1f6a50f35",
+            "19a25c1a-65ae-4fb7-b22d-b3fd8d6fe6fe",
+            "4c554163-0f15-4c26-9a4f-730cbeab0c25",
+            "3ca52ce4-e5a5-45e4-af72-a5c2f14d4013",
+            "f3ff5edd-3672-4a6c-a25c-b78b76e13763"
+          ]
+        },
+        {
+          "value": "mp-1225213",
+          "train_problem_ids": [
+            "1744036e-d793-4769-8404-6ed2fecaf8ad",
+            "5147a1e5-17f5-4cd0-af00-cd811b4d1378",
+            "d8e648fc-237b-4aec-b913-4fe6ae7c8349",
+            "f9a43d62-a64b-49cd-b5cc-06905ad31e29",
+            "87104ec6-8365-4835-aedd-0a92386e26b6"
+          ],
+          "bench_problem_ids": [
+            "88aab6f0-be6d-40ab-833a-c0715a7c8583",
+            "07ecb159-07f4-4c65-b602-61b4567d469d",
+            "ca5162e5-8895-4ea6-a2a5-b62650ae3adf",
+            "c213b1f9-a007-4e7d-948d-542bf9148c57",
+            "2df41e02-1005-4675-a997-290da9cfac8c"
+          ]
+        },
+        {
+          "value": "mp-1226695",
+          "train_problem_ids": [
+            "1806778d-0387-4586-a840-10b857e13fa6",
+            "37f76d74-21c8-48c6-96f3-c825e50118a1",
+            "7166d7aa-f198-4d51-9100-1e1864dd8681",
+            "92efb5c6-6667-4a10-bce5-31ede39a4598",
+            "fb8b894e-8d08-4ab0-b973-1f2987d85d0e"
+          ],
+          "bench_problem_ids": [
+            "d1a25bee-05ea-44b3-a333-edb323972b28",
+            "822396dc-9369-47cb-8e3a-6d7b33dfcd17",
+            "bd1a3e9b-33cd-4b57-bb4f-12d046d7d582",
+            "7c823376-e614-4e8f-8762-57f8cc974df6",
+            "ab45e3ff-b8a2-450d-b14d-6f9104cbce07"
+          ]
+        },
+        {
+          "value": "mp-1235023",
+          "train_problem_ids": [
+            "c782f7d7-8193-449c-8ff5-c72ac85995b0",
+            "41e575ef-a820-4d4a-a4ec-4e7d065776dc",
+            "047ff3ee-79c4-47e0-ab88-50e2aa466d91",
+            "79452295-9e2c-4f86-adb9-c4c70ac5d9f0",
+            "cca1384c-b531-4998-818d-7eb5d02d624b"
+          ],
+          "bench_problem_ids": [
+            "2d2f2a7a-a828-4f4b-8d95-4f24c71da6d2",
+            "9a0f4502-11cc-4728-bee6-a7bab9cf45b1",
+            "10669e2f-e506-4dd5-ab54-8fffffb1e5d8",
+            "ea472529-cbfb-4e14-aa0b-fe3204a720ec",
+            "eb74ed89-d1c2-45cf-8e62-ac9641e31939"
+          ]
+        },
+        {
+          "value": "mp-1239078",
+          "train_problem_ids": [
+            "78ded09a-be57-4bdd-9837-48d6c097aedb",
+            "5987400c-72b6-4093-ab81-2f2dd2207787",
+            "c707c11d-9b39-42d5-ad5b-dfa67ef4ad87",
+            "4f9b2bda-6244-43a0-8b95-2cecebccaaf5",
+            "3d77703d-e849-4311-9599-c3a592298293"
+          ],
+          "bench_problem_ids": [
+            "bb07636d-4117-4ced-8e0d-d9bd9cd040d8",
+            "051b5485-fc6d-4607-a297-fbf86c8fb95a",
+            "99230087-b4be-457a-8da0-7a2efa2fcd25",
+            "fdd5cdf2-2efe-481b-a040-28e8820a25ea",
+            "e744bb5b-e6f0-40bf-98d7-9e1002011c3b"
+          ]
+        },
+        {
+          "value": "mp-1239141",
+          "train_problem_ids": [
+            "f45424dd-0e87-4a6d-b6c9-52c9e2e79f0d",
+            "f4613a05-4599-4205-9887-aa7e7e734017",
+            "7c296562-08c3-497a-94f1-251529c3ea71",
+            "d5c93cb0-b33d-4f8d-a290-6260f9c4916d",
+            "7ccf8105-7d5d-4af8-a871-3fb3df9c0183"
+          ],
+          "bench_problem_ids": [
+            "7de14950-fe09-4a4a-b471-1875b113e263",
+            "2e3a5bce-b576-494f-9269-cf31aed28a55",
+            "fbcc9248-2c09-432d-98f6-c4d0e9a99b6e",
+            "056ae6a6-fc51-4d70-952f-745b0d8c4cf5",
+            "e76de566-8722-40e0-a6f3-3ac01cc5abe7"
+          ]
+        },
+        {
+          "value": "mp-1247690",
+          "train_problem_ids": [
+            "1a5ab979-f41d-4bd0-988f-58e422fd935c",
+            "f2100cd9-5d06-4aca-a02c-3aca099b9a41",
+            "5afcb657-62fc-4155-97d9-07811e7a8c15",
+            "5d571166-c40c-4e00-831d-50b980383f8a",
+            "c7703c69-30aa-4870-853c-e344dca5f46a"
+          ],
+          "bench_problem_ids": [
+            "38dd69d4-fcc0-4028-8a2b-8a3833f9efbc",
+            "59587bce-6e3d-4f7e-9e41-811356426593",
+            "d6fa7d17-a7d9-4369-8237-2057eb6840d8",
+            "59101270-a9fe-4406-8546-029a35351ebf",
+            "357d936b-0140-46d5-8f7d-f3f43da1c8eb"
+          ]
+        },
+        {
+          "value": "mp-1368020",
+          "train_problem_ids": [
+            "78d3f035-5e74-41c6-ba3c-b40cbb8159d5",
+            "53546b38-7385-4105-b9d3-3659ee1e0423",
+            "36d0f26e-0b9a-454f-84a8-4b8dc8f7ca0a",
+            "c99129c6-960d-4050-be7b-83bb5268d3f8",
+            "e76c410d-3593-45f4-b20a-f277e0688f79"
+          ],
+          "bench_problem_ids": [
+            "34bc8d06-e7c3-45b4-a9fb-e06d9d01bf23",
+            "48074fbd-9a44-4ec5-a6a9-e5c041733f4f",
+            "4d824166-19a4-4427-8163-325a51a303c3",
+            "1a7e4bf5-b705-4ff3-86d3-a701c16da075",
+            "562e5e27-df98-487f-9410-330a87582a5b"
+          ]
+        }
+      ],
+      "examples_limit": 20,
+      "shared_mp_ids": [
+        "mp-1027965",
+        "mp-1033383",
+        "mp-1039951",
+        "mp-1095677",
+        "mp-1174010",
+        "mp-1181584",
+        "mp-1195087",
+        "mp-1195337",
+        "mp-1198574",
+        "mp-1202898",
+        "mp-1212504",
+        "mp-1212621",
+        "mp-1214464",
+        "mp-1225213",
+        "mp-1226695",
+        "mp-1235023",
+        "mp-1239078",
+        "mp-1239141",
+        "mp-1247690",
+        "mp-1368020",
+        "mp-1666930",
+        "mp-18612",
+        "mp-2053129",
+        "mp-555534",
+        "mp-557589",
+        "mp-680260",
+        "mp-752915",
+        "mp-978989"
+      ]
+    },
+    "input_sha256": {
+      "shared_distinct_values": 0,
+      "train_records_in_shared_values": 0,
+      "bench_records_in_shared_values": 0,
+      "within_split_duplicate_excess": {
+        "train": 54314,
+        "bench": 8424
+      },
+      "examples": [],
+      "examples_limit": 20
+    },
+    "input_output_sha256": {
+      "shared_distinct_values": 0,
+      "train_records_in_shared_values": 0,
+      "bench_records_in_shared_values": 0,
+      "within_split_duplicate_excess": {
+        "train": 370,
+        "bench": 1
+      },
+      "examples": [],
+      "examples_limit": 20
+    },
+    "input_and_action_parameters": {
+      "shared_distinct_values": 0,
+      "train_records_in_shared_values": 0,
+      "bench_records_in_shared_values": 0,
+      "within_split_duplicate_excess": {
+        "train": 276,
+        "bench": 0
+      },
+      "examples": [],
+      "examples_limit": 20
+    }
+  }
+}

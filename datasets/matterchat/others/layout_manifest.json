@@ -1,0 +1,101 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "matterchat",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "gnome.jsonl",
+      "relative_path": "messages/gnome.jsonl",
+      "rows": 177922,
+      "original_sha256": "5ba7755f8b903fad4e3eb21b02a5f8cb7def71c79c733d078a03813976176766",
+      "sha256": "a9db95fca319f6f4cdbf0c013cf5b188d2b2135ec373be16399127892ace2f41",
+      "messages_sha256": "26b479731b042a18365c5970d85d350475ae10607ac888c99db2cf39cff79d95",
+      "bytes": 115379472
+    },
+    {
+      "original_name": "structures.jsonl",
+      "relative_path": "others/structures.jsonl",
+      "rows": 158382,
+      "original_sha256": "e7ac62f680bf82f3ba21022d53cb69f9abd895964683c0b774c3a8d4fa3f4ee4",
+      "sha256": "f72b4a17e28d0003c9f2b89c422f0b150f72bc6735ffeb8f338723e6ed6543b1",
+      "messages_sha256": null,
+      "bytes": 232797851
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 1478871,
+      "original_sha256": "6d14f9eba79fd6cf282246a25d151385a535a75ddc9472e44e0efe6021170a9d",
+      "sha256": "c1d447575e62f819c9d48994c8f1b6aa8e4e93da4501b29f34a50216aeb61833",
+      "messages_sha256": "cbc4fdb04666b4a15f97c71a30abfd9fc9cca8bc5ee04aa02b1a91578549e574",
+      "bytes": 924302771
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 164209,
+      "original_sha256": "a9e63b61dbb4aad1179d340a173f3822cc153a91f88e033c315db4b64d14cbfb",
+      "sha256": "3f648387472047a993e2b8b2e57932556d553c1bf7cd60b2c7d2a36a88386844",
+      "messages_sha256": "a6c97cbdea96377201232b351a51fcad7ccadb2c6141eaccd9d451035c26d8f7",
+      "bytes": 101642812
+    },
+    {
+      "original_name": "cif/index.jsonl",
+      "relative_path": "others/structure_file_index.jsonl",
+      "rows": 158382,
+      "original_sha256": "29fa9360cfc18ad42a1c99b5749745dd6b84337cd296a19515856f67077e906b",
+      "sha256": "b1589da7d4328228a9977de34a6e698c3f4d21459263259d3dd727116751f840",
+      "messages_sha256": null,
+      "bytes": 64844686
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 158382
+    },
+    "bytes": {
+      "structures": 464925872
+    },
+    "manifest_sha256": "dabbbc4a7b67f5430c2e3a49672e7a57a3a2cb91d23d4bc2f3f2a6db554ac737",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 1801462,
+    "cif_path_added_from_structure_index": 177922
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 144,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/matterchat/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "gnome.jsonl",
+    "train.jsonl",
+    "val.jsonl"
+  ],
+  "missing_structure_path_fix": {
+    "added_paths_by_file": {
+      "gnome.jsonl": 177922,
+      "train.jsonl": 0,
+      "val.jsonl": 0
+    },
+    "binding_key": [
+      "split",
+      "structure_id"
+    ],
+    "every_geometry_sha256_matches_export_index": true,
+    "full_rewritten_file_readback_verified": true,
+    "message_text_hashes_unchanged": true,
+    "train_and_val_files_unchanged": true
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "alm_csp_atomtxt",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 112485,
+      "original_sha256": "bf5c575095ecaa2ced8c7d29c844cade68ffe98add823c573c4efb2ce3290510",
+      "sha256": "3e7367e55c7917f46aac4832958011796518a5e1fa3a58a1e24554fe0c0db65c",
+      "messages_sha256": null,
+      "bytes": 108196254
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 105698,
+      "original_sha256": "10bb94659c6790821a64b3002cc3e9f56a29ee5984acfbddc71969a3d0cc0701",
+      "sha256": "b2a4e26d2e0a58ee955e2f143249fe19d0edfcd1bd41d5c7441f50a651fd0d51",
+      "messages_sha256": "7b6a0686ac1e2a15664b9a8c1c817f8fa59bf4bfcf63fc473374aef93232ce14",
+      "bytes": 196361020
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 11705,
+      "original_sha256": "582f4990d46b9447b7aa96e9af8bb383baede36ba463a43d4ba7736e643b283a",
+      "sha256": "d1de8c8c6cccbee5304ab7bc8be78fc95f60f0fcd6635b38eae5a668ee24cc14",
+      "messages_sha256": "88e8e6825901675bd6817433435f0db2fda526639f7dc7783a699825b4542b42",
+      "bytes": 21701814
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 112485
+    },
+    "bytes": {
+      "structures": 110733184
+    },
+    "manifest_sha256": "f20405db6fb7dccd506e59caecf495bd3013e6dba52027ff97341c5a0d62fdb5",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 112485,
+    "output_cif_path": 117403,
+    "input_cif_path": 4918
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 10,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/alm_csp_atomtxt/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

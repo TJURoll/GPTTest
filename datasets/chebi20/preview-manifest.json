@@ -1,0 +1,169 @@
+{
+  "dataset": "chebi20",
+  "purpose": "decompressed data-format preview",
+  "complete_dataset": false,
+  "source_archive_filename": "chebi20.tar.zst",
+  "limits": {
+    "full_text_file_bytes": 1048576,
+    "sample_records": 500,
+    "main_sample_records": 500,
+    "auxiliary_sample_records": 5,
+    "preview_file_bytes": 10485760,
+    "sample_line_bytes": 1048576,
+    "structure_files": 100,
+    "structure_file_bytes": 1048576,
+    "shared_package_budget_bytes": 134217728
+  },
+  "count_units": {
+    "original_physical_line_count": "physical text lines; not unique or parsed records",
+    "original_parquet_row_count": "Parquet footer metadata; data pages not decoded"
+  },
+  "source_counts": {
+    "file_count": 9,
+    "uncompressed_bytes": 22760097,
+    "cif_file_count": 0,
+    "structure_file_count": 0,
+    "parquet_file_count": null,
+    "parquet_counted_file_count": null,
+    "parquet_known_row_count": null,
+    "parquet_unknown_file_count": null,
+    "parquet_row_count": null,
+    "parquet_count_status": null
+  },
+  "files": [
+    {
+      "original_path": "messages/test.jsonl",
+      "normalized_path": "messages/test.jsonl",
+      "original_bytes": 2262322,
+      "exported_path": "messages/test.jsonl",
+      "original_physical_line_count": 3300,
+      "original_parquet_row_count": null,
+      "exported_bytes": 341550,
+      "exported_record_count": 500,
+      "complete_source_file": false,
+      "selection_method": "first500",
+      "requested_record_count": 500,
+      "selection_reason": "first 500 complete valid source JSON records"
+    },
+    {
+      "original_path": "messages/train.jsonl",
+      "normalized_path": "messages/train.jsonl",
+      "original_bytes": 18169811,
+      "exported_path": "messages/train.jsonl",
+      "original_physical_line_count": 26407,
+      "original_parquet_row_count": null,
+      "exported_bytes": 337298,
+      "exported_record_count": 500,
+      "complete_source_file": false,
+      "selection_method": "first500",
+      "requested_record_count": 500,
+      "selection_reason": "first 500 complete valid source JSON records"
+    },
+    {
+      "original_path": "messages/validation.jsonl",
+      "normalized_path": "messages/validation.jsonl",
+      "original_bytes": 2317060,
+      "exported_path": "messages/validation.jsonl",
+      "original_physical_line_count": 3301,
+      "original_parquet_row_count": null,
+      "exported_bytes": 340089,
+      "exported_record_count": 500,
+      "complete_source_file": false,
+      "selection_method": "first500",
+      "requested_record_count": 500,
+      "selection_reason": "first 500 complete valid source JSON records"
+    },
+    {
+      "original_path": "others/README_layout_zh.md",
+      "normalized_path": "others/README_layout_zh.md",
+      "original_bytes": 2473,
+      "exported_path": "others/README_layout_zh.md",
+      "original_physical_line_count": 24,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2473,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/README_zh.md",
+      "normalized_path": "others/README_zh.md",
+      "original_bytes": 2249,
+      "exported_path": "others/README_zh.md",
+      "original_physical_line_count": 50,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2249,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/asset_manifest.jsonl",
+      "normalized_path": "others/asset_manifest.jsonl",
+      "original_bytes": 0,
+      "exported_path": "others/asset_manifest.jsonl",
+      "original_physical_line_count": 0,
+      "original_parquet_row_count": null,
+      "exported_bytes": 0,
+      "exported_record_count": 0,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/layout_manifest.json",
+      "normalized_path": "others/layout_manifest.json",
+      "original_bytes": 2456,
+      "exported_path": "others/layout_manifest.json",
+      "original_physical_line_count": 61,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2456,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/manifest.json",
+      "normalized_path": "others/manifest.json",
+      "original_bytes": 3266,
+      "exported_path": "others/manifest.json",
+      "original_physical_line_count": 101,
+      "original_parquet_row_count": null,
+      "exported_bytes": 3266,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/transfer_verification.json",
+      "normalized_path": "others/transfer_verification.json",
+      "original_bytes": 460,
+      "exported_path": "others/transfer_verification.json",
+      "original_physical_line_count": 16,
+      "original_parquet_row_count": null,
+      "exported_bytes": 460,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    }
+  ],
+  "omitted_assets_by_extension": {},
+  "excluded_files": [],
+  "errors": [],
+  "source_archive_validation": {
+    "zstd_exitcode": 0,
+    "observed_regular_file_count": 9,
+    "observed_file_bytes": 22760097
+  },
+  "preview_status": "ready_incomplete_subset",
+  "structure_reference_selection": {
+    "priority_references_from_first_five_message_records": [],
+    "priority_included_references": [],
+    "priority_not_included_references": [],
+    "references_from_exported_message_records": [],
+    "included_references": [],
+    "not_included_references": [],
+    "not_included_reference_count": 0,
+    "selected_structure_file_count": 0,
+    "fallback_structure_file_count": 0
+  }
+}

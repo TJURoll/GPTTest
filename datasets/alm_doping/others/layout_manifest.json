@@ -1,0 +1,68 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "alm_doping",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 9098,
+      "original_sha256": "1fc1bd0889f432e309de735d3608be8ffef57d384de25a2c3c3b9991d0ecafef",
+      "sha256": "95b304736f997ad36a86e3d0cf417cbf566d0860c4d6ab0ba80af2823e54960a",
+      "messages_sha256": null,
+      "bytes": 5506537
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 6403,
+      "original_sha256": "e753121eb7d87f0d566426934a9b7cadf0014d58a55d1318929951a101e4b504",
+      "sha256": "f9d37a30f667c962fa47bae1260d4ec2ee12b75ed07b19429b67ec2f5ffb7ebf",
+      "messages_sha256": "bc4dfe85fe379e8b6085420114ab0eac3834595d8589e84b2a76754f64288b19",
+      "bytes": 19268866
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 525,
+      "original_sha256": "c0bdabe228a76dfe6cc28eb7c8cf1ff55c7031981bbb670ba30499092ed82c7e",
+      "sha256": "1a13f889b7095943c22dbb21444bb788851dc31dcc3faeeb4419bd107a2d6f82",
+      "messages_sha256": "783ce81bcccad8a7e3c19b902af8fa50c411c5a6e4f1f2d61c7d1bed43c38560",
+      "bytes": 1581485
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 9098
+    },
+    "bytes": {
+      "structures": 21259062
+    },
+    "manifest_sha256": "f8c00b22b5b21a17530f0ec8cac20188f67f6e7042c5a68314a06483215aa782",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 9098,
+    "input_cif_path": 6928,
+    "output_cif_path": 6928
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 5,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/alm_doping/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

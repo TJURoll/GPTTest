@@ -1,0 +1,66 @@
+{
+  "schema_version": "portable_llm_corpus_layout_v1",
+  "status": "complete",
+  "dataset": "qmof",
+  "path_base": "llm_corpus root; resolve every runtime path against the parent of messages/",
+  "messages_directory": "messages",
+  "structures_directory": "structures",
+  "spectra_directory": "spectra",
+  "auxiliary_directory": "others",
+  "files": [
+    {
+      "original_name": "structure_index.jsonl",
+      "relative_path": "others/structure_index.jsonl",
+      "rows": 20372,
+      "original_sha256": "0e2b6c79767caef02e763b8b5fc7a6bbdeb9f68fa32f8a41bd34f6a2f0226121",
+      "sha256": "272414199de38f692f74a4075b41028803f0ff728b9be3f31c7fa6447ad2a5c9",
+      "messages_sha256": null,
+      "bytes": 16187557
+    },
+    {
+      "original_name": "train.jsonl",
+      "relative_path": "messages/train.jsonl",
+      "rows": 311695,
+      "original_sha256": "5081319dea5673bfdc5f18700305ec2f760a851251abfc560c8f62532d6ee0a8",
+      "sha256": "3aa31506f85850e2ad49ffe252b8342e90350ef30b3cfcc04f2d41c6747c1663",
+      "messages_sha256": "caf4df8ea70e4b21de0f6da16c26844e2f0eb27565eb3377b298507e3a4ba3a5",
+      "bytes": 404123221
+    },
+    {
+      "original_name": "val.jsonl",
+      "relative_path": "messages/val.jsonl",
+      "rows": 34629,
+      "original_sha256": "122caa1043c117b3722a30cc10250ea70e0e8a497c7394d5d2dfb6c54a17f544",
+      "sha256": "b41bbcf98872637118f766a72b3df4843247f408cb6300f3e2d5fa745b129bed",
+      "messages_sha256": "8b68a022c5aefa12e0953ae5d97fdc78d4b3dc447d2517e7fccedb96fb582670",
+      "bytes": 43521451
+    }
+  ],
+  "assets": {
+    "counts": {
+      "structures": 20372
+    },
+    "bytes": {
+      "structures": 161048733
+    },
+    "manifest_sha256": "c83e9dea781d53224b7da6463a96d2f068eb9d6c8a352c1eb5834cb3974406b4",
+    "all_runtime_references_internal": true,
+    "all_referenced_files_rehashed": true,
+    "external_assets_copied_not_linked": true
+  },
+  "path_changes_by_field": {
+    "cif_path": 366696
+  },
+  "messages_labels_order_and_splits_preserved": true,
+  "full_jsonl_readback_verified": true,
+  "preview_rows": 47,
+  "preview_matches_current_messages": true,
+  "source_backup_directory": "/mnt/e/Datasets/Scientific_LLM_Corpus_Layout_Backup_20260914/qmof/original_files",
+  "provenance_paths_are_not_runtime_dependencies": true,
+  "original_reports_and_scripts_are_historical": true,
+  "spectra_parquet_rows_and_arrays_unchanged": null,
+  "existing_split_names_preserved": [
+    "train.jsonl",
+    "val.jsonl"
+  ]
+}

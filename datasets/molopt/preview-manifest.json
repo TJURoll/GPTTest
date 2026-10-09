@@ -1,0 +1,179 @@
+{
+  "dataset": "molopt",
+  "purpose": "decompressed data-format preview",
+  "complete_dataset": false,
+  "source_archive_filename": "molopt.tar.zst",
+  "limits": {
+    "full_text_file_bytes": 1048576,
+    "sample_records": 500,
+    "main_sample_records": 500,
+    "auxiliary_sample_records": 5,
+    "preview_file_bytes": 10485760,
+    "sample_line_bytes": 1048576,
+    "structure_files": 100,
+    "structure_file_bytes": 1048576,
+    "shared_package_budget_bytes": 134217728
+  },
+  "count_units": {
+    "original_physical_line_count": "physical text lines; not unique or parsed records",
+    "original_parquet_row_count": "Parquet footer metadata; data pages not decoded"
+  },
+  "source_counts": {
+    "file_count": 10,
+    "uncompressed_bytes": 625244947,
+    "cif_file_count": 0,
+    "structure_file_count": 0,
+    "parquet_file_count": null,
+    "parquet_counted_file_count": null,
+    "parquet_known_row_count": null,
+    "parquet_unknown_file_count": null,
+    "parquet_row_count": null,
+    "parquet_count_status": null
+  },
+  "files": [
+    {
+      "original_path": "messages/train.jsonl",
+      "normalized_path": "messages/train.jsonl",
+      "original_bytes": 591340385,
+      "exported_path": "messages/train.jsonl",
+      "original_physical_line_count": 340294,
+      "original_parquet_row_count": null,
+      "exported_bytes": 866839,
+      "exported_record_count": 500,
+      "complete_source_file": false,
+      "selection_method": "first500",
+      "requested_record_count": 500,
+      "selection_reason": "first 500 complete valid source JSON records"
+    },
+    {
+      "original_path": "messages/val.jsonl",
+      "normalized_path": "messages/val.jsonl",
+      "original_bytes": 33856030,
+      "exported_path": "messages/val.jsonl",
+      "original_physical_line_count": 19624,
+      "original_parquet_row_count": null,
+      "exported_bytes": 858259,
+      "exported_record_count": 500,
+      "complete_source_file": false,
+      "selection_method": "first500",
+      "requested_record_count": 500,
+      "selection_reason": "first 500 complete valid source JSON records"
+    },
+    {
+      "original_path": "others/README_layout_zh.md",
+      "normalized_path": "others/README_layout_zh.md",
+      "original_bytes": 2472,
+      "exported_path": "others/README_layout_zh.md",
+      "original_physical_line_count": 24,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2472,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/README_zh.md",
+      "normalized_path": "others/README_zh.md",
+      "original_bytes": 2172,
+      "exported_path": "others/README_zh.md",
+      "original_physical_line_count": 41,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2172,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/asset_manifest.jsonl",
+      "normalized_path": "others/asset_manifest.jsonl",
+      "original_bytes": 0,
+      "exported_path": "others/asset_manifest.jsonl",
+      "original_physical_line_count": 0,
+      "original_parquet_row_count": null,
+      "exported_bytes": 0,
+      "exported_record_count": 0,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/layout_manifest.json",
+      "normalized_path": "others/layout_manifest.json",
+      "original_bytes": 2011,
+      "exported_path": "others/layout_manifest.json",
+      "original_physical_line_count": 51,
+      "original_parquet_row_count": null,
+      "exported_bytes": 2011,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/manifest.json",
+      "normalized_path": "others/manifest.json",
+      "original_bytes": 13557,
+      "exported_path": "others/manifest.json",
+      "original_physical_line_count": 506,
+      "original_parquet_row_count": null,
+      "exported_bytes": 13557,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/preview.jsonl",
+      "normalized_path": "others/preview.jsonl",
+      "original_bytes": 21105,
+      "exported_path": "others/preview.jsonl",
+      "original_physical_line_count": 12,
+      "original_parquet_row_count": null,
+      "exported_bytes": 21105,
+      "exported_record_count": 12,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/preview.md",
+      "normalized_path": "others/preview.md",
+      "original_bytes": 6785,
+      "exported_path": "others/preview.md",
+      "original_physical_line_count": 148,
+      "original_parquet_row_count": null,
+      "exported_bytes": 6785,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    },
+    {
+      "original_path": "others/transfer_verification.json",
+      "normalized_path": "others/transfer_verification.json",
+      "original_bytes": 430,
+      "exported_path": "others/transfer_verification.json",
+      "original_physical_line_count": 15,
+      "original_parquet_row_count": null,
+      "exported_bytes": 430,
+      "exported_record_count": null,
+      "complete_source_file": true,
+      "selection_method": "FULL"
+    }
+  ],
+  "omitted_assets_by_extension": {},
+  "excluded_files": [],
+  "errors": [],
+  "source_archive_validation": {
+    "zstd_exitcode": 0,
+    "observed_regular_file_count": 10,
+    "observed_file_bytes": 625244947
+  },
+  "preview_status": "ready_incomplete_subset",
+  "structure_reference_selection": {
+    "priority_references_from_first_five_message_records": [],
+    "priority_included_references": [],
+    "priority_not_included_references": [],
+    "references_from_exported_message_records": [],
+    "included_references": [],
+    "not_included_references": [],
+    "not_included_reference_count": 0,
+    "selected_structure_file_count": 0,
+    "fallback_structure_file_count": 0
+  }
+}
